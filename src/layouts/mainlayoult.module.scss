@@ -1,0 +1,50 @@
+.mainLayout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .mainContent {
+      flex: 1;
+    }
+    
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      
+      .footerText {
+        margin-bottom: 15px;
+      }
+      
+      .footerLinks {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: #333;
+          
+          .icon {
+            margin-right: 5px;
+            font-size: 1.2rem;
+          }
+          
+          &:hover {
+            text-decoration: underline;
+          }
+          
+          &.linkedinLink .icon {
+            color: #0077B5;
+          }
+          
+          &.emailLink .icon {
+            color: #D44638;
+          }
+        }
+      }
+    }
+  }

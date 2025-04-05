@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom"
+import Header from "../components/Header/Header"
+import styles from "./mainlayoult.module.scss"
 
 function MainLayoult() {
-
   return (
-    <main>
+    <div className={styles.container}>
+      <Header />
+      <main className={styles.mainContent}>
         <Outlet />
-    </main>
+      </main>
+    </div>
   )
 }
 

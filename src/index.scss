@@ -1,17 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Exo", sans-serif;
-}
-
-:root{
+  }
+  
+  :root {
     --backgroundColor: #F7F7F7;
     --caseBackgroundColor: #BBBBBB;
     --textColor: #000000;
     --fadeTextColor: #0000004D;
-}
-
-body{
-    max-width: 1440px;
-}
+  }
+  
+  body {
+    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+  }

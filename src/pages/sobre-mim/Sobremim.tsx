@@ -4,6 +4,9 @@ import { Ferramentas } from '../../services/FerramentasData';
 import Ferramenta from './components/ferramenta/Ferramenta';
 import { FerramentaInterface } from '../../interfaces/components';
 import empresasImg from '../../assets/Empreas.webp'
+import ExternalLink from '../../components/ExternalLink/ExternalLink';
+import { MdEmail } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa";
 
 function Sobremim() {
     return (
@@ -42,6 +45,20 @@ function Sobremim() {
                     <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
                 </section>
 
+                {/* Seção de contatos*/}
+                <section className={styles.contatoWrapper}>
+                    <ExternalLink 
+                        path='/'
+                        text='LinkedIn'
+                        icon={FaLinkedinIn}
+                    />
+
+                    <ExternalLink 
+                        path='/'
+                        text="Envie um e-mail"
+                        icon={MdEmail}
+                    />
+                </section>
             </section>
         </main>
     )

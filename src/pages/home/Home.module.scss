@@ -1,0 +1,49 @@
+.homeContainer {
+
+}
+
+.titleSectionContainer {
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titlesWrapper {
+    width: 206px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    margin: 10px 0;
+}
+
+.titlesWrapper>p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    margin: 0 56px;
+}
+
+.titlesWrapper>p:first-child {
+    margin: 0 15px;
+}
+
+.textDegrade {
+    color: var(--fadeTextColor);
+}
+
+.subtitle {
+    position: absolute;
+    top: 64%;
+    left: 54%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+}

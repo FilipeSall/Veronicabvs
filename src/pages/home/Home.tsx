@@ -12,6 +12,7 @@ function Home() {
         </div>
         <h2 className={styles.subtitle}>Product Designer</h2>
       </div>
+      
     </section>
   );
 }

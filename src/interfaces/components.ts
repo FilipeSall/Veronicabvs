@@ -1,10 +1,12 @@
+import { IconType } from "react-icons"
+
 export interface LinkInterface {
     path: string
     text: string
 }
 
 export interface ExternalLinkInterface extends LinkInterface{
-    icon:string
+    icon:IconType  
 }
 
 

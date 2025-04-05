@@ -41,6 +41,61 @@
     letter-spacing: 0%;
 }
 
-.para > span {
+.para>span {
     font-weight: bold;
+}
+
+.ferramentasWrapper {
+    display: flex;
+    align-items: center;
+    width: 789px;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, var(--backgroundColor) 0%, transparent 100%);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, var(--backgroundColor) 0%, transparent 100%);
+    }
+}
+
+.ferramentasInner {
+    display: inline-flex;
+    gap: 30px;
+    align-items: center;
+    width: max-content;
+    animation:
+        scrollTools 15s linear infinite;
+}
+
+.empresasWrapper{
+    border: 1px solid red;
+}
+
+.empresasImg{
+    
+}
+
+@keyframes scrollTools {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 15px));
+    }
 }

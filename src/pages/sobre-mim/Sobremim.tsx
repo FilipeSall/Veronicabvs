@@ -8,11 +8,11 @@ import empresasImg from '../../assets/Empreas.webp'
 function Sobremim() {
     return (
         <main className={styles.sobremimContainer}>
-              {/* imagem*/}
+            {/* imagem*/}
             <section className={styles.imgSection}>
                 <img src={veronicaImg} className={styles.img} alt='Foto da Verônica de perfil cortada pela metade. Coloração preto e branca.' />
             </section>
-              {/* Seção do texto*/}
+            {/* Seção do texto*/}
             <section className={styles.contentSection}>
                 <h1 className={styles.title}>Prazer, Verôn<span>ica</span></h1>
                 <p className={styles.para}><span>Bacharel</span> em arquitetura, <span>sou apaixonada por criar para pessoas através do design</span>. Pós-graduada em Design de Produtos Digitais, me encontrei na área, criando experiências guiada pela visão estratégica do <span>Data-Driven Design</span> desde 2022.</p>
@@ -21,7 +21,7 @@ function Sobremim() {
                     Minha trajetória inclui atuação em <span>e-commerce</span>, o marketing digital, <span>Fintech</span> e negócios, em empresas B2C e B2B, com vivências nacionais e internacionais.
                 </p>
 
-                <p className="para">
+                <p className={styles.para}>
                     Vamos conversar?
                 </p>
 
@@ -36,8 +36,8 @@ function Sobremim() {
                         ))}
                     </div>
                 </section>
-                
-                  {/* Seção das empresas*/}
+
+                {/* Seção das empresas*/}
                 <section className={styles.empresasWrapper}>
                     <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
                 </section>

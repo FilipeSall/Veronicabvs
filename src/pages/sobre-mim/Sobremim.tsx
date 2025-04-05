@@ -1,8 +1,25 @@
 import styles from './sobremim.module.scss';
+import veronicaImg from '../../assets/veronica.webp';
 
 function Sobremim() {
     return (
-        <main className={styles.sobremimContainer}>Sobremim</main>
+        <main className={styles.sobremimContainer}>
+            <section className={styles.imgSection}>
+                <img src={veronicaImg} className={styles.img} alt='Foto da Verônica de perfil cortada pela metade. Coloração preto e branca.' />
+            </section>
+            <section className={styles.contentSection}>
+                <h1 className={styles.title}>Prazer, Verôn<span>ica</span></h1>
+                <p className={styles.para}><span>Bacharel</span> em arquitetura, <span>sou apaixonada por criar para pessoas através do design</span>. Pós-graduada em Design de Produtos Digitais, me encontrei na área, criando experiências guiada pela visão estratégica do <span>Data-Driven Design</span> desde 2022.</p>
+
+                <p className={styles.para}>
+                    Minha trajetória inclui atuação em <span>e-commerce</span>, o marketing digital, <span>Fintech</span> e negócios, em empresas B2C e B2B, com vivências nacionais e internacionais.
+                </p>
+
+                <p className="para">
+                    Vamos conversar?
+                </p>
+            </section>
+        </main>
     )
 }
 

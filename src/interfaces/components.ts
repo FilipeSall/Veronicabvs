@@ -9,4 +9,7 @@ export interface ExternalLinkInterface extends LinkInterface{
     icon:IconType  
 }
 
-
+export interface FerramentaInterface {
+    icon: string;    
+    alt: string;   
+}

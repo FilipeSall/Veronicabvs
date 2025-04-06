@@ -17,3 +17,9 @@ export interface FerramentaInterface {
 export interface CaseNavInterface extends LinkInterface {
     caseValue?: 'sucesso' | 'premiado'
 }
+
+export interface CasePanelInterface {
+    nome: string;
+    projeto: string;
+    data:string
+}

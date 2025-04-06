@@ -1,4 +1,3 @@
-import { SiStyleshare } from 'react-icons/si';
 import CaseNav from '../../components/CaseNav/CaseNav';
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
 import { CasesInterface } from '../../interfaces/case';

@@ -4,9 +4,6 @@ import { Ferramentas } from '../../services/FerramentasData';
 import Ferramenta from './components/ferramenta/Ferramenta';
 import { FerramentaInterface } from '../../interfaces/components';
 import empresasImg from '../../assets/Empreas.webp'
-import ExternalLink from '../../components/ExternalLink/ExternalLink';
-import { MdEmail } from "react-icons/md";
-import { FaLinkedinIn } from "react-icons/fa";
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
 
 function Sobremim() {

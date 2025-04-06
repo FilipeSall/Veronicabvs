@@ -4,10 +4,6 @@ import MainLayoult from './layouts/MainLayoult';
 import GlobalProvider from './GlobalContext';
 import Home from './pages/home/Home';
 import Sobremim from './pages/sobre-mim/Sobremim';
-import Case1 from './pages/case1/Case1';
-import Case2 from './pages/case2/Case2';
-import Case3 from './pages/case3/Case3';
-import Case4 from './pages/case4/Case4';
 import CasePage from './pages/case-page/CasePage';
 
 function App() {

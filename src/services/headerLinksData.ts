@@ -22,7 +22,7 @@ export const externalLinksHeader: ExternalLinkInterface[] = [
     },
     {
         text:'LinkedIn',
-        path:'/',
+        path:'https://www.linkedin.com/in/veronicabvs/',
         icon: FaLinkedinIn
     },
     {

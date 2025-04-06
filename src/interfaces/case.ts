@@ -5,4 +5,6 @@ export interface CasesInterface {
     tipoDeCase?: 'sucesso' | 'premiado'
     path:string
     data:string
+    bgColor:string,
+    imgHover:string
 }

@@ -1,0 +1,18 @@
+.caseNav {
+    width: 340px;
+    position: relative;
+    display: block;
+    height: 340px;
+    background-color: var(--CaseNavBg);
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F7F7F7;
+    margin: 80px 0;
+}
+
+.caseIcon{
+    position: absolute;
+    top: 90%;
+}

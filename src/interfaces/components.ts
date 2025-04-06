@@ -13,3 +13,7 @@ export interface FerramentaInterface {
     icon: string;    
     alt: string;   
 }
+
+export interface CaseNavInterface extends LinkInterface {
+    caseValue?: 'sucesso' | 'premiado'
+}

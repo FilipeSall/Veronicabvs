@@ -7,7 +7,7 @@ function SecaoContatos() {
     return (
         <section className={styles.contatoWrapper}>
             <ExternalLink
-                path='/'
+                path='https://www.linkedin.com/in/veronicabvs/'
                 text='LinkedIn'
                 icon={FaLinkedinIn}
             />

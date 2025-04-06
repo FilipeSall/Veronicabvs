@@ -23,12 +23,16 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
         <div className={styles.container}>
             <div className={styles.infoWrapper}>
                 <p className={styles.nome}>{nome}</p>
+
                 <div className={styles.projectDataWrapper}>
                     <h1 className={styles.projeto}>{projeto}</h1>
-                    <span className={styles.dot}></span>
-                    <p className={styles.data}>{data}</p>
+                    <div className={styles.dataDotWrapper}>
+                        <span className={styles.dot}></span>
+                        <p className={styles.data}>{data}</p>
+                    </div>
                 </div>
             </div>
+
             <div className={styles.navWrapper}>
                 {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => (
                     <Link

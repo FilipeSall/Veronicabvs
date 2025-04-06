@@ -23,6 +23,9 @@ function Home() {
             path={`case/${caseItem.id}`}
             text={caseItem.id.toString()}
             caseValue={caseItem.tipoDeCase}
+            bgColor={caseItem.bgColor}
+            imgHover={caseItem.imgHover}
+            projectName={caseItem.projeto}
             />
           ))}
       </div>

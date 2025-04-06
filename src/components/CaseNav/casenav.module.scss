@@ -1,7 +1,9 @@
 .caseNav {
     width: 340px;
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 340px;
     background-color: var(--CaseNavBg);
     font-size: 100px;
@@ -10,9 +12,79 @@
     justify-content: center;
     color: #F7F7F7;
     margin: 80px 0;
+    transition: background-color 0.5s ease;
 }
 
-.caseIcon{
+.caseIcon {
     position: absolute;
     top: 90%;
+}
+
+.idText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textNormal {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.textHover {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 8px 55px 7px 55px;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caseContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    overflow: visible !important;
+    position: relative; 
+}
+
+.imageWrapper {
+    height: 70%;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.hoverImg {
+    opacity: 0;
+    transform: translateY(50px);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation-name: slideUpEffect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUpEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

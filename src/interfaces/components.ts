@@ -17,6 +17,8 @@ export interface FerramentaInterface {
 export interface CaseNavInterface extends LinkInterface {
     caseValue?: 'sucesso' | 'premiado'
     bgColor: string
+    imgHover:string
+    projectName:string
 }
 
 export interface CasePanelInterface {

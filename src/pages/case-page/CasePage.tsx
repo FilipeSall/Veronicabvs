@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
+import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
 
 function CasePage() {
     const { id } = useParams();
     const [caseData, setCaseData] = useState<CasesInterface | null>(null);
 
     useEffect(() => {
-        // Encontrar o case correspondente pelo path na URL
         const currentCase = CasesData.find(item => item.path === `case-${id}`);
         if (currentCase) {
             setCaseData(currentCase);
@@ -27,8 +27,13 @@ function CasePage() {
             <CasePanel
             data={caseData.data}
             nome={caseData.nome}
+            bgColor={caseData.bgColor}
             projeto={caseData.projeto}
             />
+            <section className={styles.caseWrapper}>
+
+            </section>
+            <SecaoContatos />
         </main>
     )
 }

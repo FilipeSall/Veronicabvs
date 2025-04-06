@@ -1,0 +1,14 @@
+.caseContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    height: 95vh;
+}
+
+.caseWrapper{
+    height: 75vh;
+    width: 100%;
+    background-color: #FFFFFF;
+    overflow-y: scroll;
+}

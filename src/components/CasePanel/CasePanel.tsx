@@ -18,6 +18,8 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
     };
     
     const currentCaseId = getCurrentCaseId();
+    
+
 
     return (
         <div className={styles.container}>
@@ -34,15 +36,20 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
             </div>
 
             <div className={styles.navWrapper}>
-                {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => (
-                    <Link
-                        key={i}
-                        to={`/case/${caseItem.id}`}
-                        className={`${styles.caseNav} ${currentCaseId === caseItem.id ? styles.active : ''}`}
-                    >
-                        {caseItem.id}
-                    </Link>
-                ))}
+                {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => {
+                    const isActive = currentCaseId === caseItem.id;
+                    
+                    return (
+                        <Link
+                            key={i}
+                            to={`/case/${caseItem.id}`}
+                            className={`${styles.caseNav} ${isActive ? styles.active : ''}`}
+                            style={isActive ? { backgroundColor: caseItem.bgColor } : {}}
+                        >
+                            {caseItem.id}
+                        </Link>
+                    );
+                })}
             </div>
         </div>
     )

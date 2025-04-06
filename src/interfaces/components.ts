@@ -25,4 +25,5 @@ export interface CasePanelInterface {
     nome: string;
     projeto: string;
     data:string
+    bgColor:string
 }

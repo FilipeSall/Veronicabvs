@@ -20,7 +20,7 @@ function Home() {
         {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => (
             <CaseNav 
             key={i}
-            path={caseItem.path}
+            path={`case/${caseItem.id}`}
             text={caseItem.id.toString()}
             caseValue={caseItem.tipoDeCase}
             />

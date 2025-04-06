@@ -18,8 +18,6 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
     };
     
     const currentCaseId = getCurrentCaseId();
-    
-
 
     return (
         <div className={styles.container}>

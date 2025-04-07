@@ -1,0 +1,111 @@
+:root {
+    --spacing-xs: 0.5rem; // 8px 
+    --spacing-sm: 1rem; // 16px
+    --spacing-md: 1.5rem; // 24px
+    --spacing-lg: 2rem; // 32px
+    --spacing-xl: 3rem; // 48px
+    --spacing-xxl: 3.5rem; // 56px
+}
+
+.case-header {
+    background-color: #FFFFFF;
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.case-content,
+.case-header {
+    padding: var(--spacing-sm) var(--spacing-xxl);
+}
+
+.header-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 58.45%;
+}
+
+.header-description span {
+    font-weight: 700;
+}
+
+.tools-text {
+    font-family: Exo;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.tools-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.tools-wrapper {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.case-summary {
+    font-family: "Inter";
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.case-summary>h1 {
+    font-weight: 700;
+    font-family: "Inter";
+}
+
+.case-cols {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xs) 0;
+}
+
+.case-row>span {
+    font-weight: 700;
+}
+
+// Media queries para responsividade
+@media (max-width: 768px) {
+
+    .case-content,
+    .case-header {
+        padding: var(--spacing-sm);
+    }
+
+    .case-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-description {
+        max-width: 100%;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .case-cols {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --spacing-xs: 0.375rem; // 6px 
+        --spacing-sm: 0.75rem; // 12px
+        --spacing-md: 1.125rem; // 18px
+        --spacing-lg: 1.5rem; // 24px
+        --spacing-xl: 2.25rem; // 36px
+        --spacing-xxl: 2.625rem; // 42px
+    }
+}

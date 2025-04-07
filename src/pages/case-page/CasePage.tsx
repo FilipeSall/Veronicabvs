@@ -5,6 +5,7 @@ import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
+import Case2Page from './case-02/Case2Page';
 
 function CasePage() {
     const { id } = useParams();
@@ -31,7 +32,7 @@ function CasePage() {
             projeto={caseData.projeto}
             />
             <section className={styles.caseWrapper}>
-
+                {id == '2' && <Case2Page />}
             </section>
             <SecaoContatos />
         </main>

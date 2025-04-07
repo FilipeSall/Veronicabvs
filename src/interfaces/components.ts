@@ -27,3 +27,7 @@ export interface CasePanelInterface {
     data:string
     bgColor:string
 }
+
+export interface ToolsIconInterface{
+    value: string
+}

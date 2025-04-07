@@ -1,0 +1,121 @@
+@import '../escopecasepage.scss';
+
+.pageContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container21 {
+    color: #FFFFFF;
+    margin-top: var(--spacing-xl);
+    font-family: Exo;
+    line-height: 100%;
+}
+
+.title21 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+}
+
+.paraApoio {
+    font-family: Exo;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: var(--spacing-xs);
+}
+
+.paraApoio span {
+    font-weight: 600;
+}
+
+.paraResultado {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.resultadoBoldTxt {
+    font-weight: 700;
+}
+
+.sectionTitle {
+    font-family: Exo;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-bottom: var(--spacing-md);
+}
+
+.sectionContent {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.imageContainer {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.videoWrapper21{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.video21{
+    width: 46.876%;
+    margin: 60px 0;
+}
+
+@media (max-width: 768px) {
+    .container21 {
+        margin-top: var(--spacing-lg);
+    }
+
+    .title21 {
+        font-size: 24px;
+    }
+
+    .sectionTitle {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container21 {
+        margin-top: var(--spacing-md);
+    }
+
+    .title21 {
+        font-size: 20px;
+    }
+
+    .paraApoio {
+        font-size: 14px;
+    }
+
+    .sectionTitle {
+        font-size: 20px;
+    }
+
+    .sectionContent {
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+}

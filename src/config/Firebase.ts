@@ -1,21 +1,30 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+import { getFunctions } from "firebase/functions";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Configuração do Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyC_ad8ZPZCvfETe-_FUSHzZ8qIWHvHmn5U",
-  authDomain: "veronicabvs-a7fac.firebaseapp.com",
-  projectId: "veronicabvs-a7fac",
-  storageBucket: "veronicabvs-a7fac.firebasestorage.app",
-  messagingSenderId: "802935806062",
-  appId: "1:802935806062:web:a03541a94058629399ae7f",
-  measurementId: "G-LZ03MH1J26"
+    apiKey: "AIzaSyC_ad8ZPZCvfETe-_FUSHzZ8qIWHvHmn5U",
+    authDomain: "veronicabvs-a7fac.firebaseapp.com",
+    projectId: "veronicabvs-a7fac",
+    storageBucket: "veronicabvs-a7fac.firebasestorage.app",
+    messagingSenderId: "802935806062",
+    appId: "1:802935806062:web:a03541a94058629399ae7f",
+    measurementId: "G-LZ03MH1J26"
 };
 
-// Initialize Firebase
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+
+// Inicializar serviços
 const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
+const functions = getFunctions(app);
+
+// Exportar instâncias inicializadas
+export { app, analytics, auth, db, storage, functions };

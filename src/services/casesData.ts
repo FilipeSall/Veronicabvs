@@ -6,7 +6,7 @@ import case4img from '../assets/cases/case4.webp';
 
 export const CasesData:CasesInterface[] = [
     {
-        id:1,
+        id:2,
         data:'2024/2',
         nome:'Case 01 - Mélliuz',
         projeto:'Doação de Cashback',
@@ -15,7 +15,7 @@ export const CasesData:CasesInterface[] = [
         imgHover: case1img
     },
     {
-        id:2,
+        id:1,
         data:'2022-2024',
         nome:'Case 02 - Bemol (Fintech)',
         projeto:'Conta Digital e Empréstimo Pessoal',

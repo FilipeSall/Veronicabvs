@@ -1,4 +1,4 @@
-@import '../escopecasepage.scss';
+@use '../escopecasepage.scss' as *;
 
 .pageContainer {
     width: 100%;

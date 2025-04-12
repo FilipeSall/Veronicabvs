@@ -5,7 +5,7 @@ import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
-import Case2Page from './case-01/CaseBemol';
+import Case2Page from './caseBemol/CaseBemol';
 
 function CasePage() {
     const { id } = useParams();

@@ -75,6 +75,16 @@
     font-weight: 700;
 }
 
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+
 // Media queries para responsividade
 @media (max-width: 768px) {
 

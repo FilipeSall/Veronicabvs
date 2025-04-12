@@ -1,8 +1,8 @@
-import styles from './case2page.module.scss';
+import styles from './casebemol.module.scss';
 import '../escopecasepage.scss';
 import tools from './tools';
 import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
-import video21 from '../../../assets/case02/resultadoVideo.mp4';
+import video21 from '../../../assets/caseBemol/resultadoVideo.mp4';
 import personalizacaoIco from '../../../assets/svgs/personalizacao.svg';
 import relevanciaIco from '../../../assets/svgs/relevancia.svg';
 
@@ -45,7 +45,7 @@ function CaseBemol() {
                     <h1 className={styles.title21}>2.1 Resgate de cliente via Push</h1>
                     <p className={styles.paraApoio}><span>Apoio: </span>Equipe de Marketing e equipe de Dados.</p>
                     <p className={styles.paraResultado}>
-                        <span className={styles.dot}></span>
+                        <span className={'dot'}></span>
                         <span className={styles.resultadoBoldTxt}>Resultado</span> - User Flow
                     </p>
                     <div className={styles.videoWrapper21}>
@@ -59,7 +59,7 @@ function CaseBemol() {
                     </div>
                     <div className={styles.resultWrapper}>
                         <div className={styles.resultCol}>
-                            <h1 className={styles.resultTitle}><span className={styles.dot}></span> Análise e oportunidade</h1>
+                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Análise e oportunidade</h1>
                             <p className={styles.resultPara}>Com o apoio da equipe de dados, identificamos uma <span>alta taxa de abandono</span> no <span>fluxo de contratação</span> de empréstimos pessoais, mesmo entre clientes com crédito pré-aprovado.</p>
                             <p className={styles.resultPara}>Para aprofundar a análise, realizei um <span>benchmarking</span> com outras contas digitais, investigando como lidam com a recuperação de usuários nesse mesmo contexto.</p>
                             <p className={styles.resultPara}>Ao final do Discovery, identifiquei a <span>oportunidade de recuperar</span> esses usuários por meio de uma comunicação mais <span>personalizada e direcionada</span>, incentivando a retomada do processo de contratação.</p>
@@ -87,7 +87,10 @@ function CaseBemol() {
                     </div>
 
                     <div className={styles.resultWrapper}>
-                        <h1 className={styles.resultTitle}><span className={styles.dot}></span> Funil de empréstimos</h1>
+                        <h1 className={styles.resultTitle}><span className={'dot'}></span> Funil de empréstimos</h1>
+                        <div className={styles.funilImgWrapper}>
+
+                        </div>
                     </div>
                 </section>
             </div>

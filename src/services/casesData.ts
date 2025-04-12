@@ -6,15 +6,6 @@ import case4img from '../assets/cases/case4.webp';
 
 export const CasesData:CasesInterface[] = [
     {
-        id:2,
-        data:'2024/2',
-        nome:'Case 01 - Mélliuz',
-        projeto:'Doação de Cashback',
-        path:'case-1',
-        bgColor:'#ED387B',
-        imgHover: case1img
-    },
-    {
         id:1,
         data:'2022-2024',
         nome:'Case 02 - Bemol (Fintech)',
@@ -23,6 +14,15 @@ export const CasesData:CasesInterface[] = [
         tipoDeCase:'sucesso',
         bgColor:'#526FDC',
         imgHover: case2img
+    },
+    {
+        id:2,
+        data:'2024/2',
+        nome:'Case 01 - Mélliuz',
+        projeto:'Doação de Cashback',
+        path:'case-1',
+        bgColor:'#ED387B',
+        imgHover: case1img
     },
     {
         id:3,
@@ -43,6 +43,5 @@ export const CasesData:CasesInterface[] = [
         bgColor:'#386681',
         imgHover: case4img
     },
-
 ]
 

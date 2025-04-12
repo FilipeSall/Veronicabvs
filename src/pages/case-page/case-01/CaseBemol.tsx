@@ -6,7 +6,7 @@ import video21 from '../../../assets/case02/resultadoVideo.mp4';
 import personalizacaoIco from '../../../assets/svgs/personalizacao.svg';
 import relevanciaIco from '../../../assets/svgs/relevancia.svg';
 
-function Case2Page() {
+function CaseBemol() {
     return (
         <section className={styles.pageContainer}>
             <div className='case-header'>
@@ -95,4 +95,4 @@ function Case2Page() {
     )
 }
 
-export default Case2Page
+export default CaseBemol

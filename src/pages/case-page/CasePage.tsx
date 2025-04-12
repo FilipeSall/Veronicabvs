@@ -5,14 +5,18 @@ import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
-import Case2Page from './case-02/Case2Page';
+import Case2Page from './case-01/CaseBemol';
 
 function CasePage() {
     const { id } = useParams();
     const [caseData, setCaseData] = useState<CasesInterface | null>(null);
 
     useEffect(() => {
-        const currentCase = CasesData.find(item => item.path === `case-${id}`);
+        const numericId = Number(id);
+        const currentCase = [...CasesData]
+            .sort((a, b) => a.id - b.id)
+            .find(item => item.id === numericId);
+
         if (currentCase) {
             setCaseData(currentCase);
         }
@@ -22,21 +26,20 @@ function CasePage() {
         return <div>Carregando...</div>;
     }
 
-
     return (
         <main className={styles.caseContainer}>
             <CasePanel
-            data={caseData.data}
-            nome={caseData.nome}
-            bgColor={caseData.bgColor}
-            projeto={caseData.projeto}
+                data={caseData.data}
+                nome={caseData.nome}
+                bgColor={caseData.bgColor}
+                projeto={caseData.projeto}
             />
             <section className={styles.caseWrapper}>
-                {id == '2' && <Case2Page />}
+                {caseData.id === 1 && <Case2Page />}
             </section>
             <SecaoContatos />
         </main>
     )
 }
 
-export default CasePage
+export default CasePage;

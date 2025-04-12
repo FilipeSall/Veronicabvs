@@ -7,13 +7,13 @@ import { getFunctions } from "firebase/functions";
 
 // Configuração do Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyC_ad8ZPZCvfETe-_FUSHzZ8qIWHvHmn5U",
-    authDomain: "veronicabvs-a7fac.firebaseapp.com",
-    projectId: "veronicabvs-a7fac",
-    storageBucket: "veronicabvs-a7fac.firebasestorage.app",
-    messagingSenderId: "802935806062",
-    appId: "1:802935806062:web:a03541a94058629399ae7f",
-    measurementId: "G-LZ03MH1J26"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Inicializar Firebase

@@ -5,6 +5,12 @@ import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import video21 from '../../../assets/caseBemol/resultadoVideo.mp4';
 import personalizacaoIco from '../../../assets/svgs/personalizacao.svg';
 import relevanciaIco from '../../../assets/svgs/relevancia.svg';
+import funilImg1 from '../../../assets/caseBemol/funilImg1.png';
+import funilImg2 from '../../../assets/caseBemol/funilImg2.png';
+import funilImg3 from '../../../assets/caseBemol/funilImg3.png';
+import funilImg4 from '../../../assets/caseBemol/funilImg4.png';
+import funilImg from '../../../assets/caseBemol/funil.png';
+import funilEmprestimoImg from '../../../assets/caseBemol/funilemprestimo.png';
 
 function CaseBemol() {
     return (
@@ -86,10 +92,46 @@ function CaseBemol() {
                         </div>
                     </div>
 
-                    <div className={styles.resultWrapper}>
+                    <div className={styles.containerWrapper}>
                         <h1 className={styles.resultTitle}><span className={'dot'}></span> Funil de empréstimos</h1>
                         <div className={styles.funilImgWrapper}>
+                            <div className={styles.funilImg}>
+                                <p>1</p>
+                                <img src={funilImg1} alt="foto do case" />
+                            </div>
+                            <div className={styles.funilImg}>
+                                <p>2</p>
+                                <img src={funilImg2} alt="foto do case" />
+                            </div>
+                            <div className={styles.funilImg}>
+                                <img src={funilImg} alt="foto do case" />
+                            </div>
+                            <div className={styles.funilImg}>
+                                <p>3</p>
+                                <img src={funilImg3} alt="foto do case" />
+                            </div>
+                            <div className={styles.funilImg}>
+                                <p>4</p>
+                                <img src={funilImg4} alt="foto do case" />
+                            </div>
+                        </div>
+                    </div>
 
+                    <div className={styles.containerWrapper}>
+                        <h1 className={styles.resultTitle}><span className={'dot'}></span> Régua de comunicação segmentada</h1>
+                        <img src={funilEmprestimoImg} alt='funil de emprestimo' />
+                    </div>
+
+                    <div className={styles.containerRowBetween}>
+                        <div className={styles.containerCol}>
+                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Régua de comunicação segmentada</h1>
+                            <p className='case-para'>Para avaliar o impacto da solução, foram analisadas métricas como o <span>aumento da taxa de retorno</span> ao fluxo de contratação, da <span>taxa de conversão</span> em empréstimos efetivados e da <span>taxa de engajamento</span> com as notificações. </p>
+                            <p className='case-para'>Com os primeiros resultados, tive apoio do time de marketing nos ajustes na copy e no <span>timing</span> dos pushs.</p>
+                        </div>
+
+                        <div className={styles.containerCol}>
+                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Régua de comunicação segmentada</h1>
+                            <p className='case-para'>O desempenho da estratégia foi acompanhado por relatórios periódicos, permitindo a identificação de padrões e ajustes contínuos. O plano inclui <span>monitoramento periódico das interações</span> dos usuários com os pushs, o <span>tempo médio para retorno</span> ao fluxo e <span>variações nas taxas de conversão</span>.</p>
                         </div>
                     </div>
                 </section>

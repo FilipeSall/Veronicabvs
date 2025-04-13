@@ -7,6 +7,12 @@
     --spacing-xxl: 3.5rem; // 56px
 }
 
+.case-title{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+}
+
 .case-header {
     background-color: #FFFFFF;
     width: 100%;
@@ -75,13 +81,17 @@
     font-weight: 700;
 }
 
-.dot {
+.dot, .dot-black {
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background-color: #FFFFFF;
     display: inline-block;
     opacity: 0.7;
+}
+
+.dot-black{
+    background-color: #000000;
 }
 
 .case-para{

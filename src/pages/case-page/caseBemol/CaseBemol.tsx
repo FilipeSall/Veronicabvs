@@ -11,6 +11,7 @@ import funilImg3 from '../../../assets/caseBemol/funilImg3.png';
 import funilImg4 from '../../../assets/caseBemol/funilImg4.png';
 import funilImg from '../../../assets/caseBemol/funil.png';
 import funilEmprestimoImg from '../../../assets/caseBemol/funilemprestimo.png';
+import fluxogramaVideo from '../../../assets/caseBemol/FLUXOGRAMAS.mp4';
 
 function CaseBemol() {
     return (
@@ -36,19 +37,19 @@ function CaseBemol() {
                     <h1>Sumário</h1>
                     <div className='case-cols'>
                         <div className='case-col'>
-                            <p className='case-row'><span>2.1</span> Resgate de cliente pré aprovado via Push</p>
-                            <p className='case-row'><span>2.2</span> Fluxogramas completos de Empréstimo Pessoal</p>
+                            <p className='case-row'><span>1.1</span> Resgate de cliente pré aprovado via Push</p>
+                            <p className='case-row'><span>1.2</span> Fluxogramas completos de Empréstimo Pessoal</p>
                         </div>
                         <div className='case-col'>
-                            <p className='case-row'><span>2.3</span> Data-Driven Design</p>
-                            <p className='case-row'><span>2.4</span> Escolha da data do vencimento das parcelas </p>
+                            <p className='case-row'><span>1.3</span> Data-Driven Design</p>
+                            <p className='case-row'><span>1.4</span> Escolha da data do vencimento das parcelas </p>
                         </div>
                     </div>
                 </section>
 
                 {/* Conteúdo da seção 2.1 */}
-                <section className={styles.container21}>
-                    <h1 className={styles.title21}>2.1 Resgate de cliente via Push</h1>
+                <section className={styles.container11}>
+                    <h1 className={'case-title'}>1.1 Resgate de cliente via Push</h1>
                     <p className={styles.paraApoio}><span>Apoio: </span>Equipe de Marketing e equipe de Dados.</p>
                     <p className={styles.paraResultado}>
                         <span className={'dot'}></span>
@@ -136,6 +137,15 @@ function CaseBemol() {
                     </div>
                 </section>
             </div>
+            <section className={styles.container12}>
+                <h1 className='case-title'>1.2 Fluxogramas completos do Empréstimo Pessoal</h1>
+                <div className={styles.videoContainerWrapper12}>
+                    <h2 className={styles.resultTitle}><span className={'dot-black'}></span> Resultado</h2>
+                    <div className={styles.videoWrapper12}>
+                        <video autoPlay loop src={fluxogramaVideo} className={styles.fluxogramaVideo}/>
+                    </div>
+                </div>
+            </section>
         </section>
     )
 }

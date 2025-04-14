@@ -19,7 +19,7 @@ import arrowUp from '../../../assets/svgs/arrowUp.svg';
 
 function CaseBemol() {
     return (
-        <section className={styles.pageContainer}>
+        <section className='pageContainer'>
             <div className='case-header' id='header-bemol'>
                 <p className='header-description'>
                     <span>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas na etapa de discoberta à entrega e estratégia do acompanhamento de métricas pós lançamento.

@@ -5,7 +5,8 @@ import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
 import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
-import Case2Page from './caseBemol/CaseBemol';
+import CaseBemol from './caseBemol/CaseBemol';
+import AppBemol from './appBemol/AppBemol';
 
 function CasePage() {
     const { id } = useParams();
@@ -35,7 +36,8 @@ function CasePage() {
                 projeto={caseData.projeto}
             />
             <section className={styles.caseWrapper}>
-                {caseData.id === 1 && <Case2Page />}
+                {caseData.id === 1 && <CaseBemol />}
+                {caseData.id === 2 && <AppBemol />}
             </section>
             <SecaoContatos />
         </main>

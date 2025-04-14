@@ -12,6 +12,8 @@ import funilImg4 from '../../../assets/caseBemol/funilImg4.png';
 import funilImg from '../../../assets/caseBemol/funil.png';
 import funilEmprestimoImg from '../../../assets/caseBemol/funilemprestimo.png';
 import fluxogramaVideo from '../../../assets/caseBemol/FLUXOGRAMAS.mp4';
+import npsImg from '../../../assets/caseBemol/nps.png';
+import dataImg from '../../../assets/caseBemol/data.png';
 
 function CaseBemol() {
     return (
@@ -47,7 +49,7 @@ function CaseBemol() {
                     </div>
                 </section>
 
-                {/* Conteúdo da seção 2.1 */}
+                {/* Conteúdo da seção 1.1 */}
                 <section className={styles.container11}>
                     <h1 className={'case-title'}>1.1 Resgate de cliente via Push</h1>
                     <p className={styles.paraApoio}><span>Apoio: </span>Equipe de Marketing e equipe de Dados.</p>
@@ -125,24 +127,100 @@ function CaseBemol() {
 
                     <div className={styles.containerRowBetween}>
                         <div className={styles.containerCol}>
-                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Régua de comunicação segmentada</h1>
+                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Métricas e melhorias</h1>
                             <p className='case-para'>Para avaliar o impacto da solução, foram analisadas métricas como o <span>aumento da taxa de retorno</span> ao fluxo de contratação, da <span>taxa de conversão</span> em empréstimos efetivados e da <span>taxa de engajamento</span> com as notificações. </p>
                             <p className='case-para'>Com os primeiros resultados, tive apoio do time de marketing nos ajustes na copy e no <span>timing</span> dos pushs.</p>
                         </div>
 
                         <div className={styles.containerCol}>
-                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Régua de comunicação segmentada</h1>
+                            <h1 className={styles.resultTitle}><span className={'dot'}></span> Plano de monitoramento</h1>
                             <p className='case-para'>O desempenho da estratégia foi acompanhado por relatórios periódicos, permitindo a identificação de padrões e ajustes contínuos. O plano inclui <span>monitoramento periódico das interações</span> dos usuários com os pushs, o <span>tempo médio para retorno</span> ao fluxo e <span>variações nas taxas de conversão</span>.</p>
                         </div>
                     </div>
                 </section>
             </div>
+            {/* Conteúdo 1.2*/}
             <section className={styles.container12}>
                 <h1 className='case-title'>1.2 Fluxogramas completos do Empréstimo Pessoal</h1>
                 <div className={styles.videoContainerWrapper12}>
                     <h2 className={styles.resultTitle}><span className={'dot-black'}></span> Resultado</h2>
                     <div className={styles.videoWrapper12}>
-                        <video autoPlay loop src={fluxogramaVideo} className={styles.fluxogramaVideo}/>
+                        <video autoPlay loop src={fluxogramaVideo} className={styles.fluxogramaVideo} />
+                    </div>
+                </div>
+
+                <div className={styles.containerRowBetween}>
+                    <div className={styles.containerCol}>
+                        <h2 className={styles.resultTitle}><span className={'dot-black'}></span> Diagnóstico e oportunidade</h2>
+                        <p className='case-para'>Diante da <span>complexidade do produto</span> de empréstimo pessoal, tomei a <span>iniciativa</span> de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato. </p>
+                        <p className='case-para'>
+                            O objetivo foi consolidar uma <span>visão completa do processo</span>, a criação de material de <span>referência</span> para <span>otimizar o trabalho</span> de diferentes áreas, além de servir para identificar <span>oportunidades de melhoria</span>.
+                        </p>
+                    </div>
+
+                    <div className={styles.containerCol}>
+                        <h2 className={styles.resultTitle}><span className={'dot-black'}></span> Imprevisto e solução</h2>
+                        <p className='case-para'>
+                            Durante a documentação, percebi <span>inconsistências nas informações</span> fornecidas sobre o funcionamento real do fluxo. Diferentes áreas possuíam versões divergentes do processo, dificultando a criação de um material confiável.
+                        </p>
+                        <p className="case-para">
+                            Para solucionar esse problema, implementei uma <span>validação estruturada</span>: ao final de cada etapa mapeada, colhi a assinatura do responsável da área correspondente, garantindo alinhamento e precisão nos fluxogramas.
+                        </p>
+                    </div>
+                </div>
+
+                <div className={styles.containerColFull}>
+                    <h2 className={styles.resultTitle}><span className={'dot-black'}></span> Entrega de valor</h2>
+                    <div className={styles.containerRowEvenly}>
+                        <div className={styles.valueItemWrapper}>
+                            <h3>Referência oficial</h3>
+                            <p>
+                                Promove o entendimento do produto, alinha times e serve como base para discussões e planejamento.
+                            </p>
+                            <p className={styles.valueItemNumber}>1</p>
+                        </div>
+
+                        <div className={styles.valueItemWrapper}>
+                            <h3>Otimização do trabalho</h3>
+                            <p>
+                                Reduz dúvidas e facilita a compreensão dos processos por diferentes áreas da empresa.
+                            </p>
+                            <p className={styles.valueItemNumber}>2</p>
+                        </div>
+
+                        <div className={styles.valueItemWrapper}>
+                            <h3>Visão estratégica</h3>
+                            <p>
+                                Oferece uma visão ampla do produto, alinhando expectativas entre stakeholders e orientando decisões mais eficientes.
+                            </p>
+                            <p className={styles.valueItemNumber}>3</p>
+                        </div>
+
+                        <div className={styles.valueItemWrapper}>
+                            <h3>Impacto contínuo</h3>
+                            <p>
+                                Material ainda utilizado como base para aprimoramentos e novas melhorias no produto.
+                            </p>
+                            <p className={styles.valueItemNumber}>4</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/*Conteúdo 1.3*/}
+            <section className={styles.container13} style={{ background: '#4c31e0' }}>
+                <h1>1.3 Data-Driven</h1>
+                <p className='case-para'>Propostas guiadas pela abordagem de Data-Driven Design — desde a identificação da dor, validação do problema, até a definição da solução e plano de acompanhamento pós lançamento.</p>
+                <div className='content-row__full'>
+                    <div className={styles.containerCol}>
+                        <p className={styles.subtitle}><span className={'dot'}></span>Cálculo e análise do NPS da Conta Digital 2023.</p>
+                        <img src={npsImg} alt='dados do NPS' />
+                        <p className={styles.imgObsLegend}>Obs. Dados sensíveis censurados</p>
+                    </div>
+                    <div className={styles.containerCol}>
+                        <p className={styles.subtitle}><span className={'dot'}></span>Apresentações mensais da análise da taxa de cancelamento de contas.</p>
+                        <img src={dataImg} alt='Foto contendo graficos' />
+                        <p className={styles.imgObsLegend}>Obs. Dados sensíveis censurados</p>
                     </div>
                 </div>
             </section>

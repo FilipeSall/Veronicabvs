@@ -104,7 +104,12 @@
     font-weight: 700;
 }
 
-// Media queries para responsividade
+.content-row__full{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 @media (max-width: 768px) {
 
     .case-content,

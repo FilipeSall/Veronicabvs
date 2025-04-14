@@ -84,7 +84,8 @@
     width: 40%;
 }
 
-.resultTitle {
+.resultTitle,
+.subtitle {
     display: flex;
     align-items: center;
     font-weight: 700;
@@ -173,38 +174,99 @@
     margin: 50px 0;
 }
 
-.containerCol {
+.containerRowEvenly {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.containerCol,
+.containerColFull {
     display: flex;
     flex-direction: column;
     width: 45%;
     gap: 24px;
 }
 
-.container12{
+.containerColFull {
+    width: 100% !important;
+}
+
+.container12 {
     padding: 56px;
     background-color: #ffffff;
 }
 
-.videoContainerWrapper12{
+.videoContainerWrapper12 {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: 24px 0;
     gap: 24px;
     justify-content: center;
-    
+
 }
 
-.videoWrapper12{
+.videoWrapper12 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.fluxogramaVideo{
+.fluxogramaVideo {
     aspect-ratio: 16/9;
     width: 69%;
+}
+
+.valueItemWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 30%;
+    text-align: center;
+    gap: 8px;
+}
+
+.valueItemWrapper h3 {
+    font-weight: 700;
+}
+
+.valueItemWrapper p {
+    font-size: 16px;
+}
+
+.valueItemNumber {
+    position: absolute;
+    color: #4C31E026;
+    font-size: 100px !important;
+    text-shadow: 2px 3px 4px #00000040;
+    top: 30%;
+}
+
+.container13 {
+    color: #FFFFFF;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container13 h1 {
+    font-size: 28px;
+}
+
+.subtitle {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+.imgObsLegend {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 100%;
 }
 
 @media (max-width: 768px) {

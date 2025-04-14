@@ -14,11 +14,13 @@ import funilEmprestimoImg from '../../../assets/caseBemol/funilemprestimo.png';
 import fluxogramaVideo from '../../../assets/caseBemol/FLUXOGRAMAS.mp4';
 import npsImg from '../../../assets/caseBemol/nps.png';
 import dataImg from '../../../assets/caseBemol/data.png';
+import videoAgende from '../../../assets/caseBemol/EscolhaData.mp4';
+import arrowUp from '../../../assets/svgs/arrowUp.svg';
 
 function CaseBemol() {
     return (
         <section className={styles.pageContainer}>
-            <div className='case-header'>
+            <div className='case-header' id='header-bemol'>
                 <p className='header-description'>
                     <span>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas na etapa de discoberta à entrega e estratégia do acompanhamento de métricas pós lançamento.
                 </p>
@@ -224,6 +226,28 @@ function CaseBemol() {
                     </div>
                 </div>
             </section>
+
+            {/* Seção 1.4*/}
+            <section className={styles.container14}>
+                <div className={styles.titleWrapper14}>
+                    <h1>1.4 Escolha da data do vencimento das parcelas</h1>
+                    <p className='case-para'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende</p>
+                </div>
+                <ul>
+                    <li>Identificação da dor</li>
+                    <li>Pesquisa</li>
+                    <li>Coleta e análise de dados</li>
+                    <li>Design System <br />(documentação técnica de novo componente)</li>
+                    <li>Teste com usuários</li>
+                </ul>
+
+                <div className={styles.videoWrapper21}>
+                    <video autoPlay loop src={videoAgende} className={styles.video21} />
+                </div>
+            </section>
+            <a href='#header-bemol' className='scrollup-case'>
+                <img src={arrowUp} alt='Seta para cima'/>
+            </a>
         </section>
     )
 }

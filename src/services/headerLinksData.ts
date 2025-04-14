@@ -17,7 +17,7 @@ export const internalLinksHeader: LinkInterface[] = [
 export const externalLinksHeader: ExternalLinkInterface[] = [
     {
         text:'Medium',
-        path:'/',
+        path:'https://medium.com/@veronicabvs',
         icon: FaMedium 
     },
     {

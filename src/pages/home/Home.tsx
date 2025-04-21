@@ -10,10 +10,10 @@ function Home() {
 
       <div className={styles.titleSectionContainer}>
         <div className={styles.titlesWrapper}>
-          <p className={styles.textoAnimationHover}>Primavérn<span className={styles.textDegrade}>ica</span></p>
+          <p id={styles.privameraTxt}>Primavérn<span className={styles.textDegrade}>ica</span></p>
           <h1 className={styles.title}>Verônica <img src={solicon} alt='icone de sol'/> </h1>
-          <p className={styles.textoAnimationHover}>Outôn<span className={styles.textDegrade}>ica</span></p>
-          <p className={styles.textoAnimationHover}>Invérn<span className={styles.textDegrade}>ica</span></p>
+          <p id={styles.outonoTxt}>Outôn<span className={styles.textDegrade}>ica</span></p>
+          <p id={styles.invernoTxt}>Invérn<span className={styles.textDegrade}>ica</span></p>
         </div>
         <h2 className={styles.subtitle}>Product Designer</h2>
       </div>

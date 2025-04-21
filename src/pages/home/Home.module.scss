@@ -45,6 +45,7 @@
 
 .textDegrade {
     color: var(--fadeTextColor);
+    transition: all 0.3s ease;
 }
 
 .subtitle {
@@ -71,4 +72,26 @@
 .footerTxt {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
+}
+
+#privameraTxt,
+#outonoTxt,
+#invernoTxt {
+    transition: all 0.3s ease;
+}
+
+#privameraTxt:hover:not(.textDegrade) {
+    color: #F03599B2;
+}
+
+#outonoTxt:hover:not(.textDegrade) {
+    color: #905410B2;
+}
+
+#invernoTxt:hover:not(.textDegrade) {
+    color: #1E96FFB2;
+}
+
+p:hover .textDegrade {
+    color: #0000004D;
 }

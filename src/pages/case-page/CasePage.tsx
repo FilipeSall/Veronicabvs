@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import CasePanel from '../../components/CasePanel/CasePanel';
-import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
 import CaseBemol from './caseBemol/CaseBemol';
 import AppBemol from './appBemol/AppBemol';
 

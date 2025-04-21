@@ -8,9 +8,9 @@ export const CasesData:CasesInterface[] = [
     {
         id:1,
         data:'2022-2024',
-        nome:'Case 02 - Bemol (Fintech)',
+        nome:`Case 01 - Bemol (Fintech)`,
         projeto:'Conta Digital e Empréstimo Pessoal',
-        path:'case-2',
+        path:'case-1',
         tipoDeCase:'sucesso',
         bgColor:'#526FDC',
         imgHover: case2img
@@ -18,18 +18,18 @@ export const CasesData:CasesInterface[] = [
     {
         id:2,
         data:'2022-2024',
-        nome:'Case 03 - Bemol (e-commerce)',
+        nome:'Case 02 - Bemol (e-commerce)',
         projeto:'E-commerce App Bemol',
-        path:'case-3',
+        path:'case-2',
         bgColor:'#F23434',
         imgHover: case3img
     },
     {
         id:3,
         data:'2024/2',
-        nome:'Case 01 - Mélliuz',
+        nome:'Case 03 - Mélliuz',
         projeto:'Doação de Cashback',
-        path:'case-1',
+        path:'case-3',
         bgColor:'#ED387B',
         imgHover: case1img
     },

@@ -4,7 +4,6 @@ import { Ferramentas } from '../../services/FerramentasData';
 import Ferramenta from './components/ferramenta/Ferramenta';
 import { FerramentaInterface } from '../../interfaces/components';
 import empresasImg from '../../assets/Empreas.webp'
-import SecaoContatos from '../../components/secao-contatos/SecaoContatos';
 
 function Sobremim() {
     return (

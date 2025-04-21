@@ -39,7 +39,6 @@ function CasePage() {
                 {caseData.id === 1 && <CaseBemol />}
                 {caseData.id === 2 && <AppBemol />}
             </section>
-            <SecaoContatos />
         </main>
     )
 }

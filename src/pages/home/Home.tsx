@@ -2,6 +2,7 @@ import CaseNav from '../../components/CaseNav/CaseNav';
 import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import styles from './Home.module.scss';
+import solicon from '../../assets/svgs/sol.svg';
 
 function Home() {
   return (
@@ -9,10 +10,10 @@ function Home() {
 
       <div className={styles.titleSectionContainer}>
         <div className={styles.titlesWrapper}>
-          <p>Primavérn<span className={styles.textDegrade}>ica</span></p>
-          <h1 className={styles.title}>Verônica</h1>
-          <p>Outôn<span className={styles.textDegrade}>ica</span></p>
-          <p>Invérn<span className={styles.textDegrade}>ica</span></p>
+          <p className={styles.textoAnimationHover}>Primavérn<span className={styles.textDegrade}>ica</span></p>
+          <h1 className={styles.title}>Verônica <img src={solicon} alt='icone de sol'/> </h1>
+          <p className={styles.textoAnimationHover}>Outôn<span className={styles.textDegrade}>ica</span></p>
+          <p className={styles.textoAnimationHover}>Invérn<span className={styles.textDegrade}>ica</span></p>
         </div>
         <h2 className={styles.subtitle}>Product Designer</h2>
       </div>

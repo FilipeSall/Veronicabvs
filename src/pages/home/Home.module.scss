@@ -17,6 +17,19 @@
     font-size: 40px;
     line-height: 100%;
     margin: 10px 0;
+
+    img {
+        opacity: 0;
+        transform: translateX(-10px);
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        img {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 }
 
 .titlesWrapper>p {
@@ -43,11 +56,11 @@
     line-height: 100%;
 }
 
-.NavCasesWrapper{
+.NavCasesWrapper {
     display: flex;
 }
 
-.contatoWrapper{
+.contatoWrapper {
     height: 100%;
     flex-direction: column;
     display: flex;
@@ -55,7 +68,7 @@
     justify-content: center;
 }
 
-.footerTxt{
+.footerTxt {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
 }

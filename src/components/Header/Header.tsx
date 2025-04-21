@@ -23,6 +23,7 @@ function Header() {
             icon={link.icon}
             path={link.path}
             text={link.text}
+            hoverIcon={link.hoverIcon}
           />
         ))}
       </div>

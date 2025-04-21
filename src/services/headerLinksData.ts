@@ -2,6 +2,7 @@ import { ExternalLinkInterface, LinkInterface } from "../interfaces/components";
 import { FaMedium } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
 
 export const internalLinksHeader: LinkInterface[] = [
     {
@@ -23,7 +24,8 @@ export const externalLinksHeader: ExternalLinkInterface[] = [
     {
         text:'LinkedIn',
         path:'https://www.linkedin.com/in/veronicabvs/',
-        icon: FaLinkedinIn
+        icon: FaLinkedinIn,
+        hoverIcon:FaLinkedin
     },
     {
         text:'Envie um e-mail',

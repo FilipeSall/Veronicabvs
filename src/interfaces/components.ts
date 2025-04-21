@@ -7,7 +7,7 @@ export interface LinkInterface {
 
 export interface ExternalLinkInterface extends LinkInterface{
     icon:IconType  
-    hoverIcon:IconType
+    hoverIcon?:IconType
 }
 
 export interface FerramentaInterface {

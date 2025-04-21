@@ -42,8 +42,6 @@ function Sobremim() {
                 <section className={styles.empresasWrapper}>
                     <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
                 </section>
-
-                    <SecaoContatos />
             </section>
         </main>
     )

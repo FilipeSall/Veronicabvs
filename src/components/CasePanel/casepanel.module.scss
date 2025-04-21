@@ -66,8 +66,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s ease-in-out;
 }
 
+
+
 .active{
-    background-color: #416FE2;
+    font-weight: bolder;
 }

@@ -3,11 +3,13 @@ import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './casepanel.module.scss';
+import { useState } from 'react';
 
 function CasePanel({ data, nome, projeto }: CasePanelInterface) {
 
     const location = useLocation();
     const currentPath = location.pathname;
+    const [hoveredId, setHoveredId] = useState<number | null>(null);
 
     const getCurrentCaseId = () => {
         if (currentPath.startsWith('/case/')) {
@@ -16,7 +18,7 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
         }
         return null;
     };
-    
+
     const currentCaseId = getCurrentCaseId();
 
     return (
@@ -36,13 +38,16 @@ function CasePanel({ data, nome, projeto }: CasePanelInterface) {
             <div className={styles.navWrapper}>
                 {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => {
                     const isActive = currentCaseId === caseItem.id;
-                    
+                    const isHovered = hoveredId === caseItem.id;
+
                     return (
                         <Link
                             key={i}
                             to={`/case/${caseItem.id}`}
                             className={`${styles.caseNav} ${isActive ? styles.active : ''}`}
-                            style={isActive ? { backgroundColor: caseItem.bgColor } : {}}
+                            style={isActive || isHovered ? { backgroundColor: caseItem.bgColor } : {}}
+                            onMouseEnter={() => setHoveredId(caseItem.id)}
+                            onMouseLeave={() => setHoveredId(null)}
                         >
                             {caseItem.id}
                         </Link>

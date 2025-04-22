@@ -34,6 +34,7 @@ function CasePage() {
                 bgColor={caseData.bgColor}
                 projeto={caseData.projeto}
             />
+            
             <section className={styles.caseWrapper}>
                 {caseData.id === 1 && <CaseBemol />}
                 {caseData.id === 2 && <AppBemol />}

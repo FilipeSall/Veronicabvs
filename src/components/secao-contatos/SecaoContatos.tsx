@@ -1,21 +1,25 @@
 import styles from './secaocontatos.module.scss'
 import ExternalLink from '../ExternalLink/ExternalLink'
-import { FaLinkedinIn } from 'react-icons/fa6'
-import { MdEmail } from 'react-icons/md'
+import linkedinicon from '../../assets/svgs/links/linkedin.svg';
+import linkedhovericon from '../../assets/svgs/links/linkedinhover.svg';
+import emailIcon from '../../assets/svgs/links/email.svg';
+import emailhovericon from '../../assets/svgs/links/emailhover.svg';
 
 function SecaoContatos() {
     return (
         <section className={styles.contatoWrapper}>
             <ExternalLink
                 path='https://www.linkedin.com/in/veronicabvs/'
+                hoverIcon={linkedhovericon}
                 text='LinkedIn'
-                icon={FaLinkedinIn}
+                icon={linkedinicon}
             />
 
             <ExternalLink
                 path='/'
                 text="Envie um e-mail"
-                icon={MdEmail}
+                icon={emailIcon}
+                hoverIcon={emailhovericon}
             />
         </section>
     )

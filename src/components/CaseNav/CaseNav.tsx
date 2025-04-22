@@ -16,11 +16,6 @@ function CaseNav({ caseValue, path, text, bgColor, imgHover, projectName }: Case
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {caseValue && isHovered && (
-                <p className={styles.caseTypeIndicator}>
-                    {caseValue === 'sucesso' ? 'Case de Sucesso' : 'Case Premiado'}
-                </p>
-            )}
             <div
                 className={styles.caseContent}
                 style={{ justifyContent: isHovered ? 'space-between' : 'center' }}
@@ -54,6 +49,11 @@ function CaseNav({ caseValue, path, text, bgColor, imgHover, projectName }: Case
                         alt={`Caso ${caseValue}`}
                         className={styles.caseIcon}
                     />
+                    {caseValue && isHovered && (
+                        <p className={styles.caseTypeIndicator}>
+                            {caseValue === 'sucesso' ? 'Case de Sucesso' : 'Case Premiado'}
+                        </p>
+                    )}
                 </div>
             )}
         </Link>

@@ -13,10 +13,28 @@ function ExternalLink({ icon: Icon, path, text, hoverIcon: HoverIcon }: External
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            {isHovered && HoverIcon ? <HoverIcon /> : <Icon />}
+            <div className={styles.iconWrapper}>
+                <div className={`${styles.iconContainer} ${isHovered ? styles.hidden : ''}`}>
+                    {typeof Icon === 'string' ? (
+                        <img src={Icon} alt={text} className={styles.icon} />
+                    ) : (
+                        <Icon />
+                    )}
+                </div>
+                
+                {HoverIcon && (
+                    <div className={`${styles.iconContainer} ${styles.hoverIcon} ${isHovered ? styles.visible : ''}`}>
+                        {typeof HoverIcon === 'string' ? (
+                            <img src={HoverIcon} alt={text} className={styles.icon} />
+                        ) : (
+                            <HoverIcon />
+                        )}
+                    </div>
+                )}
+            </div>
             {text}
         </a>
-    )
+    );
 }
 
-export default ExternalLink
+export default ExternalLink;

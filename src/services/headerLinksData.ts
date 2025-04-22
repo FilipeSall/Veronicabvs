@@ -1,7 +1,10 @@
 import { ExternalLinkInterface, LinkInterface } from "../interfaces/components";
-import { FaMedium } from "react-icons/fa6";
-import { FaLinkedinIn, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import mediumIcon from '../assets/svgs/links/medium.svg';
+import mediumHoverIcon from '../assets/svgs/links/mediumhover.svg';
+import linkedinIcon from '../assets/svgs/links/linkedin.svg';
+import linkedinHoverIcon from '../assets/svgs/links/linkedinhover.svg';
+import emailIcon from '../assets/svgs/links/email.svg';
+import emailHoverIcon from '../assets/svgs/links/emailhover.svg';
 
 export const internalLinksHeader: LinkInterface[] = [
     {
@@ -18,17 +21,19 @@ export const externalLinksHeader: ExternalLinkInterface[] = [
     {
         text:'Medium',
         path:'https://medium.com/@veronicabvs',
-        icon: FaMedium 
+        icon: mediumIcon,
+        hoverIcon:mediumHoverIcon
     },
     {
         text:'LinkedIn',
         path:'https://www.linkedin.com/in/veronicabvs/',
-        icon: FaLinkedinIn,
-        hoverIcon:FaLinkedin
+        icon: linkedinIcon,
+        hoverIcon:linkedinHoverIcon
     },
     {
         text:'Envie um e-mail',
         path:'/',
-        icon:MdEmail
+        icon:emailIcon,
+        hoverIcon:emailHoverIcon
     }
 ]

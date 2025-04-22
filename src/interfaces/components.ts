@@ -6,7 +6,7 @@ export interface LinkInterface {
 }
 
 export interface ExternalLinkInterface extends LinkInterface{
-    icon:IconType  
+    icon:IconType | string
     hoverIcon?:IconType | string
 }
 

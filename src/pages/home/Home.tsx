@@ -11,13 +11,16 @@ function Home() {
       <div className={styles.titleSectionContainer}>
         <div className={styles.titlesWrapper}>
           <p id={styles.privameraTxt}>Primavérn<span className={styles.textDegrade}>ica</span></p>
-          <h1 className={styles.title}>Verônica <img src={solicon} alt='icone de sol'/> </h1>
+          <div className={styles.subtitleWrapper}>
+            <h1 className={styles.title}><img src={solicon} alt='icone de sol' /> Verônica</h1>
+            <h2 className={styles.subtitle}>- Product Designer</h2>
+          </div>
           <p id={styles.outonoTxt}>Outôn<span className={styles.textDegrade}>ica</span></p>
           <p id={styles.invernoTxt}>Invérn<span className={styles.textDegrade}>ica</span></p>
         </div>
-        <h2 className={styles.subtitle}>Product Designer</h2>
+
       </div>
-      
+
       <div className={styles.NavCasesWrapper}>
         {CasesData
           .sort((a, b) => a.id - b.id)

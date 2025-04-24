@@ -19,21 +19,21 @@ export const internalLinksHeader: LinkInterface[] = [
 
 export const externalLinksHeader: ExternalLinkInterface[] = [
     {
-        text:'Medium',
-        path:'https://medium.com/@veronicabvs',
-        icon: mediumIcon,
-        hoverIcon:mediumHoverIcon
-    },
-    {
-        text:'LinkedIn',
-        path:'https://www.linkedin.com/in/veronicabvs/',
+        text: 'LinkedIn',
+        path: 'https://www.linkedin.com/in/veronicabvs/',
         icon: linkedinIcon,
-        hoverIcon:linkedinHoverIcon
+        hoverIcon: linkedinHoverIcon
     },
     {
-        text:'Envie um e-mail',
-        path:'/',
-        icon:emailIcon,
-        hoverIcon:emailHoverIcon
-    }
+        text: 'Envie um e-mail',
+        path: '/',
+        icon: emailIcon,
+        hoverIcon: emailHoverIcon
+    },
+    {
+        text: 'Medium',
+        path: 'https://medium.com/@veronicabvs',
+        icon: mediumIcon,
+        hoverIcon: mediumHoverIcon
+    },
 ]

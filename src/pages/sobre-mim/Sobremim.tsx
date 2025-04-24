@@ -26,19 +26,23 @@ function Sobremim() {
                 </p>
 
                 {/* Seção de ferramentas*/}
-                <section className={styles.ferramentasWrapper}>
-                    <div className={styles.ferramentasInner}>
-                        {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
-                            <Ferramenta key={`original-${i}`} {...ferramenta} />
-                        ))}
-                        {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
-                            <Ferramenta key={`duplicate-${i}`} {...ferramenta} />
-                        ))}
+                <section className={styles.ferramentasSection}>
+                    <p>Principais ferramentas:</p>
+                    <div className={styles.ferramentasWrapper}>
+                        <div className={styles.ferramentasInner}>
+                            {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
+                                <Ferramenta key={`original-${i}`} {...ferramenta} />
+                            ))}
+                            {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
+                                <Ferramenta key={`duplicate-${i}`} {...ferramenta} />
+                            ))}
+                        </div>
                     </div>
                 </section>
 
                 {/* Seção das empresas*/}
                 <section className={styles.empresasWrapper}>
+                    <p>Empresas por onde passei:</p>
                     <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
                 </section>
             </section>

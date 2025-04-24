@@ -16,7 +16,7 @@ function SecaoContatos() {
             />
 
             <ExternalLink
-                path='/'
+                path='mailto:vebarbosa@hotmail.com'
                 text="Envie um e-mail"
                 icon={emailIcon}
                 hoverIcon={emailhovericon}

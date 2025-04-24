@@ -26,7 +26,7 @@ export const externalLinksHeader: ExternalLinkInterface[] = [
     },
     {
         text: 'Envie um e-mail',
-        path: '/',
+        path: '/mailto:vebarbosa@hotmail.com',
         icon: emailIcon,
         hoverIcon: emailHoverIcon
     },

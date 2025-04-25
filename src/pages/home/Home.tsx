@@ -12,7 +12,7 @@ function Home() {
         <div className={styles.titlesWrapper}>
           <p id={styles.privameraTxt}>Primavérn<span className={styles.textDegrade}>ica</span></p>
           <div className={styles.subtitleWrapper}>
-            <h1 className={styles.title}><img src={solicon} alt='icone de sol' /> Verônica</h1>
+            <h1 className={styles.title}><img src={solicon} alt='icone de sol' /> Verônica Silva</h1>
             <h2 className={styles.subtitle}>- Product Designer</h2>
           </div>
           <p id={styles.outonoTxt}>Outôn<span className={styles.textDegrade}>ica</span></p>

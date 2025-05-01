@@ -9,6 +9,7 @@ function Home() {
     <section className={styles.homeContainer}>
 
       <div className={styles.titleSectionContainer}>
+
         <div className={styles.titlesWrapper}>
           <p id={styles.privameraTxt}>Primavérn<span className={styles.textDegrade}>ica</span></p>
           <div className={styles.subtitleWrapper}>
@@ -38,7 +39,7 @@ function Home() {
       </div>
 
       <div className={styles.contatoWrapper}>
-        <p className={styles.footerTxt}>Combine comigo a apresentação de case de sucesso</p>
+        <p className={styles.footerTxt}>Combine comigo a apresentação de case de sucesso e exclusivo</p>
       </div>
 
     </section>

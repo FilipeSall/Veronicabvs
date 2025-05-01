@@ -1,4 +1,4 @@
-.homeContainer{
+.homeContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     transition: all 0.3s ease;
 }
 
-.subtitleWrapper{
+.subtitleWrapper {
     display: flex;
     align-items: center;
     width: 100%;
@@ -90,18 +90,41 @@
     transition: all 0.3s ease;
 }
 
-#privameraTxt:hover:not(.textDegrade) {
-    color: #F03599B2;
+@keyframes colorChange {
+    0% {
+        color: inherit;
+    }
+    5% {
+        color: var(--highlight-color);
+    }
+    20% {
+        color: var(--highlight-color);
+    }
+    25% {
+        color: inherit;
+    }
+    100% {
+        color: inherit;
+    }
 }
 
-#outonoTxt:hover:not(.textDegrade) {
-    color: #905410B2;
+#privameraTxt {
+    --highlight-color: #F03599B2;
+    animation: colorChange 6s infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
 }
 
-#invernoTxt:hover:not(.textDegrade) {
-    color: #1E96FFB2;
+#outonoTxt {
+    --highlight-color: #905410B2;
+    animation: colorChange 6s infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
 }
 
-p:hover .textDegrade {
-    color: #0000004D;
+#invernoTxt {
+    --highlight-color: #1E96FFB2;
+    animation: colorChange 6s infinite;
+    animation-delay: 4s;
+    animation-timing-function: ease-in-out;
 }

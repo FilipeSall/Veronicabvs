@@ -20,7 +20,7 @@ function CaseBemol() {
                     </div>
                 </div>
             </div>
-
+            {/*SUMMARY */}
         
             <a href='#header-bemol' className='scrollup-case'>
                 <img src={arrowUp} alt='Seta para cima'/>

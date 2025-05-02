@@ -1,15 +1,12 @@
-.pageContainer {
+
+
+.page-container {
     width: 100%;
     display: flex;
     scroll-behavior: smooth;
     flex-direction: column;
 }
 
-.case-title{
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 100%;
-}
 .case-header {
     background-color: #FFFFFF;
     width: 100%;
@@ -23,22 +20,13 @@
     padding: 1rem 3.5rem;
 }
 
-.case-content {
-    padding: 1rem 3.5rem; 
-}
-
-.case-title {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 100%;
-}
-
+/*HEADER */
 .header-description {
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
     max-width: 58.45%;
-
+    padding-left: 0.5rem;
     span {
         font-weight: 700;
     }
@@ -61,6 +49,130 @@
     gap: 0.5rem; 
 }
 
+/* SECTIONS */
+.chapter{
+    width: 100%;
+    margin-bottom: 80px;
+    min-height: 20px;
+    padding: 40px 58px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.case-title__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid green;
+    margin-bottom: 40px;
+}
+
+.case-title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.case-subtitle{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.case-subtitle > span{
+    font-weight: 600;
+}
+
+.subsection{
+    margin-bottom: 104px;
+    min-height: 20px;
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.subsection h3 {
+    position: relative;  
+    font-weight: bold;
+    padding-left: 16px;  
+    font-size: 16px;
+}
+/* Bullet branco - para fundos escuros */
+.bullet-white::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Bullet preto - para fundos claros */
+.bullet-black::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.subsection-content{
+    border: 1px solid red;
+}
+
+.subsection-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    width: 50%;
+    letter-spacing: 0%;
+    border: 1px solid red;
+}
+
+.subsection-description>span {
+    font-weight: bold;
+}
+
+.list-wrapper{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: bold;
+    padding-left: 16px;
+    gap: 4px;
+}
+
+.list-wrapper li > span{
+    font-weight: 400;
+}
+
+/* UTILS CLASSES*/
+.noGap{
+    gap: 0 !important;
+}
+.half{
+    width: 50%;
+}
+
+/* FOOTER*/
+.footer-text{
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+
+// BTN SCROLL TO HEADER
 .scrollup-case{
     margin: 0 auto;
 }

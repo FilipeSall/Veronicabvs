@@ -12,7 +12,7 @@ function AppBemol() {
                 </p>
 
                 <div className='tools-container'>
-                    <p className='tools-text'>Ferramentas utilizadas:</p>
+                    <p className='tools-text'>Ferramentas:</p>
                     <div className='tools-wrapper'>
                         {tools.map((tool, i) => (
                             <ToolsIcon key={i} value={tool.value} />

@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    border: 1px solid purple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.imgWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 300px;
+    gap: 4px;
+}
+
+.imgWrapper p {
+    font-size: 20px;
+    font-weight: bolder;
+}

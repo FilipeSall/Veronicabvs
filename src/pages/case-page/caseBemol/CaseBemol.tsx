@@ -6,6 +6,8 @@ import arrowUp from '../../../assets/svgs/arrowUp.svg';
 import TwoColumnGrid from '../components/TwoColumnGrid/TwoColumnGrid';
 import suspensePhoneImg from '../../../assets/caseBemol/suspense-phone.png';
 import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
+import FunilImg from './components/funilImg/FunilImg';
+import ProcessFlowContainer from './components/processflowcontainer/ProcessFlowContainer';
 
 function CaseBemol() {
     return (
@@ -36,10 +38,10 @@ function CaseBemol() {
                 <div className='subsection'>
                     <h3 className="bullet-white">Resultado</h3>
                     <div className={`subsection-content ${styles.wrapper}`}>
-                        <img 
-                        src={suspensePhoneImg}
-                        className={styles.suspensePhoneImg}
-                        alt='telefone'
+                        <img
+                            src={suspensePhoneImg}
+                            className={styles.suspensePhoneImg}
+                            alt='telefone'
                         />
                         {pushNotifications && pushNotifications.map((cel, i) => (
                             <PushNotificationVideo
@@ -51,7 +53,64 @@ function CaseBemol() {
                         ))}
                     </div>
                 </div>
+
+                <div className="subsection noGap">
+                    <h3 className="bullet-white">Desafio e oportunidade</h3>
+                    <TwoColumnGrid
+                        leftContent={
+                            <>
+                                <div className={`coluna ${styles.colResults}`}>
+                                    <p className={`case-paragrafo`}>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
+                                    </p>
+                                    <p className={`case-paragrafo`}>
+                                        Esse comportamento indicava uma <span>oportunidade estratégica</span>: mesmo com uma oferta pronta para ser ativada, a experiência atual não estava sendo eficiente em converter esse público.
+                                    </p>
+                                </div>
+                            </>
+                        }
+                        rightContent={
+                            <div className={`coluna ${styles.colResults}`}>
+                                <p className={`case-paragrafo`}>Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span> de reengajamento após o abandono do fluxo.
+                                </p>
+                                <p className={`case-paragrafo`}>
+                                    A partir dessa constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span> do funil.
+                                </p>
+                            </div>
+                        }
+                    />
+                    <FunilImg />
+                </div>
+
+                <div className="subsection noGap">
+                    <h3 className="bullet-white">Processo</h3>
+                    <TwoColumnGrid
+                        leftContent={
+                            <>
+                                <div className={`coluna ${styles.colResults}`}>
+                                    <p className={`case-paragrafo`}>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
+                                    </p>
+                                    <p className={`case-paragrafo`}>
+                                        A partir disso, identifiquei a <span>oportunidade</span> de implementar uma régua de comunicação segmentada via push.
+                                    </p>
+                                </div>
+                            </>
+                        }
+                        rightContent={
+                            <div className={`coluna ${styles.colResults}`}>
+                                <p className={`case-paragrafo`}>
+                                    <span>"Alinhei a proposta com stakeholders</span> e, em parceria com a equipe de <span>marketing</span>, definimos os conteúdos e gatilhos da régua. A partir disso, personalizei o componente de push existente no <span>design system</span>, adaptando seu comportamento, visual e conteúdo ao contexto da <span>jornada</span>.
+                                </p>
+                                <p className={`case-paragrafo`}>
+                                    Apresentei a solução aos stakeholders, <span>validei a solução</span> e finalizei a entrega.
+                                </p>
+                            </div>
+                        }
+                    />
+                    <ProcessFlowContainer />
+    
+                </div>
             </section>
+
             {/*1.2 Outras entregas*/}
             <section className='chapter' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
                 <div className='case-title__wrapper'>
@@ -80,6 +139,7 @@ function CaseBemol() {
                 </div>
 
             </section>
+
             {/*1.3 Outras entregas*/}
             <section className='chapter' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
 
@@ -112,8 +172,8 @@ function CaseBemol() {
                 </div>
 
             </section>
-            {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
 
+            {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
             <section className='chapter' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia)</h2>

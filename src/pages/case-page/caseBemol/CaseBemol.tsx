@@ -1,8 +1,11 @@
 import '../escopecasepage.scss';
-import tools from './tools';
+import { tools, pushNotifications } from './tools';
+import styles from './casebemol.module.scss';
 import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import arrowUp from '../../../assets/svgs/arrowUp.svg';
 import TwoColumnGrid from '../components/TwoColumnGrid/TwoColumnGrid';
+import suspensePhoneImg from '../../../assets/caseBemol/suspense-phone.png';
+import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
 
 function CaseBemol() {
     return (
@@ -32,8 +35,20 @@ function CaseBemol() {
                 </div>
                 <div className='subsection'>
                     <h3 className="bullet-white">Resultado</h3>
-                    <div className='subsection-content'>
-                        VIDEO CONTAINER
+                    <div className={`subsection-content ${styles.wrapper}`}>
+                        <img 
+                        src={suspensePhoneImg}
+                        className={styles.suspensePhoneImg}
+                        alt='telefone'
+                        />
+                        {pushNotifications && pushNotifications.map((cel, i) => (
+                            <PushNotificationVideo
+                                alt={cel.alt}
+                                topImg={cel.topImg}
+                                video={cel.video}
+                                key={i}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

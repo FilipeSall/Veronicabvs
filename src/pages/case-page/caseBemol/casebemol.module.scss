@@ -1,1 +1,15 @@
 @use '../escopecasepage.scss' as *;
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+.suspensePhoneImg{
+    position: absolute;
+    left: 0;
+    top: 0;
+}

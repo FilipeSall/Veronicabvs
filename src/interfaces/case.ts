@@ -8,3 +8,9 @@ export interface CasesInterface {
     bgColor:string,
     imgHover:string
 }
+
+export interface pushNotificationsInterface {
+    alt:string
+    video:string
+    topImg:string
+}

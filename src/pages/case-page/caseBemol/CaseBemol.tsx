@@ -1,5 +1,5 @@
 import '../escopecasepage.scss';
-import { tools, pushNotifications } from './tools';
+import { tools, pushNotifications, Values, entregas } from './tools';
 import styles from './casebemol.module.scss';
 import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import arrowUp from '../../../assets/svgs/arrowUp.svg';
@@ -10,6 +10,10 @@ import FunilImg from './components/funilImg/FunilImg';
 import ProcessFlowContainer from './components/processflowcontainer/ProcessFlowContainer';
 import FullscreenImage from './components/fullscreenimg/FullscreenImage';
 import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
+import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
+import InfoImg from '../components/InfoImg/InfoImg';
+import DateVideo from './components/dateVideo/DateVideo';
+
 
 function CaseBemol() {
     return (
@@ -172,7 +176,7 @@ function CaseBemol() {
                     <h2 className='case-title'>1.2 Outras entregas</h2>
                 </div>
 
-                <div className='subsection'>
+                <div className='subsection gap24'>
                     <h3 className="bullet-black">Fluxogramas completos do produto Empréstimo Pessoal</h3>
                     <div className='subsection-content'>
                         <FluxogramaVideo />
@@ -180,16 +184,38 @@ function CaseBemol() {
                 </div>
 
                 <div className='subsection'>
-                    <h3 className="bullet-black">Diagnóstico e oportunidade</h3>
-                    <div className='subsection-content'>
-                        TEXT CONTAINER
-                    </div>
+                    <TwoColumnGrid
+                        leftContent={
+                            <>
+                                <div className={`coluna noGap${styles.colResults}`}>
+                                    <h3 className={`bullet-black ${styles.titleCol}`}>Diagnóstico e oportunidade</h3>
+                                    <p className={`case-paragrafo mb30`}>Diante da <span>complexidade do produto</span> de empréstimo pessoal, tomei a <span>iniciativa</span> de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.
+                                    </p>
+                                    <p className={`case-paragrafo`}>
+                                        O objetivo foi consolidar uma <span>visão completa do processo</span>, a criação de material de <span>referência</span> <span>para otimizar o trabalho</span> de diferentes áreas, além de servir para identificar <span>oportunidades de melhoria</span>.
+                                    </p>
+                                </div>
+                            </>
+                        }
+                        rightContent={
+                            <div className={`coluna noGap ${styles.colResults}`}>
+                                <h3 className={`bullet-black ${styles.titleCol}`}>Imprevisto e solução</h3>
+                                <p className={`case-paragrafo mb30`}>Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span> de reengajamento após o abandono do fluxo.
+                                </p>
+                                <p className={`case-paragrafo`}>
+                                    A partir dessa constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span> do funil.
+                                </p>
+                            </div>
+                        }
+                    />
                 </div>
 
                 <div className='subsection'>
                     <h3 className="bullet-black">Entrega de valor</h3>
                     <div className='subsection-content'>
-                        TEXT CONTAINER
+                        {Values && (
+                            <CardsEnumerados cards={Values} />
+                        )}
                     </div>
                 </div>
 
@@ -211,16 +237,22 @@ function CaseBemol() {
                     <TwoColumnGrid
                         leftContent={
                             <>
-                                <div className="metric-content">
-                                    <h4>Cálculo e análise do NPS da Conta Digital do ano de 2023.</h4>
-                                    IMAGEM COMPONENT
+                                <div className={`${styles.imgEntregaContainer}`}>
+                                    <h3 className="bullet-white mb18">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
+                                    <InfoImg
+                                        img={entregas[0].img}
+                                        info={entregas[0].info}
+                                    />
                                 </div>
                             </>
                         }
                         rightContent={
-                            <div className="metric-content">
-                                <h4>Apresentações mensais da análise da taxa de cancelamento de contas.</h4>
-                                IMAGEM COMPONENT
+                            <div className={`${styles.imgEntrega}`}>
+                                <h3 className="bullet-white mb18">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
+                                <InfoImg
+                                    img={entregas[1].img}
+                                    info={entregas[1].info}
+                                />
                             </div>
                         }
                     />
@@ -245,7 +277,7 @@ function CaseBemol() {
 
                     <div className='subsection'>
                         <div className='subsection-content'>
-                            VIDEO CONTAINER
+                            <DateVideo />
                         </div>
                     </div>
                 </div>

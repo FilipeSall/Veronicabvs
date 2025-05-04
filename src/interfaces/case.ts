@@ -14,3 +14,13 @@ export interface pushNotificationsInterface {
     video:string
     topImg:string
 }
+
+export interface CardsEnumeradosInterface{
+    title:string
+    text:string
+}
+
+export interface InfoImgInterface{
+    img:string
+    info:string
+}

@@ -1,6 +1,6 @@
 import styles from './fluxogramavideo.module.scss';
 import video from '../../../../../assets/caseBemol/FLUXOGRAMAS.mp4';
-import { useVideoInView } from '../../../../../hooks/useVideoInView'; // ajuste o caminho conforme sua estrutura
+import { useVideoInView } from '../../../../../hooks/useVideoInView';
 
 function FluxogramaVideo() {
   const { videoRef } = useVideoInView({

@@ -1,11 +1,13 @@
 import { ToolsIconInterface } from "../../../interfaces/components";
-import { pushNotificationsInterface } from "../../../interfaces/case";
+import { CardsEnumeradosInterface, InfoImgInterface, pushNotificationsInterface } from "../../../interfaces/case";
 import educationVideo from "../../../assets/caseBemol/Estudos.mp4";
 import topImgEducation from "../../../assets/caseBemol/educacaoImg.png";
 import viagemVideo from "../../../assets/caseBemol/Viagens.mp4";
 import topImgViagem from "../../../assets/caseBemol/viagemImg.png";
 import comprasVideo from "../../../assets/caseBemol/Compras.mp4";
 import topImgCompras from "../../../assets/caseBemol/comprasImg.png";
+import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
+import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
 
 export const tools: ToolsIconInterface[] = [
     {
@@ -33,12 +35,42 @@ export const pushNotifications: pushNotificationsInterface[] = [
     },
     {
         alt: 'viagem',
-        topImg:topImgViagem,
-        video:viagemVideo
+        topImg: topImgViagem,
+        video: viagemVideo
     },
     {
-        alt:'compras',
-        topImg:topImgCompras,
-        video:comprasVideo
+        alt: 'compras',
+        topImg: topImgCompras,
+        video: comprasVideo
+    }
+]
+
+export const Values: CardsEnumeradosInterface[] = [
+    {
+        title: 'Referência oficial',
+        text: 'Promove o entendimento do produto, alinha times e serve como base para discussões e planejamento.'
+    },
+    {
+        title: 'Otimização do trabalho',
+        text: 'Reduz dúvidas e facilita a compreensão dos processos por diferentes áreas da empresa.'
+    },
+    {
+        title: 'Visão estratégica',
+        text: 'Oferece uma visão ampla do produto, alinhando expectativas entre stakeholders e orientando decisões mais eficientes.'
+    },
+    {
+        title: 'Impacto contínuo',
+        text: 'Material ainda utilizado como base para aprimoramentos e novas melhorias no produto.'
+    }
+]
+
+export const entregas:InfoImgInterface[] = [
+    {
+        img:entregaImg1,
+        info:'Obs. Dados sensíveis censurados'
+    },
+    {
+        img:entregaImg2,
+        info:'Dados sensíveis censurados'
     }
 ]

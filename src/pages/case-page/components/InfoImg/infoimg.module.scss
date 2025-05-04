@@ -1,5 +1,4 @@
 .container {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -10,7 +9,6 @@
     width: 100%;
     height: auto;
     display: block;
-    border: 1px solid orange;
 }
 
 .textInfo {

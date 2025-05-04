@@ -8,6 +8,8 @@ import suspensePhoneImg from '../../../assets/caseBemol/suspense-phone.png';
 import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
 import FunilImg from './components/funilImg/FunilImg';
 import ProcessFlowContainer from './components/processflowcontainer/ProcessFlowContainer';
+import FullscreenImage from './components/fullscreenimg/FullscreenImage';
+import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
 
 function CaseBemol() {
     return (
@@ -107,7 +109,60 @@ function CaseBemol() {
                         }
                     />
                     <ProcessFlowContainer />
-    
+                </div>
+
+                <div className="subsection noGap">
+                    <h3 className="bullet-white">Solução: Régua de comunicação segmentada</h3>
+                    <TwoColumnGrid
+                        leftContent={
+                            <>
+                                <div className={`coluna ${styles.colResults}`}>
+                                    <p className={`case-paragrafo`}>Para <span>aumentar a conversão</span> de clientes com crédito pré-aprovado, desenvolvi uma <span>régua de comunicação segmentada via push</span>, considerando o momento de abandono no fluxo e o perfil do usuário.
+                                    </p>
+                                </div>
+                            </>
+                        }
+                        rightContent={
+                            <div className={`coluna ${styles.colResults}`}>
+                                <p className={`case-paragrafo`}>
+                                    O conteúdo e o timing das mensagens foram definidos com apoio do time de <span>marketing e alinhados</span> com o <span>design system</span> da empresa.
+                                </p>
+                            </div>
+                        }
+                    />
+
+                    <FullscreenImage />
+                </div>
+
+                <div className="subsection">
+                    <TwoColumnGrid
+                        leftContent={
+                            <>
+                                <div className={`coluna ${styles.colResults}`}>
+                                    <h3 className="bullet-white">Métricas e melhorias</h3>
+                                    <p className={`case-paragrafo`}>Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:
+                                    </p>
+                                    <div>
+                                        <p className={`case-paragrafo`}><span>Taxa de retorno</span> ao fluxo de contratação (aumento de 12% para 28%)</p>
+                                        <p className={`case-paragrafo`}><span>Taxa de conversão</span> em empréstimos efetivados (aumento de 4% para 7%);</p>
+                                        <p className={`case-paragrafo`}><span>Taxa de engajamento</span> com as notificações (taxa de cliques em torno de 18%).</p>
+                                    </div>
+                                    <p className="case-paragrafo">Além disso, tive apoio do time de marketing nos ajustes na <span>copy</span> e no <span>timing</span> das notificações.</p>
+                                </div>
+                            </>
+                        }
+                        rightContent={
+                            <div className={`coluna ${styles.colResults}`}>
+                                <h3 className="bullet-white">Plano de monitoramento</h3>
+                                <p className={`case-paragrafo`}>
+                                    O desempenho da estratégia foi acompanhado por relatórios periódicos, com foco na <span>identificação de padrões e ajustes contínuos</span>.
+                                </p>
+                                <p className={`case-paragrafo`}>
+                                    O <span>monitoramento incluiu métricas</span> como interações com os pushes, tempo médio de retorno ao fluxo e variações nas taxas de conversão, de forma a <span>garantir a evolução da estratégia</span>, de acordo com o comportamento dos usuários e as metas do negócio.
+                                </p>
+                            </div>
+                        }
+                    />
                 </div>
             </section>
 
@@ -120,7 +175,7 @@ function CaseBemol() {
                 <div className='subsection'>
                     <h3 className="bullet-black">Fluxogramas completos do produto Empréstimo Pessoal</h3>
                     <div className='subsection-content'>
-                        VIDEO CONTAINER
+                        <FluxogramaVideo />
                     </div>
                 </div>
 

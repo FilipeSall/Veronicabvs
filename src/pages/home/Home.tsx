@@ -39,7 +39,7 @@ function Home() {
       </div>
 
       <div className={styles.contatoWrapper}>
-        <p className={styles.footerTxt}>Combine comigo a apresentação de case de sucesso e exclusivo</p>
+        <p className={styles.footerTxt}>Combine comigo a apresentação de case de sucesso e exclusivo:</p>
       </div>
 
     </section>

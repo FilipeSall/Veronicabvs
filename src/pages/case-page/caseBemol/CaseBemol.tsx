@@ -1,5 +1,5 @@
 import '../escopecasepage.scss';
-import { tools, pushNotifications, Values, entregas } from './tools';
+import { tools, pushNotifications, Values, entregas, summary } from './tools';
 import styles from './casebemol.module.scss';
 import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import arrowUp from '../../../assets/svgs/arrowUp.svg';
@@ -13,15 +13,19 @@ import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
 import InfoImg from '../components/InfoImg/InfoImg';
 import DateVideo from './components/dateVideo/DateVideo';
-
+import Summary from '../components/summary/Summary';
+import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
 
 function CaseBemol() {
+
+    const scrollToElement = useSmoothScroll();
+
     return (
         <section className='page-container'>
             {/* CASE HEADER*/}
             <div className='case-header' id='header-bemol'>
                 <p className='header-description' style={{ borderLeft: '1px solid #404040' }}>
-                    <span>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas na etapa de discoberta à entrega e estratégia do acompanhamento de métricas pós lançamento.
+                    <span>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.
                 </p>
 
                 <div className='tools-container'>
@@ -34,9 +38,10 @@ function CaseBemol() {
                 </div>
             </div>
             {/*SUMMARY */}
+            <Summary items={summary.items} bg={summary.bg} color={summary.color} />
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
-            <section className='chapter' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
+            <section className='chapter' id='chapter-1-1' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas</h2>
                     <p className='case-subtitle'><span>Apoio:</span> Equipe de Marketing e equipe de Dados.</p>
@@ -171,7 +176,7 @@ function CaseBemol() {
             </section>
 
             {/*1.2 Outras entregas*/}
-            <section className='chapter' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+            <section className='chapter' id='chapter-1-2' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.2 Outras entregas</h2>
                 </div>
@@ -222,9 +227,9 @@ function CaseBemol() {
             </section>
 
             {/*1.3 Outras entregas*/}
-            <section className='chapter' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
+            <section className='chapter' id='chapter-1-3' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
 
-                <div className='case-title__wrapper'>
+                <div className='case-title__wrapper mb24'>
                     <h2 className='case-title'>1.3 Outras entregas</h2>
                 </div>
 
@@ -237,8 +242,8 @@ function CaseBemol() {
                     <TwoColumnGrid
                         leftContent={
                             <>
-                                <div className={`${styles.imgEntregaContainer}`}>
-                                    <h3 className="bullet-white mb18">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
+                                <div className={`${styles.imgEntregaContainer} mr40`}>
+                                    <h3 className="bullet-white mb24">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
                                     <InfoImg
                                         img={entregas[0].img}
                                         info={entregas[0].info}
@@ -247,8 +252,8 @@ function CaseBemol() {
                             </>
                         }
                         rightContent={
-                            <div className={`${styles.imgEntrega}`}>
-                                <h3 className="bullet-white mb18">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
+                            <div className={`${styles.imgEntregaContainer} ml40`}>
+                                <h3 className="bullet-white mb24">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
                                 <InfoImg
                                     img={entregas[1].img}
                                     info={entregas[1].info}
@@ -261,7 +266,7 @@ function CaseBemol() {
             </section>
 
             {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-            <section className='chapter' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+            <section className='chapter noMb' id='chapter-1-4' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia)</h2>
                     <p className='case-subtitle'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende</p>
@@ -282,10 +287,22 @@ function CaseBemol() {
                     </div>
                 </div>
             </section>
-            <p className='footer-text'>💡Entre em contato e agente uma apresentação,por algum dos botões abaixo!</p>
-            <a href='#header-bemol' className='scrollup-case'>
-                <img src={arrowUp} alt='Seta para cima' />
+
+            {/*FOOTER*/}
+            <p className='footer-text'>
+                💡Entre em contato e agende uma apresentação por algum dos botões abaixo! :)
+            </p>
+            <a
+                href="#header-bemol"
+                className="scrollup-case"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToElement('header-bemol');
+                }}
+            >
+                <img src={arrowUp} alt="Seta para cima" />
             </a>
+
         </section>
     )
 }

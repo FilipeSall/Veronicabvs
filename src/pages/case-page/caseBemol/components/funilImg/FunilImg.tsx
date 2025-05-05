@@ -15,19 +15,19 @@ function FunilImg() {
 
             <div className={styles.imgWrapper}>
                 <p>2</p>
-                <img alt='imagem com dinheiro' src={funil2img} />
+                <img alt='imagem com menu mavegável' src={funil2img} />
             </div>
 
             <img src={mainFunil} alt="funil com os resultados" className="funilImg" />
 
             <div className={styles.imgWrapper}>
                 <p>3</p>
-                <img alt='imagem com dinheiro' src={funil3img} />
+                <img alt='imagem com input' src={funil3img} />
             </div>
 
             <div className={styles.imgWrapper}>
                 <p>4</p>
-                <img alt='imagem com dinheiro' src={funil4img} />
+                <img alt='imagem com simulação de empréstimo' src={funil4img} />
             </div>
         </div>
     )

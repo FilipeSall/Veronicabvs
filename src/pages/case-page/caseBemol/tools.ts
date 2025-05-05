@@ -1,5 +1,5 @@
 import { ToolsIconInterface } from "../../../interfaces/components";
-import { CardsEnumeradosInterface, InfoImgInterface, pushNotificationsInterface } from "../../../interfaces/case";
+import { CardsEnumeradosInterface, InfoImgInterface, pushNotificationsInterface, SummaryInterface } from "../../../interfaces/case";
 import educationVideo from "../../../assets/caseBemol/Estudos.mp4";
 import topImgEducation from "../../../assets/caseBemol/educacaoImg.png";
 import viagemVideo from "../../../assets/caseBemol/Viagens.mp4";
@@ -64,13 +64,42 @@ export const Values: CardsEnumeradosInterface[] = [
     }
 ]
 
-export const entregas:InfoImgInterface[] = [
+export const entregas: InfoImgInterface[] = [
     {
-        img:entregaImg1,
-        info:'Obs. Dados sensíveis censurados'
+        img: entregaImg1,
+        info: 'Obs. Dados sensíveis censurados'
     },
     {
-        img:entregaImg2,
-        info:'Dados sensíveis censurados'
+        img: entregaImg2,
+        info: 'Dados sensíveis censurados'
     }
 ]
+
+export const summary: SummaryInterface = {
+    bg:'#4c31e0',
+    color:'#FFFFFF',
+    items: [
+        {
+            id: '1.1',
+            href: '#chapter-1-1',
+            isSpecial: false,
+            readingTime: 3,
+            title: 'Resgatando clientes no fluxo de empréstimo por notificações segmentadas'
+        },
+        {
+            id:'1.2 e 1.3',
+            href:'#chapter-1-2',
+            isSpecial: false,
+            readingTime: 1,
+            title:'Outras entregas'
+        },
+        {
+            id:'1.4',
+            href:'#chapter-1-4',
+            isSpecial:true,
+            readingTime:0.5,
+            title:'Escolha da data do vencimento das parcelas de empréstimo (prévia)',
+            specialNote:'Case exclusivo para apresentação pessoal)'
+        }
+    ]
+}

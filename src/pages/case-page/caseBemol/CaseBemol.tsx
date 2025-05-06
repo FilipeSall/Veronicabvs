@@ -266,10 +266,10 @@ function CaseBemol() {
             </section>
 
             {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-            <section className='chapter noMb' id='chapter-1-4' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+            <section className='chapter noMb noPb' id='chapter-1-4' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia)</h2>
-                    <p className='case-subtitle'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende</p>
+                    <p className='case-subtitle'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende um horário.</p>
                     <ul className='list-wrapper' style={{ color: '#7F7F7F' }}>
                         <li>Identificação da dor</li>
                         <li>Meu processo de design</li>

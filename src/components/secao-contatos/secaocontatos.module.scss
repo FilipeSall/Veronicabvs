@@ -7,4 +7,19 @@
     padding: 12px 0;
     min-height: 64px;
     height: 6.25vh;
+    position: relative;
+    & > *:first-child {
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 16px;
+            width: 1px;
+            background-color: #00000080;
+        }
+    }
 }

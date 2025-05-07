@@ -31,7 +31,6 @@
     max-width: 631px;
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
     gap: 40px;
     height: 100%;
     
@@ -66,12 +65,8 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    align-items: center;
 }
 
-.ferramentasSection > p {
-    margin: 16px 0;
-}
 
 .ferramentasWrapper {
     display: flex;
@@ -114,25 +109,95 @@
     animation: scrollTools 15s linear infinite;
 }
 
+.empresasSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
 .empresasWrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
-    margin-top: 40px;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, var(--backgroundColor) 0%, transparent 100%);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, var(--backgroundColor) 0%, transparent 100%);
+    }
     
     @media (max-width: 768px) {
-        flex-wrap: wrap;
-        gap: 15px;
+        flex-wrap: nowrap;
+        gap: 0;
     }
+}
+
+.empresasInner {
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    animation: scrollEmpresas 20s linear infinite;
 }
 
 .empresasImg {
     max-width: 100%;
     height: auto;
+    flex-shrink: 0;
 }
 
+.textWrapperContainer{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 4px;
+}
+
+.textWrapperContainer > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newWindowBtn{
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+}
+
+.curriculoContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.bulletPoint {
+    font-size: 18px;
+    line-height: 1;
+}
 
 @keyframes scrollTools {
     from {
@@ -141,5 +206,15 @@
 
     to {
         transform: translateX(calc(-50% - 15px));
+    }
+}
+
+@keyframes scrollEmpresas {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
     }
 }

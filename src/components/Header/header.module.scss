@@ -7,8 +7,17 @@
     align-items: center;
 }
 
-.linkWrapper{
+.linkWrapper {
     display: flex;
-    gap: 32px;
-}
+    align-items: center;
 
+    a {
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '|';
+            margin: 0 8px;
+            color: #00000080;
+        }
+    }
+}

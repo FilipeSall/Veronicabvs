@@ -3,17 +3,18 @@
     flex-direction: column;
     position: relative;
     width: 100%;
+    gap: 6px;
 }
 
 .img {
     width: 100%;
-    height: auto;
-    display: block;
+    margin-bottom: 6px;
+    object-fit: fill;
+    height: 100%;
 }
 
 .textInfo {
     margin-top: auto;
     font-size: 12px;
     font-style: italic;
-    
 }

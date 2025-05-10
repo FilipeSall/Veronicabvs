@@ -243,7 +243,7 @@ function CaseBemol() {
                         leftContent={
                             <>
                                 <div className={`${styles.imgEntregaContainer} mr40`}>
-                                    <h3 className="bullet-white mb24">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
+                                    <h3 className="bullet-white mb16">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
                                     <InfoImg
                                         img={entregas[0].img}
                                         info={entregas[0].info}
@@ -253,7 +253,7 @@ function CaseBemol() {
                         }
                         rightContent={
                             <div className={`${styles.imgEntregaContainer} ml40`}>
-                                <h3 className="bullet-white mb24">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
+                                <h3 className="bullet-white mb16">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
                                 <InfoImg
                                     img={entregas[1].img}
                                     info={entregas[1].info}

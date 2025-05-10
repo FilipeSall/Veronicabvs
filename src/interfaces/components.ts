@@ -20,6 +20,8 @@ export interface CaseNavInterface extends LinkInterface {
     bgColor: string
     imgHover:string
     projectName:string
+    isUnderConstruction?: boolean
+    underConstructionImg?:string
 }
 
 export interface CasePanelInterface {
@@ -27,6 +29,7 @@ export interface CasePanelInterface {
     projeto: string;
     data:string
     bgColor:string
+    isUnderConstruction?:boolean
 }
 
 export interface ToolsIconInterface{

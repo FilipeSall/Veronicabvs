@@ -1,8 +1,11 @@
 import { CasesInterface } from "../interfaces/case";
 import case1img from '../assets/cases/case1.webp';
 import case2img from '../assets/cases/case2.webp';
+import case2imgOff from '../assets/cases/case2off.png';
 import case3img from '../assets/cases/case3.webp';
+import case3imgOff from '../assets/cases/case3off.png';
 import case4img from '../assets/cases/case4.webp';
+import case4imgOff from '../assets/cases/case4off.png';
 
 export const CasesData:CasesInterface[] = [
     {
@@ -22,7 +25,9 @@ export const CasesData:CasesInterface[] = [
         projeto:'E-commerce App Bemol',
         path:'case-2',
         bgColor:'#F23434',
-        imgHover: case3img
+        imgHover: case3img,
+        underConstruction:true,
+        underConstructionImg:case2imgOff
     },
     {
         id:3,
@@ -31,7 +36,9 @@ export const CasesData:CasesInterface[] = [
         projeto:'Doação de Cashback',
         path:'case-3',
         bgColor:'#ED387B',
-        imgHover: case1img
+        imgHover: case1img,
+        underConstruction:true,
+        underConstructionImg:case3imgOff
     },
     {
         id:4,
@@ -41,7 +48,9 @@ export const CasesData:CasesInterface[] = [
         path:'case-4',
         tipoDeCase:'premiado',
         bgColor:'#386681',
-        imgHover: case4img
+        imgHover: case4img,
+        underConstruction:true,
+        underConstructionImg:case4imgOff
     },
 ]
 

@@ -6,7 +6,9 @@ export interface CasesInterface {
     path: string
     data: string
     bgColor: string,
-    imgHover: string
+    imgHover: string,
+    underConstruction?: boolean,
+    underConstructionImg?: string
 }
 
 export interface pushNotificationsInterface {

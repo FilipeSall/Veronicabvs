@@ -34,6 +34,8 @@ function Home() {
               bgColor={caseItem.bgColor}
               imgHover={caseItem.imgHover}
               projectName={caseItem.projeto}
+              isUnderConstruction={caseItem.underConstruction}
+              underConstructionImg={caseItem.underConstructionImg}
             />
           ))}
       </div>

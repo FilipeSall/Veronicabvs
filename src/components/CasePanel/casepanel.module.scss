@@ -61,9 +61,8 @@
     align-items: center;
     justify-content: center;
     transition: .3s ease-in-out;
+    position: relative; 
 }
-
-
 
 .active {
     font-weight: bolder;
@@ -72,4 +71,35 @@
 .underConstruction {
     opacity: 0.8;
     pointer-events: auto;
+    background-color: #7f7f7f;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.caseId {
+    transition: opacity 0.2s ease;
+}
+
+.constructionIcon {
+    height: 22px;
+    animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

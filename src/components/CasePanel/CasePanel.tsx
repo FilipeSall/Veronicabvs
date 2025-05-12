@@ -4,6 +4,7 @@ import { CasesData } from '../../services/casesData';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './casepanel.module.scss';
 import { useState, useCallback } from 'react';
+import engrenagemIcon from '../../assets/svgs/engrenagem.svg';
 
 function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePanelInterface) {
 
@@ -11,7 +12,6 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
     const currentPath = location.pathname;
     const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-    // Obtém o ID do case atual a partir da URL
     const getCurrentCaseId = useCallback(() => {
         if (currentPath.startsWith('/case/')) {
             const id = currentPath.split('/').pop();
@@ -22,23 +22,19 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
 
     const currentCaseId = getCurrentCaseId();
 
-    // Previne a navegação quando o painel ou o case específico estiver em construção
     const handleClick = useCallback((e: React.MouseEvent, caseItem: CasesInterface) => {
         if (isUnderConstruction || caseItem.underConstruction) {
             e.preventDefault();
         }
     }, [isUnderConstruction]);
 
-    // Determina o estilo com base no estado do item
     const getItemStyle = useCallback((isActive: boolean, isHovered: boolean, caseItem: CasesInterface) => {
         const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;
 
-        // Se estiver em construção, apenas altera o cursor para not-allowed
         if (itemUnderConstruction) {
             return { cursor: 'not-allowed' };
         }
 
-        // Se não estiver em construção, o comportamento normal de hover/active se aplica
         if (isActive || isHovered) {
             return { backgroundColor: caseItem.bgColor };
         }
@@ -65,6 +61,7 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
                     const isActive = currentCaseId === caseItem.id;
                     const isHovered = hoveredId === caseItem.id;
                     const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;
+                    const showIcon = itemUnderConstruction && isHovered;
 
                     return (
                         <Link
@@ -76,7 +73,14 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
                             onMouseLeave={() => setHoveredId(null)}
                             onClick={(e) => handleClick(e, caseItem)}
                         >
-                            {caseItem.id}
+                            <div className={styles.contentWrapper}>
+                                {!showIcon && (
+                                    <span className={styles.caseId}>{caseItem.id}</span>
+                                )}
+                                {showIcon && (
+                                    <img src={engrenagemIcon} className={styles.constructionIcon} alt="Em construção" />
+                                )}
+                            </div>
                         </Link>
                     );
                 })}

@@ -4,14 +4,14 @@ import styles from './summary.module.scss';
 import sucessoIcon from '../../../../assets/svgs/sucesso.svg';
 import { useSmoothScroll } from '../../../../hooks/useSmoothScrol';
 
-function Summary({ items, bg, color }: SummaryInterface) {
+function Summary({ items, bg, color, navegavelColor }: SummaryInterface) {
     const scrollToElement = useSmoothScroll();
 
     return (
         <nav className={styles.navContainer} style={{ background: bg, color: color }}>
             <div className={styles.titleWrapper}>
                 <h1>Sumário (principais entregas)</h1>
-                <p>- 💡 Dica: É navegável!</p>
+                <p>- 💡 Dica: <span style={{color: navegavelColor ? navegavelColor : '#F3DA8B'}}>É navegável!</span></p>
             </div>
             <div className={styles.anchorWrapper}>
                 {items.map((item) => (

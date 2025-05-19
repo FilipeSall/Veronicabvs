@@ -22,6 +22,7 @@ export interface CaseNavInterface extends LinkInterface {
     projectName:string
     isUnderConstruction?: boolean
     underConstructionImg?:string
+    hoverText?:string
 }
 
 export interface CasePanelInterface {

@@ -8,6 +8,7 @@ import miro from "../assets/ferramentas/miro.webp";
 import notion from "../assets/ferramentas/notion.webp";
 import office from "../assets/ferramentas/office.webp";
 import ux from "../assets/ferramentas/ux.webp";
+import grama from '../assets/ferramentas/gramer.webp';
 
 export const Ferramentas: FerramentaInterface[] = [
     {
@@ -46,5 +47,8 @@ export const Ferramentas: FerramentaInterface[] = [
         icon: ux,
         alt: "UX design logo"
     },
-
+    {
+        icon:grama,
+        alt:'Grama logo'
+    }
 ];

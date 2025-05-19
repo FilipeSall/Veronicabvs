@@ -30,8 +30,12 @@ function Sobremim() {
 
                 <div className={styles.textWrapperContainer}>
                     <div className="bullet-point">•</div>
-                    <p>Acesse meu currículo </p>
-                    <a href={pdfCurriculo} target='_blank'>
+                    <a
+                        href={pdfCurriculo}
+                        target='_blank'
+                        className={styles.curriculoLink}
+                    >
+                        <p>Acesse meu currículo </p>
                         <img alt='Nova janela icone' className={styles.newWindowBtn} src={newWindowIcon} />
                     </a>
                 </div>

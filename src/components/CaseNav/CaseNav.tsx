@@ -13,7 +13,8 @@ function CaseNav({
     imgHover,
     projectName,
     isUnderConstruction = false,
-    underConstructionImg
+    underConstructionImg,
+    hoverText
 }: CaseNavInterface) {
 
     const [isHovered, setIsHovered] = useState(false);
@@ -33,12 +34,16 @@ function CaseNav({
     }, [isHovered]);
 
     const displayText = useMemo(() => {
-        if (!isUnderConstruction) {
-            return isHovered ? projectName : text;
+        if (isUnderConstruction) {
+            return isHovered ? null : text;
         }
-
-        return isHovered ? null : text;
-    }, [isHovered, projectName, text, isUnderConstruction]);
+        
+        if (isHovered) {
+            return hoverText || projectName; 
+        }
+        
+        return text;
+    }, [isHovered, projectName, text, isUnderConstruction, hoverText]);
 
     const getImageSource = useMemo(() => {
         if (isUnderConstruction && underConstructionImg) {

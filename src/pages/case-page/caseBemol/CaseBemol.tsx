@@ -25,7 +25,7 @@ function CaseBemol() {
             {/* CASE HEADER*/}
             <div className='case-header' id='header-bemol'>
                 <p className='header-description' style={{ borderLeft: '1px solid #404040' }}>
-                    <span>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.
+                    <span className='header-description__title'>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.
                 </p>
 
                 <div className='tools-container'>
@@ -54,6 +54,7 @@ function CaseBemol() {
                             className={styles.suspensePhoneImg}
                             alt='telefone'
                         />
+                        <p className={styles.suspenseTxt}>Step 2</p>
                         {pushNotifications && pushNotifications.map((cel, i) => (
                             <PushNotificationVideo
                                 alt={cel.alt}

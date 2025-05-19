@@ -1,10 +1,10 @@
 .sobremimContainer {
-    height: 85vh; 
+    height: 85vh;
     max-width: 1100px;
     display: flex;
     gap: 40px;
     margin: 0 auto;
-    
+
     @media (max-width: 768px) {
         flex-direction: column;
         gap: 20px;
@@ -33,7 +33,7 @@
     flex-direction: column;
     gap: 40px;
     height: 100%;
-    
+
     @media (max-width: 768px) {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -43,7 +43,7 @@
 
 .title {
     font-size: 40px;
-    
+
     @media (max-width: 768px) {
         font-size: 32px;
     }
@@ -61,7 +61,7 @@
     font-weight: bold;
 }
 
-.ferramentasSection{
+.ferramentasSection {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -75,7 +75,7 @@
     max-width: 789px;
     position: relative;
     overflow: hidden;
-    
+
     @media (max-width: 840px) {
         width: 100%;
     }
@@ -122,7 +122,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    
+
     &::before,
     &::after {
         content: '';
@@ -142,7 +142,7 @@
         right: 0;
         background: linear-gradient(to left, var(--backgroundColor) 0%, transparent 100%);
     }
-    
+
     @media (max-width: 768px) {
         flex-wrap: nowrap;
         gap: 0;
@@ -162,20 +162,30 @@
     flex-shrink: 0;
 }
 
-.textWrapperContainer{
+.textWrapperContainer {
     display: flex;
     align-items: center;
     gap: 4px;
     margin-left: 4px;
 }
 
-.textWrapperContainer > a{
+.curriculoLink {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        color: #0000FF;
+
+        .newWindowBtn {
+            filter: invert(7%) sepia(100%) saturate(7500%) hue-rotate(240deg) brightness(102%) contrast(143%);
+        }
+    }
+
 }
 
-.newWindowBtn{
+
+.newWindowBtn {
     cursor: pointer;
     background-color: inherit;
     border: none;
@@ -189,7 +199,7 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    
+
     &:hover {
         text-decoration: underline;
     }

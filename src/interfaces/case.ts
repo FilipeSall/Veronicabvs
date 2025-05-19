@@ -7,6 +7,7 @@ export interface CasesInterface {
     data: string
     bgColor: string,
     imgHover: string,
+    hoverText?:string,
     underConstruction?: boolean,
     underConstructionImg?: string
 }
@@ -46,4 +47,5 @@ export interface SummaryInterface {
     bg:string,
     color:string,
     items:SummaryNavInterface[]
+    navegavelColor?:string
 }

@@ -47,7 +47,7 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
             <div className={styles.infoWrapper}>
                 <p className={styles.nome}>{nome}</p>
 
-                <div className={styles.projectDataWrapper}>
+                <div className={styles.projectDataWrapper}> 
                     <h1 className={styles.projeto}>{projeto}</h1>
                     <div className={styles.dataDotWrapper}>
                         <span className={styles.dot}></span>

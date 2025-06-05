@@ -10,6 +10,8 @@ function ExternalLink({ icon: Icon, path, text, hoverIcon: HoverIcon }: External
             href={path}
             className={styles.link}
             target='_blank'
+            rel='noopener noreferrer' 
+            aria-label={text}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

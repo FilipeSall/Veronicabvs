@@ -10,7 +10,8 @@
     height: 6.25vh;
     color: var(--textColor);
     position: relative;
-    & > *:first-child {
+    
+    & > *:not(:last-child) {
         position: relative;
         
         &::after {
@@ -23,5 +24,32 @@
             width: 1px;
             background-color: var(--textColor);
         }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contatoWrapper > * {
+    animation: fadeInUp 0.6s ease forwards;
+    
+    &:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    
+    &:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    
+    &:nth-child(3) {
+        animation-delay: 0.3s;
     }
 }

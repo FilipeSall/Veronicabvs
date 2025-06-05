@@ -4,6 +4,8 @@
     justify-content: center;
     transition: .3s ease-in-out;
     font-size: 14px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
 
     &:hover {
         color: var(--textHover);
@@ -45,4 +47,31 @@
     width: 16px;
     height: 16px;
     color: var(--textColor);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.link:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.link:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.link:nth-child(4) {
+    animation-delay: 0.4s;
 }

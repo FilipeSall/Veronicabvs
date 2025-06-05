@@ -33,6 +33,7 @@ function CasePage() {
                 nome={caseData.nome}
                 bgColor={caseData.bgColor}
                 projeto={caseData.projeto}
+                miniImg={caseData.miniImg}
             />
             
             <section className={styles.caseWrapper}>

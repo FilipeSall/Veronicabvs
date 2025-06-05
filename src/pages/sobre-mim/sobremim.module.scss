@@ -4,6 +4,7 @@
     display: flex;
     gap: 40px;
     margin: 0 auto;
+    color: var(--textColor);
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -178,10 +179,9 @@
         color: #0000FF;
 
         .newWindowBtn {
-            filter: invert(7%) sepia(100%) saturate(7500%) hue-rotate(240deg) brightness(102%) contrast(143%);
+            filter: brightness(0) saturate(100%) invert(9%) sepia(100%) saturate(7391%) hue-rotate(248deg) brightness(105%) contrast(145%);
         }
     }
-
 }
 
 
@@ -208,6 +208,7 @@
 .bulletPoint {
     font-size: 18px;
     line-height: 1;
+    color: var(--textColor);
 }
 
 @keyframes scrollTools {

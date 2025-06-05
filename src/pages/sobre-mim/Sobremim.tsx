@@ -3,8 +3,8 @@ import veronicaImg from '../../assets/veronica.webp';
 import { Ferramentas } from '../../services/FerramentasData';
 import Ferramenta from './components/ferramenta/Ferramenta';
 import { FerramentaInterface } from '../../interfaces/components';
-import empresasImg from '../../assets/EMPRESAS.png'
-import newWindowIcon from '../../assets/svgs/new-window-black.svg';
+import empresasImg from '../../assets/EMPRESAS.webp'
+import newWindowIcon from '../../assets/svgs/new-window.svg';
 import pdfCurriculo from '../../assets/pdfs/curriculo.pdf';
 
 function Sobremim() {

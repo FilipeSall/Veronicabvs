@@ -1,6 +1,8 @@
 .container {
     display: flex;
     justify-content: space-between;
+    height: 84px;
+    margin: 40px 0;
 }
 
 .infoWrapper {
@@ -9,46 +11,50 @@
     flex-direction: column;
 }
 
-.projectDataWrapper {
+.casePanelShowcase{
     display: flex;
-    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    align-items: flex-end;
+}
+
+.casePanelThumbnail{
+    width: 84px;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.textNavWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    gap: 4px;
+}
+
+.textNavWrapper>p {
+    color: var(--textColor);
+    font-family: 'inter';
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0%;
 }
 
 .navWrapper {
     display: flex;
-    align-items: center;
-}
-
-.dataDotWrapper {
-    display: flex;
-    align-items: center;
-    width: 161px;
-    justify-content: space-evenly;
 }
 
 .nome {
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--textColor);
 }
 
 .projeto {
     font-weight: 700;
     font-size: 40px;
-}
-
-.dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: var(--fadeTextColor);
-    display: inline-block;
-    opacity: 0.7;
-}
-
-.data {
-    font-weight: 400;
-    font-size: 24px;
-    color: var(--fadeTextColor);
+    color: var(--textColor);
 }
 
 .caseNav {
@@ -61,7 +67,7 @@
     align-items: center;
     justify-content: center;
     transition: .3s ease-in-out;
-    position: relative; 
+    position: relative;
 }
 
 .active {
@@ -98,6 +104,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);

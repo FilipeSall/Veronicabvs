@@ -22,23 +22,27 @@ function Home() {
 
       </div>
 
-      <div className={styles.NavCasesWrapper}>
-        {CasesData
-          .sort((a, b) => a.id - b.id)
-          .map((caseItem: CasesInterface, i: number) => (
-            <CaseNav
-              key={i}
-              path={`case/${caseItem.id}`}
-              text={caseItem.id.toString()}
-              caseValue={caseItem.tipoDeCase}
-              bgColor={caseItem.bgColor}
-              imgHover={caseItem.imgHover}
-              projectName={caseItem.projeto}
-              isUnderConstruction={caseItem.underConstruction}
-              underConstructionImg={caseItem.underConstructionImg}
-              hoverText={caseItem.hoverText}
-            />
-          ))}
+    
+      <div className={styles.navCaseContainer}>
+        <p>Cases selecionados</p>
+        <div className={styles.NavCasesWrapper}>
+          {CasesData
+            .sort((a, b) => a.id - b.id)
+            .map((caseItem: CasesInterface, i: number) => (
+              <CaseNav
+                key={i}
+                path={`case/${caseItem.id}`}
+                text={caseItem.id.toString()}
+                caseValue={caseItem.tipoDeCase}
+                bgColor={caseItem.bgColor}
+                imgHover={caseItem.imgHover}
+                projectName={caseItem.projeto}
+                isUnderConstruction={caseItem.underConstruction}
+                underConstructionImg={caseItem.underConstructionImg}
+                hoverText={caseItem.hoverText}
+              />
+            ))}
+        </div>
       </div>
 
       <div className={styles.contatoWrapper}>

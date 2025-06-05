@@ -37,11 +37,11 @@ function CaseNav({
         if (isUnderConstruction) {
             return isHovered ? null : text;
         }
-        
+
         if (isHovered) {
-            return hoverText || projectName; 
+            return hoverText || projectName;
         }
-        
+
         return text;
     }, [isHovered, projectName, text, isUnderConstruction, hoverText]);
 
@@ -61,7 +61,7 @@ function CaseNav({
     }, [caseValue]);
 
     const handleMouseEnter = useCallback(() => setIsHovered(true), []);
-    
+
     const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
     const handleClick = useCallback((e: React.MouseEvent) => {
@@ -114,7 +114,7 @@ function CaseNav({
                     />
                     {isHovered && (
                         <p className={styles.caseTypeIndicator}>
-                            {caseTypeText}
+                            — {caseTypeText}
                         </p>
                     )}
                 </div>

@@ -6,7 +6,7 @@
     font-size: 14px;
 
     &:hover {
-        color: #0000FF;
+        color: var(--textHover);
     }
 }
 
@@ -44,4 +44,5 @@
 .icon {
     width: 16px;
     height: 16px;
+    color: var(--textColor);
 }

@@ -31,6 +31,7 @@ export interface CasePanelInterface {
     data:string
     bgColor:string
     isUnderConstruction?:boolean
+    miniImg: string
 }
 
 export interface ToolsIconInterface{

@@ -10,6 +10,7 @@ export interface CasesInterface {
     hoverText?:string,
     underConstruction?: boolean,
     underConstructionImg?: string
+    miniImg: string
 }
 
 export interface pushNotificationsInterface {

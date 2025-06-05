@@ -6,7 +6,7 @@ import styles from './casepanel.module.scss';
 import { useState, useCallback } from 'react';
 import engrenagemIcon from '../../assets/svgs/engrenagem.svg';
 
-function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePanelInterface) {
+function CasePanel({ nome, projeto, miniImg, isUnderConstruction = false }: CasePanelInterface) {
 
     const location = useLocation();
     const currentPath = location.pathname;
@@ -47,43 +47,49 @@ function CasePanel({ data, nome, projeto, isUnderConstruction = false }: CasePan
             <div className={styles.infoWrapper}>
                 <p className={styles.nome}>{nome}</p>
 
-                <div className={styles.projectDataWrapper}> 
+                <div className={styles.projectDataWrapper}>
                     <h1 className={styles.projeto}>{projeto}</h1>
-                    <div className={styles.dataDotWrapper}>
-                        <span className={styles.dot}></span>
-                        <p className={styles.data}>{data}</p>
-                    </div>
                 </div>
             </div>
 
-            <div className={styles.navWrapper}>
-                {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => {
-                    const isActive = currentCaseId === caseItem.id;
-                    const isHovered = hoveredId === caseItem.id;
-                    const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;
-                    const showIcon = itemUnderConstruction && isHovered;
+            <div className={styles.casePanelShowcase }>
+                <img
+                    src={miniImg}
+                    alt="Preview do case"
+                    className={styles.casePanelThumbnail}
+                />
 
-                    return (
-                        <Link
-                            key={i}
-                            to={`/case/${caseItem.id}`}
-                            className={`${styles.caseNav} ${isActive ? styles.active : ''} ${itemUnderConstruction ? styles.underConstruction : ''}`}
-                            style={getItemStyle(isActive, isHovered, caseItem)}
-                            onMouseEnter={() => setHoveredId(caseItem.id)}
-                            onMouseLeave={() => setHoveredId(null)}
-                            onClick={(e) => handleClick(e, caseItem)}
-                        >
-                            <div className={styles.contentWrapper}>
-                                {!showIcon && (
-                                    <span className={styles.caseId}>{caseItem.id}</span>
-                                )}
-                                {showIcon && (
-                                    <img src={engrenagemIcon} className={styles.constructionIcon} alt="Em construção" />
-                                )}
-                            </div>
-                        </Link>
-                    );
-                })}
+                <div className={styles.textNavWrapper}>
+                    <p>💡Explore os cases:</p>
+                    <div className={styles.navWrapper}>
+                        {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => {
+                            const isActive = currentCaseId === caseItem.id;
+                            const isHovered = hoveredId === caseItem.id;
+                            const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;
+                            const showIcon = itemUnderConstruction && isHovered;
+                            return (
+                                <Link
+                                    key={i}
+                                    to={`/case/${caseItem.id}`}
+                                    className={`${styles.caseNav} ${isActive ? styles.active : ''} ${itemUnderConstruction ? styles.underConstruction : ''}`}
+                                    style={getItemStyle(isActive, isHovered, caseItem)}
+                                    onMouseEnter={() => setHoveredId(caseItem.id)}
+                                    onMouseLeave={() => setHoveredId(null)}
+                                    onClick={(e) => handleClick(e, caseItem)}
+                                >
+                                    <div className={styles.contentWrapper}>
+                                        {!showIcon && (
+                                            <span className={styles.caseId}>{caseItem.id}</span>
+                                        )}
+                                        {showIcon && (
+                                            <img src={engrenagemIcon} className={styles.constructionIcon} alt="Em construção" />
+                                        )}
+                                    </div>
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
         </div>
     )

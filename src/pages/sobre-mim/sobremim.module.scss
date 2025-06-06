@@ -1,53 +1,41 @@
 .sobremimContainer {
     height: 85vh;
-    max-width: 1100px;
     display: flex;
-    gap: 40px;
-    margin: 0 auto;
+    justify-content: space-between;
     color: var(--textColor);
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 20px;
-    }
 }
 
 .imgSection {
     flex: 0 0 430px;
-
-    @media (max-width: 768px) {
-        flex: 0 0 auto;
-        max-height: 50vh;
-    }
+    animation: fadeInLeft 0.6s ease-out;
 }
 
 .img {
     width: 100%;
     max-height: 100%;
-    object-fit: contain;
 }
 
 .contentSection {
     flex: 1;
-    max-width: 631px;
+    max-width: 65%;
     display: flex;
     flex-direction: column;
     gap: 40px;
     height: 100%;
+}
 
-    @media (max-width: 768px) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        gap: 20px;
-    }
+.textWrapper {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 0 80px 0;
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
 }
 
 .title {
     font-size: 40px;
-
-    @media (max-width: 768px) {
-        font-size: 32px;
-    }
 }
 
 .title>span {
@@ -62,18 +50,30 @@
     font-weight: bold;
 }
 
+.animatedItem {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.2s; }
+    &:nth-child(2) { animation-delay: 0.4s; }
+    &:nth-child(3) { animation-delay: 0.6s; }
+    &:nth-child(4) { animation-delay: 0.8s; }
+    &:nth-child(5) { animation-delay: 1s; }
+}
+
 .ferramentasSection {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 1.1s;
 }
-
 
 .ferramentasWrapper {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 789px;
     position: relative;
     overflow: hidden;
 
@@ -108,6 +108,7 @@
     align-items: center;
     width: max-content;
     animation: scrollTools 15s linear infinite;
+    transition: all 0.3s ease;
 }
 
 .empresasSection {
@@ -115,6 +116,9 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    animation-delay: 1.3s;
 }
 
 .empresasWrapper {
@@ -161,6 +165,11 @@
     max-width: 100%;
     height: auto;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.02);
+    }
 }
 
 .textWrapperContainer {
@@ -168,6 +177,9 @@
     align-items: center;
     gap: 4px;
     margin-left: 4px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+    animation-delay: 0.9s;
 }
 
 .curriculoLink {
@@ -183,7 +195,6 @@
         }
     }
 }
-
 
 .newWindowBtn {
     cursor: pointer;
@@ -211,11 +222,11 @@
     color: var(--textColor);
 }
 
+// Keyframes das animações
 @keyframes scrollTools {
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(calc(-50% - 15px));
     }
@@ -225,8 +236,39 @@
     from {
         transform: translateX(0);
     }
-
     to {
         transform: translateX(-50%);
+    }
+}
+
+// Animações de entrada
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

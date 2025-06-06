@@ -10,10 +10,8 @@ export interface CasesInterface {
     projeto: string;
     tipoDeCase?: 'sucesso' | 'premiado'
     path: string
-    data: string
     bgColor: string,
     imgHover: string,
-    hoverText?: string,
     underConstruction?: boolean,
     underConstructionImg?: string
     miniImg: string

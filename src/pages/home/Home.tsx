@@ -39,7 +39,6 @@ function Home() {
                 projectName={caseItem.projeto}
                 isUnderConstruction={caseItem.underConstruction}
                 underConstructionImg={caseItem.underConstructionImg}
-                hoverText={caseItem.hoverText}
                 CasePreview={caseItem.CasePreview}
               />
             ))}

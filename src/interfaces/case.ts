@@ -7,6 +7,7 @@ export type CasePreview = {
 export interface CasesInterface {
     id: number;
     nome: string;
+    data:string;
     projeto: string;
     tipoDeCase?: 'sucesso' | 'premiado'
     path: string

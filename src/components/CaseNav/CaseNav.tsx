@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useMemo, useState, useCallback } from 'react';
+import { useState } from 'react';
 import styles from './casenav.module.scss';
 import { CaseNavInterface } from '../../interfaces/components';
 import successIcon from '../../assets/svgs/sucesso.svg';
@@ -8,13 +8,7 @@ import awardIcon from '../../assets/svgs/Medalha.svg';
 function CaseNav({
     caseValue,
     path,
-    text,
-    bgColor,
     imgHover,
-    projectName,
-    isUnderConstruction = false,
-    underConstructionImg,
-    hoverText,
     CasePreview
 }: CaseNavInterface) {
 

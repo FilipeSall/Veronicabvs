@@ -1,4 +1,5 @@
 import { IconType } from "react-icons"
+import { CasePreview } from "./case"
 
 export interface LinkInterface {
     path: string
@@ -22,7 +23,8 @@ export interface CaseNavInterface extends LinkInterface {
     projectName:string
     isUnderConstruction?: boolean
     underConstructionImg?:string
-    hoverText?:string
+    hoverText?:string,
+    CasePreview: CasePreview
 }
 
 export interface CasePanelInterface {

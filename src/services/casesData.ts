@@ -18,14 +18,12 @@ import safraPreview from '../assets/cases/preview/safraPreview.png';
 export const CasesData: CasesInterface[] = [
     {
         id: 1,
-        data: '2022-2024',
         nome: `Case 01 - Conta Digital e Empréstimo Pessoal`,
         projeto: 'Bemol BSF (Bemol Serviços Financeiros)',
         path: 'case-1',
         tipoDeCase: 'sucesso',
         bgColor: '#526FDC',
         imgHover: case2img,
-        hoverText: 'Conta Digital e Empréstimo Pessoal',
         miniImg: bemolBSFMiniImg,
         CasePreview: {
             title: '1. Conta Bemol',
@@ -35,7 +33,6 @@ export const CasesData: CasesInterface[] = [
     },
     {
         id: 2,
-        data: '2022-2024',
         nome: 'Case 02 - App Bemol (e-commerce)',
         projeto: 'Bemol BSA (Varejo)',
         path: 'case-2',
@@ -43,7 +40,6 @@ export const CasesData: CasesInterface[] = [
         imgHover: case3img,
         underConstruction: true,
         underConstructionImg: case2imgOff,
-        hoverText: 'App Bemol (e-commerce)',
         miniImg: bemolBSAMiniImg,
         CasePreview: {
             title: '2. App Bemol',
@@ -53,7 +49,6 @@ export const CasesData: CasesInterface[] = [
     },
     {
         id: 3,
-        data: '2024/2',
         nome: 'Case 03 - Doação de Cashback',
         projeto: 'Méliuz',
         path: 'case-3',
@@ -61,7 +56,6 @@ export const CasesData: CasesInterface[] = [
         imgHover: case1img,
         underConstruction: true,
         underConstructionImg: case3imgOff,
-        hoverText: 'Doação de Cashback',
         miniImg: melliuzMiniImg,
         CasePreview: {
             title: '3. Méliuz',
@@ -71,13 +65,11 @@ export const CasesData: CasesInterface[] = [
     },
     {
         id: 4,
-        data: '2022/1',
         nome: 'Case 04 - Hackathon 2022',
         projeto: 'Banco Safra',
         path: 'case-4',
         tipoDeCase: 'premiado',
         bgColor: '#386681',
-        hoverText: 'Hackathon 2022',
         imgHover: case4img,
         underConstruction: true,
         underConstructionImg: case4imgOff,

@@ -1,79 +1,76 @@
 .caseNav {
-    width: 340px;
+    width: 400px;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 340px;
+    height: 400px;
     background-color: var(--CaseNavBg);
-    font-size: 100px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     color: #F7F7F7;
     transition: background-color 0.5s ease;
+    justify-content: space-between;
+    position: relative;
 }
 
-.caseIcon {
-    position: absolute;
-    margin-top: 3%;
-    width: 56px;
-}
-
-.idText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.textNormal {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.textHover {
-    font-weight: 500;
-    font-size: 24px;
-    text-align: center;
-    margin: 8px 55px 7px 55px;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.caseContent {
-    height: 100%;
-    width: 100%;
+.caseNavHeader {
     display: flex;
     flex-direction: column;
-    transition: all 0.5s ease;
-    overflow: visible !important;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
 }
 
-.imageWrapper {
-    height: 70%;
-    position: relative;
+.caseNavHeader>h3 {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.caseNavHeader>p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0%;
+}
+
+.caseImgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    width: 100%;
+}
+
+.caseImgWrapper:hover {}
+
+.imgPreview {
+    object-fit: contain;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .hoverImg {
     opacity: 0;
-    transform: translateY(50px);
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     animation-name: slideUpEffect;
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+}
+
+.caseIndicator {
+    position: absolute;
+    bottom: 10%;
+    left: -50%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.caseIcon {
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 33%;
+    width: 56px;
 }
 
 .caseTypeIndicator {
@@ -83,45 +80,35 @@
     text-align: right;
     position: absolute;
     font-style: italic;
-    margin-top: 7%;
-    margin-left: 13%;
+    margin-top: 8%;
+    margin-left: 30%;
     color: var(--textSucess);
     animation: show 0.5s ease-in-out;
     width: 35%;
 }
 
-.caseIndicator {
-    position: absolute;
-    bottom: 10%;
-    left: -75%;
-    right: 0;
-    display: flex;
-    justify-content: center;
-}
 
-.underConstructionText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    margin: 8px 55px 7px 55px;
-    height: 30%;
-    color: #BBBBBB;
-
-    strong {
-        font-weight: 500;
-        display: block;
-        line-height: 1.2;
+@keyframes slideUpEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
     }
 
-    span {
-        font-size: 18px;
-        opacity: 0.8;
-        display: block;
-        line-height: 1.2;
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -134,17 +121,5 @@
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes slideUpEffect {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
     }
 }

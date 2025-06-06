@@ -14,107 +14,46 @@ function CaseNav({
     projectName,
     isUnderConstruction = false,
     underConstructionImg,
-    hoverText
+    hoverText,
+    CasePreview
 }: CaseNavInterface) {
 
     const [isHovered, setIsHovered] = useState(false);
-
-    const backgroundStyle = useMemo(() => {
-        if (!isHovered) return {};
-        return {
-            backgroundColor: isUnderConstruction ? '#FFFFFF' : bgColor,
-            cursor: isUnderConstruction ? 'not-allowed' : 'pointer'
-        };
-    }, [isHovered, bgColor, isUnderConstruction]);
-
-    const contentStyle = useMemo(() => {
-        return {
-            justifyContent: isHovered ? 'space-between' : 'center'
-        };
-    }, [isHovered]);
-
-    const displayText = useMemo(() => {
-        if (isUnderConstruction) {
-            return isHovered ? null : text;
-        }
-
-        if (isHovered) {
-            return hoverText || projectName;
-        }
-
-        return text;
-    }, [isHovered, projectName, text, isUnderConstruction, hoverText]);
-
-    const getImageSource = useMemo(() => {
-        if (isUnderConstruction && underConstructionImg) {
-            return underConstructionImg;
-        }
-        return imgHover;
-    }, [imgHover, isUnderConstruction, underConstructionImg]);
-
-    const caseTypeText = useMemo(() => {
-        return caseValue === 'sucesso' ? 'Case de Sucesso' : 'Case Premiado';
-    }, [caseValue]);
-
-    const caseIconSrc = useMemo(() => {
-        return caseValue === 'sucesso' ? successIcon : awardIcon;
-    }, [caseValue]);
-
-    const handleMouseEnter = useCallback(() => setIsHovered(true), []);
-
-    const handleMouseLeave = useCallback(() => setIsHovered(false), []);
-
-    const handleClick = useCallback((e: React.MouseEvent) => {
-        if (isUnderConstruction) {
-            e.preventDefault();
-        }
-    }, [isUnderConstruction]);
 
     return (
         <Link
             to={path}
             className={styles.caseNav}
-            style={backgroundStyle}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={handleClick}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
-            <div
-                className={styles.caseContent}
-                style={contentStyle}
-            >
-                {isUnderConstruction && isHovered ? (
-                    <div className={styles.underConstructionText}>
-                        <strong>Em breve</strong>
-                        <span>(em desenvolvimento)</span>
-                    </div>
-                ) : (
-                    <p className={isHovered ? styles.textHover : styles.textNormal}>
-                        {displayText}
-                    </p>
-                )}
+            <div className={styles.caseNavHeader}>
+                <h3>{CasePreview?.title}</h3>
+                <p>{CasePreview?.description}</p>
+            </div>
 
-                {isHovered && imgHover && (
-                    <div className={styles.imageWrapper}>
-                        <img
-                            src={getImageSource}
-                            alt={caseValue || 'projeto'}
-                            className={styles.hoverImg}
-                        />
-                    </div>
-                )}
+            <div className={`${styles.caseImgWrapper}`}>
+                {isHovered ?
+                    <img
+                        className={styles.hoverImg}
+                        src={imgHover}
+                    /> :
+                    <img
+                        className={styles.imgPreview}
+                        src={CasePreview.img}
+                    />}
             </div>
 
             {caseValue && (
                 <div className={styles.caseIndicator}>
                     <img
-                        src={caseIconSrc}
+                        src={caseValue === 'sucesso' ? awardIcon : successIcon}
                         alt={`Caso ${caseValue}`}
                         className={styles.caseIcon}
                     />
                     {isHovered && (
                         <p className={styles.caseTypeIndicator}>
-                            — {caseTypeText}
+                            — {caseValue}
                         </p>
                     )}
                 </div>

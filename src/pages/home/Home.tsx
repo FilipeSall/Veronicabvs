@@ -40,6 +40,7 @@ function Home() {
                 isUnderConstruction={caseItem.underConstruction}
                 underConstructionImg={caseItem.underConstructionImg}
                 hoverText={caseItem.hoverText}
+                CasePreview={caseItem.CasePreview}
               />
             ))}
         </div>

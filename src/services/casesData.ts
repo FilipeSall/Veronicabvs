@@ -28,7 +28,7 @@ export const CasesData: CasesInterface[] = [
         hoverText: 'Conta Digital e Empréstimo Pessoal',
         miniImg: bemolBSFMiniImg,
         CasePreview: {
-            title: 'Conta Bemol',
+            title: '1. Conta Bemol',
             description: 'Serviços Financeiros',
             img: caseBemolPreviewImg
         }
@@ -46,7 +46,7 @@ export const CasesData: CasesInterface[] = [
         hoverText: 'App Bemol (e-commerce)',
         miniImg: bemolBSAMiniImg,
         CasePreview: {
-            title: 'App Bemol',
+            title: '2. App Bemol',
             description: 'e-commerce',
             img: appBemolPreviewImg
         }
@@ -64,7 +64,7 @@ export const CasesData: CasesInterface[] = [
         hoverText: 'Doação de Cashback',
         miniImg: melliuzMiniImg,
         CasePreview: {
-            title: 'Méliuz',
+            title: '3. Méliuz',
             description: 'Solução para Cashback',
             img: melliuzPreview
         }
@@ -83,7 +83,7 @@ export const CasesData: CasesInterface[] = [
         underConstructionImg: case4imgOff,
         miniImg: safraMiniImg,
         CasePreview: {
-            title: 'Safra',
+            title: '4. Safra',
             description: 'Hackathon 2022',
             img: safraPreview
         }

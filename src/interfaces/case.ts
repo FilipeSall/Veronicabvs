@@ -1,3 +1,9 @@
+export type CasePreview = {
+    title: string;
+    description: string;
+    img:string;
+}
+
 export interface CasesInterface {
     id: number;
     nome: string;
@@ -7,10 +13,11 @@ export interface CasesInterface {
     data: string
     bgColor: string,
     imgHover: string,
-    hoverText?:string,
+    hoverText?: string,
     underConstruction?: boolean,
     underConstructionImg?: string
     miniImg: string
+    CasePreview: CasePreview
 }
 
 export interface pushNotificationsInterface {
@@ -34,19 +41,19 @@ export type SummaryNavInterface = {
     readingTime: number;
     title: string;
     isSpecial: false;
-    href:string
+    href: string
 } | {
     id: string;
     readingTime: number;
-    href:string
+    href: string
     title: string;
     isSpecial: true;
     specialNote: string;
 }
 
 export interface SummaryInterface {
-    bg:string,
-    color:string,
-    items:SummaryNavInterface[]
-    navegavelColor?:string
+    bg: string,
+    color: string,
+    items: SummaryNavInterface[]
+    navegavelColor?: string
 }

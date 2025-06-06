@@ -10,6 +10,10 @@ import bemolBSAMiniImg from '../assets/cases/bemolBsaMiniImg.webp';
 import bemolBSFMiniImg from '../assets/cases/bemolBsfMiniImg.webp';
 import melliuzMiniImg from '../assets/cases/melliuuzMiniImg.webp';
 import safraMiniImg from '../assets/cases/safraMiniImg.webp';
+import caseBemolPreviewImg from '../assets/cases/preview/contaBemolPreview.webp';
+import appBemolPreviewImg from '../assets/cases/preview/appBemolPreview.webp';
+import melliuzPreview from '../assets/cases/preview/melliuzPreview.webp';
+import safraPreview from '../assets/cases/preview/safraPreview.png';
 
 export const CasesData: CasesInterface[] = [
     {
@@ -22,7 +26,12 @@ export const CasesData: CasesInterface[] = [
         bgColor: '#526FDC',
         imgHover: case2img,
         hoverText: 'Conta Digital e Empréstimo Pessoal',
-        miniImg: bemolBSFMiniImg
+        miniImg: bemolBSFMiniImg,
+        CasePreview: {
+            title: 'Conta Bemol',
+            description: 'Serviços Financeiros',
+            img: caseBemolPreviewImg
+        }
     },
     {
         id: 2,
@@ -35,7 +44,12 @@ export const CasesData: CasesInterface[] = [
         underConstruction: true,
         underConstructionImg: case2imgOff,
         hoverText: 'App Bemol (e-commerce)',
-        miniImg: bemolBSAMiniImg
+        miniImg: bemolBSAMiniImg,
+        CasePreview: {
+            title: 'App Bemol',
+            description: 'e-commerce',
+            img: appBemolPreviewImg
+        }
     },
     {
         id: 3,
@@ -48,7 +62,12 @@ export const CasesData: CasesInterface[] = [
         underConstruction: true,
         underConstructionImg: case3imgOff,
         hoverText: 'Doação de Cashback',
-        miniImg: melliuzMiniImg
+        miniImg: melliuzMiniImg,
+        CasePreview: {
+            title: 'Méliuz',
+            description: 'Solução para Cashback',
+            img: melliuzPreview
+        }
     },
     {
         id: 4,
@@ -62,7 +81,12 @@ export const CasesData: CasesInterface[] = [
         imgHover: case4img,
         underConstruction: true,
         underConstructionImg: case4imgOff,
-        miniImg: safraMiniImg
+        miniImg: safraMiniImg,
+        CasePreview: {
+            title: 'Safra',
+            description: 'Hackathon 2022',
+            img: safraPreview
+        }
     },
 ]
 

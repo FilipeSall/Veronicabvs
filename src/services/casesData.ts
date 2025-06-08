@@ -60,7 +60,7 @@ export const CasesData: CasesInterface[] = [
         underConstruction: true,
         underConstructionImg: case3imgOff,
         miniImg: melliuzMiniImg,
-        CasePreview: {
+        CasePreview: { 
             title: '3. Méliuz',
             description: 'Solução para Cashback',
             img: melliuzPreview

@@ -40,6 +40,20 @@ function Sobremim() {
                     </a>
                 </div>
 
+                {/* Seção das empresas*/}
+                <section className={styles.empresasSection}>
+                    <div className={styles.textWrapperContainer}>
+                        <div className={styles.bulletPoint}>•</div>
+                        <p>Empresas por onde passei:</p>
+                    </div>
+                    <div className={styles.empresasWrapper}>
+                        <div className={styles.empresasInner}>
+                            <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
+                            <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
+                        </div>
+                    </div>
+                </section>
+
                 {/* Seção de ferramentas*/}
                 <section className={styles.ferramentasSection}>
                     <div className={styles.textWrapperContainer}>
@@ -54,20 +68,6 @@ function Sobremim() {
                             {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
                                 <Ferramenta key={`duplicate-${i}`} {...ferramenta} />
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Seção das empresas*/}
-                <section className={styles.empresasSection}>
-                    <div className={styles.textWrapperContainer}>
-                        <div className={styles.bulletPoint}>•</div>
-                        <p>Empresas por onde passei:</p>
-                    </div>
-                    <div className={styles.empresasWrapper}>
-                        <div className={styles.empresasInner}>
-                            <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
-                            <img src={empresasImg} className={styles.empresasImg} alt='Empresas na qual já trabalhei' />
                         </div>
                     </div>
                 </section>

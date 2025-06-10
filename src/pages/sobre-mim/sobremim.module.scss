@@ -25,10 +25,9 @@
 
 .textWrapper {
     display: flex;
-    gap: 16px;
+    gap: 40px;
     flex-direction: column;
     width: 70%;
-    margin: 0 0 80px 0;
     animation: fadeInUp 0.8s ease-out;
     animation-fill-mode: both;
 }
@@ -159,10 +158,6 @@
     height: auto;
     flex-shrink: 0;
     transition: transform 0.3s ease;
-
-    &:hover {
-        transform: scale(1.02);
-    }
 }
 
 .textWrapperContainer {

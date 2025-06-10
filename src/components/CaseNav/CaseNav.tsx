@@ -9,7 +9,8 @@ function CaseNav({
     caseValue,
     path,
     imgHover,
-    CasePreview
+    CasePreview,
+    isUnderConstruction,
 }: CaseNavInterface) {
 
     const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +18,8 @@ function CaseNav({
     return (
         <Link
             to={path}
-            className={styles.caseNav}
+            onClick={(e) => isUnderConstruction && e.preventDefault()}
+            className={`${styles.caseNav} ${isUnderConstruction && styles.disabled}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -26,18 +28,27 @@ function CaseNav({
                 <p>{CasePreview?.description}</p>
             </div>
 
-            <div className={`${styles.caseImgWrapper}`}>
-                {isHovered ?
+            {/* IMAGEM */}
+            <div className={styles.caseImgWrapper}>
+                {isUnderConstruction ? 
+                (
+                    <p className={styles.underConstructionText}>[EM BREVE]</p>
+                ) : isHovered ? (
                     <img
                         className={styles.hoverImg}
                         src={imgHover}
-                    /> :
+                        alt={CasePreview?.title}
+                    />
+                ) : (
                     <img
                         className={styles.imgPreview}
                         src={CasePreview.img}
-                    />}
+                        alt={CasePreview?.title}
+                    />
+                )}
             </div>
 
+            {/* ICONE ESPECIAL*/}
             {caseValue && (
                 <div className={styles.caseIndicator}>
                     <img

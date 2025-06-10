@@ -1,5 +1,5 @@
 .caseNav {
-    width: 400px;
+    width: 332px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,19 +31,31 @@
     letter-spacing: 0%;
 }
 
+
+.underConstructionText {
+    font-size: 16px;
+    color: #BBBBBB;
+    font-family: 'inter';
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
 .caseImgWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    height: 400px;
 }
-
 
 
 .imgPreview {
     object-fit: contain;
     margin-bottom: 20px;
     animation: fadeIn 0.5s ease-in-out;
+    
 }
 
 .hoverImg {
@@ -52,7 +64,7 @@
     animation-duration: 0.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    width: 90%;
+    width: 95%;
     height: auto;
     object-fit: cover;
 }
@@ -68,7 +80,7 @@
 
 .caseIcon {
     position: absolute;
-    margin-top: 2%;
+    margin-top: 5.5%;
     margin-left: 33%;
     width: 56px;
 }
@@ -80,8 +92,8 @@
     text-align: right;
     position: absolute;
     font-style: italic;
-    margin-top: 8%;
-    margin-left: 30%;
+    margin-top: 18%;
+    margin-left: 10%;
     color: var(--textSucess);
     animation: show 0.5s ease-in-out;
     width: 35%;
@@ -96,7 +108,7 @@
 
     100% {
         opacity: 1;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
 }
 

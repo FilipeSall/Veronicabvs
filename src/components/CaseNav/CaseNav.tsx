@@ -38,13 +38,11 @@ function CaseNav({
                             src={CasePreview.img}
                             alt={CasePreview?.title}
                         />
-                        {isHovered && (
-                            <img
-                                className={styles.hoverImg}
-                                src={imgHover}
-                                alt={CasePreview?.title}
-                            />
-                        )}
+                        <img
+                            className={`${styles.hoverImg} ${isHovered ? styles.show : styles.hide}`}
+                            src={imgHover}
+                            alt={CasePreview?.title}
+                        />
                     </>
                 )}
             </div>

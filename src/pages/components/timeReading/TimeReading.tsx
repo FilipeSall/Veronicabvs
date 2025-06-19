@@ -1,5 +1,5 @@
 import styles from './timereading.module.scss';
-import clockIcon from '../../../../assets/svgs/clock.svg';
+import clockIcon from '../../../assets/svgs/clock.svg';
 
 type TimeReadingProps = {
     time: number

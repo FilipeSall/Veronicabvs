@@ -1,0 +1,59 @@
+.pageHeaderContainer {
+    width: 100%;
+    font-family: Inter;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 72px;
+}
+
+
+.headerDescription {
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 50%;
+    padding-left: 0.5rem;
+    border-left: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    span {
+        font-weight: 700;
+    }
+}
+
+.headerDescriptionTitle{
+    font-weight: 700;
+    font-family: Exo;
+    line-height: 100%;
+}
+
+.headerDescriptionContextTxt{
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.toolsContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.toolsWrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toolsText {
+    font-family: Exo;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0%;
+}
+
+
+
+

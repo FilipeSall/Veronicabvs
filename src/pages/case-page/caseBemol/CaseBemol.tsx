@@ -1,7 +1,6 @@
 import '../escopecasepage.scss';
 import { tools, pushNotifications, Values, entregas, summary } from './tools';
 import styles from './casebemol.module.scss';
-import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import arrowUp from '../../../assets/svgs/arrowUp.svg';
 import TwoColumnGrid from '../components/TwoColumnGrid/TwoColumnGrid';
 import suspensePhoneImg from '../../../assets/caseBemol/suspense-phone.png';
@@ -13,8 +12,9 @@ import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
 import InfoImg from '../components/InfoImg/InfoImg';
 import DateVideo from './components/dateVideo/DateVideo';
-import Summary from '../components/summary/Summary';
+import Summary from '../../components/summary/Summary';
 import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
+import PageHeader from '../../components/page-header/PageHeader';
 
 function CaseBemol() {
 
@@ -22,26 +22,17 @@ function CaseBemol() {
 
     return (
         <section className='page-container'>
-            {/* CASE HEADER*/}
-            <div className='case-header' id='header-bemol'>
-                <p className='header-description' style={{ borderLeft: '1px solid #404040' }}>
-                    <span className='header-description__title'>Contexto:</span> Atuação abrangente em <span>conta digital</span> (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo <span>todo o ciclo de design</span>, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.
-                </p>
+            <PageHeader 
+                bgColor={summary.bg}
+                contextTxt='Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.'
+                headerId='header-bemol'
+                tools={tools}
+            />
 
-                <div className='tools-container'>
-                    <p className='tools-text'>Ferramentas:</p>
-                    <div className='tools-wrapper'>
-                        {tools.map((tool, i) => (
-                            <ToolsIcon key={i} value={tool.value} />
-                        ))}
-                    </div>
-                </div>
-            </div>
-            {/*SUMMARY */}
             <Summary items={summary.items} bg={summary.bg} color={summary.color} />
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
-            <section className='chapter' id='chapter-1-1' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
+            <section className='chapter' id='chapter-1-1' style={{ color: '#FFFFFF' }}>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas</h2>
                     <p className='case-subtitle'><span>Apoio:</span> Equipe de Marketing e equipe de Dados.</p>

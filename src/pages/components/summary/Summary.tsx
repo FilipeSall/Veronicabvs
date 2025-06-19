@@ -6,13 +6,14 @@ import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
 import { hexToRgba } from '../../../utils/hexToRgba';
 
 
-function Summary({ items, bg, color, navegavelColor }: SummaryInterface) {
+function Summary({ items, bg, color, navegavelColor, totalReading }: SummaryInterface) {
     const scrollToElement = useSmoothScroll();
 
     const backgroundWithOpacity = hexToRgba(bg, 0.25);
 
     return (
         <nav className={styles.navContainer} style={{ background: backgroundWithOpacity, color: color }}>
+        <div className={styles.summaryContentWrapper}>
             <div className={styles.titleWrapper}>
                 <h1>Sumário <span>(principais entregas) </span></h1>
                 <p>
@@ -29,7 +30,7 @@ function Summary({ items, bg, color, navegavelColor }: SummaryInterface) {
                                 scrollToElement(item.href.replace('#', ''));
                             }}
                         >
-                            <span className={styles.anchorId}>{item.id}</span> 
+                            <span className={styles.anchorId}>{item.id}</span>
                             <p>{item.title}</p>
                             <TimeReading time={item.readingTime} />
                         </a>
@@ -41,7 +42,12 @@ function Summary({ items, bg, color, navegavelColor }: SummaryInterface) {
                     </div>
                 ))}
             </div>
-        </nav>
+        </div>
+        <div className={styles.totalReadingContaine}>
+            <TimeReading time={totalReading ?? 0} totalReading />
+        </div>
+    </nav>
+    
     );
 }
 

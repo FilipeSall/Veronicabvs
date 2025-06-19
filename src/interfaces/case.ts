@@ -55,4 +55,5 @@ export interface SummaryInterface {
     color: string,
     items: SummaryNavInterface[]
     navegavelColor?: string
+    totalReading?: number
 }

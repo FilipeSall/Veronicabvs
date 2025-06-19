@@ -101,5 +101,5 @@ export const summary: SummaryInterface = {
             title:'Escolha da data do vencimento das parcelas de empréstimo (prévia)',
             specialNote:'Case exclusivo para apresentação pessoal)'
         }
-    ]
+    ],
 }

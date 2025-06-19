@@ -19,6 +19,7 @@ import PageHeader from '../../components/page-header/PageHeader';
 function CaseBemol() {
 
     const scrollToElement = useSmoothScroll();
+    const totalReading = summary.items.reduce((acc, item) => acc + item.readingTime, 0);
 
     return (
         <section className='page-container'>
@@ -29,7 +30,7 @@ function CaseBemol() {
                 tools={tools}
             />
 
-            <Summary items={summary.items} bg={summary.bg} color={summary.color} />
+            <Summary items={summary.items} bg={summary.bg} color={summary.color} totalReading={totalReading} />
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
             <section className='chapter' id='chapter-1-1' style={{ color: '#FFFFFF' }}>

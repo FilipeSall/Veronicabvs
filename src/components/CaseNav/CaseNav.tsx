@@ -12,7 +12,6 @@ function CaseNav({
     CasePreview,
     isUnderConstruction,
 }: CaseNavInterface) {
-
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -30,21 +29,23 @@ function CaseNav({
 
             {/* IMAGEM */}
             <div className={styles.caseImgWrapper}>
-                {isUnderConstruction ? 
-                (
+                {isUnderConstruction ? (
                     <p className={styles.underConstructionText}>[EM BREVE]</p>
-                ) : isHovered ? (
-                    <img
-                        className={styles.hoverImg}
-                        src={imgHover}
-                        alt={CasePreview?.title}
-                    />
                 ) : (
-                    <img
-                        className={styles.imgPreview}
-                        src={CasePreview.img}
-                        alt={CasePreview?.title}
-                    />
+                    <>
+                        <img
+                            className={styles.imgPreview}
+                            src={CasePreview.img}
+                            alt={CasePreview?.title}
+                        />
+                        {isHovered && (
+                            <img
+                                className={styles.hoverImg}
+                                src={imgHover}
+                                alt={CasePreview?.title}
+                            />
+                        )}
+                    </>
                 )}
             </div>
 

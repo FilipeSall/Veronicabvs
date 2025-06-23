@@ -33,7 +33,7 @@ function CaseBemol() {
             <Summary items={summary.items} bg={summary.bg} color={summary.color} totalReading={totalReading} />
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
-            <section className='chapter' id='chapter-1-1' style={{ color: '#FFFFFF' }}>
+            <section className='chapter' id='chapter-1-1'>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas</h2>
                     <p className='case-subtitle'><span>Apoio:</span> Equipe de Marketing e equipe de Dados.</p>
@@ -169,7 +169,7 @@ function CaseBemol() {
             </section>
 
             {/*1.2 Outras entregas*/}
-            <section className='chapter' id='chapter-1-2' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+            <section className='chapter' id='chapter-1-2'>
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.2 Outras entregas</h2>
                 </div>
@@ -220,7 +220,7 @@ function CaseBemol() {
             </section>
 
             {/*1.3 Outras entregas*/}
-            <section className='chapter' id='chapter-1-3' style={{ backgroundColor: '#4c31e0', color: '#FFFFFF' }}>
+            <section className='chapter' id='chapter-1-3'>
 
                 <div className='case-title__wrapper mb24'>
                     <h2 className='case-title'>1.3 Outras entregas</h2>
@@ -259,7 +259,7 @@ function CaseBemol() {
             </section>
 
             {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-            <section className='chapter noMb noPb' id='chapter-1-4' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
+            <section className='chapter noMb noPb' id='chapter-1-4' >
                 <div className='case-title__wrapper'>
                     <h2 className='case-title'>1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia)</h2>
                     <p className='case-subtitle'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende um horário.</p>

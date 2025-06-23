@@ -13,7 +13,18 @@
     padding: 40px 58px;
     display: flex;
     flex-direction: column;
+    color: var(--textColor);
+    text-align: center;
 }
+
+section.chapter:nth-child(odd) {
+  background-color: #0F0F0F;
+}
+
+section.chapter:nth-child(even) {
+  background-color: #272727;
+}
+
 
 .case-title__wrapper {
     display: flex;

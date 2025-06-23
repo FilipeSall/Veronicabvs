@@ -1,13 +1,13 @@
 export type CasePreview = {
     title: string;
     description: string;
-    img:string;
+    img: string;
 }
 
 export interface CasesInterface {
     id: number;
     nome: string;
-    data:string;
+    data: string;
     projeto: string;
     tipoDeCase?: 'sucesso' | 'premiado'
     path: string
@@ -39,6 +39,7 @@ export type SummaryNavInterface = {
     id: string;
     readingTime: number;
     title: string;
+    subtitle?: string;
     isSpecial: false;
     href: string
 } | {
@@ -46,6 +47,7 @@ export type SummaryNavInterface = {
     readingTime: number;
     href: string
     title: string;
+    subtitle?: string;
     isSpecial: true;
     specialNote: string;
 }

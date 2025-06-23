@@ -4,24 +4,14 @@
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-.suspensePhoneImg {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.suspenseTxt {
-    position: absolute;
-    top: 76%;
-    left: 0%;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 12px;
-    line-height: 100%;
+.pushNotificationsContainer{
+    display: flex;
+    width: 85%;
+    justify-content: space-evenly;
 }
 
 .colResults {
@@ -32,6 +22,9 @@
     margin-bottom: 40px;
 }
 
-.titleCol {
-    margin-bottom: 24px;
+.cardsEnumeradosContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 40px 0;
 }

@@ -1,13 +1,11 @@
 import { ToolsIconInterface } from "../../../interfaces/components";
-import { CardsEnumeradosInterface, InfoImgInterface, pushNotificationsInterface, SummaryInterface } from "../../../interfaces/case";
+import { CardsEnumeradosInterface, pushNotificationsInterface, SummaryInterface } from "../../../interfaces/case";
 import educationVideo from "../../../assets/caseBemol/Estudos.mp4";
 import topImgEducation from "../../../assets/caseBemol/educacaoImg.png";
 import viagemVideo from "../../../assets/caseBemol/Viagens.mp4";
 import topImgViagem from "../../../assets/caseBemol/viagemImg.png";
 import comprasVideo from "../../../assets/caseBemol/Compras.mp4";
 import topImgCompras from "../../../assets/caseBemol/comprasImg.png";
-import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
-import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
 
 export const tools: ToolsIconInterface[] = [
     {
@@ -64,16 +62,6 @@ export const Values: CardsEnumeradosInterface[] = [
     }
 ]
 
-export const entregas: InfoImgInterface[] = [
-    {
-        img: entregaImg1,
-        info: 'Obs. Dados sensíveis censurados'
-    },
-    {
-        img: entregaImg2,
-        info: 'Dados sensíveis censurados'
-    }
-]
 
 export const summary: SummaryInterface = {
     bg:'#4c31e0',
@@ -84,14 +72,15 @@ export const summary: SummaryInterface = {
             href: '#chapter-1-1',
             isSpecial: false,
             readingTime: 3,
-            title: 'Resgatando clientes no fluxo de empréstimo por notificações segmentadas'
+            title: '1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas',
+            subtitle:'Apoio: Equipe de Marketing e equipe de Dados.'
         },
         {
             id:'1.2 e 1.3',
             href:'#chapter-1-2',
             isSpecial: false,
             readingTime: 1,
-            title:'Outras entregas'
+            title:'1.2 Outras entregas',
         },
         {
             id:'1.4',

@@ -1,20 +1,22 @@
 import '../escopecasepage.scss';
-import { tools, pushNotifications, Values, entregas, summary } from './tools';
+import { tools, pushNotifications, Values, summary } from './tools';
 import styles from './casebemol.module.scss';
-import arrowUp from '../../../assets/svgs/arrowUp.svg';
-import TwoColumnGrid from '../components/TwoColumnGrid/TwoColumnGrid';
-import suspensePhoneImg from '../../../assets/caseBemol/suspense-phone.png';
+import arrowUp from '../../../assets/svgs/scrolTop.svg';
 import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
 import FunilImg from './components/funilImg/FunilImg';
 import ProcessFlowContainer from './components/processflowcontainer/ProcessFlowContainer';
-import FullscreenImage from './components/fullscreenimg/FullscreenImage';
 import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
-import InfoImg from '../components/InfoImg/InfoImg';
 import DateVideo from './components/dateVideo/DateVideo';
 import Summary from '../../components/summary/Summary';
 import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
 import PageHeader from '../../components/page-header/PageHeader';
+import CaseTitle from '../../components/case-title/CaseTitle';
+import SuspensePhone from './components/suspensePhone/SuspensePhone';
+import OpenScreenImg from './components/openScreenImg/OpenScreenImg';
+import ImgWithText from '../components/imgWithText/ImgWithText';
+import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
+import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
 
 function CaseBemol() {
 
@@ -23,7 +25,7 @@ function CaseBemol() {
 
     return (
         <section className='page-container'>
-            <PageHeader 
+            <PageHeader
                 bgColor={summary.bg}
                 contextTxt='Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.'
                 headerId='header-bemol'
@@ -34,183 +36,144 @@ function CaseBemol() {
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
             <section className='chapter' id='chapter-1-1'>
-                <div className='case-title__wrapper'>
-                    <h2 className='case-title'>1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas</h2>
-                    <p className='case-subtitle'><span>Apoio:</span> Equipe de Marketing e equipe de Dados.</p>
-                </div>
+                <CaseTitle
+                    title={summary.items[0].title}
+                    subTitle={summary.items[0].subtitle}
+                />
                 <div className='subsection'>
-                    <h3 className="bullet-white">Resultado</h3>
-                    <div className={`subsection-content ${styles.wrapper}`}>
-                        <img
-                            src={suspensePhoneImg}
-                            className={styles.suspensePhoneImg}
-                            alt='telefone'
-                        />
-                        <p className={styles.suspenseTxt}>Step 2</p>
-                        {pushNotifications && pushNotifications.map((cel, i) => (
-                            <PushNotificationVideo
-                                alt={cel.alt}
-                                topImg={cel.topImg}
-                                video={cel.video}
-                                key={i}
-                            />
-                        ))}
+                    <div className={`${styles.wrapper}`}>
+                        <SuspensePhone />
+                        <div className={styles.pushNotificationsContainer}>
+                            {pushNotifications && pushNotifications.map((cel, i) => (
+                                <PushNotificationVideo
+                                    alt={cel.alt}
+                                    topImg={cel.topImg}
+                                    video={cel.video}
+                                    key={i}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="subsection noGap">
-                    <h3 className="bullet-white">Desafio e oportunidade</h3>
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`coluna ${styles.colResults}`}>
-                                    <p className={`case-paragrafo`}>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
-                                    </p>
-                                    <p className={`case-paragrafo`}>
-                                        Esse comportamento indicava uma <span>oportunidade estratégica</span>: mesmo com uma oferta pronta para ser ativada, a experiência atual não estava sendo eficiente em converter esse público.
-                                    </p>
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`coluna ${styles.colResults}`}>
-                                <p className={`case-paragrafo`}>Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span> de reengajamento após o abandono do fluxo.
-                                </p>
-                                <p className={`case-paragrafo`}>
-                                    A partir dessa constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span> do funil.
-                                </p>
-                            </div>
-                        }
-                    />
+                <div className="subsection">
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>DESAFIO E OPORTUNIDADE</h3>
+                            <p className='content-text'>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
+                                <br />
+                                <br />
+                                Esse comportamento indicava uma <span>oportunidade estratégica:</span> mesmo com uma oferta pronta para ser ativada, a experiência atual não estava sendo eficiente em converter esse público.
+                                <br />
+                                <br />
+                                Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span>  de reengajamento após o abandono do fluxo.
+                                <br />
+                                <br />
+                                A partir desta constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span>  do funil.</p>
+                        </div>
+                    </div>
                     <FunilImg />
                 </div>
 
-                <div className="subsection noGap">
-                    <h3 className="bullet-white">Processo</h3>
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`coluna ${styles.colResults}`}>
-                                    <p className={`case-paragrafo`}>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
-                                    </p>
-                                    <p className={`case-paragrafo`}>
-                                        A partir disso, identifiquei a <span>oportunidade</span> de implementar uma régua de comunicação segmentada via push.
-                                    </p>
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`coluna ${styles.colResults}`}>
-                                <p className={`case-paragrafo`}>
-                                    <span>"Alinhei a proposta com stakeholders</span> e, em parceria com a equipe de <span>marketing</span>, definimos os conteúdos e gatilhos da régua. A partir disso, personalizei o componente de push existente no <span>design system</span>, adaptando seu comportamento, visual e conteúdo ao contexto da <span>jornada</span>.
-                                </p>
-                                <p className={`case-paragrafo`}>
-                                    Apresentei a solução aos stakeholders, <span>validei a solução</span> e finalizei a entrega.
-                                </p>
-                            </div>
-                        }
-                    />
+                <div className="subsection">
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>PROCESSO</h3>
+                            <p className='content-text'>
+                                Comecei com uma <span>análise de dados</span> para  identificar o problema e entender o comportamento de abandono no funil, seguida por um <span>benchmarking</span> com bancos digitais para mapear  <span>boas práticas</span>  de reengajamento.
+                                <br />
+                                <br />
+                                A partir disso, <span>identifiquei a oportunidade</span> de implementar uma régua de comunicação segmentada via push.
+                                <br />
+                                <br />
+                                Alinhei a proposta com <span>stakeholders</span> e, em parceria com a equipe de marketing, definimos os conteúdos e gatilhos da régua. A partir disso, personalizei o componente de push existente no <span> design system</span>, adaptando seu comportamento, visual e conteúdo ao contexto da jornada.
+                                <br />
+                                <br />
+                                Apresentei a solução aos stakeholders, <span>validei a solução</span> e finalizei a entrega.
+                            </p>
+                        </div>
+                    </div>
                     <ProcessFlowContainer />
                 </div>
 
-                <div className="subsection noGap">
-                    <h3 className="bullet-white">Solução: Régua de comunicação segmentada</h3>
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`coluna ${styles.colResults}`}>
-                                    <p className={`case-paragrafo`}>Para <span>aumentar a conversão</span> de clientes com crédito pré-aprovado, desenvolvi uma <span>régua de comunicação segmentada via push</span>, considerando o momento de abandono no fluxo e o perfil do usuário.
-                                    </p>
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`coluna ${styles.colResults}`}>
-                                <p className={`case-paragrafo`}>
-                                    O conteúdo e o timing das mensagens foram definidos com apoio do time de <span>marketing e alinhados</span> com o <span>design system</span> da empresa.
-                                </p>
-                            </div>
-                        }
-                    />
+                <div className="subsection">
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>PROCESSO</h3>
+                            <p className='content-text'>
+                                Para <span>aumentar a conversão</span> de clientes com crédito pré-aprovado, desenvolvi uma <span>régua de comunicação segmentada via push</span>, considerando o momento de abandono no fluxo e o perfil do usuário.
+                                <br />
+                                <br />
+                                O conteúdo e o timing das mensagens foram definidos com apoio do <span>time de marketing</span> e alinhados com o <span> design system</span> da empresa.
+                            </p>
+                        </div>
+                    </div>
 
-                    <FullscreenImage />
+                    <OpenScreenImg />
                 </div>
 
                 <div className="subsection">
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`coluna ${styles.colResults}`}>
-                                    <h3 className="bullet-white">Métricas e melhorias</h3>
-                                    <p className={`case-paragrafo`}>Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:
-                                    </p>
-                                    <div>
-                                        <p className={`case-paragrafo`}><span>Taxa de retorno</span> ao fluxo de contratação (aumento de 12% para 28%)</p>
-                                        <p className={`case-paragrafo`}><span>Taxa de conversão</span> em empréstimos efetivados (aumento de 4% para 7%);</p>
-                                        <p className={`case-paragrafo`}><span>Taxa de engajamento</span> com as notificações (taxa de cliques em torno de 18%).</p>
-                                    </div>
-                                    <p className="case-paragrafo">Além disso, tive apoio do time de marketing nos ajustes na <span>copy</span> e no <span>timing</span> das notificações.</p>
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`coluna ${styles.colResults}`}>
-                                <h3 className="bullet-white">Plano de monitoramento</h3>
-                                <p className={`case-paragrafo`}>
-                                    O desempenho da estratégia foi acompanhado por relatórios periódicos, com foco na <span>identificação de padrões e ajustes contínuos</span>.
-                                </p>
-                                <p className={`case-paragrafo`}>
-                                    O <span>monitoramento incluiu métricas</span> como interações com os pushes, tempo médio de retorno ao fluxo e variações nas taxas de conversão, de forma a <span>garantir a evolução da estratégia</span>, de acordo com o comportamento dos usuários e as metas do negócio.
-                                </p>
-                            </div>
-                        }
-                    />
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>MÉTRICAS E MELHORIAS</h3>
+                            <p className='content-text'>
+                                Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:</p>
+                            <ul className='content-list'>
+                                <li><span>Taxa de retorno</span> ao fluxo de contratação (<span>aumento de 12% para 28%</span>);</li>
+                                <li><span>Taxa de conversão</span> em empréstimos efetivados (<span>aumento de 4% para 7%</span>);</li>
+                                <li><span>Taxa de engajamento</span> com as notificações (<span>taxa de cliques em torno de 18%</span>).</li>
+                            </ul>
+                            <p className='content-text'>
+                                Além disso, tive apoio do time de marketing nos ajustes na <span>copy</span> e no <span>timing</span> das notificações.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/*1.2 Outras entregas*/}
             <section className='chapter' id='chapter-1-2'>
-                <div className='case-title__wrapper'>
-                    <h2 className='case-title'>1.2 Outras entregas</h2>
+                 <div className='case-title__wrapper'>
+                    <div className='title-text__container '>
+                        <h3 className='strong-white'>1.2 Outras entregas</h3>
+                        <p className='description-text strong-white'>Fluxogramas completos do produto Empréstimo Pessoal</p>
+                    </div>
                 </div>
 
-                <div className='subsection gap24'>
-                    <h3 className="bullet-black">Fluxogramas completos do produto Empréstimo Pessoal</h3>
+                <div className='subsection'>
                     <div className='subsection-content'>
                         <FluxogramaVideo />
                     </div>
                 </div>
 
                 <div className='subsection'>
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`coluna noGap${styles.colResults}`}>
-                                    <h3 className={`bullet-black ${styles.titleCol}`}>Diagnóstico e oportunidade</h3>
-                                    <p className={`case-paragrafo mb30`}>Diante da <span>complexidade do produto</span> de empréstimo pessoal, tomei a <span>iniciativa</span> de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.
-                                    </p>
-                                    <p className={`case-paragrafo`}>
-                                        O objetivo foi consolidar uma <span>visão completa do processo</span>, a criação de material de <span>referência</span> <span>para otimizar o trabalho</span> de diferentes áreas, além de servir para identificar <span>oportunidades de melhoria</span>.
-                                    </p>
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`coluna noGap ${styles.colResults}`}>
-                                <h3 className={`bullet-black ${styles.titleCol}`}>Imprevisto e solução</h3>
-                                <p className={`case-paragrafo mb30`}>Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span> de reengajamento após o abandono do fluxo.
-                                </p>
-                                <p className={`case-paragrafo`}>
-                                    A partir dessa constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span> do funil.
-                                </p>
-                            </div>
-                        }
-                    />
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>DIAGNÓSTICO E OPORTUNIDADE</h3>
+                            <p className='content-text'>
+                                Diante da <span>complexidade do produto</span> de empréstimo pessoal, tomei a <span>iniciativa</span> de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.
+                                <br />
+                                <br />
+                                O objetivo foi consolidar uma <span>visão completa</span> do processo, a criação de material de referência para <span>otimizar</span> o trabalho de diferentes áreas, além de servir para identificar <span>oportunidades</span> de melhoria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className='content-container'>
+                        <div>
+                            <h3 className='content-title'>IMPREVISTO E SOLUÇÃO</h3>
+                            <p className='content-text'>
+                                Durante a documentação, percebi <span>inconsistências nas informações</span> fornecidas sobre o funcionamento real do fluxo. Diferentes áreas possuíam versões divergentes do processo, dificultando a criação de um material confiável.
+                                <br />
+                                <br />
+                                Para solucionar esse problema, implementei uma <span>validação estruturada:</span> ao final de cada etapa mapeada, colhi a assinatura digital do responsável da área correspondente, garantindo alinhamento e precisão nos fluxogramas.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='subsection'>
-                    <h3 className="bullet-black">Entrega de valor</h3>
-                    <div className='subsection-content'>
+                    <div className={styles.cardsEnumeradosContainer}>
                         {Values && (
                             <CardsEnumerados cards={Values} />
                         )}
@@ -222,61 +185,58 @@ function CaseBemol() {
             {/*1.3 Outras entregas*/}
             <section className='chapter' id='chapter-1-3'>
 
-                <div className='case-title__wrapper mb24'>
-                    <h2 className='case-title'>1.3 Outras entregas</h2>
-                </div>
+                <div className='title-text__container'>
+                        <h3 className='strong-white'>1.3 Outras entregas</h3>
+                    </div>
 
-                <div className="subsection noGap">
-                    <p className='subsection-description'>
-                        Propostas guiadas pela abordagem de <span>Data-Driven Design</span>
-                        — desde a identificação da dor, validação do problema, até a definição
-                        da solução e plano de acompanhamento pós lançamento.
-                    </p>
-                    <TwoColumnGrid
-                        leftContent={
-                            <>
-                                <div className={`${styles.imgEntregaContainer} mr40`}>
-                                    <h3 className="bullet-white mb16">Cálculo e análise do NPS da Conta Digital do ano de 2023.</h3>
-                                    <InfoImg
-                                        img={entregas[0].img}
-                                        info={entregas[0].info}
-                                    />
-                                </div>
-                            </>
-                        }
-                        rightContent={
-                            <div className={`${styles.imgEntregaContainer} ml40`}>
-                                <h3 className="bullet-white mb16">Apresentações mensais da análise da taxa de cancelamento de contas.</h3>
-                                <InfoImg
-                                    img={entregas[1].img}
-                                    info={entregas[1].info}
-                                />
-                            </div>
-                        }
-                    />
+                <div className="subsection">
+                    <div className='title-text__container'>
+                        <p className='content-text'>
+                            Todas as propostas foram guiadas pela abordagem de Data-Driven Design
+                            — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento.
+                        </p>
+                    </div>
+                    <div className='subsection-img__wrapper'>
+                        <ImgWithText
+                            img={entregaImg1}
+                            title='CÁLCULO E ANÁLISE DO NPS'
+                            text='Da conta digital Conta Bemol, do ano de 2023.'
+                            description='Dados sensíveis censurados.'
+                        />
+                    </div>
+                    <div className='subsection-img__wrapper'>
+                        <ImgWithText
+                            img={entregaImg2}
+                            title='ANÁLISE DA TAXA DE CANCELAMENTO'
+                            text='Apresentações mensais das análises aos stakeholders.'
+                            description='Dados sensíveis censurados.'
+                        />
+                    </div>
                 </div>
 
             </section>
 
             {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-            <section className='chapter noMb noPb' id='chapter-1-4' >
+            <section className='chapter' id='chapter-1-4' >
                 <div className='case-title__wrapper'>
-                    <h2 className='case-title'>1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia)</h2>
-                    <p className='case-subtitle'><span>Exclusivo</span> para apresentação pessoal, entre em contato comigo e agende um horário.</p>
-                    <ul className='list-wrapper' style={{ color: '#7F7F7F' }}>
-                        <li>Identificação da dor</li>
-                        <li>Meu processo de design</li>
-                        <li>Pesquisa e Benchmarking</li>
-                        <li>Coleta e análise de dados</li>
-                        <li>Design System <span>(documentação técnica de novo componente)</span></li>
-                        <li>Teste com usuários</li>
-                        <li>Aprendizados</li>
-                    </ul>
+                    <div className='title-text__container'>
+                        <h3>1.4 Escolha da data do vencimento das parcelas</h3>
+                        <p className='description-text'><span>Exclusivo para apresentação pessoal</span>, entre em contato comigo e agende um horário.</p>
+                    </div>
 
+                    <div className='list-wrapper'>
+                        <ul>
+                            <li>Identificação da dor</li>
+                            <li>Meu processo de design</li>
+                            <li>Pesquisa e Benchmarking</li>
+                            <li>Coleta e análise de dados</li>
+                            <li>Design System (documentação técnica de novo componente)</li>
+                            <li>Teste com usuários</li>   
+                            <li>Aprendizados</li>
+                        </ul>
+                    </div>
                     <div className='subsection'>
-                        <div className='subsection-content'>
-                            <DateVideo />
-                        </div>
+                        <DateVideo />
                     </div>
                 </div>
             </section>
@@ -285,17 +245,16 @@ function CaseBemol() {
             <p className='footer-text'>
                 💡Entre em contato e agende uma apresentação por algum dos botões abaixo! :)
             </p>
-            <a
-                href="#header-bemol"
-                className="scrollup-case"
-                onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement('header-bemol');
-                }}
-            >
-                <img src={arrowUp} alt="Seta para cima" />
-            </a>
-
+                <a
+                    href="#header-bemol"
+                    className="scrollup-case"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        scrollToElement('header-bemol');
+                    }}
+                >
+                    <img src={arrowUp} alt="Seta para cima" />
+                </a>
         </section>
     )
 }

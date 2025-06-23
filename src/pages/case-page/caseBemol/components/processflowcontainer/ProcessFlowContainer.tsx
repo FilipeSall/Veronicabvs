@@ -1,14 +1,15 @@
 import styles from './processflowcontainer.module.scss';
-import arrowBlack from '../../../../../assets/caseBemol/Polygonblack.svg'
-import arrowWhite from '../../../../../assets/caseBemol/Polygonwhite.svg'
+import arrowWhite from '../../../../../assets/caseBemol/Polygonwhite.svg';
+import arrowBlue from '../../../../../assets/svgs/blueArrow.svg';
 
 function ProcessFlowContainer() {
     return (
         <div className={styles.container}>
             <div className={styles.columnWrapper}>
+                {/* Planning - branco */}
                 <div className={styles.column}>
-                    <img src={arrowBlack} alt="seta" className={styles.arrow} />
-                    <p className={styles.blackColor}>Planning</p>
+                    <img src={arrowWhite} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
+                    <p className={styles.whiteColor}>Planning</p>
                     <ul className={styles.list}>
                         <li>Análise de dados</li>
                         <li>Identificação do problema</li>
@@ -17,8 +18,8 @@ function ProcessFlowContainer() {
                 </div>
 
                 <div className={styles.column}>
-                    <img src={arrowWhite} alt="seta" className={styles.arrow} />
-                    <p className={styles.whiteColor}>Discovery</p>
+                    <img src={arrowBlue} alt="seta" className={styles.arrow} />
+                    <p className={styles.coloredText} >Discovery</p>
                     <ul className={styles.list}>
                         <li>Benchmarking</li>
                         <li>Discussões exploratórias com áreas parceiras</li>
@@ -26,8 +27,8 @@ function ProcessFlowContainer() {
                 </div>
 
                 <div className={styles.column}>
-                    <img src={arrowWhite} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
-                    <p className={styles.whiteColor}>Define</p>
+                    <img src={arrowBlue} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
+                    <p className={styles.coloredText}>Define</p>
                     <ul className={styles.list}>
                         <li>Solução</li>
                         <li>Alinhamento com as áreas envolvidas</li>
@@ -35,8 +36,8 @@ function ProcessFlowContainer() {
                 </div>
 
                 <div className={styles.column}>
-                    <img src={arrowWhite} alt="seta" className={styles.arrow} />
-                    <p className={styles.whiteColor}>Develop</p>
+                    <img src={arrowBlue} alt="seta" className={styles.arrow} />
+                    <p className={styles.coloredText}>Develop</p>
                     <ul className={styles.list}>
                         <li>Design System</li>
                         <li>Co-criação (marketing)</li>
@@ -45,8 +46,8 @@ function ProcessFlowContainer() {
                 </div>
 
                 <div className={styles.column}>
-                    <img src={arrowWhite} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
-                    <p className={styles.whiteColor}>Delivery</p>
+                    <img src={arrowBlue} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
+                    <p className={styles.coloredText}>Delivery</p>
                     <ul className={styles.list}>
                         <li>Validação e apresentação</li>
                         <li>Documentação</li>
@@ -55,15 +56,15 @@ function ProcessFlowContainer() {
                 </div>
 
                 <div className={styles.column}>
-                    <img src={arrowBlack} alt="seta" className={`${styles.arrow} ${styles.reverse}`} />
-                    <p className={styles.blackColor}>Follow-up</p>
+                    <img src={arrowWhite} alt="seta" className={`${styles.arrow}`} />
+                    <p className={styles.whiteColor}>Follow-up</p>
                     <ul className={styles.list}>
                         <li>Acompanhamento de métricas de conversão</li>
                     </ul>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ProcessFlowContainer
+export default ProcessFlowContainer;

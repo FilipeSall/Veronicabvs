@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    margin: 40px 0;
+}
+
+.btnWrapper {
+    position: absolute;
+    top: 80%;
+    display: flex;
+    left: 74%;
+    gap: 4px;
+    font-size: 14px;
+    color: #BBBBBB;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #F3DA8B;
+    background-color: inherit;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 14px;
+}

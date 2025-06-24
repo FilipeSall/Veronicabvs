@@ -106,6 +106,22 @@
     width: 35%;
 }
 
+.faixaImg {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  z-index: 3;
+}
+
+.faixaImgActive {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 
 @keyframes slideUpEffect {
     0% {
@@ -114,7 +130,7 @@
     }
 
     100% {
-         opacity: 1;
+        opacity: 1;
         transform: translateY(20px);
     }
 }

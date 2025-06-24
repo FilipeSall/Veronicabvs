@@ -4,6 +4,7 @@ import styles from './casenav.module.scss';
 import { CaseNavInterface } from '../../interfaces/components';
 import successIcon from '../../assets/svgs/sucesso.svg';
 import awardIcon from '../../assets/svgs/Medalha.svg';
+import faixaimg from '../../assets/FAIXA.webp';
 
 function CaseNav({
     caseValue,
@@ -30,7 +31,14 @@ function CaseNav({
             {/* IMAGEM */}
             <div className={styles.caseImgWrapper}>
                 {isUnderConstruction ? (
-                    <p className={styles.underConstructionText}>[EM BREVE]</p>
+                    <>
+                        <p className={styles.underConstructionText}>[EM BREVE]</p>
+                        <img
+                            src={faixaimg}
+                            className={`${styles.faixaImg} ${isHovered ? styles.faixaImgActive : ''}`}
+                        />
+
+                    </>
                 ) : (
                     <>
                         <img

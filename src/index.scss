@@ -31,3 +31,17 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    background: #272727;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #272727;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #F3DA8B;
+  border-radius: 8px;
+  border: 1px solid #F3DA8B;
+}

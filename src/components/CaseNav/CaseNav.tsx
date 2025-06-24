@@ -18,7 +18,19 @@ function CaseNav({
     return (
         <Link
             to={path}
-            onClick={(e) => isUnderConstruction && e.preventDefault()}
+            onClick={(e) => {
+                if (isUnderConstruction) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            }}
+
+            onAuxClick={(e) => {
+                if (isUnderConstruction) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            }}
             className={`${styles.caseNav} ${isUnderConstruction && styles.disabled}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}

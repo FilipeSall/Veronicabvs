@@ -5,6 +5,7 @@ import { CaseNavInterface } from '../../interfaces/components';
 import successIcon from '../../assets/svgs/sucesso.svg';
 import awardIcon from '../../assets/svgs/Medalha.svg';
 import faixaimg from '../../assets/FAIXA.webp';
+import { formatCaseValue } from '../../utils/formatCaseValue ';
 
 function CaseNav({
     caseValue,
@@ -77,7 +78,7 @@ function CaseNav({
                     />
                     {isHovered && (
                         <p className={styles.caseTypeIndicator}>
-                            — {caseValue}
+                            {formatCaseValue(caseValue)}
                         </p>
                     )}
                 </div>

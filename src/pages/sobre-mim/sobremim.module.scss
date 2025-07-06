@@ -48,6 +48,12 @@
     font-weight: bold;
 }
 
+.paraConversar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .animatedItem {
     opacity: 0;
     animation: fadeInUp 0.5s ease-out forwards;
@@ -151,6 +157,7 @@
     align-items: center;
     width: max-content;
     animation: scrollEmpresas 20s linear infinite;
+    gap: 25px;
 }
 
 .empresasImg {
@@ -164,7 +171,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    margin-left: 4px;
+    margin-left: 8px;
     opacity: 0;
     animation: fadeIn 0.6s ease-out forwards;
     animation-delay: 0.6s;
@@ -173,7 +180,8 @@
 .curriculoLink {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 30%;
 
     &:hover {
         color: #0000FF;
@@ -205,7 +213,7 @@
 }
 
 .bulletPoint {
-    font-size: 18px;
+    font-size: 30px;
     line-height: 1;
     color: var(--textColor);
 }
@@ -226,7 +234,7 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 20px)); /* Ajuste para considerar o gap */
     }
 }
 

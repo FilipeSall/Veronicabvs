@@ -51,7 +51,6 @@
 .paraConversar {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 }
 
 .animatedItem {
@@ -234,7 +233,7 @@
     }
 
     to {
-        transform: translateX(calc(-50% - 20px)); /* Ajuste para considerar o gap */
+        transform: translateX(calc(-50% - 20px));
     }
 }
 

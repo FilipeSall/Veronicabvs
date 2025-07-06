@@ -40,7 +40,7 @@ export const CasesData: CasesInterface[] = [
         path: 'case-2',
         bgColor: '#F23434',
         imgHover: case3img,
-        underConstruction: true,
+        underConstruction: false,
         underConstructionImg: case2imgOff,
         miniImg: bemolBSAMiniImg,
         CasePreview: {

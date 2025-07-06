@@ -1,25 +1,18 @@
 import styles from './appbemol.module.scss';
+import { summary } from './summary';
 import '../escopecasepage.scss';
-import ToolsIcon from '../components/ToolsIcon/ToolsIcon';
 import tools from './tools';
+import PageHeader from '../../components/page-header/PageHeader';
 
 function AppBemol() {
     return (
-        <section className='case-container'>
-            <div className='case-header' id={styles.headerAppBemol}>
-                <p className='header-description'>
-                    <span>Contexto:</span> Contexto: Atuação aplicativo de <span>e-commerce</span> (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa.
-                </p>
-
-                <div className='tools-container'>
-                    <p className='tools-text'>Ferramentas:</p>
-                    <div className='tools-wrapper'>
-                        {tools.map((tool, i) => (
-                            <ToolsIcon key={i} value={tool.value} />
-                        ))}
-                    </div>
-                </div>
-            </div>
+        <section className='page-container'>
+            <PageHeader
+                bgColor={summary.bg}
+                contextTxt='Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa.'
+                headerId='header-bemol'
+                tools={tools}
+            />
         </section>
     )
 }

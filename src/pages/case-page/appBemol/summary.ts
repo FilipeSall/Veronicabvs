@@ -6,11 +6,19 @@ export const summary: SummaryInterface =
     color: '#FFFFFF',
     items: [
         {
-            id: '1.1',
+            id: '2.1',
             href: '#chapter-2-1',
             isSpecial: false,
             readingTime: 3,
-            title: '2.1 Autocomplete para reconhecimento clientes com Conta Bemol'
+            title: 'Autocomplete para reconhecimento clientes com Conta Bemol'
+        },
+        {
+            id: '2.2',
+             href: '#chapter-2-2',
+             readingTime: 1,
+             title:'Redesign das telas de contratação de empréstimos via aplicativo e-commerce',
+             isSpecial: false,
+             
         }
     ]
 }

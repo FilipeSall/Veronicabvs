@@ -69,16 +69,21 @@
         position: relative;
         padding-left: 16px;
         text-align: left;
-        width: 100%;
-        display: flex;
+        width: 75%;
         color: #FFFFFF;
-        gap: 4px;
-    }
-}
 
-.bulletPoint{
-    font-size: 30px;
-    line-height: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+        }
+    }
 }
 
 @media (max-width: 768px) {

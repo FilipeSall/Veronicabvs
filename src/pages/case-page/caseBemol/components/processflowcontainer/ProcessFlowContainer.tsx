@@ -47,7 +47,7 @@ function ProcessFlowContainer({
                             <ul className={styles.list}>
                                 {item.lists.map((listItem, listIndex) => (
                                     <li key={listIndex}>
-                                        {listItem}
+                                        <div className={styles.bulletPoint}>•</div>{listItem}
                                     </li>
                                 ))}
                             </ul>

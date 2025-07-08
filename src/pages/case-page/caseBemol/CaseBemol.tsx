@@ -17,6 +17,8 @@ import OpenScreenImg from './components/openScreenImg/OpenScreenImg';
 import ImgWithText from '../components/imgWithText/ImgWithText';
 import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
 import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
+import { processDataApp } from './processData';
+import arrowBlue from '../../../assets/svgs/blueArrow.svg';
 
 function CaseBemol() {
 
@@ -93,7 +95,11 @@ function CaseBemol() {
                             </p>
                         </div>
                     </div>
-                    <ProcessFlowContainer />
+                    <ProcessFlowContainer
+                        arrowColored={arrowBlue}
+                        color="#4C31E0"
+                        lists={processDataApp}
+                    />
                 </div>
 
                 <div className="subsection">
@@ -133,7 +139,7 @@ function CaseBemol() {
 
             {/*1.2 Outras entregas*/}
             <section className='chapter' id='chapter-1-2'>
-                 <div className='case-title__wrapper'>
+                <div className='case-title__wrapper'>
                     <div className='title-text__container '>
                         <h3 className='strong-white'>1.2 Outras entregas</h3>
                         <p className='description-text strong-white'>Fluxogramas completos do produto Empréstimo Pessoal</p>
@@ -186,8 +192,8 @@ function CaseBemol() {
             <section className='chapter' id='chapter-1-3'>
 
                 <div className='title-text__container'>
-                        <h3 className='strong-white'>1.3 Outras entregas</h3>
-                    </div>
+                    <h3 className='strong-white'>1.3 Outras entregas</h3>
+                </div>
 
                 <div className="subsection">
                     <div className='title-text__container'>
@@ -231,7 +237,7 @@ function CaseBemol() {
                             <li>Pesquisa e Benchmarking</li>
                             <li>Coleta e análise de dados</li>
                             <li>Design System (documentação técnica de novo componente)</li>
-                            <li>Teste com usuários</li>   
+                            <li>Teste com usuários</li>
                             <li>Aprendizados</li>
                         </ul>
                     </div>
@@ -245,16 +251,16 @@ function CaseBemol() {
             <p className='footer-text'>
                 💡Entre em contato e agende uma apresentação por algum dos botões abaixo! :)
             </p>
-                <a
-                    href="#header-bemol"
-                    className="scrollup-case"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        scrollToElement('header-bemol');
-                    }}
-                >
-                    <img src={arrowUp} alt="Seta para cima" />
-                </a>
+            <a
+                href="#header-bemol"
+                className="scrollup-case"
+                onClick={(e) => {
+                    e.preventDefault();
+                    scrollToElement('header-bemol');
+                }}
+            >
+                <img src={arrowUp} alt="Seta para cima" />
+            </a>
         </section>
     )
 }

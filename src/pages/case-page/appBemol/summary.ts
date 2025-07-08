@@ -14,11 +14,10 @@ export const summary: SummaryInterface =
         },
         {
             id: '2.2',
-             href: '#chapter-2-2',
-             readingTime: 1,
-             title:'Redesign das telas de contratação de empréstimos via aplicativo e-commerce',
-             isSpecial: false,
-             
+            href: '#chapter-2-2',
+            readingTime: 1,
+            title: 'Redesign das telas de contratação de empréstimos via aplicativo e-commerce',
+            isSpecial: false,
         }
     ]
 }

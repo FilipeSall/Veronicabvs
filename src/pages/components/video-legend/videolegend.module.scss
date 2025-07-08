@@ -1,0 +1,19 @@
+.videoContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.videoContainer video{
+    width: 50%;
+}
+
+.videoContainer p {
+    width: 50%;
+    font-family: 'Inter';
+    color: #BBBBBB;
+    font-style: italic;
+    font-size: 14px;
+}

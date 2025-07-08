@@ -1,5 +1,6 @@
 :root {
-    --arrow-size: 30px;
+    --arrow-width: 26px;
+    --arrow-height: 39px;
 }
 
 .container {
@@ -18,7 +19,7 @@
         content: "";
         position: absolute;
         width: 85%;
-        top: 8%;
+        top: 19.5px; /* Metade da altura da seta (39px / 2) */
         left: 8%;
         border-top: 1px dashed #FFFFFF;
         opacity: 0.7;
@@ -34,14 +35,23 @@
 }
 
 .arrow {
-    width: var(--arrow-size);
+    width: var(--arrow-width);
+    height: var(--arrow-height);
     position: relative;
     z-index: 1;
     opacity: 1;
+    object-fit: contain;
+    display: block;
 }
 
 .reverse {
     transform: scaleX(-1);
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .list {
@@ -52,14 +62,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    gap: 20px;
     li {
         margin-bottom: 8px;
-        font-size: 14px;
+        font-size: 16px;
         position: relative;
-        padding-left: 12px;
+        padding-left: 20px;
         text-align: left;
-        width: 50%;
+        width: 75%;
+        color: #FFFFFF;
+        opacity: 0.9;
 
         &::before {
             content: "";
@@ -69,24 +81,10 @@
             transform: translateY(-50%);
             width: 4px;
             height: 4px;
-            background-color: currentColor;
+            background-color: #FFFFFF;
             border-radius: 50%;
         }
     }
-}
-
-.whiteColor {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.coloredText {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-    color: #4C31E0;
 }
 
 @media (max-width: 768px) {

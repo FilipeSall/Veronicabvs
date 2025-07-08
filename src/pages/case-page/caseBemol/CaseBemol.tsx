@@ -181,7 +181,11 @@ function CaseBemol() {
                 <div className='subsection'>
                     <div className={styles.cardsEnumeradosContainer}>
                         {Values && (
-                            <CardsEnumerados cards={Values} />
+                            <CardsEnumerados 
+                            cards={Values}
+                            color='#4C31E0'
+                            title='ENTREGA DE VALOR'
+                            />
                         )}
                     </div>
                 </div>

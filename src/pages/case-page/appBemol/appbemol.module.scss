@@ -27,3 +27,13 @@
 .appText span{
     font-weight: bold;
 }
+
+.arrowList{
+    list-style: none;
+    width: 50%;
+}
+
+.arrowList li {
+    gap: 10px;
+    display: flex;
+}

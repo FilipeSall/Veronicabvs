@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    font-family: 'Inter' !important;
+}
+
+.contentWrapper{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.textWrapper{
+    width: 300px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textWrapper h4{
+    font-weight: bold;
+}
+
+.textWrapper h4 span{
+    color: #F23434;
+}
+
+.textWrapper:first-child{
+    text-align: right;
+}
+
+.textWrapper:last-child{
+    text-align: left;
+}

@@ -47,3 +47,22 @@ export const processData = [
         ]
     }
 ];
+
+export const cardsData = [
+    {
+        title: 'Reestruturação do fluxo',
+        text: 'Simplificação das etapas e melhor organização da informação.'
+    },
+    {
+        title: 'Transparência',
+        text: 'Detalhes financeiros (taxas, parcelas, valores) exibidos de forma mais clara.'
+    },
+    {
+        title: 'Maior usabilidade',
+        text: 'Ajuste na hierarquia visual para guiar o usuário na tomada de decisão;'
+    },
+    {
+        title: 'Redução da fricção',
+        text: 'Minimização de esforços desnecessários, tornando a jornada mais fluida.'
+    }
+]

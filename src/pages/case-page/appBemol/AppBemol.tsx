@@ -82,7 +82,6 @@ function AppBemol() {
                     />
                 </div>
 
-
                 <div className={styles.appBemolDiv}>
                     <h3 className={styles.appTitle}>DESIGN SYSTEM</h3>
                     <p className={styles.appText}>Contribuí para a evolução do Design System com a <span>documentação técnica</span> e adaptação do componente Datepicker, originalmente do <span>Material 3 (Google)</span>, para a identidade da marca.

@@ -1,14 +1,15 @@
 .container {
-    width: 100%;
+    width: 99vw;
     position: relative;
     padding-top: 50%;
+    margin: 52px 0 0 0;
 }
 
 .sucessIcon {
     position: absolute;
     top: -35px;
     z-index: 5;
-    left: 47.5%;
+    left: 49%;
     width: 56px;
     height: 56px;
 }

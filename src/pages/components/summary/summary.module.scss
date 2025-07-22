@@ -1,14 +1,18 @@
 .navContainer {
     width: 100%;
-    display: flex;
-    gap: 3px;
-    padding: inherit;
-    justify-content: space-between;
-    padding: 35px 72px;
     position: relative;
 }
 
-.summaryContentWrapper{
+.navContent {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3px;
+    justify-content: space-between;
+    padding: 35px 55px;
+}
+
+.summaryContentWrapper {
     display: flex;
     flex-direction: column;
 }
@@ -71,7 +75,7 @@
     margin-left: 24px;
 }
 
-.specialText>img {
+.specialText > img {
     width: 24px;
     height: 24px;
     margin: 0 3px;

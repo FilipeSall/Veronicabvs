@@ -12,6 +12,14 @@
     flex-direction: column;
     color: var(--textColor);
     margin: 40px 0;
+    align-items: center;
+}
+
+.chapter-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 72px;
+    width: 100%;
 }
 
 section.chapter:nth-child(odd) {
@@ -26,17 +34,18 @@ section.chapter:nth-child(even) {
     display: flex;
     flex-direction: column;
     margin: 40px 0;
+    width: 100%;
+    max-width: 1440px;
 }
 
 .content-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 40px 0;
     width: 100%;
 }
 
-.content-container>div {
+.content-container > div {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 72px;
     width: 65%;
     display: flex;
     flex-direction: column;
@@ -62,7 +71,7 @@ section.chapter:nth-child(even) {
     font-weight: 700;
 }
 
-.simple-title{
+.simple-title {
     width: 50%;
     margin: 0 auto;
 }
@@ -84,21 +93,22 @@ section.chapter:nth-child(even) {
     margin: 40px 0;
 }
 
-
 .case-title__wrapper {
     width: 100%;
     margin: 40px 0;
 }
 
 .title-text__container {
-    width: 70%;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 72px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.title-text__container h3{
+.title-text__container h3 {
     color: #BBBBBB;
     font-size: 24px;
 }
@@ -114,37 +124,41 @@ section.chapter:nth-child(even) {
     color: #F3DA8B;
 }
 
-.list-wrapper{
+.list-wrapper {
     margin: 40px 0;
     width: 100%;
 }
 
-.list-wrapper ul{
-    width: 55%;
+.list-wrapper ul {
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 72px;
+    width: 55%;
 }
 
-.list-wrapper ul li{
+.list-wrapper ul li {
     color: #BBBBBB;
     font-size: 16px;
 }
 
 /* FOOTER*/
 .footer-text {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 72px 40px;
     width: 30%;
     text-align: center;
-    margin: 0 auto;
-    padding-bottom: 40px;
     color: var(--textColor);
 }
 
 // BTN SCROLL TO HEADER
 .scrollup-case {
+    max-width: 1440px;
     margin: 0 auto;
-    padding-bottom: 40px;
+    padding: 0 72px 40px;
 }
 
 // UTILS
-.strong-white{
+.strong-white {
     color: #FFFFFF !important;
 }

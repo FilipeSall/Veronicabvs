@@ -34,15 +34,17 @@ function AppBemol() {
 
             {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}
             <section className='chapter' id='chapter-2-1'>
-                <CaseTitle
-                    title={summary.items[0].title}
-                    subTitle={summary.items[0].subtitle}
-                />
+                <div className='chapter-content'>
+                    <CaseTitle
+                        title={summary.items[0].title}
+                        subTitle={summary.items[0].subtitle}
+                    />
 
-                <VideoLegend
-                    src={videoAutocoplete}
-                    legend='Solução: Reconhecimento de cliente com Conta Bemol durante o processo de contratação de empréstimo por preenchimento inteligente.'
-                />
+                    <VideoLegend
+                        src={videoAutocoplete}
+                        legend='Solução: Reconhecimento de cliente com Conta Bemol durante o processo de contratação de empréstimo por preenchimento inteligente.'
+                    />
+                </div>
 
                 <div className={styles.appBemolDiv}>
                     <h3 className={styles.appTitle}>Contexto</h3>
@@ -119,7 +121,7 @@ function AppBemol() {
 
                 <div className={styles.appBemolDiv}>
                     <h3 className={styles.appTitle}>MÉTRICAS E MELHORIAS</h3>
-                    <p className={styles.appText}>Após o lançamento, acompanhamos os KPI’s para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:
+                    <p className={styles.appText}>Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:
                         <br />
                         <br />
                         →  A escolha da Conta Bemol como destino do crédito contratado <span>aumentou de 1,8% para 14,6%</span> nas primeiras semanas após a implementação.
@@ -129,10 +131,12 @@ function AppBemol() {
 
             {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
             <section className='chapter' id='chapter-2-2'>
-                <CaseTitle
-                    title={summary.items[1].title}
-                    subTitle={summary.items[1].subtitle}
-                />
+                <div className='chapter-content'>
+                    <CaseTitle
+                        title={summary.items[1].title}
+                        subTitle={summary.items[1].subtitle}
+                    />
+                </div>
 
                 <div className={styles.appBemolDiv}>
                     <h3 className={styles.appTitle}>DIAGNÓSTICO</h3>

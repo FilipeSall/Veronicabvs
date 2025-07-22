@@ -16,17 +16,19 @@ function PageHeader({ bgColor, contextTxt, tools, headerId }: PageHeaderProps) {
 
     return (
         <header className={styles.pageHeaderContainer} id={headerId} style={{ backgroundColor: backgroundWithOpacity }}>
-            <div className={styles.headerDescription}>
-                <p className={styles.headerDescriptionTitle}>Contexto</p>
-                <p className={styles.headerDescriptionContextTxt}>{contextTxt}</p>
-            </div>
+            <div className={styles.pageHeaderContent}>
+                <div className={styles.headerDescription}>
+                    <p className={styles.headerDescriptionTitle}>Contexto</p>
+                    <p className={styles.headerDescriptionContextTxt}>{contextTxt}</p>
+                </div>
 
-            <div className={styles.toolsContainer}>
-                <p className={styles.toolsText}>Ferramentas</p>
-                <div className={styles.toolsWrapper}>
-                    {tools.map((tool, i) => (
-                        <ToolsIcon key={i} value={tool.value} />
-                    ))}
+                <div className={styles.toolsContainer}>
+                    <p className={styles.toolsText}>Ferramentas</p>
+                    <div className={styles.toolsWrapper}>
+                        {tools.map((tool, i) => (
+                            <ToolsIcon key={i} value={tool.value} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </header>

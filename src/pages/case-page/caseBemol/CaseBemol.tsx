@@ -181,10 +181,10 @@ function CaseBemol() {
                 <div className='subsection'>
                     <div className={styles.cardsEnumeradosContainer}>
                         {Values && (
-                            <CardsEnumerados 
-                            cards={Values}
-                            color='#4C31E0'
-                            title='ENTREGA DE VALOR'
+                            <CardsEnumerados
+                                cards={Values}
+                                color='#4C31E0'
+                                title='ENTREGA DE VALOR'
                             />
                         )}
                     </div>
@@ -195,12 +195,9 @@ function CaseBemol() {
             {/*1.3 Outras entregas*/}
             <section className='chapter' id='chapter-1-3'>
 
-                <div className='title-text__container'>
-                    <h3 className='strong-white'>1.3 Outras entregas</h3>
-                </div>
-
                 <div className="subsection">
                     <div className='title-text__container'>
+                        <h3 className='strong-white'>1.3 Outras entregas</h3>
                         <p className='content-text'>
                             Todas as propostas foram guiadas pela abordagem de Data-Driven Design
                             — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento.

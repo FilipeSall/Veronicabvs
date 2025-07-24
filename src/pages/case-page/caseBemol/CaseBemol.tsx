@@ -19,6 +19,7 @@ import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
 import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
 import { processDataApp } from './processData';
 import arrowBlue from '../../../assets/svgs/blueArrow.svg';
+import ContentSection from '../components/contentSection/ContentSection ';
 
 function CaseBemol() {
 
@@ -59,42 +60,28 @@ function CaseBemol() {
                 </div>
 
                 <div className="subsection">
-                    <div className='content-container'>
-                        <div>
-                            <h3 className='content-title'>DESAFIO E OPORTUNIDADE</h3>
-                            <p className='content-text'>Com o apoio da equipe de dados, identificamos que cerca de <span>68% dos clientes</span> com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.
-                                <br />
-                                <br />
-                                Esse comportamento indicava uma <span>oportunidade estratégica:</span> mesmo com uma oferta pronta para ser ativada, a experiência atual não estava sendo eficiente em converter esse público.
-                                <br />
-                                <br />
-                                Ao analisar a jornada, constatei a <span>ausência de qualquer estratégia</span>  de reengajamento após o abandono do fluxo.
-                                <br />
-                                <br />
-                                A partir desta constatação, propus uma iniciativa focada em desenvolver uma <span>régua de comunicação segmentada</span>, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a <span>taxa de conversão</span>  do funil.</p>
-                        </div>
-                    </div>
+                    <ContentSection
+                        title="DESAFIO E OPORTUNIDADE"
+                        paragraphs={[
+                            "Com o apoio da equipe de dados, identificamos que cerca de **68% dos clientes** com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.",
+                            "Esse comportamento indicava uma **oportunidade estratégica:** mesmo com uma oferta pronta para ser ativada, a experiência atual não estava sendo eficiente em converter esse público.",
+                            "Ao analisar a jornada, constatei a **ausência de qualquer estratégia** de reengajamento após o abandono do fluxo.",
+                            "A partir desta constatação, propus uma iniciativa focada em desenvolver uma **régua de comunicação segmentada**, com o objetivo de resgatar clientes com crédito pré-aprovado e aumentar a **taxa de conversão** do funil."
+                        ]}
+                    />
                     <FunilImg />
                 </div>
 
                 <div className="subsection">
-                    <div className='content-container'>
-                        <div>
-                            <h3 className='content-title'>PROCESSO</h3>
-                            <p className='content-text'>
-                                Comecei com uma <span>análise de dados</span> para  identificar o problema e entender o comportamento de abandono no funil, seguida por um <span>benchmarking</span> com bancos digitais para mapear  <span>boas práticas</span>  de reengajamento.
-                                <br />
-                                <br />
-                                A partir disso, <span>identifiquei a oportunidade</span> de implementar uma régua de comunicação segmentada via push.
-                                <br />
-                                <br />
-                                Alinhei a proposta com <span>stakeholders</span> e, em parceria com a equipe de marketing, definimos os conteúdos e gatilhos da régua. A partir disso, personalizei o componente de push existente no <span> design system</span>, adaptando seu comportamento, visual e conteúdo ao contexto da jornada.
-                                <br />
-                                <br />
-                                Apresentei a solução aos stakeholders, <span>validei a solução</span> e finalizei a entrega.
-                            </p>
-                        </div>
-                    </div>
+                    <ContentSection
+                        title="PROCESSO"
+                        paragraphs={[
+                            "Comecei com uma **análise de dados** para identificar o problema e entender o comportamento de abandono no funil, seguida por um **benchmarking** com bancos digitais para mapear **boas práticas** de reengajamento.",
+                            "A partir disso, **identifiquei a oportunidade** de implementar uma régua de comunicação segmentada via push.",
+                            "Alinhei a proposta com **stakeholders** e, em parceria com a equipe de marketing, definimos os conteúdos e gatilhos da régua. A partir disso, personalizei o componente de push existente no **design system**, adaptando seu comportamento, visual e conteúdo ao contexto da jornada.",
+                            "Apresentei a solução aos stakeholders, **validei a solução** e finalizei a entrega."
+                        ]}
+                    />
                     <ProcessFlowContainer
                         arrowColored={arrowBlue}
                         color="#4C31E0"
@@ -103,17 +90,13 @@ function CaseBemol() {
                 </div>
 
                 <div className="subsection">
-                    <div className='content-container'>
-                        <div>
-                            <h3 className='content-title'>PROCESSO</h3>
-                            <p className='content-text'>
-                                Para <span>aumentar a conversão</span> de clientes com crédito pré-aprovado, desenvolvi uma <span>régua de comunicação segmentada via push</span>, considerando o momento de abandono no fluxo e o perfil do usuário.
-                                <br />
-                                <br />
-                                O conteúdo e o timing das mensagens foram definidos com apoio do <span>time de marketing</span> e alinhados com o <span> design system</span> da empresa.
-                            </p>
-                        </div>
-                    </div>
+                    <ContentSection
+                        title="PROCESSO"
+                        paragraphs={[
+                            "Para **aumentar a conversão** de clientes com crédito pré-aprovado, desenvolvi uma **régua de comunicação segmentada via push**, considerando o momento de abandono no fluxo e o perfil do usuário.",
+                            "O conteúdo e o timing das mensagens foram definidos com apoio do **time de marketing** e alinhados com o **design system** da empresa."
+                        ]}
+                    />
 
                     <OpenScreenImg />
                 </div>
@@ -153,29 +136,21 @@ function CaseBemol() {
                 </div>
 
                 <div className='subsection'>
-                    <div className='content-container'>
-                        <div>
-                            <h3 className='content-title'>DIAGNÓSTICO E OPORTUNIDADE</h3>
-                            <p className='content-text'>
-                                Diante da <span>complexidade do produto</span> de empréstimo pessoal, tomei a <span>iniciativa</span> de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.
-                                <br />
-                                <br />
-                                O objetivo foi consolidar uma <span>visão completa</span> do processo, a criação de material de referência para <span>otimizar</span> o trabalho de diferentes áreas, além de servir para identificar <span>oportunidades</span> de melhoria.
-                            </p>
-                        </div>
-                    </div>
+                    <ContentSection
+                        title="DIAGNÓSTICO E OPORTUNIDADE"
+                        paragraphs={[
+                            "Diante da **complexidade do produto** de empréstimo pessoal, tomei a **iniciativa** de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.",
+                            "O objetivo foi consolidar uma **visão completa** do processo, a criação de material de referência para **otimizar** o trabalho de diferentes áreas, além de servir para identificar **oportunidades** de melhoria."
+                        ]}
+                    />
 
-                    <div className='content-container'>
-                        <div>
-                            <h3 className='content-title'>IMPREVISTO E SOLUÇÃO</h3>
-                            <p className='content-text'>
-                                Durante a documentação, percebi <span>inconsistências nas informações</span> fornecidas sobre o funcionamento real do fluxo. Diferentes áreas possuíam versões divergentes do processo, dificultando a criação de um material confiável.
-                                <br />
-                                <br />
-                                Para solucionar esse problema, implementei uma <span>validação estruturada:</span> ao final de cada etapa mapeada, colhi a assinatura digital do responsável da área correspondente, garantindo alinhamento e precisão nos fluxogramas.
-                            </p>
-                        </div>
-                    </div>
+                    <ContentSection
+                        title="IMPREVISTO E SOLUÇÃO"
+                        paragraphs={[
+                            "Durante a documentação, percebi **inconsistências nas informações** fornecidas sobre o funcionamento real do fluxo. Diferentes áreas possuíam versões divergentes do processo, dificultando a criação de um material confiável.",
+                            "Para solucionar esse problema, implementei uma **validação estruturada:** ao final de cada etapa mapeada, colhi a assinatura digital do responsável da área correspondente, garantindo alinhamento e precisão nos fluxogramas."
+                        ]}
+                    />
                 </div>
 
                 <div className='subsection'>

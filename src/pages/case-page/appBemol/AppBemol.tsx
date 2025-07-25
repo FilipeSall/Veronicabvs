@@ -15,12 +15,13 @@ import { processData, cardsData } from './data'
 import desingSystemImg from '../../../assets/appBemol/designsystem.png';
 import NegocioExperiencia from './components/negocio-experiencia/NegocioExperiencia';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
+import { useScrollToElement } from '../../../hooks/useScrollToElement';
 
 function AppBemol() {
 
     const scrollToElement = useSmoothScroll();
     const totalReading = summary.items.reduce((acc, item) => acc + item.readingTime, 0);
-
+    useScrollToElement('header-app-bemol', {smooth: false});
     return (
         <section className='page-container'>
             <PageHeader

@@ -20,11 +20,13 @@ import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
 import { processDataApp } from './processData';
 import arrowBlue from '../../../assets/svgs/blueArrow.svg';
 import ContentSection from '../components/contentSection/ContentSection ';
+import { useScrollToElement } from '../../../hooks/useScrollToElement';
 
 function CaseBemol() {
 
     const scrollToElement = useSmoothScroll();
     const totalReading = summary.items.reduce((acc, item) => acc + item.readingTime, 0);
+    useScrollToElement('header-bemol', {smooth: false});
 
     return (
         <section className='page-container'>

@@ -74,7 +74,7 @@ function CaseBemol() {
 
                 <div className="subsection">
                     <ContentSection
-                        title="PROCESSO"
+                        title="SOLUÇÃO"
                         paragraphs={[
                             "Comecei com uma **análise de dados** para identificar o problema e entender o comportamento de abandono no funil, seguida por um **benchmarking** com bancos digitais para mapear **boas práticas** de reengajamento.",
                             "A partir disso, **identifiquei a oportunidade** de implementar uma régua de comunicação segmentada via push.",
@@ -225,7 +225,7 @@ function CaseBemol() {
 
             {/*FOOTER*/}
             <p className='footer-text'>
-                💡Entre em contato e agende uma apresentação por algum dos botões abaixo! :)
+            💡Entre em contato e agende uma apresentação :)
             </p>
             <a
                 href="#header-bemol"

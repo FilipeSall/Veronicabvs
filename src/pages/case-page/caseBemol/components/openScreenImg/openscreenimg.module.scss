@@ -7,20 +7,28 @@
     position: absolute;
     top: 80%;
     display: flex;
+    justify-content: center;
     left: 70%;
     gap: 4px;
     font-size: 14px;
     color: #BBBBBB;
     align-items: center;
+    p{
+        font-size: 14px;
+        font-style: italic;
+    }
 }
 
 .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     border: none;
     color: #F3DA8B;
     background-color: inherit;
+    font-weight: normal;
     cursor: pointer;
     font-family: 'Inter';
     font-size: 14px;
+    font-style: italic;
 }

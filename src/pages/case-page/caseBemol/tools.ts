@@ -72,7 +72,7 @@ export const summary: SummaryInterface = {
             href: '#chapter-1-1',
             isSpecial: false,
             readingTime: 3,
-            title: 'Resgatando clientes no fluxo de empréstimo por notificações segmentadas',
+            title: '1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas',
             subtitle:'Apoio: Equipe de Marketing e equipe de Dados.'
         },
         {

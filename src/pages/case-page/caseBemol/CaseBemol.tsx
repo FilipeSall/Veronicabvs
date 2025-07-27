@@ -125,7 +125,7 @@ function CaseBemol() {
             <section className='chapter' id='chapter-1-2'>
                 <div className='case-title__wrapper'>
                     <div className='title-text__container '>
-                        <h3 className='strong-white'>1.2 Outras entregas</h3>
+                        <h3 className='strong-white'><span className='id-text'>1.2</span> Outras entregas</h3>
                         <p className='description-text strong-white'>Fluxogramas completos do produto Empréstimo Pessoal</p>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ function CaseBemol() {
 
                 <div className="subsection">
                     <div className='title-text__container'>
-                        <h3 className='strong-white'>1.3 Outras entregas</h3>
+                        <h3 className='strong-white'><span className='id-text'>1.3</span> Outras entregas</h3>
                         <p className='content-text'>
                             Todas as propostas foram guiadas pela abordagem de Data-Driven Design
                             — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento.

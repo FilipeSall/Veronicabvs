@@ -123,6 +123,10 @@ section.chapter:nth-child(even) {
     color: #F3DA8B;
 }
 
+.id-text {
+    font-size: 32px;
+}
+
 .list-wrapper {
     margin: 40px 0;
     width: 100%;
@@ -149,8 +153,6 @@ section.chapter:nth-child(even) {
     text-align: center;
     color: var(--textColor);
 }
-
-
 
 // UTILS
 .strong-white {

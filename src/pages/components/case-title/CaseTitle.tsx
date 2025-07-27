@@ -21,7 +21,7 @@ function CaseTitle({ title, subTitle, id }: CaseTitleProps) {
     return (
         <div className={styles.caseTitleWrapper} ref={wrapperRef}>
             <h2 className={styles.caseTitle} ref={titleRef}>
-                {id && id}  {title}
+                <span className={styles.id}>{id && id}</span>  {title}
             </h2>
             {subTitle && <p className={styles.caseSubtitle}>{subTitle}</p>}
         </div>

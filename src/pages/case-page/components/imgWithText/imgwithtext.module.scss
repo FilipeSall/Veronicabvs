@@ -1,33 +1,33 @@
-.container{
+.container {
     width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-.textWrapper{
+.textWrapper {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.title{
+.title {
     font-weight: 700;
     font-size: 16px;
 }
 
-.text{
+.text {
     font-family: 'Inter';
     font-weight: 400;
 }
 
-.imgWrapper{
+.imgWrapper {
     margin-top: 40px;
 }
 
-.descriptionText{
+.descriptionText {
     font-size: 14px;
     color: #BBBBBB;
     font-family: 'Inter';
-    font-style:italic ;
+    font-style: italic;
 }

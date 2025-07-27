@@ -1,4 +1,3 @@
-// hooks/useVideoInView.ts
 import { useEffect, useRef, RefObject } from 'react';
 
 interface UseVideoInViewOptions {
@@ -35,7 +34,7 @@ export function useVideoInView({
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     videoElement.play().catch((error) => {
-                        console.log("Erro ao reproduzir vídeo:", error);
+                        console.error("Erro ao reproduzir vídeo:", error);
                     });
                 } else {
                     videoElement.pause();

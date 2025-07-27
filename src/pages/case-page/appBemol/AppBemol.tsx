@@ -1,10 +1,8 @@
 import styles from './appbemol.module.scss';
 import { summary } from './summary';
 import '../escopecasepage.scss';
-import arrowUp from '../../../assets/svgs/scrolTop.svg';
 import tools from './tools';
 import PageHeader from '../../components/page-header/PageHeader';
-import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
 import Summary from '../../components/summary/Summary';
 import CaseTitle from '../../components/case-title/CaseTitle';
 import VideoLegend from '../../components/video-legend/VideoLegend';
@@ -16,12 +14,12 @@ import desingSystemImg from '../../../assets/appBemol/designsystem.png';
 import NegocioExperiencia from './components/negocio-experiencia/NegocioExperiencia';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
 import { useScrollToElement } from '../../../hooks/useScrollToElement';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
 
 function AppBemol() {
 
-    const scrollToElement = useSmoothScroll();
     const totalReading = summary.items.reduce((acc, item) => acc + item.readingTime, 0);
-    useScrollToElement('header-app-bemol', {smooth: false});
+    useScrollToElement('header-app-bemol', { smooth: false });
     return (
         <section className='page-container'>
             <PageHeader
@@ -39,6 +37,7 @@ function AppBemol() {
                     <CaseTitle
                         title={summary.items[0].title}
                         subTitle={summary.items[0].subtitle}
+                        id={summary.items[0].id}
                     />
 
                     <VideoLegend
@@ -136,6 +135,7 @@ function AppBemol() {
                     <CaseTitle
                         title={summary.items[1].title}
                         subTitle={summary.items[1].subtitle}
+                        id={summary.items[1].id}
                     />
                 </div>
 
@@ -184,17 +184,10 @@ function AppBemol() {
             <p className='footer-text'>
                 💡Entre em contato e agende uma apresentação por algum dos botões abaixo! :)
             </p>
-            <a
-                href="#header-app-bemol"
-                className="scrollup-case"
-                onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement('header-app-bemol');
-                }}
-            >
-                <img src={arrowUp} alt="Seta para cima" />
-            </a>
-
+            <ScrollToTop
+                targetId="header-app-bemol"
+                arrowColor="vermelha"
+            />
         </section>
     )
 }

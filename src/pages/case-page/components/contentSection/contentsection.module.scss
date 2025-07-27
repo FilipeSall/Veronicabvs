@@ -1,9 +1,9 @@
 .contentContainer {
     width: 100%;
-    margin: 40px 0;
+    margin-top: 20px;
 }
 
-.contentContainer > div {
+.contentContainer>div {
     max-width: 1440px;
     margin: 0 auto;
     padding: 40px 72px;
@@ -26,7 +26,7 @@
     letter-spacing: 0%;
     font-size: 16px;
     width: 100%;
-    
+
     span {
         font-weight: 700;
     }
@@ -34,7 +34,7 @@
 
 .contentList {
     margin-left: 30px;
-    
+
     li {
         span {
             font-weight: bolder;

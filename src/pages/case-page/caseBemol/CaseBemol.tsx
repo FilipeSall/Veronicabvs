@@ -1,7 +1,6 @@
 import '../escopecasepage.scss';
 import { tools, pushNotifications, Values, summary } from './tools';
 import styles from './casebemol.module.scss';
-import arrowUp from '../../../assets/svgs/scrolTop.svg';
 import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
 import FunilImg from './components/funilImg/FunilImg';
 import ProcessFlowContainer from './components/processflowcontainer/ProcessFlowContainer';
@@ -9,24 +8,23 @@ import FluxogramaVideo from './components/fluxogramaVideo/FluxogramaVideo';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
 import DateVideo from './components/dateVideo/DateVideo';
 import Summary from '../../components/summary/Summary';
-import { useSmoothScroll } from '../../../hooks/useSmoothScrol';
 import PageHeader from '../../components/page-header/PageHeader';
 import CaseTitle from '../../components/case-title/CaseTitle';
 import SuspensePhone from './components/suspensePhone/SuspensePhone';
 import OpenScreenImg from './components/openScreenImg/OpenScreenImg';
 import ImgWithText from '../components/imgWithText/ImgWithText';
-import entregaImg1 from '../../../assets/caseBemol/entrega1.png';
-import entregaImg2 from '../../../assets/caseBemol/entrega2.png';
+import entregaImg1 from '../../../assets/caseBemol/1.3 A.png';
+import entregaImg2 from '../../../assets/caseBemol/1.3 B.png';
 import { processDataApp } from './processData';
 import arrowBlue from '../../../assets/svgs/blueArrow.svg';
 import ContentSection from '../components/contentSection/ContentSection ';
 import { useScrollToElement } from '../../../hooks/useScrollToElement';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
 
 function CaseBemol() {
 
-    const scrollToElement = useSmoothScroll();
     const totalReading = summary.items.reduce((acc, item) => acc + item.readingTime, 0);
-    useScrollToElement('header-bemol', {smooth: false});
+    useScrollToElement('header-bemol', { smooth: false });
 
     return (
         <section className='page-container'>
@@ -44,6 +42,7 @@ function CaseBemol() {
                 <CaseTitle
                     title={summary.items[0].title}
                     subTitle={summary.items[0].subtitle}
+                    id={summary.items[0].id}
                 />
                 <div className='subsection'>
                     <div className={`${styles.wrapper}`}>
@@ -186,6 +185,7 @@ function CaseBemol() {
                             title='CÁLCULO E ANÁLISE DO NPS'
                             text='Da conta digital Conta Bemol, do ano de 2023.'
                             description='Dados sensíveis censurados.'
+                            maxWidth='70'
                         />
                     </div>
                     <div className='subsection-img__wrapper'>
@@ -194,6 +194,7 @@ function CaseBemol() {
                             title='ANÁLISE DA TAXA DE CANCELAMENTO'
                             text='Apresentações mensais das análises aos stakeholders.'
                             description='Dados sensíveis censurados.'
+                            maxWidth='70'
                         />
                     </div>
                 </div>
@@ -227,18 +228,12 @@ function CaseBemol() {
 
             {/*FOOTER*/}
             <p className='footer-text'>
-            💡Entre em contato e agende uma apresentação :)
+                💡Entre em contato e agende uma apresentação :)
             </p>
-            <a
-                href="#header-bemol"
-                className="scrollup-case"
-                onClick={(e) => {
-                    e.preventDefault();
-                    scrollToElement('header-bemol');
-                }}
-            >
-                <img src={arrowUp} alt="Seta para cima" />
-            </a>
+            <ScrollToTop
+                targetId="header-bemol"
+                arrowColor="azul"
+            />
         </section>
     )
 }

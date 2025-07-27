@@ -41,7 +41,7 @@ section.chapter:nth-child(even) {
     width: 100%;
 }
 
-.content-container > div {
+.content-container>div {
     max-width: 1440px;
     margin: 0 auto;
     padding: 40px 72px;
@@ -150,12 +150,7 @@ section.chapter:nth-child(even) {
     color: var(--textColor);
 }
 
-// BTN SCROLL TO HEADER
-.scrollup-case {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 72px 40px;
-}
+
 
 // UTILS
 .strong-white {

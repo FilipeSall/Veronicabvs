@@ -4,9 +4,10 @@ import styles from './CaseTitle.module.scss';
 type CaseTitleProps = {
     title: string;
     subTitle?: string;
+    id?: string;
 };
 
-function CaseTitle({ title, subTitle}: CaseTitleProps) {
+function CaseTitle({ title, subTitle, id }: CaseTitleProps) {
     const titleRef = useRef<HTMLHeadingElement>(null);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -20,7 +21,7 @@ function CaseTitle({ title, subTitle}: CaseTitleProps) {
     return (
         <div className={styles.caseTitleWrapper} ref={wrapperRef}>
             <h2 className={styles.caseTitle} ref={titleRef}>
-                {title}
+                {id && id}  {title}
             </h2>
             {subTitle && <p className={styles.caseSubtitle}>{subTitle}</p>}
         </div>

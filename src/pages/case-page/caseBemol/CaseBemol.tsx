@@ -170,7 +170,6 @@ function CaseBemol() {
 
             {/*1.3 Outras entregas*/}
             <section className='chapter' id='chapter-1-3'>
-
                 <div className="subsection">
                     <div className='title-text__container'>
                         <h3 className='strong-white'><span className='id-text'>1.3</span> Outras entregas</h3>

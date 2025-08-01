@@ -9,12 +9,13 @@ import VideoLegend from '../../components/video-legend/VideoLegend';
 import videoAutocoplete from '../../../assets/appBemol/autocomplete.mp4';
 import redArrow from '../../../assets/svgs/redArrow.svg';
 import ProcessFlowContainer from '../caseBemol/components/processflowcontainer/ProcessFlowContainer';
-import { processData, cardsData } from './data'
+import { processData, cardsData, carrosselData } from './data'
 import desingSystemImg from '../../../assets/appBemol/designsystem.png';
 import NegocioExperiencia from './components/negocio-experiencia/NegocioExperiencia';
 import CardsEnumerados from '../components/cardsEnumerados/CardsEnumerados';
 import { useScrollToElement } from '../../../hooks/useScrollToElement';
 import ScrollToTop from '../../components/scroll-to-top/ScrollToTop';
+import Carrossel from '../components/carrossel/Carrossel';
 
 function AppBemol() {
 
@@ -150,7 +151,14 @@ function AppBemol() {
                         <li><span>→</span>Barreiras na finalização da contratação (potencialmente motivando a queda na taxa de conversão).</li>
                     </ul>
                 </div>
-
+                <div className={styles.appBemolDiv}>
+                    <h3 className={styles.appTitle}>ANTES X DEPOIS</h3>
+                    <Carrossel
+                        slides={carrosselData}
+                        title="Tela inicial do fluxo de contratação"
+                        dotColor='#F23434'
+                    />
+                </div>
                 <div className={styles.appBemolDiv}>
                     <h3 className={styles.appTitle}>DESAFIO E OBJETIVO</h3>
                     <p className={styles.appText}>O redesenho envolveu a responsabilidade de <span>otimizar o fluxo</span> do produto mais rentável da empresa.

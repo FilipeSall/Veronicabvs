@@ -1,3 +1,8 @@
+import carrossel1 from '../../../assets/appBemol/carrossel/1.png';
+import carrossel2 from '../../../assets/appBemol/carrossel/2.png';
+import carrossel3 from '../../../assets/appBemol/carrossel/3.png';
+import carrossel4 from '../../../assets/appBemol/carrossel/4.png';
+
 export const processData = [
     {
         title: "Planning",
@@ -65,4 +70,8 @@ export const cardsData = [
         title: 'Redução da fricção',
         text: 'Minimização de esforços desnecessários, tornando a jornada mais fluida.'
     }
+]
+
+export const carrosselData = [
+    carrossel1, carrossel2, carrossel3, carrossel4
 ]

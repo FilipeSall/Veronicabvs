@@ -48,7 +48,7 @@ function AppBemol() {
                 </div>
 
                 <div className={styles.appBemolDiv}>
-                    <h3 className={styles.appTitle}>Contexto</h3>
+                    <h3 className={styles.appTitle}>CONTEXTO</h3>
                     <p className={styles.appText}>A Bemol é uma empresa amazonense com forte atuação nos setores de varejo <span>(BSA)</span> e serviços financeiros <span>(BSF)</span>, oferecendo uma experiência integrada por meio de dois aplicativos principais:
                         <br />
                         <br />

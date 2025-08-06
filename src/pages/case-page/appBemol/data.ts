@@ -1,7 +1,7 @@
-import carrossel1 from '../../../assets/appBemol/carrossel/1.png';
-import carrossel2 from '../../../assets/appBemol/carrossel/2.png';
-import carrossel3 from '../../../assets/appBemol/carrossel/3.png';
-import carrossel4 from '../../../assets/appBemol/carrossel/4.png';
+import carrossel1 from '../../../assets/appBemol/carrossel/1.webp';
+import carrossel2 from '../../../assets/appBemol/carrossel/2.webp';
+import carrossel3 from '../../../assets/appBemol/carrossel/3.webp';
+import carrossel4 from '../../../assets/appBemol/carrossel/4.webp';
 
 export const processData = [
     {

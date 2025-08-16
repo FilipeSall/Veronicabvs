@@ -52,7 +52,7 @@ function CasePanel({ nome, projeto, miniImg, isUnderConstruction = false }: Case
                 </div>
             </div>
 
-            <div className={styles.casePanelShowcase }>
+            <div className={styles.casePanelShowcase}>
                 <img
                     src={miniImg}
                     alt="Preview do case"

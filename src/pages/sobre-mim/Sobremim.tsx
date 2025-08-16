@@ -26,7 +26,7 @@ function Sobremim() {
                     <div className={styles.paraConversar}>
                         <p><span>Vamos conversar?</span></p>
                         <div className={styles.textWrapperContainer}>
-                            <div className={styles.bulletPoint}>•</div>
+                            <div className={`${styles.bulletPoint} ${styles.bulletPointCurriculo}`}>•</div>
                             <a
                                 href={pdfCurriculo}
                                 target='_blank'

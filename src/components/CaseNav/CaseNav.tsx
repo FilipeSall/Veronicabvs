@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import styles from './casenav.module.scss';
 import { CaseNavInterface } from '../../interfaces/components';
-import successIcon from '../../assets/svgs/sucesso.svg';
-import awardIcon from '../../assets/svgs/Medalha.svg';
+import sucessoIcon from '../../assets/svgs/sucesso.svg';
+import premiadoIcon from '../../assets/svgs/Medalha.svg';
 import faixaimg from '../../assets/FAIXA.webp';
 import { formatCaseValue } from '../../utils/formatCaseValue ';
 
@@ -72,7 +72,7 @@ function CaseNav({
             {caseValue && (
                 <div className={styles.caseIndicator}>
                     <img
-                        src={caseValue === 'sucesso' ? awardIcon : successIcon}
+                        src={caseValue === 'sucesso' ? sucessoIcon : premiadoIcon}
                         alt={`Caso ${caseValue}`}
                         className={styles.caseIcon}
                     />

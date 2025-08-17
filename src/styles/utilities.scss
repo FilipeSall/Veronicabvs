@@ -1,0 +1,128 @@
+// Utility Classes - Classes reutilizáveis
+@use './tokens.scss';
+
+// Layout Utilities
+.u-content-wrapper {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--spacing-xxl);
+  width: 100%;
+}
+
+.u-content-container {
+  width: 100%;
+
+  >div {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-xxl);
+    width: var(--content-width-large);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+}
+
+// Width Utilities
+.u-width-small {
+  width: var(--content-width-small);
+}
+
+.u-width-medium {
+  width: var(--content-width-medium);
+}
+
+.u-width-large {
+  width: var(--content-width-large);
+}
+
+.u-width-extra-large {
+  width: var(--content-width-extra-large);
+}
+
+.u-width-full {
+  width: var(--content-width-full);
+}
+
+// Spacing Utilities
+.u-margin-top-xl {
+  margin-top: var(--spacing-xl);
+}
+
+.u-margin-bottom-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.u-margin-y-xl {
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.u-margin-y-xxxl {
+  margin-top: var(--spacing-xxxl);
+  margin-bottom: var(--spacing-xl);
+}
+
+// Typography Utilities
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.u-text-highlight {
+  color: #F3DA8B;
+}
+
+.u-text-white {
+  color: #FFFFFF !important;
+}
+
+.u-text-gray {
+  color: #BBBBBB;
+}
+
+// Flex Utilities
+.u-flex {
+  display: flex;
+}
+
+.u-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.u-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.u-flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// Gap Utilities
+.u-gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.u-gap-md {
+  gap: var(--spacing-md);
+}
+
+.u-gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.u-gap-xl {
+  gap: var(--spacing-xl);
+}

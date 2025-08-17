@@ -1,4 +1,4 @@
-import '../escopecasepage.scss';
+import '../estilos-case.scss';
 import { tools, pushNotifications, Values, summary } from './tools';
 import styles from './casebemol.module.scss';
 import PushNotificationVideo from '../components/pushNotificationVideo/PushNotificationVideo';
@@ -27,7 +27,7 @@ function CaseBemol() {
     useScrollToElement('header-bemol', { smooth: false });
 
     return (
-        <section className='page-container'>
+        <section className='pagina-case'>
             <PageHeader
                 bgColor={summary.bg}
                 contextTxt='Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.'
@@ -38,13 +38,13 @@ function CaseBemol() {
             <Summary items={summary.items} bg={summary.bg} color={summary.color} totalReading={totalReading} />
 
             {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
-            <section className='chapter' id='chapter-1-1'>
+            <section className='capitulo-case' id='chapter-1-1'>
                 <CaseTitle
                     title={summary.items[0].title}
                     subTitle={summary.items[0].subtitle}
                     id={summary.items[0].id}
                 />
-                <div className='subsection'>
+                <div className='subsecao-case'>
                     <div className={`${styles.wrapper}`}>
                         <SuspensePhone />
                         <div className={styles.pushNotificationsContainer}>
@@ -60,7 +60,7 @@ function CaseBemol() {
                     </div>
                 </div>
 
-                <div className="subsection">
+                <div className="subsecao-case">
                     <ContentSection
                         title="DESAFIO E OPORTUNIDADE"
                         paragraphs={[
@@ -73,7 +73,7 @@ function CaseBemol() {
                     <FunilImg />
                 </div>
 
-                <div className="subsection">
+                <div className="subsecao-case">
                     <ContentSection
                         title="SOLUÇÃO"
                         paragraphs={[
@@ -90,7 +90,7 @@ function CaseBemol() {
                     />
                 </div>
 
-                <div className="subsection">
+                <div className="subsecao-case">
                     <ContentSection
                         title="PROCESSO"
                         paragraphs={[
@@ -102,7 +102,7 @@ function CaseBemol() {
                     <OpenScreenImg />
                 </div>
 
-                <div className="subsection">
+                <div className="subsecao-case">
                     <div className='content-container'>
                         <div>
                             <h3 className='content-title'>MÉTRICAS E MELHORIAS</h3>
@@ -122,21 +122,21 @@ function CaseBemol() {
             </section>
 
             {/*1.2 Outras entregas*/}
-            <section className='chapter' id='chapter-1-2'>
+            <section className='capitulo-case' id='chapter-1-2'>
                 <div className='case-title__wrapper'>
-                    <div className='title-text__container '>
-                        <h3 className='strong-white'><span className='id-text'>1.2</span> Outras entregas</h3>
-                        <p className='description-text strong-white'>Fluxogramas completos do produto Empréstimo Pessoal</p>
+                    <div className='case-title__container'>
+                        <h3 className='u-text-white'><span className='case-title__id'>1.2</span> Outras entregas</h3>
+                        <p className='case-title__description u-text-white'>Fluxogramas completos do produto Empréstimo Pessoal</p>
                     </div>
                 </div>
 
-                <div className='subsection'>
+                <div className='subsecao-case'>
                     <div className='subsection-content'>
                         <FluxogramaVideo />
                     </div>
                 </div>
 
-                <div className='subsection'>
+                <div className='subsecao-case'>
                     <ContentSection
                         title="DIAGNÓSTICO E OPORTUNIDADE"
                         paragraphs={[
@@ -154,7 +154,7 @@ function CaseBemol() {
                     />
                 </div>
 
-                <div className='subsection'>
+                <div className='subsecao-case'>
                     <div className={styles.cardsEnumeradosContainer}>
                         {Values && (
                             <CardsEnumerados
@@ -169,16 +169,16 @@ function CaseBemol() {
             </section>
 
             {/*1.3 Outras entregas*/}
-            <section className='chapter' id='chapter-1-3'>
-                <div className="subsection">
-                    <div className='title-text__container'>
-                        <h3 className='strong-white'><span className='id-text'>1.3</span> Outras entregas</h3>
-                        <p className='content-text'>
+            <section className='capitulo-case' id='chapter-1-3'>
+                <div className="subsecao-case">
+                    <div className='case-title__container'>
+                        <h3 className='u-text-white'><span className='case-title__id'>1.3</span> Outras entregas</h3>
+                        <p className='case-content__text'>
                             Todas as propostas foram guiadas pela abordagem de Data-Driven Design
                             — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento.
                         </p>
                     </div>
-                    <div className='subsection-img__wrapper'>
+                    <div className='case-subsection__img-wrapper'>
                         <ImgWithText
                             img={entregaImg1}
                             title='CÁLCULO E ANÁLISE DO NPS'
@@ -187,7 +187,7 @@ function CaseBemol() {
                             maxWidth='70'
                         />
                     </div>
-                    <div className='subsection-img__wrapper'>
+                    <div className='case-subsection__img-wrapper'>
                         <ImgWithText
                             img={entregaImg2}
                             title='ANÁLISE DA TAXA DE CANCELAMENTO'
@@ -201,14 +201,14 @@ function CaseBemol() {
             </section>
 
             {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-            <section className='chapter' id='chapter-1-4' >
+            <section className='capitulo-case' id='chapter-1-4'>
                 <div className='case-title__wrapper'>
-                    <div className='title-text__container'>
+                    <div className='case-title__container'>
                         <h3>1.4 Escolha da data do vencimento das parcelas</h3>
-                        <p className='description-text'><span>Exclusivo para apresentação pessoal</span>, entre em contato comigo e agende um horário.</p>
+                        <p className='case-title__description'><span>Exclusivo para apresentação pessoal</span>, entre em contato comigo e agende um horário.</p>
                     </div>
 
-                    <div className='list-wrapper'>
+                    <div className='case-list__wrapper'>
                         <ul>
                             <li>Identificação da dor</li>
                             <li>Meu processo de design</li>
@@ -219,14 +219,14 @@ function CaseBemol() {
                             <li>Aprendizados</li>
                         </ul>
                     </div>
-                    <div className='subsection'>
+                    <div className='subsecao-case'>
                         <DateVideo />
                     </div>
                 </div>
             </section>
 
             {/*FOOTER*/}
-            <p className='footer-text'>
+            <p className='case-footer__text'>
                 💡Entre em contato e agende uma apresentação :)
             </p>
             <ScrollToTop

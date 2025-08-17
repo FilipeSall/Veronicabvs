@@ -1,160 +1,314 @@
-.page-container {
+@use '../../styles/tokens.scss';
+@use '../../styles/utilities.scss';
+
+// Case Page Layout - Seguindo metodologia BEM
+.case-page {
     width: 100%;
     display: flex;
     scroll-behavior: smooth;
     flex-direction: column;
 }
 
-/* SECTIONS */
-.chapter {
+// Chapter Structure
+.case-chapter {
     width: 100%;
     display: flex;
     flex-direction: column;
     color: var(--textColor);
-    margin: 40px 0;
     align-items: center;
+    // border: 2px solid #ff0000; // DEBUG: Border vermelho
+
+    &:nth-child(odd) {
+        background-color: #0F0F0F;
+    }
+
+    &:nth-child(even) {
+        background-color: #272727;
+    }
+
+    &__content {
+        max-width: var(--max-width-content);
+        margin: 20px auto;
+        padding: 0 var(--spacing-xxl);
+        width: 100%;
+        // border: 2px solid #00ff00; // DEBUG: Border verde
+    }
+}
+
+// Subsections
+.case-subsection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: var(--max-width-content);
+    // border: 2px solid #0000ff; // DEBUG: Border azul
+
+    &__img-wrapper {
+        width: 100%;
+        margin: var(--spacing-xxxl) 0 var(--spacing-xl) 0;
+        // border: 2px solid #ffff00; // DEBUG: Border amarelo
+    }
+
+    &__title {
+        text-align: center;
+    }
+}
+
+// Content Structure
+.case-content {
+    &__container {
+        width: 100%;
+
+        >div {
+            max-width: var(--max-width-content);
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-xxl);
+            width: var(--content-width-large);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+    }
+
+    &__section {
+        width: 100%;
+        max-width: var(--max-width-content);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: var(--spacing-xl) 0;
+        font-family: 'Inter' !important;
+        gap: var(--spacing-xl);
+        // border: 2px solid #ff00ff; // DEBUG: Border magenta
+    }
+
+    &__title {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-tight);
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-weight: var(--font-weight-normal);
+        line-height: var(--line-height-base);
+        letter-spacing: 0%;
+        font-size: var(--font-size-base);
+        width: 100%;
+
+        span {
+            font-weight: var(--font-weight-bold);
+        }
+    }
+
+    &__list {
+        margin-left: 30px;
+
+        li span {
+            font-weight: var(--font-weight-bold);
+        }
+    }
+}
+
+// Title Structure
+.case-title {
+    &__wrapper {
+        width: 100%;
+        margin: var(--spacing-xl) 0;
+        max-width: var(--max-width-content);
+    }
+
+    &__container {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+        width: var(--content-width-extra-large);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+
+        h3 {
+            color: #BBBBBB;
+            font-size: var(--font-size-xl);
+        }
+    }
+
+    &__description {
+        font-family: 'Inter';
+        font-size: var(--font-size-base);
+        color: #BBBBBB;
+        font-weight: var(--font-weight-normal);
+
+        span {
+            color: #F3DA8B;
+        }
+    }
+
+    &__id {
+        font-size: var(--font-size-xxl);
+    }
+}
+
+// List Structure
+.case-list {
+    &__wrapper {
+        margin: var(--spacing-xl) 0;
+        width: 100%;
+
+        ul {
+            max-width: var(--max-width-content);
+            margin: 0 auto;
+            padding: 0 var(--spacing-xxl);
+            width: var(--content-width-medium);
+
+            li {
+                color: #BBBBBB;
+                font-size: var(--font-size-base);
+            }
+        }
+    }
+}
+
+// Footer
+.case-footer {
+    &__text {
+        max-width: var(--max-width-content);
+        margin: 0 auto;
+        padding: 0 var(--spacing-xxl) var(--spacing-xl);
+        width: var(--content-width-small);
+        text-align: center;
+        color: var(--textColor);
+    }
+}
+
+// App Bemol Specific Components (DEPRECATED - usar .case-content__section)
+.app-bemol {
+    &__section {
+        @extend .case-content__section;
+    }
+
+    &__title {
+        width: var(--content-width-medium);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-tight);
+    }
+
+    &__text {
+        width: var(--content-width-medium);
+        font-size: var(--font-size-base);
+        font-family: 'Inter';
+        font-weight: var(--font-weight-normal);
+        line-height: var(--line-height-base);
+
+        span {
+            font-weight: var(--font-weight-bold);
+        }
+    }
+
+    &__list {
+        list-style: none;
+        width: var(--content-width-medium);
+
+        li {
+            gap: 10px;
+            display: flex;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+// Header específico para App Bemol
+#header-app-bemol {
+    background-color: #f23434 !important;
+    color: #fff;
+}
+
+// Legacy Support (manter por compatibilidade)
+.page-container {
+    @extend .case-page;
+}
+
+.chapter {
+    @extend .case-chapter;
 }
 
 .chapter-content {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 72px;
-    width: 100%;
-}
-
-section.chapter:nth-child(odd) {
-    background-color: #0F0F0F;
-}
-
-section.chapter:nth-child(even) {
-    background-color: #272727;
+    @extend .case-chapter__content;
 }
 
 .subsection {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1440px;
+    @extend .case-subsection;
 }
 
 .content-container {
-    width: 100%;
-}
-
-.content-container>div {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 40px 72px;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @extend .case-content__container;
 }
 
 .content-title {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
+    @extend .case-content__title;
 }
 
 .content-text {
-    font-family: 'Inter';
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0%;
-    font-size: 16px;
-    width: 100%;
-}
-
-.content-text span {
-    font-weight: 700;
-}
-
-.simple-title {
-    width: 50%;
-    margin: 0 auto;
+    @extend .case-content__text;
 }
 
 .content-list {
-    margin-left: 30px;
-}
-
-.content-list li span {
-    font-weight: bolder;
+    @extend .case-content__list;
 }
 
 .subsection-title {
-    text-align: center;
+    @extend .case-subsection__title;
 }
 
 .subsection-img__wrapper {
-    width: 100%;
-    margin: 80px 0 40px 0;
+    @extend .case-subsection__img-wrapper;
 }
 
 .case-title__wrapper {
-    width: 100%;
-    margin: 40px 0;
-    max-width: 1440px;
+    @extend .case-title__wrapper;
 }
 
 .title-text__container {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.title-text__container h3 {
-    color: #BBBBBB;
-    font-size: 24px;
+    @extend .case-title__container;
 }
 
 .description-text {
-    font-family: 'Inter';
-    font-size: 16px;
-    color: #BBBBBB;
-    font-weight: 400;
-}
-
-.description-text span {
-    color: #F3DA8B;
+    @extend .case-title__description;
 }
 
 .id-text {
-    font-size: 32px;
+    @extend .case-title__id;
 }
 
 .list-wrapper {
-    margin: 40px 0;
-    width: 100%;
+    @extend .case-list__wrapper;
 }
 
-.list-wrapper ul {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 72px;
-    width: 55%;
-}
-
-.list-wrapper ul li {
-    color: #BBBBBB;
-    font-size: 16px;
-}
-
-/* FOOTER*/
 .footer-text {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 72px 40px;
-    width: 30%;
-    text-align: center;
-    color: var(--textColor);
+    @extend .case-footer__text;
 }
 
-// UTILS
-.strong-white {
-    color: #FFFFFF !important;
+// App Bemol Legacy Support
+.appBemolDiv {
+    @extend .case-content__section;
+}
+
+.appTitle {
+    @extend .app-bemol__title;
+}
+
+.appText {
+    @extend .app-bemol__text;
+}
+
+.arrowList {
+    @extend .app-bemol__list;
+}
+
+.appBemolImg {
+    @extend .app-bemol__img;
 }

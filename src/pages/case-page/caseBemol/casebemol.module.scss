@@ -1,30 +1,51 @@
 @use '../escopecasepage.scss' as *;
+@use '../../../styles/tokens.scss' as *;
+@use '../../../styles/utilities.scss' as *;
 
-.wrapper {
+.case-bemol {
+  &__wrapper {
     display: flex;
     align-items: center;
     position: relative;
     justify-content: space-between;
     width: 100%;
-}
+  }
 
-.pushNotificationsContainer {
+  &__push-notifications {
     display: flex;
-    width: 85%;
+    width: var(--content-width-full);
     justify-content: space-evenly;
-}
+  }
 
-.colResults {
+  &__results-column {
     gap: 30px;
     height: 80%;
     width: 100%;
     padding-right: 20px;
-    margin-bottom: 40px;
-}
+    margin-bottom: var(--spacing-xl);
+  }
 
-.cardsEnumeradosContainer {
+  &__cards-container {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 40px 0;
+    margin: var(--spacing-xl) 0;
+  }
+}
+
+// Legacy Support (manter por compatibilidade)
+.wrapper {
+  @extend .case-bemol__wrapper;
+}
+
+.pushNotificationsContainer {
+  @extend .case-bemol__push-notifications;
+}
+
+.colResults {
+  @extend .case-bemol__results-column;
+}
+
+.cardsEnumeradosContainer {
+  @extend .case-bemol__cards-container;
 }

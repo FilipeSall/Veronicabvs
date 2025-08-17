@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import styles from './CaseTitle.module.scss';
+import styles from './casetitle.module.scss';
 
 type CaseTitleProps = {
     title: string;

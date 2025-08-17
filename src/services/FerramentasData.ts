@@ -2,7 +2,7 @@ import { FerramentaInterface } from "../interfaces/components";
 import adobe from "../assets/ferramentas/adobe.webp";
 import asana from "../assets/ferramentas/asana.webp";
 import figma from "../assets/ferramentas/figma.webp";
-import jetbrains from "../assets/ferramentas/jetbrains.webp";
+import jetbrains from "../assets/ferramentas/jetBrains.webp";
 import logoAzul from "../assets/ferramentas/logoAzul.webp";
 import miro from "../assets/ferramentas/miro.webp";
 import notion from "../assets/ferramentas/notion.webp";

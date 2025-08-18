@@ -65,6 +65,7 @@ export interface CaseTitleHeaderProps {
     title: string;
     subtitle?: string | ReactNode;
     subtitleVariant?: 'default' | 'paragraph';
+    subtitleWhite?: boolean;
     className?: string;
 }
 

@@ -148,6 +148,7 @@ function CaseBemol() {
           id="1.2"
           title="Outras entregas"
           subtitle="Fluxogramas completos do produto Empréstimo Pessoal"
+          subtitleWhite
         />
 
         <ContentBlock>

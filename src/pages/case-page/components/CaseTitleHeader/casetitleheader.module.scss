@@ -21,13 +21,6 @@
   font-size: 24px;
 }
 
-.descriptionText {
-  font-family: "Inter";
-  font-size: 16px;
-  color: #bbbbbb !important;
-  font-weight: 400;
-}
-
 .descriptionText span {
   color: #f3da8b;
 }
@@ -38,6 +31,18 @@
 
 .strongWhite {
   color: #ffffff !important;
+}
+
+/* Garante que strongWhite tenha prioridade sobre descriptionText */
+.descriptionText.strongWhite {
+  color: #ffffff !important;
+}
+
+.descriptionText {
+  font-family: "Inter";
+  font-size: 16px;
+  color: #bbb !important;
+  font-weight: 400;
 }
 
 /* Estilo para subtítulo em formato de parágrafo (textos longos) */
@@ -51,7 +56,7 @@
   color: #ffffff !important;
 }
 
-/* Estilos para capítulo especial (1.4) */
+/* Estilos para capítulo especial */
 .special-chapter .titleTextContainer h3 {
   color: #bbbbbb !important;
 }

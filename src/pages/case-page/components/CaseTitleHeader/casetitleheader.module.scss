@@ -29,20 +29,20 @@
   font-size: 32px;
 }
 
-.strongWhite {
-  color: #ffffff !important;
-}
-
-/* Garante que strongWhite tenha prioridade sobre descriptionText */
-.descriptionText.strongWhite {
-  color: #ffffff !important;
+.titleTextContainer .strongWhite {
+  color: #ffffff;
 }
 
 .descriptionText {
   font-family: "Inter";
   font-size: 16px;
-  color: #bbb !important;
+  color: #ffffff;
   font-weight: 400;
+}
+
+/* Cor opcional #bbb para subtítulo quando subtitleWhite={false} */
+.descriptionText.grayText {
+  color: #bbb;
 }
 
 /* Estilo para subtítulo em formato de parágrafo (textos longos) */
@@ -53,14 +53,21 @@
   max-width: 100%;
   text-align: left;
   padding: 20px 0;
-  color: #ffffff !important;
+}
+
+.paragraphStyle {
+  color: #ffffff;
+}
+
+.paragraphStyle.grayText {
+  color: #bbb;
 }
 
 /* Estilos para capítulo especial */
 .special-chapter .titleTextContainer h3 {
-  color: #bbbbbb !important;
+  color: #bbbbbb;
 }
 
 .special-chapter .descriptionText span {
-  color: #f3da8b !important;
+  color: #f3da8b;
 }

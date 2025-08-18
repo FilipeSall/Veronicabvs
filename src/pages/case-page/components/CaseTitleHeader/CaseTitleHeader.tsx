@@ -63,7 +63,7 @@ function CaseTitleHeader({
         {subtitle && (
           <p
             className={`${styles.descriptionText} ${
-              subtitleWhite ? styles.strongWhite : ""
+              !subtitleWhite ? styles.grayText : ""
             } ${subtitleVariant === "paragraph" ? styles.paragraphStyle : ""}`}
           >
             {subtitle}

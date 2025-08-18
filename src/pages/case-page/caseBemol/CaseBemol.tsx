@@ -54,6 +54,7 @@ function CaseBemol() {
           id="1.1"
           title="Resgatando clientes no fluxo de empréstimo por notificações segmentadas"
           subtitle="Apoio: Equipe de Marketing e equipe de Dados."
+          subtitleWhite={false}
         />
         <ContentBlock>
           <div className={`${styles.wrapper}`}>

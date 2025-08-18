@@ -1,4 +1,5 @@
 import { IconType } from "react-icons"
+import { ReactNode } from "react"
 import { CasePreview } from "./case"
 
 export interface LinkInterface {
@@ -44,4 +45,31 @@ export interface ContentSectionProps {
     title: string;
     paragraphs: string[];
     lineBreaks?: number;
+}
+
+export interface ChapterProps {
+    id: string;
+    title?: string;
+    subtitle?: string;
+    children: React.ReactNode;
+    className?: string;
+}
+
+export interface ContentBlockProps {
+    children: React.ReactNode;
+    className?: string;
+}
+
+export interface CaseTitleHeaderProps {
+    id: string;
+    title: string;
+    subtitle?: string | ReactNode;
+    subtitleVariant?: 'default' | 'paragraph';
+    className?: string;
+}
+
+export interface ContentWrapperProps {
+    title: string;
+    children: React.ReactNode;
+    className?: string;
 }

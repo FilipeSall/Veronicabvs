@@ -5,6 +5,34 @@ import funil3img from '../../../../../assets/caseBemol/funil3.png'
 import funil4img from '../../../../../assets/caseBemol/funil4.png'
 import mainFunil from '../../../../../assets/caseBemol/mainFunil.png'
 
+/**
+ * FunilImg - Componente para exibir o funil de conversão com etapas visuais
+ * 
+ * Este componente renderiza um funil de conversão interativo mostrando
+ * as 4 etapas principais do fluxo de empréstimo, com imagens ilustrativas
+ * e numeração sequencial para facilitar a compreensão.
+ * 
+ * @example
+ * ```tsx
+ * // Uso simples
+ * <FunilImg />
+ * 
+ * // Dentro de um ContentBlock
+ * <ContentBlock>
+ *   <ContentSection 
+ *     title="ANÁLISE DO FUNIL"
+ *     paragraphs={["Visualização das etapas de abandono..."]}
+ *   />
+ *   <FunilImg />
+ * </ContentBlock>
+ * ```
+ * 
+ * Etapas do funil:
+ * 1. Oferta de dinheiro (entrada no fluxo)
+ * 2. Menu navegável (exploração)
+ * 3. Input de dados (preenchimento)
+ * 4. Simulação de empréstimo (finalização)
+ */
 function FunilImg() {
     return (
         <div className={styles.container}>

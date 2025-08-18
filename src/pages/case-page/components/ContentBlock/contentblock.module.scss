@@ -1,0 +1,28 @@
+@use "../../escopecasepage.scss" as *;
+
+/* CONTENT BLOCK STYLES */
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.contentBlockContent {
+  width: 100%;
+}
+
+.contentBlockImgWrapper {
+  width: 100%;
+  margin: 80px 0 40px 0;
+}
+
+/* Classe global para compatibilidade - usar contentBlockImgWrapper ao invés */
+:global(.subsection-content) {
+  width: 100%;
+}
+
+:global(.subsection-img__wrapper) {
+  width: 100%;
+  margin: 80px 0 40px 0;
+}

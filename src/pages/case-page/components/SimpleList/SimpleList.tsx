@@ -1,82 +1,73 @@
-import { SimpleListProps } from '../../../../interfaces/components';
-import styles from './simplelist.module.scss';
+import { SimpleListProps } from "../../../../interfaces/components";
+import { parseStringOrNode } from "../../../../utils/textUtils";
+import styles from "./simplelist.module.scss";
 
 /**
  * SimpleList - Componente para exibir listas simples de itens
- * 
+ *
  * Este componente renderiza uma lista HTML (<ul>) com itens padronizados,
  * seguindo o mesmo padrão de layout dos outros componentes do projeto.
  * Ideal para listas de tópicos, etapas de processo ou itens informativos.
- * 
+ *
  * @example
  * ```tsx
- * // Lista de etapas de processo
- * <ContentSection title="PROCESSO DE DESIGN">
- *   <SimpleList 
- *     items={[
- *       "Identificação da dor",
- *       "Meu processo de design", 
- *       "Pesquisa e Benchmarking",
- *       "Coleta e análise de dados",
- *       "Design System (documentação técnica de novo componente)",
- *       "Teste com usuários",
- *       "Aprendizados"
- *     ]}
- *   />
- * </ContentSection>
+ * // Lista simples de strings
+ * <SimpleList
+ *   items={[
+ *     "Identificação da dor",
+ *     "Meu processo de design",
+ *     "Pesquisa e Benchmarking"
+ *   ]}
+ * />
  * 
- * // Lista de funcionalidades
- * <ContentSection title="FUNCIONALIDADES IMPLEMENTADAS">
- *   <SimpleList 
- *     items={[
- *       "Autenticação de usuários",
- *       "Dashboard interativo",
- *       "Relatórios automatizados",
- *       "Notificações em tempo real"
- *     ]}
- *   />
- * </ContentSection>
+ * // Lista com markdown **negrito**
+ * <SimpleList
+ *   items={[
+ *     "**Taxa de adesão** à Conta Bemol",
+ *     "**Conversão** no fluxo de contratação",
+ *     "**Fricção** no processo de reconhecimento"
+ *   ]}
+ * />
  * 
- * // Lista de benefícios
- * <ContentSection title="BENEFÍCIOS ALCANÇADOS">
- *   <SimpleList 
- *     items={[
- *       "Redução de 40% no tempo de processo",
- *       "Aumento de 25% na satisfação do usuário",
- *       "Eliminação de 80% dos erros manuais"
- *     ]}
- *   />
- * </ContentSection>
+ * // Lista com JSX customizado
+ * <SimpleList
+ *   items={[
+ *     <>
+ *       <span>Experiência fragmentada</span> e pouco intuitiva
+ *     </>,
+ *     <>
+ *       <span>Falta de clareza</span> na exibição das informações
+ *     </>,
+ *     <>
+ *       <span>Etapas desnecessárias</span> ou confusas
+ *     </>
+ *   ]}
+ * />
  * 
- * // Em ContentBlock estruturado
- * <ContentBlock>
- *   <ContentSection title="METODOLOGIA APLICADA">
- *     <SimpleList 
- *       items={[
- *         "Double Diamond adaptado",
- *         "Data-Driven Design",
- *         "Testes de usabilidade",
- *         "Iteração baseada em feedback"
- *       ]}
- *     />
- *   </ContentSection>
- * </ContentBlock>
+ * // Misturando tipos
+ * <SimpleList
+ *   items={[
+ *     "Texto simples",
+ *     "Texto com **destaque**",
+ *     <><strong>JSX customizado</strong> com formatação</>
+ *   ]}
+ * />
  * ```
- * 
- * @param items - Array de strings com os itens da lista
+ *
+ * @param items - Array de strings (com suporte a **negrito**) ou ReactNodes
  */
 function SimpleList({ items }: SimpleListProps) {
-    return (
-        <div className={styles.listContainer}>
-            <ul className={styles.list}>
-                {items.map((item, index) => (
-                    <li key={index} className={styles.listItem}>
-                        {item}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <div className={styles.listContainer}>
+      <ul className={styles.list}>
+        {items.map((item, index) => (
+          <li key={index} className={styles.listItem}>
+            {parseStringOrNode(item)}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export default SimpleList;

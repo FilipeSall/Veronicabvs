@@ -86,5 +86,5 @@ export interface MetricsListProps {
 }
 
 export interface SimpleListProps {
-    items: string[];
+    items: (string | ReactNode)[];
 }

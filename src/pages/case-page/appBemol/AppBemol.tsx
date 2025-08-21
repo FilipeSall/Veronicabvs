@@ -19,12 +19,14 @@ import ContentBlock from "../components/ContentBlock/ContentBlock";
 import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
 import ContentSection from "../components/ContentSection/ContentSection";
 import TextContent from "../components/TextContent/TextContent";
+import SimpleList from "../components/SimpleList/SimpleList";
 
 function AppBemol() {
   const totalReading = summary.items.reduce(
     (acc, item) => acc + item.readingTime,
     0
   );
+
   useScrollToElement("header-app-bemol", { smooth: false });
   return (
     <section className="page-container">
@@ -127,21 +129,14 @@ function AppBemol() {
               Para acompanhar a evolução e impacto da solução no negócio,
               elaborei um plano de monitoramento mensal, analisando KPIs:
             </p>
-            <ul className="content-list">
-              <li>
-                <span>Taxa de adesão</span> à Conta Bemol
-              </li>
-              <li>
-                <span>Conversão</span> no fluxo de contratação
-              </li>
-              <li>
-                <span>Fricção</span> no processo de reconhecimento
-              </li>
-              <li>
-                <span>Feedback qualitativo</span> dos usuários (via pesquisas
-                contínuas)
-              </li>
-            </ul>
+            <SimpleList
+              items={[
+                "**Taxa de adesão** à Conta Bemol",
+                "**Conversão** no fluxo de contratação",
+                "**Fricção** no processo de reconhecimento",
+                "**Feedback qualitativo** dos usuários (via pesquisas contínuas)"
+              ]}
+            />
           </ContentSection>
         </ContentBlock>
 
@@ -174,23 +169,25 @@ function AppBemol() {
             <p className="content-text">
               Identificação de pontos de dor nas telas originais, como:
             </p>
-            <ul className="content-list">
-              <li>
-                <span>Experiência fragmentada</span> e pouco intuitiva
-              </li>
-              <li>
-                <span>Falta de clareza</span> na exibição das informações
-                (impactando a confiança do usuário)
-              </li>
-              <li>
-                <span>Etapas desnecessárias</span> ou confusas (que levavam ao
-                abandono do fluxo)
-              </li>
-              <li>
-                <span>Barreiras na finalização</span> da contratação
-                (potencialmente motivando a queda na taxa de conversão)
-              </li>
-            </ul>
+            <SimpleList
+              items={[
+                <>
+                  <span>Experiência fragmentada</span> e pouco intuitiva
+                </>,
+                <>
+                  <span>Falta de clareza</span> na exibição das informações
+                  (impactando a confiança do usuário)
+                </>,
+                <>
+                  <span>Etapas desnecessárias</span> ou confusas (que levavam ao
+                  abandono do fluxo)
+                </>,
+                <>
+                  <span>Barreiras na finalização</span> da contratação
+                  (potencialmente motivando a queda na taxa de conversão)
+                </>
+              ]}
+            />
           </ContentSection>
         </ContentBlock>
 

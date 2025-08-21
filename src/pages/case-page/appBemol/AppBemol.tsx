@@ -17,8 +17,8 @@ import Carrossel from '../components/carrossel/Carrossel';
 import Chapter from '../components/Chapter/Chapter';
 import ContentBlock from '../components/ContentBlock/ContentBlock';
 import CaseTitleHeader from '../components/CaseTitleHeader/CaseTitleHeader';
-import ContentSection from '../components/contentSection/ContentSection ';
-import ContentWrapper from '../components/ContentWrapper/ContentWrapper';
+import ContentSection from '../components/ContentSection/ContentSection';
+import TextContent from '../components/TextContent/TextContent';
 
 function AppBemol() {
 
@@ -51,7 +51,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="CONTEXTO"
                         paragraphs={[
                             "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",
@@ -63,7 +63,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="DESAFIO E OPORTUNIDADE"
                         paragraphs={[
                             "Uma das **metas estratégicas** da empresa para o ano de 2024 era o aumento da base de contas Bemol ativas.",
@@ -74,7 +74,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="PROCESSO"
                         paragraphs={[
                             "A solução foi desenvolvida seguindo o modelo **Double Diamond adaptado ao Data-Driven Design**, que inclui uma fase inicial de planejamento estratégico e uma final de acompanhamento contínuo."
@@ -88,7 +88,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="DESIGN SYSTEM"
                         paragraphs={[
                             "Contribuí para a evolução do Design System com a **documentação técnica** e adaptação do componente Datepicker, originalmente do **Material 3 (Google)**, para a identidade da marca."
@@ -100,7 +100,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="NEGÓCIO X EXPERIÊNCIA"
                         paragraphs={[
                             "Elaborei duas abordagens para o componente: uma com foco em conversão direta, favorecendo objetivos de **negócio (Business First)**, e outra com uma comunicação mais fluida e informativa, priorizando a **experiência do usuário (Experience First)**.",
@@ -111,7 +111,7 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentWrapper title="PLANO DE ACOMPANHAMENTO">
+                    <ContentSection title="PLANO DE ACOMPANHAMENTO">
                         <p className="content-text">
                             Para acompanhar a evolução e impacto da solução no negócio, elaborei um plano de monitoramento mensal, analisando KPIs:
                         </p>
@@ -121,18 +121,18 @@ function AppBemol() {
                             <li><span>Fricção</span> no processo de reconhecimento</li>
                             <li><span>Feedback qualitativo</span> dos usuários (via pesquisas contínuas)</li>
                         </ul>
-                    </ContentWrapper>
+                    </ContentSection>
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentWrapper title="MÉTRICAS E MELHORIAS">
+                    <ContentSection title="MÉTRICAS E MELHORIAS">
                         <p className="content-text">
                             Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:
                         </p>
                         <p className="content-text">
                             A escolha da Conta Bemol como destino do crédito contratado <span>aumentou de 1,8% para 14,6%</span> nas primeiras semanas após a implementação.
                         </p>
-                    </ContentWrapper>
+                    </ContentSection>
                 </ContentBlock>
             </Chapter>
 
@@ -145,7 +145,7 @@ function AppBemol() {
                 />
 
                 <ContentBlock>
-                    <ContentWrapper title="DIAGNÓSTICO">
+                    <ContentSection title="DIAGNÓSTICO">
                         <p className="content-text">
                             Identificação de pontos de dor nas telas originais, como:
                         </p>
@@ -155,21 +155,21 @@ function AppBemol() {
                             <li><span>Etapas desnecessárias</span> ou confusas (que levavam ao abandono do fluxo)</li>
                             <li><span>Barreiras na finalização</span> da contratação (potencialmente motivando a queda na taxa de conversão)</li>
                         </ul>
-                    </ContentWrapper>
+                    </ContentSection>
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentWrapper title="ANTES X DEPOIS">
+                    <ContentSection title="ANTES X DEPOIS">
                         <Carrossel
                             slides={carrosselData}
                             title="Tela inicial do fluxo de contratação"
                             dotColor='#F23434'
                         />
-                    </ContentWrapper>
+                    </ContentSection>
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentSection
+                    <TextContent
                         title="DESAFIO E OBJETIVO"
                         paragraphs={[
                             "O redesenho envolveu a responsabilidade de **otimizar o fluxo** do produto mais rentável da empresa.",
@@ -187,14 +187,14 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock>
-                    <ContentWrapper title="PRÓXIMOS PASSOS">
+                    <ContentSection title="PRÓXIMOS PASSOS">
                         <p className="content-text">
                             <span>Acompanhamento de métricas pós-lançamento:</span> Como taxa de conversão, tempo médio no fluxo e taxa de abandono.
                         </p>
                         <p className="content-text">
                             <span>Testes de usabilidade com usuários reais:</span> Para validar as melhorias e identificar novas oportunidades.
                         </p>
-                    </ContentWrapper>
+                    </ContentSection>
                 </ContentBlock>
             </Chapter>
 

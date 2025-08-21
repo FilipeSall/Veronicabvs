@@ -1,4 +1,5 @@
 import { MetricsListProps } from '../../../../interfaces/components';
+import { parseStringOrNode } from '../../../../utils/textUtils';
 import styles from './metricslist.module.scss';
 
 /**
@@ -10,14 +11,14 @@ import styles from './metricslist.module.scss';
  * 
  * @example
  * ```tsx
- * // Exemplo básico com texto simples
+ * // Exemplo básico com **negrito** automático
  * <MetricsList
- *   headerText="Para avaliar o impacto da solução, foram analisadas:"
+ *   headerText="Para avaliar o **impacto da solução**, foram analisadas:"
  *   items={[
- *     { label: "Taxa de conversão", value: "aumento de 4% para 7%" },
- *     { label: "Taxa de retorno", value: "aumento de 12% para 28%" }
+ *     { label: "Taxa de conversão", value: "aumento de **4% para 7%**" },
+ *     { label: "Taxa de retorno", value: "aumento de **12% para 28%**" }
  *   ]}
- *   footerText="Além disso, tivemos apoio do time de marketing."
+ *   footerText="Além disso, tivemos apoio do **time de marketing**."
  * />
  * 
  * // Exemplo com spans para destacar valores específicos
@@ -64,22 +65,22 @@ import styles from './metricslist.module.scss';
  * />
  * ```
  * 
- * @param headerText - Texto introdutório que contextualiza as métricas
- * @param items - Array de objetos com label (string) e value (string | ReactNode)
- * @param footerText - Texto opcional de conclusão ou observações (string | ReactNode)
+ * @param headerText - Texto introdutório (suporta **negrito** se for string)
+ * @param items - Array de objetos com label (string) e value (string | ReactNode, suporta **negrito**)
+ * @param footerText - Texto opcional de conclusão (string | ReactNode, suporta **negrito**)
  */
 function MetricsList({ headerText, items, footerText }: MetricsListProps) {
     return (
         <div className={styles.metricsContainer}>
-            <p className={styles.headerText}>{headerText}</p>
+            <p className={styles.headerText}>{parseStringOrNode(headerText)}</p>
             <ul className={styles.metricsList}>
                 {items.map((item, index) => (
                     <li key={index}>
-                        <span className={styles.label}>{item.label}</span> {item.value}
+                        <span className={styles.label}>{parseStringOrNode(item.label)}</span> {parseStringOrNode(item.value)}
                     </li>
                 ))}
             </ul>
-            {footerText && <p className={styles.footerText}>{footerText}</p>}
+            {footerText && <p className={styles.footerText}>{parseStringOrNode(footerText)}</p>}
         </div>
     );
 }

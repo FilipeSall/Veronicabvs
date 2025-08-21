@@ -16,12 +16,12 @@ import entregaImg1 from "../../../assets/caseBemol/1.3 A.png";
 import entregaImg2 from "../../../assets/caseBemol/1.3 B.png";
 import { processDataApp } from "./processData";
 import arrowBlue from "../../../assets/svgs/blueArrow.svg";
-import ContentSection from "../components/contentSection/ContentSection ";
+import ContentSection from "../components/ContentSection/ContentSection";
+import TextContent from "../components/TextContent/TextContent";
 import Chapter from "../components/Chapter/Chapter";
 import chapterStyles from "../components/Chapter/chapter.module.scss";
 import ContentBlock from "../components/ContentBlock/ContentBlock";
 import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
-import ContentWrapper from "../components/ContentWrapper/ContentWrapper";
 import MetricsList from "../components/MetricsList/MetricsList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
@@ -75,7 +75,7 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection
+          <TextContent
             title="DESAFIO E OPORTUNIDADE"
             paragraphs={[
               "Com o apoio da equipe de dados, identificamos que cerca de **68% dos clientes** com crédito pré-aprovado abandonavam o fluxo de contratação de empréstimo pessoal antes da finalização.",
@@ -88,7 +88,7 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection
+          <TextContent
             title="SOLUÇÃO"
             paragraphs={[
               "Comecei com uma **análise de dados** para identificar o problema e entender o comportamento de abandono no funil, seguida por um **benchmarking** com bancos digitais para mapear **boas práticas** de reengajamento.",
@@ -105,7 +105,7 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection
+          <TextContent
             title="PROCESSO"
             paragraphs={[
               "Para **aumentar a conversão** de clientes com crédito pré-aprovado, desenvolvi uma **régua de comunicação segmentada via push**, considerando o momento de abandono no fluxo e o perfil do usuário.",
@@ -117,26 +117,46 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentWrapper title="MÉTRICAS E MELHORIAS">
+          <ContentSection title="MÉTRICAS E MELHORIAS">
             <MetricsList
               headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
               items={[
                 {
                   label: "Taxa de retorno",
-                  value: <>ao fluxo de contratação (<span>aumento de 12% para 28%</span>)</>,
+                  value: (
+                    <>
+                      ao fluxo de contratação (
+                      <span>aumento de 12% para 28%</span>)
+                    </>
+                  ),
                 },
                 {
                   label: "Taxa de conversão",
-                  value: <>em empréstimos efetivados (<span>aumento de 4% para 7%</span>)</>,
+                  value: (
+                    <>
+                      em empréstimos efetivados (
+                      <span>aumento de 4% para 7%</span>)
+                    </>
+                  ),
                 },
                 {
                   label: "Taxa de engajamento",
-                  value: <>com as notificações (<span>taxa de cliques em torno de 18%</span>)</>,
+                  value: (
+                    <>
+                      com as notificações (
+                      <span>taxa de cliques em torno de 18%</span>)
+                    </>
+                  ),
                 },
               ]}
-              footerText={<>Além disso, tive apoio do time de marketing nos ajustes na <span>copy</span> e no <span>timing</span> das notificações.</>}
+              footerText={
+                <>
+                  Além disso, tive apoio do time de marketing nos ajustes na{" "}
+                  <span>copy</span> e no <span>timing</span> das notificações.
+                </>
+              }
             />
-          </ContentWrapper>
+          </ContentSection>
         </ContentBlock>
       </Chapter>
 
@@ -156,7 +176,7 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection
+          <TextContent
             title="DIAGNÓSTICO E OPORTUNIDADE"
             paragraphs={[
               "Diante da **complexidade do produto** de empréstimo pessoal, tomei a **iniciativa** de mapear todas as etapas do fluxo — desde a contratação até a repactuação do contrato.",
@@ -164,7 +184,7 @@ function CaseBemol() {
             ]}
           />
 
-          <ContentSection
+          <TextContent
             title="IMPREVISTO E SOLUÇÃO"
             paragraphs={[
               "Durante a documentação, percebi **inconsistências nas informações** fornecidas sobre o funcionamento real do fluxo. Diferentes áreas possuíam versões divergentes do processo, dificultando a criação de um material confiável.",

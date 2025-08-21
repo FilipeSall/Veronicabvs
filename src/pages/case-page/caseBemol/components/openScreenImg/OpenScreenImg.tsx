@@ -17,7 +17,7 @@ import fullscreen from '../../../../../assets/caseBemol/ReguaComunicaçaoNotific
  * 
  * // Após explicação textual
  * <ContentBlock>
- *   <ContentSection 
+ *   <TextContent 
  *     title="RÉGUA DE COMUNICAÇÃO"
  *     paragraphs={["Estrutura completa da régua..."]}
  *   />

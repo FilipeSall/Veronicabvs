@@ -19,7 +19,7 @@ import mainFunil from '../../../../../assets/caseBemol/mainFunil.png'
  * 
  * // Dentro de um ContentBlock
  * <ContentBlock>
- *   <ContentSection 
+ *   <TextContent 
  *     title="ANÁLISE DO FUNIL"
  *     paragraphs={["Visualização das etapas de abandono..."]}
  *   />

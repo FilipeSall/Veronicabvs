@@ -1,18 +1,22 @@
 import React from 'react';
-import { ContentSectionProps } from '../../../../interfaces/components';
-import styles from './contentsection.module.scss';
+import { TextContentProps } from '../../../../interfaces/components';
+import { parseStringOrNode } from '../../../../utils/textUtils';
+import styles from './textcontent.module.scss';
 
 /**
- * ContentSection - Componente para exibir seções de texto estruturado
+ * TextContent - Componente especializado para conteúdo de texto com formatação
  * 
- * Este componente renderiza uma seção com título e múltiplos parágrafos,
- * incluindo suporte para texto em negrito usando markdown (**texto**) e
- * controle de quebras de linha entre parágrafos.
+ * Este componente renderiza seções de texto estruturado com título,
+ * suporte automático para markdown (**negrito**) e controle de quebras de linha.
+ * Aceita tanto strings quanto ReactNodes para máxima flexibilidade.
+ * 
+ * **Markdown Suportado:**
+ * - `**texto**` → Converte automaticamente para `<span>texto</span>` em negrito
  * 
  * @example
  * ```tsx
- * // Exemplo básico com texto em negrito
- * <ContentSection 
+ * // Exemplo básico com markdown **negrito**
+ * <TextContent 
  *   title="DESAFIO E OPORTUNIDADE"
  *   paragraphs={[
  *     "Com o apoio da equipe de dados, identificamos que cerca de **68% dos clientes** abandonavam o fluxo...",
@@ -21,8 +25,27 @@ import styles from './contentsection.module.scss';
  *   ]}
  * />
  * 
+ * // Com ReactNode (spans manuais)
+ * <TextContent 
+ *   title="MÉTRICAS"
+ *   paragraphs={[
+ *     "Taxa de conversão aumentou de 4% para 7%",
+ *     <>Taxa de retorno: <span>aumento de 12% para 28%</span></>
+ *   ]}
+ * />
+ * 
+ * // Misturando strings e ReactNodes
+ * <TextContent 
+ *   title="RESULTADOS"
+ *   paragraphs={[
+ *     "O projeto resultou em **melhorias significativas**:",
+ *     <>Conversão: <span>+75% de aumento</span></>,
+ *     "Além disso, a **experiência** foi aprimorada."
+ *   ]}
+ * />
+ * 
  * // Com quebras de linha customizadas
- * <ContentSection 
+ * <TextContent 
  *   title="PROCESSO"
  *   paragraphs={[
  *     "Para **aumentar a conversão** de clientes com crédito pré-aprovado...",
@@ -30,27 +53,13 @@ import styles from './contentsection.module.scss';
  *   ]}
  *   lineBreaks={3}
  * />
- * 
- * // Seção simples
- * <ContentSection 
- *   title="RESULTADOS"
- *   paragraphs={["O projeto resultou em melhorias significativas."]}
- * />
  * ```
  * 
  * @param title - Título da seção (ex: "DESAFIO E OPORTUNIDADE")
- * @param paragraphs - Array de strings com o conteúdo (suporta **negrito**)
+ * @param paragraphs - Array de strings (com **negrito**) ou ReactNodes
  * @param lineBreaks - Número de quebras de linha entre parágrafos (padrão: 2)
  */
-function ContentSection({ paragraphs, title, lineBreaks = 2 }: ContentSectionProps) {
-    const parseText = (text: string) => {
-        // Substitui **texto** por <span>texto</span>
-        const parts = text.split(/\*\*(.*?)\*\*/g);
-        return parts.map((part, index) =>
-            index % 2 === 1 ? <span key={index}>{part}</span> : part
-        );
-    };
-
+function TextContent({ paragraphs, title, lineBreaks = 2 }: TextContentProps) {
     const renderLineBreaks = () => {
         return Array.from({ length: lineBreaks }, (_, i) => <br key={i} />);
     };
@@ -62,7 +71,7 @@ function ContentSection({ paragraphs, title, lineBreaks = 2 }: ContentSectionPro
                 <p className={styles.contentText}>
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>
-                            {parseText(paragraph)}
+                            {parseStringOrNode(paragraph)}
                             {index < paragraphs.length - 1 && renderLineBreaks()}
                         </React.Fragment>
                     ))}
@@ -72,4 +81,4 @@ function ContentSection({ paragraphs, title, lineBreaks = 2 }: ContentSectionPro
     );
 };
 
-export default ContentSection
+export default TextContent

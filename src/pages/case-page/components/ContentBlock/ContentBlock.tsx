@@ -10,9 +10,9 @@ import styles from "./contentblock.module.scss";
  * 
  * @example
  * ```tsx
- * // Exemplo com ContentSection
+ * // Exemplo com TextContent
  * <ContentBlock>
- *   <ContentSection 
+ *   <TextContent 
  *     title="DESAFIO E OPORTUNIDADE"
  *     paragraphs={[
  *       "Identificamos que 68% dos clientes abandonavam o fluxo...",
@@ -30,15 +30,15 @@ import styles from "./contentblock.module.scss";
  *   </div>
  * </ContentBlock>
  * 
- * // Exemplo com ContentWrapper
+ * // Exemplo com ContentSection
  * <ContentBlock>
- *   <ContentWrapper title="MÉTRICAS E MELHORIAS">
+ *   <ContentSection title="MÉTRICAS E MELHORIAS">
  *     <p>Para avaliar o impacto da solução...</p>
  *     <ul>
  *       <li>Taxa de retorno: 12% para 28%</li>
  *       <li>Taxa de conversão: 4% para 7%</li>
  *     </ul>
- *   </ContentWrapper>
+ *   </ContentSection>
  * </ContentBlock>
  * 
  * // Com classe customizada

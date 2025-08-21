@@ -24,7 +24,7 @@ import { useEffect } from 'react';
  * 
  * // Em conjunto com texto explicativo
  * <ContentBlock>
- *   <ContentSection 
+ *   <TextContent 
  *     title="FLUXOGRAMAS COMPLETOS"
  *     paragraphs={["Documentação visual do processo..."]}
  *   />

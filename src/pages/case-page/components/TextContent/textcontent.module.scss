@@ -1,7 +1,6 @@
 .contentContainer {
   width: 100%;
   margin-top: 20px;
-  border: 1px solid green;
 }
 
 .contentContainer > div {
@@ -12,6 +11,12 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .contentTitle {

@@ -19,7 +19,7 @@ import styles from "./chapter.module.scss";
  *     subtitle="Apoio: Equipe de Marketing"
  *   />
  *   <ContentBlock>
- *     <ContentSection title="DESAFIO" paragraphs={["Texto do desafio..."]} />
+ *     <TextContent title="DESAFIO" paragraphs={["Texto do desafio..."]} />
  *   </ContentBlock>
  * </Chapter>
  * 

@@ -41,10 +41,15 @@ export interface ToolsIconInterface {
     value: string
 }
 
+export interface TextContentProps {
+    title: string;
+    paragraphs: (string | ReactNode)[];
+    lineBreaks?: number;
+}
+
 export interface ContentSectionProps {
     title: string;
-    paragraphs: string[];
-    lineBreaks?: number;
+    children: ReactNode;
 }
 
 export interface ChapterProps {
@@ -69,16 +74,11 @@ export interface CaseTitleHeaderProps {
     className?: string;
 }
 
-export interface ContentWrapperProps {
-    title: string;
-    children: React.ReactNode;
-    className?: string;
-}
 
 export interface MetricsListProps {
-    headerText: string;
+    headerText: string | ReactNode;
     items: Array<{
-        label: string;
+        label: string | ReactNode;
         value: string | ReactNode;
     }>;
     footerText?: string | ReactNode;

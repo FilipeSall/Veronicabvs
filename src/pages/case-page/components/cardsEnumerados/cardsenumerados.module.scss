@@ -1,18 +1,12 @@
 .container {
-  width: 70%;
+  width: 100%;
 }
 
 .container > div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.container h3 {
-  margin-left: 3.5%;
-  font-size: 16px;
-  margin-bottom: 40px;
-  line-height: 100%;
+  gap: 40px;
 }
 
 .card {
@@ -21,7 +15,6 @@
   flex-direction: column;
   gap: 8px;
   color: #ffffff;
-  margin: 20px;
 }
 
 .numberWrapper {
@@ -38,5 +31,4 @@
 .title {
   font-size: 16px;
   color: #ffffff;
-  letter-spacing: 0%;
 }

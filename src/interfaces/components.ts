@@ -48,7 +48,8 @@ export interface TextContentProps {
 }
 
 export interface ContentSectionProps {
-    title: string;
+    title?: string;
+    subtitle?: string;
     children: ReactNode;
 }
 
@@ -82,4 +83,8 @@ export interface MetricsListProps {
         value: string | ReactNode;
     }>;
     footerText?: string | ReactNode;
+}
+
+export interface SimpleListProps {
+    items: string[];
 }

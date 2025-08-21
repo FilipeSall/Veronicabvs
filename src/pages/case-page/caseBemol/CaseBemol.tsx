@@ -19,10 +19,10 @@ import arrowBlue from "../../../assets/svgs/blueArrow.svg";
 import ContentSection from "../components/ContentSection/ContentSection";
 import TextContent from "../components/TextContent/TextContent";
 import Chapter from "../components/Chapter/Chapter";
-import chapterStyles from "../components/Chapter/chapter.module.scss";
 import ContentBlock from "../components/ContentBlock/ContentBlock";
 import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
 import MetricsList from "../components/MetricsList/MetricsList";
+import SimpleList from "../components/SimpleList/SimpleList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
@@ -194,15 +194,9 @@ function CaseBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <div className={styles.cardsEnumeradosContainer}>
-            {Values && (
-              <CardsEnumerados
-                cards={Values}
-                color="#4C31E0"
-                title="ENTREGA DE VALOR"
-              />
-            )}
-          </div>
+          <ContentSection title="ENTREGA DE VALOR">
+            {Values && <CardsEnumerados cards={Values} color="#4C31E0" />}
+          </ContentSection>
         </ContentBlock>
       </Chapter>
 
@@ -215,24 +209,31 @@ function CaseBemol() {
           subtitleVariant="paragraph"
         />
         <ContentBlock>
-          <div className="subsection-img__wrapper">
+          <ContentSection
+            title="CÁLCULO E ANÁLISE DO NPS"
+            subtitle="Da conta digital Conta Bemol, do ano de 2023."
+          >
             <ImgWithText
               img={entregaImg1}
-              title="CÁLCULO E ANÁLISE DO NPS"
-              text="Da conta digital Conta Bemol, do ano de 2023."
+              title=""
               description="Dados sensíveis censurados."
-              maxWidth="70"
+              maxWidth="80"
             />
-          </div>
-          <div className="subsection-img__wrapper">
+          </ContentSection>
+        </ContentBlock>
+
+        <ContentBlock>
+          <ContentSection
+            title="ANÁLISE DA TAXA DE CANCELAMENTO"
+            subtitle="Apresentações mensais das análises aos stakeholders."
+          >
             <ImgWithText
               img={entregaImg2}
-              title="ANÁLISE DA TAXA DE CANCELAMENTO"
-              text="Apresentações mensais das análises aos stakeholders."
+              title=""
               description="Dados sensíveis censurados."
-              maxWidth="70"
+              maxWidth="80"
             />
-          </div>
+          </ContentSection>
         </ContentBlock>
       </Chapter>
 
@@ -251,20 +252,23 @@ function CaseBemol() {
         />
 
         <ContentBlock>
-          <div className={chapterStyles.listWrapper}>
-            <ul>
-              <li>Identificação da dor</li>
-              <li>Meu processo de design</li>
-              <li>Pesquisa e Benchmarking</li>
-              <li>Coleta e análise de dados</li>
-              <li>Design System (documentação técnica de novo componente)</li>
-              <li>Teste com usuários</li>
-              <li>Aprendizados</li>
-            </ul>
-          </div>
-          <ContentBlock>
-            <DateVideo />
-          </ContentBlock>
+          <ContentSection>
+            <SimpleList
+              items={[
+                "Identificação da dor",
+                "Meu processo de design",
+                "Pesquisa e Benchmarking",
+                "Coleta e análise de dados",
+                "Design System (documentação técnica de novo componente)",
+                "Teste com usuários",
+                "Aprendizados",
+              ]}
+            />
+          </ContentSection>
+        </ContentBlock>
+
+        <ContentBlock>
+          <DateVideo />
         </ContentBlock>
       </Chapter>
 

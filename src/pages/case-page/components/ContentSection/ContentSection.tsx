@@ -22,6 +22,14 @@ import styles from './contentsection.module.scss';
  *   />
  * </ContentSection>
  * 
+ * // Exemplo com subtítulo
+ * <ContentSection 
+ *   title="CÁLCULO E ANÁLISE DO NPS"
+ *   subtitle="Da conta digital Conta Bemol, do ano de 2023."
+ * >
+ *   <ImgWithText img={chart} description="Dados sensíveis censurados." />
+ * </ContentSection>
+ * 
  * // Exemplo com componentes mistos
  * <ContentSection title="RESULTADOS">
  *   <p>O projeto resultou em melhorias significativas:</p>
@@ -45,16 +53,38 @@ import styles from './contentsection.module.scss';
  *   <FormComponent />
  *   <SettingsPanel />
  * </ContentSection>
+ * 
+ * // Exemplo sem título (apenas conteúdo)
+ * <ContentSection>
+ *   <SimpleList 
+ *     items={[
+ *       "Identificação da dor",
+ *       "Meu processo de design", 
+ *       "Pesquisa e Benchmarking"
+ *     ]}
+ *   />
+ * </ContentSection>
+ * 
+ * // Exemplo apenas com subtítulo
+ * <ContentSection subtitle="Dados sensíveis censurados">
+ *   <ImgWithText img={chart} />
+ * </ContentSection>
  * ```
  * 
- * @param title - Título da seção (ex: "MÉTRICAS E MELHORIAS", "RESULTADOS")
+ * @param title - Título opcional da seção (ex: "MÉTRICAS E MELHORIAS", "RESULTADOS")
+ * @param subtitle - Subtítulo opcional para contextualizar o conteúdo
  * @param children - Conteúdo flexível (componentes, HTML, etc.)
  */
-function ContentSection({ title, children }: ContentSectionProps) {
+function ContentSection({ title, subtitle, children }: ContentSectionProps) {
   return (
     <div className={styles.contentContainer}>
       <div>
-        <h3 className={styles.contentTitle}>{title}</h3>
+        {(title || subtitle) && (
+          <div className={styles.titleWrapper}>
+            {title && <h3 className={styles.contentTitle}>{title}</h3>}
+            {subtitle && <p className={styles.contentSubtitle}>{subtitle}</p>}
+          </div>
+        )}
         <div className={styles.contentBody}>
           {children}
         </div>

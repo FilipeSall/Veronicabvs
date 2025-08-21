@@ -22,6 +22,7 @@ import chapterStyles from "../components/Chapter/chapter.module.scss";
 import ContentBlock from "../components/ContentBlock/ContentBlock";
 import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
 import ContentWrapper from "../components/ContentWrapper/ContentWrapper";
+import MetricsList from "../components/MetricsList/MetricsList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
@@ -117,28 +118,24 @@ function CaseBemol() {
 
         <ContentBlock>
           <ContentWrapper title="MÉTRICAS E MELHORIAS">
-            <p className="content-text">
-              Para avaliar o impacto da solução, foram analisadas métricas
-              estratégicas nos primeiros 30 dias após o lançamento:
-            </p>
-            <ul className="content-list">
-              <li>
-                <span>Taxa de retorno</span> ao fluxo de contratação (
-                <span>aumento de 12% para 28%</span>);
-              </li>
-              <li>
-                <span>Taxa de conversão</span> em empréstimos efetivados (
-                <span>aumento de 4% para 7%</span>);
-              </li>
-              <li>
-                <span>Taxa de engajamento</span> com as notificações (
-                <span>taxa de cliques em torno de 18%</span>).
-              </li>
-            </ul>
-            <p className="content-text">
-              Além disso, tive apoio do time de marketing nos ajustes na{" "}
-              <span>copy</span> e no <span>timing</span> das notificações.
-            </p>
+            <MetricsList
+              headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
+              items={[
+                {
+                  label: "Taxa de retorno",
+                  value: <>ao fluxo de contratação (<span>aumento de 12% para 28%</span>)</>,
+                },
+                {
+                  label: "Taxa de conversão",
+                  value: <>em empréstimos efetivados (<span>aumento de 4% para 7%</span>)</>,
+                },
+                {
+                  label: "Taxa de engajamento",
+                  value: <>com as notificações (<span>taxa de cliques em torno de 18%</span>)</>,
+                },
+              ]}
+              footerText={<>Além disso, tive apoio do time de marketing nos ajustes na <span>copy</span> e no <span>timing</span> das notificações.</>}
+            />
           </ContentWrapper>
         </ContentBlock>
       </Chapter>

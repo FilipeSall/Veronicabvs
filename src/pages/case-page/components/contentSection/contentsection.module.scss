@@ -1,13 +1,14 @@
 .contentContainer {
   width: 100%;
   margin-top: 20px;
+  border: 1px solid green;
 }
 
 .contentContainer > div {
   max-width: 1440px;
   margin: 0 auto;
   padding: 40px 72px;
-  width: 65%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   gap: 40px;

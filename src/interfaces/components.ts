@@ -74,3 +74,12 @@ export interface ContentWrapperProps {
     children: React.ReactNode;
     className?: string;
 }
+
+export interface MetricsListProps {
+    headerText: string;
+    items: Array<{
+        label: string;
+        value: string | ReactNode;
+    }>;
+    footerText?: string | ReactNode;
+}

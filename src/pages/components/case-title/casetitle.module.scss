@@ -1,26 +1,26 @@
 .caseTitleWrapper {
-    text-align: center;
-    --title-width: auto;
-    margin: 40px 0;
+  text-align: center;
+  --title-width: auto;
+  margin: 40px 0;
 }
 
 .id {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .caseTitle {
-    display: inline-block;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .caseSubtitle {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-    margin-top: 8px;
-    color: #BBBBBB;
-    padding-left: calc((100% - var(--title-width)) / 2);
-    width: fit-content;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 8px;
+  color: #bbbbbb;
+  padding-left: calc((100% - var(--title-width)) / 2);
+  width: fit-content;
 }

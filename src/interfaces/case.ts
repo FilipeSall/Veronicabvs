@@ -25,6 +25,17 @@ export interface pushNotificationsInterface {
     topImg: string
 }
 
+export interface VideoItemInterface {
+    alt: string
+    video: string
+    topImg?: string
+}
+
+export interface VideoGalleryInterface {
+    videos: VideoItemInterface[]
+    className?: string
+}
+
 export interface CardsEnumeradosInterface {
     title: string
     text: string

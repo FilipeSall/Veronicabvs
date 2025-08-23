@@ -1,7 +1,7 @@
 import "../escopecasepage.scss";
 import { tools, pushNotifications, Values, summary } from "./tools";
 import styles from "./casebemol.module.scss";
-import PushNotificationVideo from "../components/pushNotificationVideo/PushNotificationVideo";
+import VideoGallery from "../components/VideoGallery/VideoGallery";
 import FunilImg from "./components/funilImg/FunilImg";
 import ProcessFlowContainer from "./components/processflowcontainer/ProcessFlowContainer";
 import FluxogramaVideo from "./components/fluxogramaVideo/FluxogramaVideo";
@@ -60,17 +60,7 @@ function CaseBemol() {
         <ContentBlock>
           <div className={`${styles.wrapper}`}>
             <SuspensePhone />
-            <div className={styles.pushNotificationsContainer}>
-              {pushNotifications &&
-                pushNotifications.map((cel, i) => (
-                  <PushNotificationVideo
-                    alt={cel.alt}
-                    topImg={cel.topImg}
-                    video={cel.video}
-                    key={i}
-                  />
-                ))}
-            </div>
+            <VideoGallery videos={pushNotifications} />
           </div>
         </ContentBlock>
 

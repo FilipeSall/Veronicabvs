@@ -1,0 +1,21 @@
+.suspenseImgContainer {
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+.suspenseImg {
+    height: 380px;
+    width: 188px;
+    object-fit: contain;
+}
+
+.suspenseText {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 100%;
+    color: #BBBBBB;
+    font-family: 'Inter';
+    margin-top: 8px;
+}

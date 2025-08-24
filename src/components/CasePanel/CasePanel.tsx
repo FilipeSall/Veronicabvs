@@ -76,6 +76,7 @@ function CasePanel({ nome, projeto, miniImg, isUnderConstruction = false }: Case
                                     onMouseEnter={() => setHoveredId(caseItem.id)}
                                     onMouseLeave={() => setHoveredId(null)}
                                     onClick={(e) => handleClick(e, caseItem)}
+                                    onAuxClick={(e) => handleClick(e, caseItem)}
                                 >
                                     <div className={styles.contentWrapper}>
                                         {!showIcon && (

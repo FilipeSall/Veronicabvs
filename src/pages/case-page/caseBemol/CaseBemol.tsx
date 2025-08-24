@@ -1,4 +1,3 @@
-import "../escopecasepage.scss";
 import { tools, pushNotifications, Values, summary } from "./tools";
 import FunilImg from "./components/funilImg/FunilImg";
 import ProcessFlowContainer from "./components/processflowcontainer/ProcessFlowContainer";
@@ -58,12 +57,12 @@ function CaseBemol() {
           subtitleWhite={false}
         />
         <ContentBlock>
-          <VideoShowcase 
+          <VideoShowcase
             videos={pushNotifications}
             suspenseImg={{
               src: suspensePhoneImg,
               alt: "telefone",
-              text: "Funil de contratação: Step 2"
+              text: "Funil de contratação: Step 2",
             }}
           />
         </ContentBlock>
@@ -265,10 +264,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*FOOTER*/}
-      <CaseFooter 
-        targetId="header-bemol" 
-        arrowColor="azul" 
-      />
+      <CaseFooter targetId="header-bemol" arrowColor="azul" />
     </PageWrapper>
   );
 }

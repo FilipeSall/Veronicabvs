@@ -1,5 +1,4 @@
 import { summary } from "./summary";
-import "../escopecasepage.scss";
 import tools from "./tools";
 import PageHeader from "../../components/page-header/PageHeader";
 import Summary from "../../components/summary/Summary";
@@ -105,10 +104,7 @@ function AppBemol() {
               "Contribuí para a evolução do Design System com a **documentação técnica** e adaptação do componente Datepicker, originalmente do **Material 3 (Google)**, para a identidade da marca.",
             ]}
           />
-          <ImageWrapper 
-            src={desingSystemImg}
-            alt="design system"
-          />
+          <ImageWrapper src={desingSystemImg} alt="design system" />
         </ContentBlock>
 
         <ContentBlock>
@@ -140,11 +136,11 @@ function AppBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <TextContent 
+          <TextContent
             title="MÉTRICAS E MELHORIAS"
             paragraphs={[
               "Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:",
-              "A escolha da Conta Bemol como destino do crédito contratado **aumentou de 1,8% para 14,6%** nas primeiras semanas após a implementação."
+              "A escolha da Conta Bemol como destino do crédito contratado **aumentou de 1,8% para 14,6%** nas primeiras semanas após a implementação.",
             ]}
           />
         </ContentBlock>
@@ -159,7 +155,7 @@ function AppBemol() {
         />
 
         <ContentBlock>
-          <TextContent 
+          <TextContent
             title="DIAGNÓSTICO"
             paragraphs={[
               "Identificação de pontos de dor nas telas originais, como:",
@@ -173,15 +169,15 @@ function AppBemol() {
                     (impactando a confiança do usuário)
                   </>,
                   <>
-                    <span>Etapas desnecessárias</span> ou confusas (que levavam ao
-                    abandono do fluxo)
+                    <span>Etapas desnecessárias</span> ou confusas (que levavam
+                    ao abandono do fluxo)
                   </>,
                   <>
                     <span>Barreiras na finalização</span> da contratação
                     (potencialmente motivando a queda na taxa de conversão)
                   </>,
                 ]}
-              />
+              />,
             ]}
           />
         </ContentBlock>

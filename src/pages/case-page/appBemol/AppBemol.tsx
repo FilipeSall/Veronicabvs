@@ -12,7 +12,7 @@ import desingSystemImg from "../../../assets/appBemol/designsystem.png";
 import NegocioExperiencia from "./components/negocio-experiencia/NegocioExperiencia";
 import CardsEnumerados from "../components/cardsEnumerados/CardsEnumerados";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
-import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
+import CaseFooter from "../components/CaseFooter/CaseFooter";
 import Carrossel from "../components/carrossel/Carrossel";
 import Chapter from "../components/Chapter/Chapter";
 import ContentBlock from "../components/ContentBlock/ContentBlock";
@@ -124,20 +124,20 @@ function AppBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection title="PLANO DE ACOMPANHAMENTO">
-            <p className="content-text">
-              Para acompanhar a evolução e impacto da solução no negócio,
-              elaborei um plano de monitoramento mensal, analisando KPIs:
-            </p>
-            <SimpleList
-              items={[
-                "**Taxa de adesão** à Conta Bemol",
-                "**Conversão** no fluxo de contratação",
-                "**Fricção** no processo de reconhecimento",
-                "**Feedback qualitativo** dos usuários (via pesquisas contínuas)"
-              ]}
-            />
-          </ContentSection>
+          <TextContent
+            title="PLANO DE ACOMPANHAMENTO"
+            paragraphs={[
+              "Para acompanhar a evolução e impacto da solução no negócio, elaborei um plano de monitoramento mensal, analisando KPIs:",
+              <SimpleList
+                items={[
+                  "**Taxa de adesão** à Conta Bemol",
+                  "**Conversão** no fluxo de contratação",
+                  "**Fricção** no processo de reconhecimento",
+                  "**Feedback qualitativo** dos usuários (via pesquisas contínuas)",
+                ]}
+              />,
+            ]}
+          />
         </ContentBlock>
 
         <ContentBlock>
@@ -185,7 +185,7 @@ function AppBemol() {
                 <>
                   <span>Barreiras na finalização</span> da contratação
                   (potencialmente motivando a queda na taxa de conversão)
-                </>
+                </>,
               ]}
             />
           </ContentSection>
@@ -218,25 +218,18 @@ function AppBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection title="PRÓXIMOS PASSOS">
-            <p className="content-text">
-              <span>Acompanhamento de métricas pós-lançamento:</span> Como taxa
-              de conversão, tempo médio no fluxo e taxa de abandono.
-            </p>
-            <p className="content-text">
-              <span>Testes de usabilidade com usuários reais:</span> Para
-              validar as melhorias e identificar novas oportunidades.
-            </p>
-          </ContentSection>
+          <TextContent
+            title="PRÓXIMOS PASSOS"
+            paragraphs={[
+              "→ Acompanhamento de métricas pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",
+              "→ Testes de usabilidade com usuários reais: Para validar as melhorias e identificar novas oportunidades.",
+            ]}
+          />
         </ContentBlock>
       </Chapter>
 
       {/*FOOTER*/}
-      <p className="footer-text">
-        💡Entre em contato e agende uma apresentação por algum dos botões
-        abaixo! :)
-      </p>
-      <ScrollToTop targetId="header-app-bemol" arrowColor="vermelha" />
+      <CaseFooter targetId="header-app-bemol" arrowColor="vermelha" />
     </section>
   );
 }

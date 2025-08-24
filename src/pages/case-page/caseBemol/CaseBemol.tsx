@@ -23,7 +23,7 @@ import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
 import MetricsList from "../components/MetricsList/MetricsList";
 import SimpleList from "../components/SimpleList/SimpleList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
-import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
+import CaseFooter from "../components/CaseFooter/CaseFooter";
 
 function CaseBemol() {
   const totalReading = summary.items.reduce(
@@ -264,10 +264,10 @@ function CaseBemol() {
       </Chapter>
 
       {/*FOOTER*/}
-      <p className="footer-text">
-        💡Entre em contato e agende uma apresentação :)
-      </p>
-      <ScrollToTop targetId="header-bemol" arrowColor="azul" />
+      <CaseFooter 
+        targetId="header-bemol" 
+        arrowColor="azul" 
+      />
     </section>
   );
 }

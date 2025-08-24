@@ -5,7 +5,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--max-width);
+}
+
+/* Quando fullWidth=true, o conteúdo filho ocupa 100% mas respeitando o max-width do container */
+.fullWidth > * {
+  width: 100%;
 }
 
 .contentBlockContent {

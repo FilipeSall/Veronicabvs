@@ -65,6 +65,7 @@ export interface ContentBlockProps {
     children: React.ReactNode;
     className?: string;
     gap?: string;
+    fullWidth?: boolean;
 }
 
 export interface CaseTitleHeaderProps {

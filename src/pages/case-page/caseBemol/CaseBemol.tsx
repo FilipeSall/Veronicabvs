@@ -162,10 +162,8 @@ function CaseBemol() {
           subtitleWhite
         />
 
-        <ContentBlock>
-          <div className="subsection-content">
-            <FluxogramaVideo />
-          </div>
+        <ContentBlock fullWidth>
+          <FluxogramaVideo />
         </ContentBlock>
 
         <ContentBlock>

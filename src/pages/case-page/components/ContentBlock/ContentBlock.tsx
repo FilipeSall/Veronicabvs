@@ -58,16 +58,22 @@ import styles from "./contentblock.module.scss";
  *   <Component1 />
  *   <Component2 />
  * </ContentBlock>
+ * 
+ * // Para vídeos e conteúdo de largura total
+ * <ContentBlock fullWidth>
+ *   <FluxogramaVideo />
+ * </ContentBlock>
  * ```
  * 
  * @param children - Conteúdo a ser renderizado (componentes, texto, etc.)
  * @param className - Classe CSS adicional para customização
  * @param gap - Espaçamento entre elementos filhos. Números viram px automaticamente ("20" = 20px). Padrão: "20"
+ * @param fullWidth - Se true, ocupa 100% da largura (sem limitação de max-width). Padrão: false
  */
-function ContentBlock({ children, className, gap = "20" }: ContentBlockProps) {
+function ContentBlock({ children, className, gap = "20", fullWidth = false }: ContentBlockProps) {
   return (
     <div 
-      className={`${styles.contentBlock} ${className || ""}`}
+      className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
       style={{ gap: normalizeGap(gap) }}
     >
       {children}

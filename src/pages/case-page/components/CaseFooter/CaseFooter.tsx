@@ -1,4 +1,5 @@
 import ScrollToTop from "../../../components/scroll-to-top/ScrollToTop";
+import styles from "./casefooter.module.scss";
 
 export interface CaseFooterProps {
   text?: string;
@@ -42,7 +43,7 @@ function CaseFooter({
 }: CaseFooterProps) {
   return (
     <>
-      <p className="footer-text">
+      <p className={styles.footerText}>
         {text}
       </p>
       <ScrollToTop targetId={targetId} arrowColor={arrowColor} />

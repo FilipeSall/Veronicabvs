@@ -27,8 +27,6 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({
         scrollToElement(targetId);
     };
 
-    console.log(targetId)
-
     return (
         <a
             href={`#${targetId}`}

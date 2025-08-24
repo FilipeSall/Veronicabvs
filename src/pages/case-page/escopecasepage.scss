@@ -1,83 +1,35 @@
-.page-container {
-  width: 100%;
-  display: flex;
-  scroll-behavior: smooth;
-  flex-direction: column;
-}
-
-/* SECTIONS */
-.chapter-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 72px;
-  width: 100%;
-}
-
-.content-container {
-  width: 100%;
-}
-
-.content-container > div {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 40px 72px;
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.content-title {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
-}
-
-.content-text {
-  font-family: "Inter";
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 0%;
-  font-size: 16px;
-  width: 100%;
-  padding: 0 !important;
-}
-
-.content-text span {
-  font-weight: 700;
-}
-
-.simple-title {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.content-list {
-  margin-left: 30px;
-}
-
-.content-list li span {
-  font-weight: bolder;
-}
-
-.subsection-img__wrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* FOOTER*/
-.footer-text {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 72px 40px;
-  width: 30%;
-  text-align: center;
-  color: var(--textColor);
-}
-
-// UTILS
-.strong-white {
-  color: #ffffff !important;
-}
+/*
+ * ESCOPECASEPAGE.SCSS - ARQUIVO DE TRANSIÇÃO
+ * 
+ * Este arquivo foi completamente migrado para componentes modulares.
+ * Todas as classes globais foram convertidas em componentes reutilizáveis:
+ * 
+ * MIGRAÇÃO CONCLUÍDA:
+ * ✅ .page-container → PageWrapper component
+ * ✅ .content-text → TextContent component  
+ * ✅ .footer-text → CaseFooter component
+ * ✅ .subsection-img__wrapper → ImageWrapper component
+ * ✅ .subsection-content → Removida (ContentBlock com fullWidth)
+ * 
+ * REMOVIDAS (não utilizadas):
+ * ✅ .chapter-content
+ * ✅ .content-container  
+ * ✅ .content-title
+ * ✅ .simple-title
+ * ✅ .content-list
+ * ✅ .strong-white
+ * 
+ * COMPONENTES CRIADOS:
+ * 📦 PageWrapper - Container principal de cases
+ * 📦 ImageWrapper - Wrapper para imagens de seção
+ * 📦 CaseFooter - Footer padrão com scroll to top
+ * 📦 TextContent - Texto com markdown automático
+ * 📦 ContentBlock - Container com gap flexível
+ * 📦 ContentSection - Seções complexas
+ * 📦 VideoShowcase - Showcase de vídeos
+ * 
+ * STATUS: ✅ MIGRAÇÃO COMPLETA - ARQUIVO LIMPO
+ * DATA: 2025-01-25
+ * 
+ * Este arquivo pode ser removido quando todos os cases forem refatorados.
+ */

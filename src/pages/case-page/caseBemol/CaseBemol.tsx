@@ -24,6 +24,7 @@ import MetricsList from "../components/MetricsList/MetricsList";
 import SimpleList from "../components/SimpleList/SimpleList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
 import CaseFooter from "../components/CaseFooter/CaseFooter";
+import PageWrapper from "../components/PageWrapper/PageWrapper";
 
 function CaseBemol() {
   const totalReading = summary.items.reduce(
@@ -33,7 +34,7 @@ function CaseBemol() {
   useScrollToElement("header-bemol", { smooth: false });
 
   return (
-    <section className="page-container">
+    <PageWrapper>
       <PageHeader
         bgColor={summary.bg}
         contextTxt="Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento."
@@ -268,7 +269,7 @@ function CaseBemol() {
         targetId="header-bemol" 
         arrowColor="azul" 
       />
-    </section>
+    </PageWrapper>
   );
 }
 

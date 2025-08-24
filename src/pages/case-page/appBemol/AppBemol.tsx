@@ -13,6 +13,8 @@ import NegocioExperiencia from "./components/negocio-experiencia/NegocioExperien
 import CardsEnumerados from "../components/cardsEnumerados/CardsEnumerados";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
 import CaseFooter from "../components/CaseFooter/CaseFooter";
+import PageWrapper from "../components/PageWrapper/PageWrapper";
+import ImageWrapper from "../components/ImageWrapper/ImageWrapper";
 import Carrossel from "../components/carrossel/Carrossel";
 import Chapter from "../components/Chapter/Chapter";
 import ContentBlock from "../components/ContentBlock/ContentBlock";
@@ -29,7 +31,7 @@ function AppBemol() {
 
   useScrollToElement("header-app-bemol", { smooth: false });
   return (
-    <section className="page-container">
+    <PageWrapper>
       <PageHeader
         bgColor={summary.bg}
         contextTxt="Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."
@@ -103,13 +105,10 @@ function AppBemol() {
               "Contribuí para a evolução do Design System com a **documentação técnica** e adaptação do componente Datepicker, originalmente do **Material 3 (Google)**, para a identidade da marca.",
             ]}
           />
-          <div className="subsection-img__wrapper">
-            <img
-              src={desingSystemImg}
-              alt="design sistem"
-              style={{ width: "70%" }}
-            />
-          </div>
+          <ImageWrapper 
+            src={desingSystemImg}
+            alt="design system"
+          />
         </ContentBlock>
 
         <ContentBlock>
@@ -141,18 +140,13 @@ function AppBemol() {
         </ContentBlock>
 
         <ContentBlock>
-          <ContentSection title="MÉTRICAS E MELHORIAS">
-            <p className="content-text">
-              Após o lançamento, acompanhamos os KPI's para medir o sucesso da
-              solução implementada em relação aos objetivos do negócio e da
-              experiência do usuário. Destaque para:
-            </p>
-            <p className="content-text">
-              A escolha da Conta Bemol como destino do crédito contratado{" "}
-              <span>aumentou de 1,8% para 14,6%</span> nas primeiras semanas
-              após a implementação.
-            </p>
-          </ContentSection>
+          <TextContent 
+            title="MÉTRICAS E MELHORIAS"
+            paragraphs={[
+              "Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:",
+              "A escolha da Conta Bemol como destino do crédito contratado **aumentou de 1,8% para 14,6%** nas primeiras semanas após a implementação."
+            ]}
+          />
         </ContentBlock>
       </Chapter>
 
@@ -165,30 +159,31 @@ function AppBemol() {
         />
 
         <ContentBlock>
-          <ContentSection title="DIAGNÓSTICO">
-            <p className="content-text">
-              Identificação de pontos de dor nas telas originais, como:
-            </p>
-            <SimpleList
-              items={[
-                <>
-                  <span>Experiência fragmentada</span> e pouco intuitiva
-                </>,
-                <>
-                  <span>Falta de clareza</span> na exibição das informações
-                  (impactando a confiança do usuário)
-                </>,
-                <>
-                  <span>Etapas desnecessárias</span> ou confusas (que levavam ao
-                  abandono do fluxo)
-                </>,
-                <>
-                  <span>Barreiras na finalização</span> da contratação
-                  (potencialmente motivando a queda na taxa de conversão)
-                </>,
-              ]}
-            />
-          </ContentSection>
+          <TextContent 
+            title="DIAGNÓSTICO"
+            paragraphs={[
+              "Identificação de pontos de dor nas telas originais, como:",
+              <SimpleList
+                items={[
+                  <>
+                    <span>Experiência fragmentada</span> e pouco intuitiva
+                  </>,
+                  <>
+                    <span>Falta de clareza</span> na exibição das informações
+                    (impactando a confiança do usuário)
+                  </>,
+                  <>
+                    <span>Etapas desnecessárias</span> ou confusas (que levavam ao
+                    abandono do fluxo)
+                  </>,
+                  <>
+                    <span>Barreiras na finalização</span> da contratação
+                    (potencialmente motivando a queda na taxa de conversão)
+                  </>,
+                ]}
+              />
+            ]}
+          />
         </ContentBlock>
 
         <ContentBlock>
@@ -230,7 +225,7 @@ function AppBemol() {
 
       {/*FOOTER*/}
       <CaseFooter targetId="header-app-bemol" arrowColor="vermelha" />
-    </section>
+    </PageWrapper>
   );
 }
 

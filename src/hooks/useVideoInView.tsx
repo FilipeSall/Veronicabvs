@@ -1,53 +1,53 @@
-import { useEffect, useRef, RefObject } from 'react';
+import { useEffect, useRef, RefObject } from "react";
 
 interface UseVideoInViewOptions {
-    threshold?: number;
-    rootMargin?: string;
+  threshold?: number;
+  rootMargin?: string;
 }
 
 interface UseVideoInViewReturn {
-    videoRef: RefObject<HTMLVideoElement | null>;
+  videoRef: RefObject<HTMLVideoElement | null>;
 }
 
 export function useVideoInView({
-    threshold = 0.5,
-    rootMargin = '0px'
+  threshold = 0.5,
+  rootMargin = "0px",
 }: UseVideoInViewOptions = {}): UseVideoInViewReturn {
-    const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
-    useEffect(() => {
-        const videoElement = videoRef.current;
-        if (!videoElement) return;
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
 
-        if (!('IntersectionObserver' in window)) {
-            videoElement.play().catch(console.log);
-            return;
+    if (!("IntersectionObserver" in window)) {
+      videoElement.play().catch(console.log);
+      return;
+    }
+
+    const options = {
+      root: null,
+      rootMargin,
+      threshold,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          videoElement.play().catch((error) => {
+            console.error("Erro ao reproduzir vídeo:", error);
+          });
+        } else {
+          videoElement.pause();
         }
+      });
+    }, options);
 
-        const options = {
-            root: null,
-            rootMargin,
-            threshold,
-        };
+    observer.observe(videoElement);
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    videoElement.play().catch((error) => {
-                        console.error("Erro ao reproduzir vídeo:", error);
-                    });
-                } else {
-                    videoElement.pause();
-                }
-            });
-        }, options);
+    return () => {
+      observer.disconnect();
+    };
+  }, [threshold, rootMargin]);
 
-        observer.observe(videoElement);
-
-        return () => {
-            observer.disconnect();
-        };
-    }, [threshold, rootMargin]);
-
-    return { videoRef };
+  return { videoRef };
 }

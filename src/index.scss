@@ -7,13 +7,18 @@
 }
 
 :root {
-  --backgroundColor: #0F0F0F;
+  --backgroundColor: #0f0f0f;
   --caseBackgroundColor: #272727;
-  --textColor: #FFFFFF;
-  --fadeTextColor: #FFFFFF80;
+  --textColor: #ffffff;
+  --fadeTextColor: #ffffff80;
   --CaseNavBg: #272727;
-  --textHover: #4B4BFF;
-  --textSucess: #F3DA8B;
+  --textHover: #4b4bff;
+  --textSucess: #f3da8b;
+
+  --max-width: 1440px;
+  --content-width: 75%;
+  --container-padding: 40px 72px;
+  --center-margin: 0 auto;
 }
 
 body {
@@ -32,8 +37,8 @@ html {
 }
 
 ::-webkit-scrollbar {
-    background: #272727;
-    width: 10px;
+  background: #272727;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -41,7 +46,7 @@ html {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #F3DA8B;
+  background-color: #f3da8b;
   border-radius: 8px;
-  border: 1px solid #F3DA8B;
+  border: 1px solid #f3da8b;
 }

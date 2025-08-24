@@ -1,7 +1,5 @@
 import "../escopecasepage.scss";
 import { tools, pushNotifications, Values, summary } from "./tools";
-import styles from "./casebemol.module.scss";
-import VideoGallery from "../components/VideoGallery/VideoGallery";
 import FunilImg from "./components/funilImg/FunilImg";
 import ProcessFlowContainer from "./components/processflowcontainer/ProcessFlowContainer";
 import FluxogramaVideo from "./components/fluxogramaVideo/FluxogramaVideo";
@@ -9,7 +7,7 @@ import CardsEnumerados from "../components/cardsEnumerados/CardsEnumerados";
 import DateVideo from "./components/dateVideo/DateVideo";
 import Summary from "../../components/summary/Summary";
 import PageHeader from "../../components/page-header/PageHeader";
-import SuspenseImg from "./components/suspenseImg/SuspenseImg";
+import VideoShowcase from "../components/VideoShowcase/VideoShowcase";
 import suspensePhoneImg from "../../../assets/caseBemol/suspense-phone.png";
 import OpenScreenImg from "./components/openScreenImg/OpenScreenImg";
 import ImgWithText from "../components/imgWithText/ImgWithText";
@@ -59,14 +57,14 @@ function CaseBemol() {
           subtitleWhite={false}
         />
         <ContentBlock>
-          <div className={`${styles.wrapper}`}>
-            <SuspenseImg 
-              src={suspensePhoneImg} 
-              alt="telefone" 
-              text="Funil de contratação: Step 2" 
-            />
-            <VideoGallery videos={pushNotifications} />
-          </div>
+          <VideoShowcase 
+            videos={pushNotifications}
+            suspenseImg={{
+              src: suspensePhoneImg,
+              alt: "telefone",
+              text: "Funil de contratação: Step 2"
+            }}
+          />
         </ContentBlock>
 
         <ContentBlock>

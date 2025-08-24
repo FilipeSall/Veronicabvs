@@ -1,4 +1,5 @@
 import { ContentBlockProps } from "../../../../interfaces/components";
+import { normalizeGap } from "../../../../utils/cssUtils";
 import styles from "./contentblock.module.scss";
 
 /**
@@ -45,14 +46,30 @@ import styles from "./contentblock.module.scss";
  * <ContentBlock className="special-content">
  *   <CustomComponent />
  * </ContentBlock>
+ * 
+ * // Com gap personalizado
+ * <ContentBlock gap="40">
+ *   <TextContent title="Título" paragraphs={["Parágrafo"]} />
+ *   <ImageComponent />
+ * </ContentBlock>
+ * 
+ * // Com gap em rem
+ * <ContentBlock gap="2rem">
+ *   <Component1 />
+ *   <Component2 />
+ * </ContentBlock>
  * ```
  * 
  * @param children - Conteúdo a ser renderizado (componentes, texto, etc.)
  * @param className - Classe CSS adicional para customização
+ * @param gap - Espaçamento entre elementos filhos. Números viram px automaticamente ("20" = 20px). Padrão: "20"
  */
-function ContentBlock({ children, className }: ContentBlockProps) {
+function ContentBlock({ children, className, gap = "20" }: ContentBlockProps) {
   return (
-    <div className={`${styles.contentBlock} ${className || ""}`}>
+    <div 
+      className={`${styles.contentBlock} ${className || ""}`}
+      style={{ gap: normalizeGap(gap) }}
+    >
       {children}
     </div>
   );

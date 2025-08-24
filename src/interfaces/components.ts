@@ -64,6 +64,7 @@ export interface ChapterProps {
 export interface ContentBlockProps {
     children: React.ReactNode;
     className?: string;
+    gap?: string;
 }
 
 export interface CaseTitleHeaderProps {

@@ -1,4 +1,4 @@
-import CaseNav from '../../components/CaseNav/CaseNav';
+import CaseNav from '../../components/navigation/CaseNav/CaseNav';
 import { CasesInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import styles from './Home.module.scss';

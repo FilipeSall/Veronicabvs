@@ -1,29 +1,29 @@
 import { tools, pushNotifications, Values, summary } from "./tools";
-import FunilImg from "./components/funilImg/FunilImg";
-import ProcessFlowContainer from "./components/processflowcontainer/ProcessFlowContainer";
-import FluxogramaVideo from "./components/fluxogramaVideo/FluxogramaVideo";
-import CardsEnumerados from "../components/cardsEnumerados/CardsEnumerados";
-import DateVideo from "./components/dateVideo/DateVideo";
-import Summary from "../../components/summary/Summary";
-import PageHeader from "../../components/page-header/PageHeader";
-import VideoShowcase from "../components/VideoShowcase/VideoShowcase";
+import FunilImg from "../components/media/FunilImg/FunilImg";
+import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
+import FluxogramaVideo from "../components/media/FluxogramaVideo/FluxogramaVideo";
+import CardsEnumerados from "../components/content/CardsEnumerados/CardsEnumerados";
+import DateVideo from "../components/media/DateVideo/DateVideo";
+import Summary from "../components/structure/Summary/Summary";
+import PageHeader from "../components/structure/PageHeader/PageHeader";
+import VideoShowcase from "../components/media/VideoShowcase/VideoShowcase";
 import suspensePhoneImg from "../../../assets/caseBemol/suspense-phone.png";
-import OpenScreenImg from "./components/openScreenImg/OpenScreenImg";
-import ImgWithText from "../components/imgWithText/ImgWithText";
+import OpenScreenImg from "../components/media/OpenScreenImg/OpenScreenImg";
+import ImgWithText from "../components/media/ImageWithText/ImgWithText";
 import entregaImg1 from "../../../assets/caseBemol/1.3 A.png";
 import entregaImg2 from "../../../assets/caseBemol/1.3 B.png";
 import { processDataApp } from "./processData";
 import arrowBlue from "../../../assets/svgs/blueArrow.svg";
-import ContentSection from "../components/ContentSection/ContentSection";
-import TextContent from "../components/TextContent/TextContent";
-import Chapter from "../components/Chapter/Chapter";
-import ContentBlock from "../components/ContentBlock/ContentBlock";
-import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
-import MetricsList from "../components/MetricsList/MetricsList";
-import SimpleList from "../components/SimpleList/SimpleList";
+import ContentSection from "../components/structure/ContentSection/ContentSection";
+import TextContent from "../components/content/TextContent/TextContent";
+import Chapter from "../components/structure/Chapter/Chapter";
+import ContentBlock from "../components/structure/ContentBlock/ContentBlock";
+import CaseTitleHeader from "../components/content/CaseTitleHeader/CaseTitleHeader";
+import MetricsList from "../components/content/MetricsList/MetricsList";
+import SimpleList from "../components/content/SimpleList/SimpleList";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
-import CaseFooter from "../components/CaseFooter/CaseFooter";
-import PageWrapper from "../components/PageWrapper/PageWrapper";
+import CaseFooter from "../components/structure/CaseFooter/CaseFooter";
+import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 
 function CaseBemol() {
   const totalReading = summary.items.reduce(

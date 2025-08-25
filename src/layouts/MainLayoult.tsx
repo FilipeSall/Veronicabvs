@@ -1,7 +1,7 @@
-import { Outlet } from "react-router-dom"
-import Header from "../components/Header/Header"
-import styles from "./mainlayoult.module.scss"
-import SecaoContatos from "../components/secao-contatos/SecaoContatos"
+import { Outlet } from "react-router-dom";
+import Header from "../components/layout/Header/Header";
+import styles from "./mainlayoult.module.scss";
+import SecaoContatos from "../components/layout/SecaoContatos/SecaoContatos";
 
 function MainLayoult() {
   return (
@@ -12,7 +12,7 @@ function MainLayoult() {
       </main>
       <SecaoContatos />
     </div>
-  )
+  );
 }
 
-export default MainLayoult
+export default MainLayoult;

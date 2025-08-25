@@ -1,26 +1,26 @@
 import { summary } from "./summary";
 import tools from "./tools";
-import PageHeader from "../../components/page-header/PageHeader";
-import Summary from "../../components/summary/Summary";
-import VideoLegend from "../../components/video-legend/VideoLegend";
+import PageHeader from "../components/structure/PageHeader/PageHeader";
+import Summary from "../components/structure/Summary/Summary";
+import VideoLegend from "../components/media/VideoLegend/VideoLegend";
 import videoAutocoplete from "../../../assets/appBemol/autocomplete.mp4";
 import redArrow from "../../../assets/svgs/redArrow.svg";
-import ProcessFlowContainer from "../caseBemol/components/processflowcontainer/ProcessFlowContainer";
+import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
 import { processData, cardsData, carrosselData } from "./data";
 import desingSystemImg from "../../../assets/appBemol/designsystem.png";
-import NegocioExperiencia from "./components/negocio-experiencia/NegocioExperiencia";
-import CardsEnumerados from "../components/cardsEnumerados/CardsEnumerados";
+import NegocioExperiencia from "../components/content/NegocioExperiencia/NegocioExperiencia";
+import CardsEnumerados from "../components/content/CardsEnumerados/CardsEnumerados";
 import { useScrollToElement } from "../../../hooks/useScrollToElement";
-import CaseFooter from "../components/CaseFooter/CaseFooter";
-import PageWrapper from "../components/PageWrapper/PageWrapper";
-import ImageWrapper from "../components/ImageWrapper/ImageWrapper";
-import Carrossel from "../components/carrossel/Carrossel";
-import Chapter from "../components/Chapter/Chapter";
-import ContentBlock from "../components/ContentBlock/ContentBlock";
-import CaseTitleHeader from "../components/CaseTitleHeader/CaseTitleHeader";
-import ContentSection from "../components/ContentSection/ContentSection";
-import TextContent from "../components/TextContent/TextContent";
-import SimpleList from "../components/SimpleList/SimpleList";
+import CaseFooter from "../components/structure/CaseFooter/CaseFooter";
+import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
+import ImageWrapper from "../components/media/ImageWrapper/ImageWrapper";
+import Carrossel from "../components/interactive/Carrossel/Carrossel";
+import Chapter from "../components/structure/Chapter/Chapter";
+import ContentBlock from "../components/structure/ContentBlock/ContentBlock";
+import CaseTitleHeader from "../components/content/CaseTitleHeader/CaseTitleHeader";
+import ContentSection from "../components/structure/ContentSection/ContentSection";
+import TextContent from "../components/content/TextContent/TextContent";
+import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function AppBemol() {
   const totalReading = summary.items.reduce(

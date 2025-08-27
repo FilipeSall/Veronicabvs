@@ -1,4 +1,6 @@
-import { tools, pushNotifications, Values, summary } from "./tools";
+import tools from "./tools";
+import { pushNotifications, Values, processDataApp } from "./data";
+import { summary } from "./summary";
 import FunilImg from "../components/media/FunilImg/FunilImg";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
 import FluxogramaVideo from "../components/media/FluxogramaVideo/FluxogramaVideo";
@@ -12,7 +14,6 @@ import OpenScreenImg from "../components/media/OpenScreenImg/OpenScreenImg";
 import ImgWithText from "../components/media/ImageWithText/ImgWithText";
 import entregaImg1 from "../../../assets/caseBemol/1.3 A.png";
 import entregaImg2 from "../../../assets/caseBemol/1.3 B.png";
-import { processDataApp } from "./processData";
 import arrowBlue from "../../../assets/svgs/blueArrow.svg";
 import ContentSection from "../components/structure/ContentSection/ContentSection";
 import TextContent from "../components/content/TextContent/TextContent";
@@ -27,7 +28,7 @@ import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 
 function CaseBemol() {
   const totalReading = summary.items.reduce(
-    (acc, item) => acc + item.readingTime,
+    (acc: number, item) => acc + item.readingTime,
     0
   );
   useScrollToElement("header-bemol", { smooth: false });

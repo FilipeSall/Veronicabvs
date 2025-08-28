@@ -28,13 +28,13 @@ export const melliuzData: CaseInterface = {
         id: "3.1",
         href: "#chapter-3-1",
         isSpecial: false,
-        title: "Resultado — Doação de Cashback",
+        title: "Resultado",
       },
       {
         id: "3.2",
         href: "#chapter-3-2",
         isSpecial: false,
-        title: "Resultado — Doação de Cashback",
+        title: "Resultado",
       },
       {
         id: "3.3",

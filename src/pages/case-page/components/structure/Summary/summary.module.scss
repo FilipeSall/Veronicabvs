@@ -12,7 +12,6 @@
   padding: 35px 55px;
   flex-wrap: wrap;
   max-height: inherit;
-  max-height: 250px;
 }
 
 .summaryContentWrapper {
@@ -38,9 +37,12 @@
 }
 
 .anchorWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min-content);
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 8px 40px;
+  align-items: start;
 }
 
 .anchor {
@@ -66,6 +68,7 @@
 
 .anchorId {
   font-family: Inter;
+  font-weight: bolder;
 }
 
 .specialText {

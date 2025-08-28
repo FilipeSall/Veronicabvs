@@ -47,14 +47,14 @@ import styles from "./contentblock.module.scss";
  *   <CustomComponent />
  * </ContentBlock>
  * 
- * // Com gap personalizado
- * <ContentBlock gap="40">
+ * // Com margin e gap personalizados
+ * <ContentBlock customCss={{marginTop: "40", marginBottom: "20", gap: "30"}}>
  *   <TextContent title="Título" paragraphs={["Parágrafo"]} />
  *   <ImageComponent />
  * </ContentBlock>
  * 
- * // Com gap em rem
- * <ContentBlock gap="2rem">
+ * // Com valores em rem
+ * <ContentBlock customCss={{marginTop: "2rem", marginBottom: "1rem", gap: "1.5rem"}}>
  *   <Component1 />
  *   <Component2 />
  * </ContentBlock>
@@ -67,14 +67,25 @@ import styles from "./contentblock.module.scss";
  * 
  * @param children - Conteúdo a ser renderizado (componentes, texto, etc.)
  * @param className - Classe CSS adicional para customização
- * @param gap - Espaçamento entre elementos filhos. Números viram px automaticamente ("20" = 20px). Padrão: "20"
+ * @param customCss - CSS customizado para margin e gap (marginTop, marginBottom, gap). Valores padrão: marginTop: "0", marginBottom: "0", gap: "20"
  * @param fullWidth - Se true, ocupa 100% da largura (sem limitação de max-width). Padrão: false
  */
-function ContentBlock({ children, className, gap = "20", fullWidth = false }: ContentBlockProps) {
+function ContentBlock({ children, className, customCss, fullWidth = false }: ContentBlockProps) {
+  const defaultCustomCss = {
+    marginTop: "0",
+    marginBottom: "0",
+    gap: "20",
+    ...customCss
+  };
+
   return (
     <div 
       className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
-      style={{ gap: normalizeMeasures(gap) }}
+      style={{ 
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
+        gap: normalizeMeasures(defaultCustomCss.gap)
+      }}
     >
       {children}
     </div>

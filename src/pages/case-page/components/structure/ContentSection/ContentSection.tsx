@@ -1,4 +1,5 @@
 import { ContentSectionProps } from '../../../../../interfaces/components';
+import { normalizeMeasures } from '../../../../../utils/cssUtils';
 import styles from './contentsection.module.scss';
 
 /**
@@ -74,10 +75,23 @@ import styles from './contentsection.module.scss';
  * @param title - Título opcional da seção (ex: "MÉTRICAS E MELHORIAS", "RESULTADOS")
  * @param subtitle - Subtítulo opcional para contextualizar o conteúdo
  * @param children - Conteúdo flexível (componentes, HTML, etc.)
+ * @param customCss - CSS customizado para margin (marginTop e marginBottom). Valores padrão: marginTop: "0", marginBottom: "0"
  */
-function ContentSection({ title, subtitle, children }: ContentSectionProps) {
+function ContentSection({ title, subtitle, children, customCss }: ContentSectionProps) {
+  const defaultCustomCss = {
+    marginTop: "0",
+    marginBottom: "0",
+    ...customCss
+  };
+
   return (
-    <div className={styles.contentContainer}>
+    <div 
+      className={styles.contentContainer}
+      style={{
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+      }}
+    >
       <div>
         {(title || subtitle) && (
           <div className={styles.titleWrapper}>

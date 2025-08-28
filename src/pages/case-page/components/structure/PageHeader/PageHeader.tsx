@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { ToolsIconInterface } from "../../../../../interfaces/components";
 import { hexToRgba } from "../../../../../utils/hexToRgba";
 import { convertLineBreaksToJSX } from "../../../../../utils/textUtils";
+import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import ToolsIcon from "../../content/ToolsIcon/ToolsIcon";
 import styles from "./pageheader.module.scss";
 
@@ -10,16 +11,31 @@ type PageHeaderProps = {
   contextTxt: string | ReactNode;
   headerId: string;
   tools: ToolsIconInterface[];
+  /** CSS customizado para margin */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+  };
 };
 
-function PageHeader({ bgColor, contextTxt, tools, headerId }: PageHeaderProps) {
+function PageHeader({ bgColor, contextTxt, tools, headerId, customCss }: PageHeaderProps) {
   const backgroundWithOpacity = hexToRgba(bgColor, 0.6);
+  
+  const defaultCustomCss = {
+    marginTop: "0",
+    marginBottom: "0",
+    ...customCss
+  };
 
   return (
     <header
       className={styles.pageHeaderContainer}
       id={headerId}
-      style={{ backgroundColor: backgroundWithOpacity }}
+      style={{ 
+        backgroundColor: backgroundWithOpacity,
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+      }}
     >
       <div className={styles.pageHeaderContent}>
         <div className={styles.headerDescription}>

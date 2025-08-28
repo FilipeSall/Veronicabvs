@@ -31,7 +31,7 @@ function Melliuz() {
       {/* 3.1 resulado */}
       <Chapter id="chapter-3-1">
         <CaseTitleHeader id="3.1" title="Resultado — Doação de Cashback" />
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40" }}>
           <FullImg
             img={dogImg}
             alt="Cachorro olhando para uma pessoa enquanto esssa mesma pessoa carrega o celular."
@@ -42,10 +42,10 @@ function Melliuz() {
       </Chapter>
       {/* 3.2 Desafio */}
       <Chapter id="chapter-3-2">
-        <ContentBlock gap="0">
+        <ContentBlock customCss={{ gap: "0" }}>
           <CaseTitleHeader id="3.2" title="Desafio" />
           <TextContent
-            marginTop="0"
+            customCss={{ marginTop: "0", marginBottom: "40" }}
             paragraphs={[
               "Criar a jornada de doação de cashback para ONGs dentro do app Méliuz, garantindo uma experiência intuitiva e eficiente. Incluir:",
               <SimpleList

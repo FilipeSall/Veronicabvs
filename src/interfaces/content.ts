@@ -7,8 +7,13 @@ export interface TextContentProps {
   paragraphs: (string | ReactNode)[];
   /** Número de quebras de linha */
   lineBreaks?: number;
-  /** Margem superior do container. Números viram px automaticamente ("20" = 20px). Padrão: "20" */
-  marginTop?: string;
+  /** CSS customizado para margin e padding */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+  };
 }
 
 export interface ContentSectionProps {
@@ -18,6 +23,11 @@ export interface ContentSectionProps {
   subtitle?: string;
   /** Conteúdo da seção */
   children: ReactNode;
+  /** CSS customizado para margin */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+  };
 }
 
 export interface ChapterProps {
@@ -38,8 +48,12 @@ export interface ContentBlockProps {
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
-  /** Espaçamento entre elementos */
-  gap?: string;
+  /** CSS customizado para margin e gap */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+    gap?: string;
+  };
   /** Se deve ocupar toda a largura */
   fullWidth?: boolean;
 }

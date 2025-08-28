@@ -59,18 +59,33 @@ import styles from './textcontent.module.scss';
  * @param title - Título da seção (ex: "DESAFIO E OPORTUNIDADE")
  * @param paragraphs - Array de strings (com **negrito**) ou ReactNodes
  * @param lineBreaks - Número de quebras de linha entre parágrafos (padrão: 2)
+ * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px"
  */
-function TextContent({ paragraphs, title, lineBreaks = 2, marginTop = "20" }: TextContentProps) {
+function TextContent({ paragraphs, title, lineBreaks = 2, customCss }: TextContentProps) {
     const renderLineBreaks = () => {
         return Array.from({ length: lineBreaks }, (_, i) => <br key={i} />);
+    };
+
+    const defaultCustomCss = {
+        marginTop: "0",
+        marginBottom: "0",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        ...customCss
     };
 
     return (
         <div 
             className={styles.contentContainer}
-            style={{ marginTop: normalizeMeasures(marginTop) }}
+            style={{
+                marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+                marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+            }}
         >
-            <div>
+            <div style={{
+                paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
+                paddingBottom: normalizeMeasures(defaultCustomCss.paddingBottom)
+            }}>
                 {title && <h3 className={styles.contentTitle}>{title}</h3>}
                 <div className={styles.contentText}>
                     {paragraphs.map((paragraph, index) => (

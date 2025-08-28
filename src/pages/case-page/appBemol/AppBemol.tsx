@@ -67,7 +67,7 @@ function AppBemol() {
 
         <ContentBlock>
           <TextContent
-            marginTop="40"
+            customCss={{paddingTop: "40"}}
             title="CONTEXTO"
             paragraphs={[
               "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",

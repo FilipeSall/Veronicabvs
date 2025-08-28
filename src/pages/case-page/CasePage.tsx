@@ -36,7 +36,6 @@ function CasePage() {
   return (
     <main className={styles.caseContainer}>
       <CasePanel
-        data={caseData.data}
         nome={caseData.nome}
         bgColor={caseData.bgColor}
         projeto={caseData.projeto}

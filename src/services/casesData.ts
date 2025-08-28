@@ -17,7 +17,6 @@ export const CasesData: CaseInterface[] = [
     nome: "Case 04 - Hackathon 2022",
     projeto: "Banco Safra",
     path: "case-4",
-    data: "2022/1",
     tipoDeCase: "premiado",
     bgColor: "#386681",
     imgHover: case4img,

@@ -8,7 +8,6 @@ export const melliuzData: CaseInterface = {
   id: 3,
   nome: "Case 03 - Doação de Cashback",
   projeto: "Méliuz",
-  data: "2024/2",
   path: "case-3",
   bgColor: "#ED387B",
   imgHover: case1img,
@@ -20,7 +19,7 @@ export const melliuzData: CaseInterface = {
     description: "Solução para Cashback",
     img: melliuzPreview,
   },
-  contextTxt: "Etapa final do processo seletivo Méliuz para vaga Product Designer Pleno. Duração: 5 dias. Responsabilidade: Integral (candidata).",
+  contextTxt: "Etapa final do processo seletivo Méliuz para vaga Product Designer Pleno.\nDuração: 5 dias.\nResponsabilidade: Integral (candidata).",
   summary: {
     color: "#FFFFFF",
     items: [],

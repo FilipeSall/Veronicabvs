@@ -7,7 +7,6 @@ export const caseBemolData: CaseInterface = {
   id: 1,
   nome: "Case 01 - Conta Digital e Empréstimo Pessoal",
   projeto: "Bemol BSF (Bemol Serviços Financeiros)",
-  data: "2022-2024",
   path: "case-1",
   tipoDeCase: "sucesso",
   bgColor: "#526FDC",

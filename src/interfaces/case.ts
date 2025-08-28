@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ToolsIconInterface } from "./components";
 
 export type CasePreview = {
@@ -9,7 +10,6 @@ export type CasePreview = {
 export interface CaseInterface {
   id: number;
   nome: string;
-  data: string;
   projeto: string;
   tipoDeCase?: "sucesso" | "premiado";
   path: string;
@@ -19,7 +19,7 @@ export interface CaseInterface {
   underConstructionImg?: string;
   miniImg: string;
   CasePreview: CasePreview;
-  contextTxt?: string;
+  contextTxt?: string | ReactNode;
   summary: {
     color: string;
     navegavelColor?: string;

@@ -31,7 +31,6 @@ export interface CaseNavInterface extends LinkInterface {
 export interface CasePanelInterface {
     nome: string;
     projeto: string;
-    data: string
     bgColor: string
     isUnderConstruction?: boolean
     miniImg: string

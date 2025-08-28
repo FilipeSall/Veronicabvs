@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ToolsIconInterface } from "../../../../../interfaces/components";
 import { hexToRgba } from "../../../../../utils/hexToRgba";
 import ToolsIcon from "../../content/ToolsIcon/ToolsIcon";
@@ -5,7 +6,7 @@ import styles from "./pageheader.module.scss";
 
 type PageHeaderProps = {
   bgColor: string;
-  contextTxt: string;
+  contextTxt: string | ReactNode;
   headerId: string;
   tools: ToolsIconInterface[];
 };

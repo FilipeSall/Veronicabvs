@@ -43,9 +43,11 @@ function Summary({ items, bg, color, navegavelColor, totalReading }: SummaryInte
                         ))}
                     </div>
                 </div>
-                <div className={styles.totalReadingContaine}>
-                    <TimeReading time={totalReading ?? 0} totalReading />
-                </div>
+                {totalReading != null && totalReading > 0 && (
+                    <div className={styles.totalReadingContaine}>
+                        <TimeReading time={totalReading} totalReading />
+                    </div>
+                )}
             </div>
         </nav>
     );

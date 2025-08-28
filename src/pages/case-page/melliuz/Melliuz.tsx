@@ -2,8 +2,12 @@ import PageHeader from "../components/structure/PageHeader/PageHeader";
 import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 import Summary from "../components/structure/Summary/Summary";
 import { melliuzData } from "./data";
+import { SummaryNavInterface } from "../../../interfaces/navigation";
 
 function Melliuz() {
+  const totalReading = melliuzData.summary.items
+    .filter(item => item.readingTime != null)
+    .reduce((acc: number, item: SummaryNavInterface) => acc + item.readingTime!, 0);
   return (
     <PageWrapper>
       <PageHeader
@@ -17,6 +21,7 @@ function Melliuz() {
         bg={melliuzData.bgColor}
         items={melliuzData.summary.items}
         color={melliuzData.summary.color}
+        totalReading={totalReading}
       />
 
       {/* 3.1 resulado */}

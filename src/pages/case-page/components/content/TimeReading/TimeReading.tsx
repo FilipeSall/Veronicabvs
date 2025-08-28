@@ -2,11 +2,15 @@ import styles from './timereading.module.scss';
 import clockIcon from '../../../../../assets/svgs/clock.svg';
 
 type TimeReadingProps = {
-    time: number,
+    time?: number,
     totalReading?: boolean
 }
 
 function TimeReading({ time, totalReading = false }: TimeReadingProps) {
+    if (time == null) {
+        return null;
+    }
+
     const min = Math.max(0, Math.floor(time - 1));
     const max = Math.ceil(time + 1);
 

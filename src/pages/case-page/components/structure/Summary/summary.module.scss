@@ -1,82 +1,85 @@
 .navContainer {
-    width: 100%;
-    position: relative;
+  width: 100%;
+  position: relative;
 }
 
 .navContent {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    gap: 3px;
-    justify-content: space-between;
-    padding: 35px 55px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3px;
+  justify-content: space-between;
+  padding: 35px 55px;
+  flex-wrap: wrap;
+  max-height: inherit;
+  max-height: 250px;
 }
 
 .summaryContentWrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleWrapper {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 16px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
 }
 
 .titleWrapper h1 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .titleWrapper span {
-    color: #BBBBBB;
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 400;
+  color: #bbbbbb;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .anchorWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .anchor {
-    display: flex;
-    gap: 4px;
-    flex-direction: column;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
 }
 
 .anchor a {
-    font-size: 16px;
-    transition: .3s ease-in-out;
-    display: flex;
-    gap: 6px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  gap: 6px;
 }
 
 .anchor a p {
-    font-family: Inter;
+  font-family: Inter;
 }
 
 .anchor a:hover {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .anchorId {
-    font-family: Inter;
+  font-family: Inter;
 }
 
 .specialText {
-    color: var(--textSucess);
-    font-size: 14px;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    font-family: 'Inter';
-    margin-left: 24px;
+  color: var(--textSucess);
+  font-size: 14px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  font-family: "Inter";
+  margin-left: 24px;
 }
 
 .specialText > img {
-    width: 24px;
-    height: 24px;
-    margin: 0 3px;
+  width: 24px;
+  height: 24px;
+  margin: 0 3px;
 }

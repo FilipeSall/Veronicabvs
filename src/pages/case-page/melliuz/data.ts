@@ -19,10 +19,54 @@ export const melliuzData: CaseInterface = {
     description: "Solução para Cashback",
     img: melliuzPreview,
   },
-  contextTxt: "Etapa final do processo seletivo Méliuz para vaga Product Designer Pleno.\nDuração: 5 dias.\nResponsabilidade: Integral (candidata).",
+  contextTxt:
+    "Etapa final do processo seletivo Méliuz para vaga Product Designer Pleno.\nDuração: 5 dias.\nResponsabilidade: Integral (candidata).",
   summary: {
     color: "#FFFFFF",
-    items: [],
+    items: [
+      {
+        id: "3.1",
+        href: "#chapter-3-1",
+        isSpecial: false,
+        title: "Resultado — Doação de Cashback",
+      },
+      {
+        id: "3.2",
+        href: "#chapter-3-2",
+        isSpecial: false,
+        title: "Resultado — Doação de Cashback",
+      },
+      {
+        id: "3.3",
+        href: "#chapter-3-3",
+        isSpecial: false,
+        title: "Processo",
+      },
+      {
+        id: "3.4",
+        href: "#chapter-3-4",
+        isSpecial: false,
+        title: "Descobertas e evidências",
+      },
+      {
+        id: "3.6",
+        href: "#chapter-3-6",
+        isSpecial: false,
+        title: "Entrega de Valor",
+      },
+      {
+        id: "3.7",
+        href: "#chapter-3-7",
+        isSpecial: false,
+        title: "Potenciais de impacto",
+      },
+      {
+        id: "3.8",
+        href: "#chapter-3-8",
+        isSpecial: false,
+        title: "Próximos passos",
+      },
+    ],
   },
   tools: [
     {

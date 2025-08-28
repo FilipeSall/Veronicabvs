@@ -52,7 +52,7 @@ export type SummaryNavInterface =
       /** Identificador único */
       id: string;
       /** Tempo de leitura em minutos */
-      readingTime: number;
+      readingTime?: number;
       /** Título do item */
       title: string;
       /** Subtítulo do item */
@@ -66,7 +66,7 @@ export type SummaryNavInterface =
       /** Identificador único */
       id: string;
       /** Tempo de leitura em minutos */
-      readingTime: number;
+      readingTime?: number;
       /** Link de navegação */
       href: string;
       /** Título do item */

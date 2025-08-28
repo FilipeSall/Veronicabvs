@@ -1,5 +1,5 @@
 import { appBemolData } from "./data";
-import { SummaryNavInterface } from "../../../interfaces/case";
+import { SummaryNavInterface } from "../../../interfaces/navigation";
 import PageHeader from "../components/structure/PageHeader/PageHeader";
 import Summary from "../components/structure/Summary/Summary";
 import VideoLegend from "../components/media/VideoLegend/VideoLegend";
@@ -23,10 +23,9 @@ import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function AppBemol() {
-  const totalReading = appBemolData.summary.items.reduce(
-    (acc: number, item: SummaryNavInterface) => acc + item.readingTime,
-    0
-  );
+  const totalReading = appBemolData.summary.items
+    .filter(item => item.readingTime != null)
+    .reduce((acc: number, item: SummaryNavInterface) => acc + item.readingTime!, 0);
 
   useScrollToElement("header-app-bemol", { smooth: false });
   return (

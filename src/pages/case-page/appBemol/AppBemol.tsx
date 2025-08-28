@@ -1,12 +1,12 @@
-import { summary } from "./summary";
-import tools from "./tools";
+import { appBemolData } from "./data";
+import { SummaryNavInterface } from "../../../interfaces/case";
 import PageHeader from "../components/structure/PageHeader/PageHeader";
 import Summary from "../components/structure/Summary/Summary";
 import VideoLegend from "../components/media/VideoLegend/VideoLegend";
 import videoAutocoplete from "../../../assets/appBemol/autocomplete.mp4";
 import redArrow from "../../../assets/svgs/redArrow.svg";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
-import { processData, cardsData, carrosselData } from "./data";
+import { processData, cardsData, carrosselData } from "./contentData";
 import desingSystemImg from "../../../assets/appBemol/designsystem.png";
 import NegocioExperiencia from "../components/content/NegocioExperiencia/NegocioExperiencia";
 import CardsEnumerados from "../components/content/CardsEnumerados/CardsEnumerados";
@@ -23,8 +23,8 @@ import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function AppBemol() {
-  const totalReading = summary.items.reduce(
-    (acc, item) => acc + item.readingTime,
+  const totalReading = appBemolData.summary.items.reduce(
+    (acc: number, item: SummaryNavInterface) => acc + item.readingTime,
     0
   );
 
@@ -32,25 +32,25 @@ function AppBemol() {
   return (
     <PageWrapper>
       <PageHeader
-        bgColor={summary.bg}
-        contextTxt="Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."
+        bgColor={appBemolData.bgColor}
+        contextTxt={appBemolData.contextTxt || "Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."}
         headerId="header-app-bemol"
-        tools={tools}
+        tools={appBemolData.tools}
       />
 
       <Summary
-        items={summary.items}
-        bg={summary.bg}
-        color={summary.color}
+        items={appBemolData.summary.items}
+        bg={appBemolData.bgColor}
+        color={appBemolData.summary.color}
         totalReading={totalReading}
       />
 
       {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}
       <Chapter id="chapter-2-1">
         <CaseTitleHeader
-          id={summary.items[0].id}
-          title={summary.items[0].title}
-          subtitle={summary.items[0].subtitle}
+          id={appBemolData.summary.items[0].id}
+          title={appBemolData.summary.items[0].title}
+          subtitle={appBemolData.summary.items[0].subtitle}
         />
 
         <ContentBlock>
@@ -149,9 +149,9 @@ function AppBemol() {
       {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
       <Chapter id="chapter-2-2">
         <CaseTitleHeader
-          id={summary.items[1].id}
-          title={summary.items[1].title}
-          subtitle={summary.items[1].subtitle}
+          id={appBemolData.summary.items[1].id}
+          title={appBemolData.summary.items[1].title}
+          subtitle={appBemolData.summary.items[1].subtitle}
         />
 
         <ContentBlock>

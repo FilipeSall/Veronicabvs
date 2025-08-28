@@ -1,5 +1,5 @@
 import { CasePanelInterface } from '../../../interfaces/components';
-import { CasesInterface } from '../../../interfaces/case';
+import { CaseInterface } from '../../../interfaces/case';
 import { CasesData } from '../../../services/casesData';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './casepanel.module.scss';
@@ -22,13 +22,13 @@ function CasePanel({ nome, projeto, miniImg, isUnderConstruction = false }: Case
 
     const currentCaseId = getCurrentCaseId();
 
-    const handleClick = useCallback((e: React.MouseEvent, caseItem: CasesInterface) => {
+    const handleClick = useCallback((e: React.MouseEvent, caseItem: CaseInterface) => {
         if (isUnderConstruction || caseItem.underConstruction) {
             e.preventDefault();
         }
     }, [isUnderConstruction]);
 
-    const getItemStyle = useCallback((isActive: boolean, isHovered: boolean, caseItem: CasesInterface) => {
+    const getItemStyle = useCallback((isActive: boolean, isHovered: boolean, caseItem: CaseInterface) => {
         const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;
 
         if (itemUnderConstruction) {
@@ -62,7 +62,7 @@ function CasePanel({ nome, projeto, miniImg, isUnderConstruction = false }: Case
                 <div className={styles.textNavWrapper}>
                     <p>💡Explore os cases:</p>
                     <div className={styles.navWrapper}>
-                        {CasesData && CasesData.map((caseItem: CasesInterface, i: number) => {
+                        {CasesData && CasesData.map((caseItem: CaseInterface, i: number) => {
                             const isActive = currentCaseId === caseItem.id;
                             const isHovered = hoveredId === caseItem.id;
                             const itemUnderConstruction = isUnderConstruction || caseItem.underConstruction;

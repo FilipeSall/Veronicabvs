@@ -1,6 +1,6 @@
-import tools from "./tools";
-import { pushNotifications, Values, processDataApp } from "./data";
-import { summary } from "./summary";
+import { pushNotifications, Values, processDataApp } from "./contentData";
+import { caseBemolData } from "./data";
+import { SummaryNavInterface } from "../../../interfaces/case";
 import FunilImg from "../components/media/FunilImg/FunilImg";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
 import FluxogramaVideo from "../components/media/FluxogramaVideo/FluxogramaVideo";
@@ -27,8 +27,8 @@ import CaseFooter from "../components/structure/CaseFooter/CaseFooter";
 import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 
 function CaseBemol() {
-  const totalReading = summary.items.reduce(
-    (acc: number, item) => acc + item.readingTime,
+  const totalReading = caseBemolData.summary.items.reduce(
+    (acc: number, item: SummaryNavInterface) => acc + item.readingTime,
     0
   );
   useScrollToElement("header-bemol", { smooth: false });
@@ -36,16 +36,16 @@ function CaseBemol() {
   return (
     <PageWrapper>
       <PageHeader
-        bgColor={summary.bg}
-        contextTxt="Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento."
+        bgColor={caseBemolData.bgColor}
+        contextTxt={caseBemolData.contextTxt || ""}
         headerId="header-bemol"
-        tools={tools}
+        tools={caseBemolData.tools}
       />
 
       <Summary
-        items={summary.items}
-        bg={summary.bg}
-        color={summary.color}
+        items={caseBemolData.summary.items}
+        bg={caseBemolData.bgColor}
+        color={caseBemolData.summary.color}
         totalReading={totalReading}
       />
 

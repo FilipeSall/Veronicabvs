@@ -1,5 +1,5 @@
 import CaseNav from '../../components/navigation/CaseNav/CaseNav';
-import { CasesInterface } from '../../interfaces/case';
+import { CaseInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
 import styles from './Home.module.scss';
 import solicon from '../../assets/svgs/sol.svg';
@@ -28,7 +28,7 @@ function Home() {
         <div className={styles.NavCasesWrapper}>
           {CasesData
             .sort((a, b) => a.id - b.id)
-            .map((caseItem: CasesInterface, i: number) => (
+            .map((caseItem: CaseInterface, i: number) => (
               <CaseNav
                 key={i}
                 path={`case/${caseItem.id}`}

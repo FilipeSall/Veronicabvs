@@ -10,7 +10,8 @@
       "Bash(find:*)",
       "Bash(npm run type-check:*)",
       "Bash(npm run:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(tsc --noEmit)"
     ],
     "deny": [],
     "ask": []

@@ -1,91 +1,67 @@
-import { CardsEnumeradosInterface, pushNotificationsInterface } from "../../../interfaces/case";
-import educationVideo from "../../../assets/caseBemol/Estudos.mp4";
-import topImgEducation from "../../../assets/caseBemol/educacaoImg.png";
-import viagemVideo from "../../../assets/caseBemol/Viagens.mp4";
-import topImgViagem from "../../../assets/caseBemol/viagemImg.png";
-import comprasVideo from "../../../assets/caseBemol/Compras.mp4";
-import topImgCompras from "../../../assets/caseBemol/comprasImg.png";
+import { CaseInterface } from "../../../interfaces/case";
+import case2img from "../../../assets/cases/case2.webp";
+import bemolBSFMiniImg from "../../../assets/cases/bemolBSFMiniImg.webp";
+import caseBemolPreviewImg from "../../../assets/cases/preview/contaBemolPreview.webp";
 
-export const pushNotifications: pushNotificationsInterface[] = [
+export const caseBemolData: CaseInterface = {
+  id: 1,
+  nome: "Case 01 - Conta Digital e Empréstimo Pessoal",
+  projeto: "Bemol BSF (Bemol Serviços Financeiros)",
+  data: "2022-2024",
+  path: "case-1",
+  tipoDeCase: "sucesso",
+  bgColor: "#526FDC",
+  imgHover: case2img,
+  miniImg: bemolBSFMiniImg,
+  CasePreview: {
+    title: "1. Conta Bemol",
+    description: "Serviços Financeiros",
+    img: caseBemolPreviewImg,
+  },
+  contextTxt: "Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.",
+  summary: {
+    color: "#FFFFFF",
+    items: [
+      {
+        id: "1.1",
+        href: "#chapter-1-1",
+        isSpecial: false,
+        readingTime: 3,
+        title: "Resgatando clientes no fluxo de empréstimo por notificações segmentadas",
+        subtitle: "Apoio: Equipe de Marketing e equipe de Dados.",
+      },
+      {
+        id: "1.2 e 1.3",
+        href: "#chapter-1-2",
+        isSpecial: false,
+        readingTime: 1,
+        title: "Outras entregas",
+      },
+      {
+        id: "1.4",
+        href: "#chapter-1-4",
+        isSpecial: true,
+        readingTime: 0.5,
+        title: "Escolha da data do vencimento das parcelas de empréstimo (prévia)",
+        specialNote: "Case exclusivo para apresentação pessoal)",
+      },
+    ],
+  },
+  tools: [
     {
-        alt: 'educação',
-        topImg: topImgEducation,
-        video: educationVideo
+      value: "figma",
     },
     {
-        alt: 'viagem',
-        topImg: topImgViagem,
-        video: viagemVideo
+      value: "asana",
     },
     {
-        alt: 'compras',
-        topImg: topImgCompras,
-        video: comprasVideo
-    }
-]
-
-export const Values: CardsEnumeradosInterface[] = [
-    {
-        title: 'Referência oficial',
-        text: 'Promove o entendimento do produto, alinha times e serve como base para discussões e planejamento.'
+      value: "ux",
     },
     {
-        title: 'Otimização do trabalho',
-        text: 'Reduz dúvidas e facilita a compreensão dos processos por diferentes áreas da empresa.'
+      value: "adobe",
     },
     {
-        title: 'Visão estratégica',
-        text: 'Oferece uma visão ampla do produto, alinhando expectativas entre stakeholders e orientando decisões mais eficientes.'
+      value: "db",
     },
-    {
-        title: 'Impacto contínuo',
-        text: 'Material ainda utilizado como base para aprimoramentos e novas melhorias no produto.'
-    }
-]
-
-export const processDataApp = [
-    {
-        title: "Planning",
-        lists: [
-            "Análise de dados",
-            "Identificação do problema",
-            "Alinhamento inicial"
-        ]
-    },
-    {
-        title: "Discovery",
-        lists: [
-            "Benchmarking",
-            "Discussões exploratórias com áreas parceiras"
-        ]
-    },
-    {
-        title: "Define",
-        lists: [
-            "Solução",
-            "Alinhamento com as áreas envolvidas"
-        ]
-    },
-    {
-        title: "Develop",
-        lists: [
-            "Design System",
-            "Co-criação (marketing)",
-            "Prototipação em alta"
-        ]
-    },
-    {
-        title: "Delivery",
-        lists: [
-            "Validação e apresentação",
-            "Documentação",
-            "Entrega"
-        ]
-    },
-    {
-        title: "Follow-up",
-        lists: [
-            "Acompanhamento de métricas de conversão"
-        ]
-    }
-]
+  ],
+};

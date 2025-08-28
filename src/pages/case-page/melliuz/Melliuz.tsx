@@ -10,6 +10,9 @@ import FullImg from "../components/media/FullImg/FullImg";
 import melliuzLogo from "../../../assets/melliuz/Meliuz.svg";
 import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
+import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
+import { processDataApp } from "./contentData";
+import pinkArrow from "../../../assets/svgs/pinkArrow.svg";
 
 function Melliuz() {
   return (
@@ -70,6 +73,12 @@ function Melliuz() {
             paragraphs={[
               "Framework Double Diamond adaptado ao Data-Driven Design, com inclusão de 2 fases extras: fase inicial (de planejamento estratégico) e a fase final (de acompanhamento contínuo - “Próximos passos”). ",
             ]}
+          />
+
+          <ProcessFlowContainer
+            lists={processDataApp}
+            arrowColored={pinkArrow}
+            color={melliuzData.bgColor}
           />
         </ContentBlock>
       </Chapter>

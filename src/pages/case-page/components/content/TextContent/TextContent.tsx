@@ -59,7 +59,7 @@ import styles from './textcontent.module.scss';
  * @param title - Título da seção (ex: "DESAFIO E OPORTUNIDADE")
  * @param paragraphs - Array de strings (com **negrito**) ou ReactNodes
  * @param lineBreaks - Número de quebras de linha entre parágrafos (padrão: 2)
- * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px"
+ * @param customCss - CSS customizado para margin, padding e paragraphWidth (marginTop, marginBottom, paddingTop, paddingBottom, paragraphWidth). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px", paragraphWidth: "100%"
  */
 function TextContent({ paragraphs, title, lineBreaks = 2, customCss }: TextContentProps) {
     const renderLineBreaks = () => {
@@ -71,6 +71,7 @@ function TextContent({ paragraphs, title, lineBreaks = 2, customCss }: TextConte
         marginBottom: "0",
         paddingTop: "20px",
         paddingBottom: "20px",
+        paragraphWidth: "100%",
         ...customCss
     };
 
@@ -90,7 +91,9 @@ function TextContent({ paragraphs, title, lineBreaks = 2, customCss }: TextConte
                 <div className={styles.contentText}>
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>
-                            {parseStringOrNode(paragraph)}
+                            <div style={{ width: defaultCustomCss.paragraphWidth }}>
+                                {parseStringOrNode(paragraph)}
+                            </div>
                             {index < paragraphs.length - 1 && renderLineBreaks()}
                         </React.Fragment>
                     ))}

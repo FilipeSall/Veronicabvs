@@ -13,6 +13,7 @@ export interface TextContentProps {
     marginBottom?: string;
     paddingTop?: string;
     paddingBottom?: string;
+    paragraphWidth?: string;
   };
 }
 

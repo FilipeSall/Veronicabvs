@@ -67,7 +67,7 @@ function AppBemol() {
 
         <ContentBlock>
           <TextContent
-            customCss={{paddingTop: "40"}}
+            customCss={{ paddingTop: "40" }}
             title="CONTEXTO"
             paragraphs={[
               "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",
@@ -113,7 +113,7 @@ function AppBemol() {
           <ImageWrapper src={desingSystemImg} alt="design system" />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <TextContent
             title="NEGÓCIO X EXPERIÊNCIA"
             paragraphs={[
@@ -124,12 +124,13 @@ function AppBemol() {
           <NegocioExperiencia />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "80" }}>
           <TextContent
             title="PLANO DE ACOMPANHAMENTO"
             paragraphs={[
               "Para acompanhar a evolução e impacto da solução no negócio, elaborei um plano de monitoramento mensal, analisando KPIs:",
               <SimpleList
+                textColor="strong"
                 items={[
                   "**Taxa de adesão** à Conta Bemol",
                   "**Conversão** no fluxo de contratação",
@@ -141,7 +142,7 @@ function AppBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "80" }}>
           <TextContent
             title="MÉTRICAS E MELHORIAS"
             paragraphs={[
@@ -155,6 +156,7 @@ function AppBemol() {
       {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
       <Chapter id="chapter-2-2">
         <CaseTitleHeader
+          customCss={{ marginTop: "40px" }}
           id={appBemolData.summary.items[1].id}
           title={appBemolData.summary.items[1].title}
           subtitle={appBemolData.summary.items[1].subtitle}
@@ -164,7 +166,7 @@ function AppBemol() {
           <TextContent
             title="DIAGNÓSTICO"
             paragraphs={[
-              "Identificação de pontos de dor nas telas originais, como:",
+              "Identificação de **pontos de dor** nas telas originais, como:",
               <SimpleList
                 items={[
                   <>
@@ -188,7 +190,7 @@ function AppBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "80", marginBottom: "80" }}>
           <ContentSection title="ANTES X DEPOIS">
             <Carrossel
               slides={carrosselData}
@@ -198,7 +200,7 @@ function AppBemol() {
           </ContentSection>
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
             title="DESAFIO E OBJETIVO"
             paragraphs={[
@@ -208,19 +210,21 @@ function AppBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <ContentSection title="MELHORIAS">
             <CardsEnumerados cards={cardsData} color="#F23434" />
           </ContentSection>
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
+            customCss={{ paragraphWidth: "75%" }}
             title="PRÓXIMOS PASSOS"
             paragraphs={[
-              "→ Acompanhamento de métricas pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",
-              "→ Testes de usabilidade com usuários reais: Para validar as melhorias e identificar novas oportunidades.",
+              "→ **Acompanhamento de métricas** pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",
+              "→ **Testes de usabilidade** com usuários reais: Para validar as melhorias e identificar novas oportunidades.",
             ]}
+            lineBreaks={1}
           />
         </ContentBlock>
       </Chapter>

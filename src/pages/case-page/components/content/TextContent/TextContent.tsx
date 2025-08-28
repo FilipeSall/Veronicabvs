@@ -72,14 +72,14 @@ function TextContent({ paragraphs, title, lineBreaks = 2, marginTop = "20" }: Te
         >
             <div>
                 {title && <h3 className={styles.contentTitle}>{title}</h3>}
-                <p className={styles.contentText}>
+                <div className={styles.contentText}>
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>
                             {parseStringOrNode(paragraph)}
                             {index < paragraphs.length - 1 && renderLineBreaks()}
                         </React.Fragment>
                     ))}
-                </p>
+                </div>
             </div>
         </div>
     );

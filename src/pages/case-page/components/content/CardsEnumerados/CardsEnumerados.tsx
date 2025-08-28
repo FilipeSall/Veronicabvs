@@ -1,4 +1,4 @@
-import { CardsEnumeradosInterface } from '../../../../../interfaces/case';
+import { CardsEnumeradosInterface } from '../../../../../interfaces/content';
 import styles from './cardsenumerados.module.scss';
 
 type CardsEnumeradosProps = {

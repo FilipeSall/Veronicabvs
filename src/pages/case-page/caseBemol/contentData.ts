@@ -1,4 +1,5 @@
-import { CardsEnumeradosInterface, pushNotificationsInterface } from "../../../interfaces/case";
+import { CardsEnumeradosInterface } from "../../../interfaces/content";
+import { pushNotificationsInterface } from "../../../interfaces/media";
 import educationVideo from "../../../assets/caseBemol/Estudos.mp4";
 import topImgEducation from "../../../assets/caseBemol/educacaoImg.png";
 import viagemVideo from "../../../assets/caseBemol/Viagens.mp4";

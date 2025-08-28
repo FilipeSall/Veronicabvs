@@ -1,4 +1,4 @@
-import { VideoItemInterface } from "../../../../../interfaces/case";
+import { VideoItemInterface } from "../../../../../interfaces/media";
 import VideoGallery from "../VideoGallery/VideoGallery";
 import SuspenseImg from "../SuspenseImg/SuspenseImg";
 import styles from "./videoshowcase.module.scss";

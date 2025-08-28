@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import { ToolsIconInterface } from "../../../../../interfaces/components";
 import { hexToRgba } from "../../../../../utils/hexToRgba";
 import { convertLineBreaksToJSX } from "../../../../../utils/textUtils";

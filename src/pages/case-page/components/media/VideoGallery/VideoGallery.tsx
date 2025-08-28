@@ -1,4 +1,4 @@
-import { VideoGalleryInterface } from '../../../../../interfaces/case';
+import { VideoGalleryInterface, VideoItemInterface } from '../../../../../interfaces/media';
 import VideoItem from '../VideoItem/VideoItem';
 import styles from './videogallery.module.scss';
 
@@ -68,7 +68,7 @@ function VideoGallery({ videos, className }: VideoGalleryInterface) {
 
   return (
     <div className={`${styles.galleryContainer} ${className || ''}`}>
-      {videos.map((videoData, index) => (
+      {videos.map((videoData: VideoItemInterface, index: number) => (
         <VideoItem
           key={index}
           video={videoData.video}

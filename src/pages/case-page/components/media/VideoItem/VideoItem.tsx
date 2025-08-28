@@ -1,4 +1,4 @@
-import { VideoItemInterface } from '../../../../../interfaces/case';
+import { VideoItemInterface } from '../../../../../interfaces/media';
 import { useVideoInView } from '../../../../../hooks/useVideoInView';
 import styles from './videoitem.module.scss';
 import celularImg from '../../../../../assets/caseBemol/celular.png';

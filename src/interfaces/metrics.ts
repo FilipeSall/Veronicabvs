@@ -17,4 +17,8 @@ export interface MetricsListProps {
 export interface SimpleListProps {
   /** Lista de itens */
   items: (string | ReactNode)[];
+  /** Tipo de marcador da lista (padrão: 'arrow') */
+  listType?: 'arrow' | 'bullet';
+  /** Cor do texto (padrão: 'weak') */
+  textColor?: 'weak' | 'strong';
 }

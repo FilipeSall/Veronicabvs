@@ -28,8 +28,11 @@ import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 
 function CaseBemol() {
   const totalReading = caseBemolData.summary.items
-    .filter(item => item.readingTime != null)
-    .reduce((acc: number, item: SummaryNavInterface) => acc + item.readingTime!, 0);
+    .filter((item) => item.readingTime != null)
+    .reduce(
+      (acc: number, item: SummaryNavInterface) => acc + item.readingTime!,
+      0
+    );
   useScrollToElement("header-bemol", { smooth: false });
 
   return (
@@ -245,6 +248,7 @@ function CaseBemol() {
         <ContentBlock>
           <ContentSection>
             <SimpleList
+              listType="bullet"
               items={[
                 "Identificação da dor",
                 "Meu processo de design",

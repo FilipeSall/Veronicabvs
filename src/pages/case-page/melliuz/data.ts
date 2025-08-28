@@ -49,6 +49,12 @@ export const melliuzData: CaseInterface = {
         title: "Descobertas e evidências",
       },
       {
+        id: "3.5",
+        href: "#chapter-3-5",
+        isSpecial: false,
+        title: "User Flow",
+      },
+      {
         id: "3.6",
         href: "#chapter-3-6",
         isSpecial: false,

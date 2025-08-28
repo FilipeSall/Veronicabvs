@@ -1,7 +1,15 @@
+import CaseTitleHeader from "../components/content/CaseTitleHeader/CaseTitleHeader";
+import Chapter from "../components/structure/Chapter/Chapter";
+import ContentBlock from "../components/structure/ContentBlock/ContentBlock";
 import PageHeader from "../components/structure/PageHeader/PageHeader";
 import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 import Summary from "../components/structure/Summary/Summary";
 import { melliuzData } from "./data";
+import dogImg from "../../../assets/melliuz/OWN.webp";
+import FullImg from "../components/media/FullImg/FullImg";
+import melliuzLogo from "../../../assets/melliuz/Meliuz.svg";
+import TextContent from "../components/content/TextContent/TextContent";
+import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function Melliuz() {
   return (
@@ -21,7 +29,39 @@ function Melliuz() {
       />
 
       {/* 3.1 resulado */}
+      <Chapter id="chapter-3-1">
+        <CaseTitleHeader id="3.1" title="Resultado — Doação de Cashback" />
+        <ContentBlock>
+          <FullImg
+            img={dogImg}
+            alt="Cachorro olhando para uma pessoa enquanto esssa mesma pessoa carrega o celular."
+            optionalImg={melliuzLogo}
+            optionalAlt="Logo da Melliuz"
+          />
+        </ContentBlock>
+      </Chapter>
       {/* 3.2 Desafio */}
+      <Chapter id="chapter-3-2">
+        <ContentBlock gap="0">
+          <CaseTitleHeader id="3.2" title="Desafio" />
+          <TextContent
+            title=""
+            paragraphs={[
+              "Criar a jornada de doação de cashback para ONGs dentro do app Méliuz, garantindo uma experiência intuitiva e eficiente. Incluir:",
+              <SimpleList
+                textColor="strong"
+                items={[
+                  "Permitir ao usuário escolher o valor a doar (total ou parcial);",
+                  "Selecionar uma ONG parceira;",
+                  "Opção de incluir uma mensagem opcional;",
+                  "Confirmar a doação.",
+                ]}
+              />,
+              "O projeto foi focado em estruturar o fluxo de design, hierarquia de informações e critérios de mensuração do sucesso, alinhando as **necessidades do usuário aos objetivos do negócio**.",
+            ]}
+          />
+        </ContentBlock>
+      </Chapter>
       {/* 3.3 Processo */}
       {/* 3.4 Descobertas e evidências */}
       {/* 3.5 Userflow — Entry point 1 */}

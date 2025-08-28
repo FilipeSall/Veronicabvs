@@ -11,7 +11,7 @@ import styles from "./simplelist.module.scss";
  *
  * @example
  * ```tsx
- * // Lista simples de strings
+ * // Lista simples de strings (com setas - padrão)
  * <SimpleList
  *   items={[
  *     "Identificação da dor",
@@ -20,16 +20,27 @@ import styles from "./simplelist.module.scss";
  *   ]}
  * />
  * 
- * // Lista com markdown **negrito**
+ * // Lista com bullets
  * <SimpleList
  *   items={[
  *     "**Taxa de adesão** à Conta Bemol",
  *     "**Conversão** no fluxo de contratação",
  *     "**Fricção** no processo de reconhecimento"
  *   ]}
+ *   listType="bullet"
  * />
  * 
- * // Lista com JSX customizado
+ * // Lista com texto forte (branco)
+ * <SimpleList
+ *   items={[
+ *     "Permitir ao usuário escolher o valor a doar",
+ *     "Selecionar uma ONG parceira",
+ *     "Opção de incluir uma mensagem opcional"
+ *   ]}
+ *   textColor="strong"
+ * />
+ * 
+ * // Lista com JSX customizado e setas
  * <SimpleList
  *   items={[
  *     <>
@@ -42,26 +53,21 @@ import styles from "./simplelist.module.scss";
  *       <span>Etapas desnecessárias</span> ou confusas
  *     </>
  *   ]}
- * />
- * 
- * // Misturando tipos
- * <SimpleList
- *   items={[
- *     "Texto simples",
- *     "Texto com **destaque**",
- *     <><strong>JSX customizado</strong> com formatação</>
- *   ]}
+ *   listType="arrow"
+ *   textColor="weak"
  * />
  * ```
  *
  * @param items - Array de strings (com suporte a **negrito**) ou ReactNodes
+ * @param listType - Tipo de marcador ('arrow' padrão ou 'bullet')
+ * @param textColor - Cor do texto ('weak' padrão #bbbbbb ou 'strong' #ffffff)
  */
-function SimpleList({ items }: SimpleListProps) {
+function SimpleList({ items, listType = 'arrow', textColor = 'weak' }: SimpleListProps) {
   return (
     <div className={styles.listContainer}>
-      <ul className={styles.list}>
+      <ul className={`${styles.list} ${listType === 'bullet' ? styles.bulletList : ''}`}>
         {items.map((item, index) => (
-          <li key={index} className={styles.listItem}>
+          <li key={index} className={`${styles.listItem} ${styles[listType]} ${textColor === 'strong' ? styles.strong : ''}`}>
             {parseStringOrNode(item)}
           </li>
         ))}

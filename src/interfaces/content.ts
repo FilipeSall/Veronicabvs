@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface TextContentProps {
   /** Título do conteúdo */
-  title: string;
+  title?: string;
   /** Array de parágrafos do conteúdo */
   paragraphs: (string | ReactNode)[];
   /** Número de quebras de linha */

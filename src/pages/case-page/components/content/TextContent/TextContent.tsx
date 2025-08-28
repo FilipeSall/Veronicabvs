@@ -67,7 +67,7 @@ function TextContent({ paragraphs, title, lineBreaks = 2 }: TextContentProps) {
     return (
         <div className={styles.contentContainer}>
             <div>
-                <h3 className={styles.contentTitle}>{title}</h3>
+                {title && <h3 className={styles.contentTitle}>{title}</h3>}
                 <p className={styles.contentText}>
                     {paragraphs.map((paragraph, index) => (
                         <React.Fragment key={index}>

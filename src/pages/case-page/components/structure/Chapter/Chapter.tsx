@@ -1,4 +1,5 @@
 import { ChapterProps } from "../../../../../interfaces/components";
+import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import CaseTitle from "../../content/CaseTitle/CaseTitle";
 import styles from "./chapter.module.scss";
 
@@ -47,10 +48,24 @@ import styles from "./chapter.module.scss";
  * @param subtitle - Subtítulo opcional (apenas com title)
  * @param children - Conteúdo do chapter (ContentBlocks, etc.)
  * @param className - Classe CSS adicional para customização
+ * @param customCss - CSS customizado para margin (marginTop, marginBottom). Valores padrão: marginTop: "40px", marginBottom: "40px"
  */
-function Chapter({ id, title, subtitle, children, className }: ChapterProps) {
+function Chapter({ id, title, subtitle, children, className, customCss }: ChapterProps) {
+  const defaultCustomCss = {
+    marginTop: "40px",
+    marginBottom: "40px",
+    ...customCss
+  };
+
   return (
-    <section className={`${styles.chapter} ${className || ""}`} id={id}>
+    <section 
+      className={`${styles.chapter} ${className || ""}`} 
+      id={id}
+      style={{
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+      }}
+    >
       {title && <CaseTitle title={title} subTitle={subtitle || ""} id={id} />}
       {children}
     </section>

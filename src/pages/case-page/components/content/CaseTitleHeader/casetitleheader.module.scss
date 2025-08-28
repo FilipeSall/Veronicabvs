@@ -7,7 +7,8 @@
 .titleTextContainer {
   max-width: var(--max-width);
   margin: var(--center-margin);
-  padding: var(--container-padding);
+  padding-left: 72px;
+  padding-right: 72px;
   width: var(--content-width);
   display: flex;
   flex-direction: column;

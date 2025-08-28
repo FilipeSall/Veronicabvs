@@ -42,8 +42,8 @@ function Melliuz() {
       </Chapter>
       {/* 3.2 Desafio */}
       <Chapter id="chapter-3-2">
-        <ContentBlock customCss={{ gap: "0" }}>
-          <CaseTitleHeader id="3.2" title="Desafio" />
+        <CaseTitleHeader id="3.2" title="Desafio" />
+        <ContentBlock>
           <TextContent
             customCss={{ marginTop: "0", marginBottom: "40" }}
             paragraphs={[
@@ -63,6 +63,16 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.3 Processo */}
+      <Chapter id="chapter-3-3">
+        <CaseTitleHeader id="3.3" title="Processo" customCss={{}} />
+        <ContentBlock>
+          <TextContent
+            paragraphs={[
+              "Framework Double Diamond adaptado ao Data-Driven Design, com inclusão de 2 fases extras: fase inicial (de planejamento estratégico) e a fase final (de acompanhamento contínuo - “Próximos passos”). ",
+            ]}
+          />
+        </ContentBlock>
+      </Chapter>
       {/* 3.4 Descobertas e evidências */}
       {/* 3.5 Userflow — Entry point 1 */}
       {/* 3.6 Entrega de Valor */}

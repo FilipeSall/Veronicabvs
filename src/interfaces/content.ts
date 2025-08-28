@@ -41,6 +41,11 @@ export interface ChapterProps {
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
+  /** CSS customizado para margin */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+  };
 }
 
 export interface ContentBlockProps {
@@ -71,6 +76,13 @@ export interface CaseTitleHeaderProps {
   subtitleWhite?: boolean;
   /** Classes CSS personalizadas */
   className?: string;
+  /** CSS customizado para margin e padding */
+  customCss?: {
+    marginTop?: string;
+    marginBottom?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
+  };
 }
 
 export interface CardsEnumeradosInterface {

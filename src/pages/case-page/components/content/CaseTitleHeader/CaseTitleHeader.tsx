@@ -1,4 +1,5 @@
 import { CaseTitleHeaderProps } from "../../../../../interfaces/components";
+import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import styles from "./casetitleheader.module.scss";
 
 /**
@@ -45,6 +46,7 @@ import styles from "./casetitleheader.module.scss";
  * @param subtitleVariant - Estilo do subtítulo: 'default' (curto) ou 'paragraph' (longo)
  * @param subtitleWhite - Se true, aplica cor branca no subtítulo. Se false, usa cor padrão (#bbb)
  * @param className - Classe CSS adicional para customização
+ * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px"
  */
 function CaseTitleHeader({
   id,
@@ -53,10 +55,31 @@ function CaseTitleHeader({
   subtitleVariant = "default",
   subtitleWhite = true,
   className,
+  customCss,
 }: CaseTitleHeaderProps) {
+  const defaultCustomCss = {
+    marginTop: "0",
+    marginBottom: "0",
+    paddingTop: "20px",
+    paddingBottom: "20px",
+    ...customCss
+  };
+
   return (
-    <div className={`${styles.caseTitleWrapper} ${className || ""}`}>
-      <div className={styles.titleTextContainer}>
+    <div 
+      className={`${styles.caseTitleWrapper} ${className || ""}`}
+      style={{
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+      }}
+    >
+      <div 
+        className={styles.titleTextContainer}
+        style={{
+          paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
+          paddingBottom: normalizeMeasures(defaultCustomCss.paddingBottom)
+        }}
+      >
         <h3 className={styles.strongWhite}>
           <span className={styles.idText}>{id}</span> {title}
         </h3>

@@ -1,4 +1,4 @@
-import ScrollToTop from "../../layout/ScrollToTop/ScrollToTop";
+import ScrollToTop from "../../interactive/ScrollToTop/ScrollToTop";
 import styles from "./casefooter.module.scss";
 
 export interface CaseFooterProps {

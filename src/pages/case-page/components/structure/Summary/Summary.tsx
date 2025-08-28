@@ -1,4 +1,4 @@
-import { SummaryInterface } from '../../../../../interfaces/case';
+import { SummaryInterface } from '../../../../../interfaces/navigation';
 import TimeReading from '../../content/TimeReading/TimeReading';
 import styles from './summary.module.scss';
 import sucessoIcon from '../../../../../assets/svgs/sucesso.svg';

@@ -1,6 +1,6 @@
 import { pushNotifications, Values, processDataApp } from "./contentData";
 import { caseBemolData } from "./data";
-import { SummaryNavInterface } from "../../../interfaces/case";
+import { SummaryNavInterface } from "../../../interfaces/navigation";
 import FunilImg from "../components/media/FunilImg/FunilImg";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
 import FluxogramaVideo from "../components/media/FluxogramaVideo/FluxogramaVideo";

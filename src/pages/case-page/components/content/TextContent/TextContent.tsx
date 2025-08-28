@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextContentProps } from '../../../../../interfaces/components';
 import { parseStringOrNode } from '../../../../../utils/textUtils';
+import { normalizeMeasures } from '../../../../../utils/cssUtils';
 import styles from './textcontent.module.scss';
 
 /**
@@ -59,13 +60,16 @@ import styles from './textcontent.module.scss';
  * @param paragraphs - Array de strings (com **negrito**) ou ReactNodes
  * @param lineBreaks - Número de quebras de linha entre parágrafos (padrão: 2)
  */
-function TextContent({ paragraphs, title, lineBreaks = 2 }: TextContentProps) {
+function TextContent({ paragraphs, title, lineBreaks = 2, marginTop = "20" }: TextContentProps) {
     const renderLineBreaks = () => {
         return Array.from({ length: lineBreaks }, (_, i) => <br key={i} />);
     };
 
     return (
-        <div className={styles.contentContainer}>
+        <div 
+            className={styles.contentContainer}
+            style={{ marginTop: normalizeMeasures(marginTop) }}
+        >
             <div>
                 {title && <h3 className={styles.contentTitle}>{title}</h3>}
                 <p className={styles.contentText}>

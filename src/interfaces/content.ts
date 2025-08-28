@@ -7,6 +7,8 @@ export interface TextContentProps {
   paragraphs: (string | ReactNode)[];
   /** Número de quebras de linha */
   lineBreaks?: number;
+  /** Margem superior do container. Números viram px automaticamente ("20" = 20px). Padrão: "20" */
+  marginTop?: string;
 }
 
 export interface ContentSectionProps {

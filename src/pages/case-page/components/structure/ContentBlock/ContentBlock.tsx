@@ -1,5 +1,5 @@
 import { ContentBlockProps } from "../../../../../interfaces/components";
-import { normalizeGap } from "../../../../../utils/cssUtils";
+import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import styles from "./contentblock.module.scss";
 
 /**
@@ -74,7 +74,7 @@ function ContentBlock({ children, className, gap = "20", fullWidth = false }: Co
   return (
     <div 
       className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
-      style={{ gap: normalizeGap(gap) }}
+      style={{ gap: normalizeMeasures(gap) }}
     >
       {children}
     </div>

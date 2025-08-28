@@ -45,7 +45,7 @@ function Melliuz() {
         <ContentBlock gap="0">
           <CaseTitleHeader id="3.2" title="Desafio" />
           <TextContent
-            title=""
+            marginTop="0"
             paragraphs={[
               "Criar a jornada de doação de cashback para ONGs dentro do app Méliuz, garantindo uma experiência intuitiva e eficiente. Incluir:",
               <SimpleList

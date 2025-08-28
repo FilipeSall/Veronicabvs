@@ -24,15 +24,21 @@ import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function AppBemol() {
   const totalReading = appBemolData.summary.items
-    .filter(item => item.readingTime != null)
-    .reduce((acc: number, item: SummaryNavInterface) => acc + item.readingTime!, 0);
+    .filter((item) => item.readingTime != null)
+    .reduce(
+      (acc: number, item: SummaryNavInterface) => acc + item.readingTime!,
+      0
+    );
 
   useScrollToElement("header-app-bemol", { smooth: false });
   return (
     <PageWrapper>
       <PageHeader
         bgColor={appBemolData.bgColor}
-        contextTxt={appBemolData.contextTxt || "Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."}
+        contextTxt={
+          appBemolData.contextTxt ||
+          "Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."
+        }
         headerId="header-app-bemol"
         tools={appBemolData.tools}
       />
@@ -61,6 +67,7 @@ function AppBemol() {
 
         <ContentBlock>
           <TextContent
+            marginTop="40"
             title="CONTEXTO"
             paragraphs={[
               "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",

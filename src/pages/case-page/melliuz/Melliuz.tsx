@@ -18,6 +18,16 @@ function Melliuz() {
         items={melliuzData.summary.items}
         color={melliuzData.summary.color}
       />
+
+      {/* 3.1 resulado */}
+      {/* 3.2 Desafio */}
+      {/* 3.3 Processo */}
+      {/* 3.4 Descobertas e evidências */}
+      {/* 3.5 Userflow — Entry point 1 */}
+      {/* 3.6 Entrega de Valor */}
+      {/* 3.7 Potenciais de impacto */}
+      {/* 3.7 Potenciais de impacto */}
+      {/* 3.8 Próximos passos */}
     </PageWrapper>
   );
 }

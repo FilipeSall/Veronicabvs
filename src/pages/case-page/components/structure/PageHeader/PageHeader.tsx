@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { ToolsIconInterface } from "../../../../../interfaces/components";
 import { hexToRgba } from "../../../../../utils/hexToRgba";
+import { convertLineBreaksToJSX } from "../../../../../utils/textUtils";
 import ToolsIcon from "../../content/ToolsIcon/ToolsIcon";
 import styles from "./pageheader.module.scss";
 
@@ -23,7 +24,9 @@ function PageHeader({ bgColor, contextTxt, tools, headerId }: PageHeaderProps) {
       <div className={styles.pageHeaderContent}>
         <div className={styles.headerDescription}>
           <p className={styles.headerDescriptionTitle}>Contexto</p>
-          <p className={styles.headerDescriptionContextTxt}>{contextTxt}</p>
+          <p className={styles.headerDescriptionContextTxt}>
+            {convertLineBreaksToJSX(contextTxt)}
+          </p>
         </div>
 
         <div className={styles.toolsContainer}>

@@ -9,7 +9,7 @@ export const caseBemolData: CaseInterface = {
   projeto: "Bemol BSF (Bemol Serviços Financeiros)",
   path: "case-1",
   tipoDeCase: "sucesso",
-  bgColor: "#526FDC",
+  bgColor: "#4C31E0",
   imgHover: case2img,
   miniImg: bemolBSFMiniImg,
   CasePreview: {
@@ -17,7 +17,8 @@ export const caseBemolData: CaseInterface = {
     description: "Serviços Financeiros",
     img: caseBemolPreviewImg,
   },
-  contextTxt: "Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.",
+  contextTxt:
+    "Atuação abrangente em conta digital (Conta Bemol), com responsabilidade direta sobre o produto de empréstimos (Empréstimo Pessoal) — conduzindo todo o ciclo de design, desde pesquisas (etapa de Descoberta) à entrega e estratégia do acompanhamento de métricas pós lançamento.",
   summary: {
     color: "#FFFFFF",
     items: [
@@ -26,7 +27,8 @@ export const caseBemolData: CaseInterface = {
         href: "#chapter-1-1",
         isSpecial: false,
         readingTime: 3,
-        title: "Resgatando clientes no fluxo de empréstimo por notificações segmentadas",
+        title:
+          "Resgatando clientes no fluxo de empréstimo por notificações segmentadas",
         subtitle: "Apoio: Equipe de Marketing e equipe de Dados.",
       },
       {
@@ -41,7 +43,8 @@ export const caseBemolData: CaseInterface = {
         href: "#chapter-1-4",
         isSpecial: true,
         readingTime: 0.5,
-        title: "Escolha da data do vencimento das parcelas de empréstimo (prévia)",
+        title:
+          "Escolha da data do vencimento das parcelas de empréstimo (prévia)",
         specialNote: "Case exclusivo para apresentação pessoal)",
       },
     ],

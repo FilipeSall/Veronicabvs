@@ -65,22 +65,29 @@ function AppBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
             customCss={{ paddingTop: "40" }}
             title="CONTEXTO"
+            lineBreaks={1}
             paragraphs={[
               "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",
-              "**App Bemol:** Aplicativo voltado para compras online (e-commerce).",
-              "**Conta Bemol:** Destinado à gestão de serviços financeiros (conta digital)",
+              <>
+                <strong>App Bemol:</strong> Aplicativo voltado para compras
+                online (e-commerce);
+                <br />
+                <strong>Conta Bemol:</strong> Destinado à gestão de serviços
+                financeiros (conta digital).
+              </>,
               "O produto de **Empréstimo Pessoal** está disponível em ambos os apps, permitindo que os usuários contratem crédito de forma prática e digital",
             ]}
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
             title="DESAFIO E OPORTUNIDADE"
+            lineBreaks={1}
             paragraphs={[
               "Uma das **metas estratégicas** da empresa para o ano de 2024 era o aumento da base de contas Bemol ativas.",
               "Em **parceria** com a equipe de dados, constatamos uma **taxa muito baixa (1,8%)** de escolha da Conta Bemol como destino do crédito, mesmo entre usuários que já possuíam conta ativa no ecossistema (no último semestre)",
@@ -89,7 +96,7 @@ function AppBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
             title="PROCESSO"
             paragraphs={[
@@ -113,7 +120,7 @@ function AppBemol() {
           <ImageWrapper src={desingSystemImg} alt="design system" />
         </ContentBlock>
 
-        <ContentBlock customCss={{ gap: "80" }}>
+        <ContentBlock customCss={{ gap: "80", marginTop: "80px" }}>
           <TextContent
             title="NEGÓCIO X EXPERIÊNCIA"
             paragraphs={[
@@ -156,7 +163,7 @@ function AppBemol() {
       {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
       <Chapter id="chapter-2-2">
         <CaseTitleHeader
-          customCss={{ marginTop: "40px" }}
+          customCss={{ marginTop: "40" }}
           id={appBemolData.summary.items[1].id}
           title={appBemolData.summary.items[1].title}
           subtitle={appBemolData.summary.items[1].subtitle}
@@ -218,7 +225,7 @@ function AppBemol() {
 
         <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <TextContent
-            customCss={{ paragraphWidth: "75%" }}
+            customCss={{ paragraphWidth: "70%" }}
             title="PRÓXIMOS PASSOS"
             paragraphs={[
               "→ **Acompanhamento de métricas** pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",

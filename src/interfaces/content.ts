@@ -72,7 +72,7 @@ export interface CaseTitleHeaderProps {
   /** Subtítulo do cabeçalho */
   subtitle?: string | ReactNode;
   /** Variante do subtítulo */
-  subtitleVariant?: 'default' | 'paragraph';
+  subtitleVariant?: "default" | "paragraph";
   /** Se o subtítulo deve ser branco */
   subtitleWhite?: boolean;
   /** Classes CSS personalizadas */
@@ -91,4 +91,13 @@ export interface CardsEnumeradosInterface {
   title: string;
   /** Texto do card */
   text: string;
+}
+
+export interface InsightCardsProps {
+  /** Imagem do card */
+  img: string;
+  /** Texto do insight */
+  text: string;
+  /** Texto da imagm */
+  alt?: string;
 }

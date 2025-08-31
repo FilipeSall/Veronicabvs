@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: var(--center-margin);
+  width: 65%;
+  gap: 26px;
+}

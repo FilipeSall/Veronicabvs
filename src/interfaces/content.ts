@@ -101,3 +101,17 @@ export interface InsightCardsProps {
   /** Texto da imagm */
   alt?: string;
 }
+
+export interface SimpleVerticalTimelineProps {
+  /** Titulo do step da timeline */
+  title: string;
+  /** Texto da descrição que fica debaixo do title da timeline */
+  description: string;
+}
+
+export interface ProcessStep {
+  title: string;
+  lists: string[];
+}
+
+export type ProcessDataApp = ProcessStep[];

@@ -11,7 +11,11 @@ import melliuzLogo from "../../../assets/melliuz/Meliuz.svg";
 import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
-import { processDataApp, insightsCardsValue } from "./contentData";
+import {
+  processDataApp,
+  insightsCardsValue,
+  evidenciasTimelineData,
+} from "./contentData";
 import pinkArrow from "../../../assets/svgs/pinkArrow.svg";
 import InsightCardsGrid from "../components/content/InsightCards/InsightCardsGrid";
 

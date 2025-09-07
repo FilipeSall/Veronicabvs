@@ -1,7 +1,10 @@
-import { ProcessDataApp } from "../../../types/processData";
+import { ProcessDataApp } from "../../../interfaces/content";
 import ifood from "../../../assets/melliuz/ifood.webp";
 import next from "../../../assets/melliuz/next.webp";
-import { InsightCardsProps } from "../../../interfaces";
+import {
+  InsightCardsProps,
+  SimpleVerticalTimelineProps,
+} from "../../../interfaces";
 
 export const processDataApp: ProcessDataApp = [
   {
@@ -48,5 +51,23 @@ export const insightsCardsValue: InsightCardsProps[] = [
   {
     img: ifood,
     text: "Dentre as empresas analisadas, apenas o banco iFood oferece o compartilhamento da ação",
+  },
+];
+
+export const evidenciasTimelineData: SimpleVerticalTimelineProps[] = [
+  {
+    title: "Baby Boomers",
+    description:
+      "35% Já participaram de campanhas  de crowdfunding; 72% Fazem doações anuais; 21% Já utilizaram ferramentas online para doar (Meta).",
+  },
+  {
+    title: "Geração X",
+    description:
+      "45% Já participaram de campanhas  de crowdfunding; 31% São inspirados a doar por e mail;19% Já utilizaram ferramentas online para doar (Meta).",
+  },
+  {
+    title: "Millenials",
+    description:
+      "46% Já participaram de campanhas  de crowdfunding; 47% Já doaram pelo site de uma organização; 31% Já utilizaram ferramentas online para doar (Meta).",
   },
 ];

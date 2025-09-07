@@ -74,21 +74,3 @@ export const processDataApp = [
     lists: ["Acompanhamento de métricas de conversão"],
   },
 ];
-
-export const evidenciasTimelineData = [
-  {
-    title: "Baby Boomers",
-    description:
-      "35% Já participaram de campanhas  de crowdfunding; 72% Fazem doações anuais; 21% Já utilizaram ferramentas online para doar (Meta).",
-  },
-    {
-    title: "Geração X",
-    description:
-      "45% Já participaram de campanhas  de crowdfunding; 31% São inspirados a doar por e mail;19% Já utilizaram ferramentas online para doar (Meta).",
-  },
-    {
-    title: "Millenials",
-    description:
-      "46% Já participaram de campanhas  de crowdfunding; 47% Já doaram pelo site de uma organização; 31% Já utilizaram ferramentas online para doar (Meta).",
-  },
-];

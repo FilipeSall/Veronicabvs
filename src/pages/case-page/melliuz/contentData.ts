@@ -3,7 +3,7 @@ import ifood from "../../../assets/melliuz/ifood.webp";
 import next from "../../../assets/melliuz/next.webp";
 import {
   InsightCardsProps,
-  SimpleVerticalTimelineProps,
+  SimpleVerticalTimelineItem,
 } from "../../../interfaces";
 
 export const processDataApp: ProcessDataApp = [
@@ -54,7 +54,7 @@ export const insightsCardsValue: InsightCardsProps[] = [
   },
 ];
 
-export const evidenciasTimelineData: SimpleVerticalTimelineProps[] = [
+export const evidenciasTimelineData: SimpleVerticalTimelineItem[] = [
   {
     title: "Baby Boomers",
     description:

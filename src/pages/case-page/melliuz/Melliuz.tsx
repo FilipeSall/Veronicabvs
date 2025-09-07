@@ -18,6 +18,7 @@ import {
 } from "./contentData";
 import pinkArrow from "../../../assets/svgs/pinkArrow.svg";
 import InsightCardsGrid from "../components/content/InsightCards/InsightCardsGrid";
+import VerticalTimeline from "../components/content/VerticalTimeline/VerticalTimeline";
 
 function Melliuz() {
   return (
@@ -90,8 +91,9 @@ function Melliuz() {
       {/* 3.4 Descobertas e evidências */}
       <Chapter id="chapter-3-4">
         <CaseTitleHeader id="3.4" title="Descobertas e evidências" />
-        <ContentBlock customCss={{ marginTop: "20" }}>
+        <ContentBlock customCss={{ marginTop: "20", gap: "40" }}>
           <InsightCardsGrid items={insightsCardsValue} />
+          <VerticalTimeline items={evidenciasTimelineData} />
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}

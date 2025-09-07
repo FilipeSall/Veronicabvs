@@ -72,7 +72,7 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.3 Processo */}
-      <Chapter id="chapter-3-3">
+      <Chapter id="chapter-3-3" customCss={{ marginTop: "0" }}>
         <CaseTitleHeader id="3.3" title="Processo" />
         <ContentBlock>
           <TextContent
@@ -89,9 +89,13 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.4 Descobertas e evidências */}
-      <Chapter id="chapter-3-4">
-        <CaseTitleHeader id="3.4" title="Descobertas e evidências" />
-        <ContentBlock customCss={{ marginTop: "20", gap: "40" }}>
+      <Chapter id="chapter-3-4" customCss={{ marginTop: "0" }}>
+        <CaseTitleHeader
+          id="3.4"
+          title="Descobertas e evidências"
+          customCss={{ marginTop: "20" }}
+        />
+        <ContentBlock customCss={{ marginTop: "20" }}>
           <InsightCardsGrid items={insightsCardsValue} />
           <VerticalTimeline
             items={evidenciasTimelineData}
@@ -100,6 +104,9 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}
+      <Chapter id="chapter-3-5" customCss={{ marginTop: "0" }}>
+        <CaseTitleHeader id="3.5" title="Userflow — Entry point 1" />
+      </Chapter>
       {/* 3.6 Entrega de Valor */}
       {/* 3.7 Potenciais de impacto */}
       {/* 3.7 Potenciais de impacto */}

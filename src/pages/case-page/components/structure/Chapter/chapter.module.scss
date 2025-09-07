@@ -7,11 +7,11 @@
   align-items: center;
 }
 
-.chapter:nth-child(odd) {
+.chapter:nth-of-type(odd) {
   background-color: #0f0f0f;
 }
 
-.chapter:nth-child(even) {
+.chapter:nth-of-type(even) {
   background-color: #272727;
 }
 

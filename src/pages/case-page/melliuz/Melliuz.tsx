@@ -93,7 +93,10 @@ function Melliuz() {
         <CaseTitleHeader id="3.4" title="Descobertas e evidências" />
         <ContentBlock customCss={{ marginTop: "20", gap: "40" }}>
           <InsightCardsGrid items={insightsCardsValue} />
-          <VerticalTimeline items={evidenciasTimelineData} />
+          <VerticalTimeline
+            items={evidenciasTimelineData}
+            dotColor={melliuzData.bgColor}
+          />
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}

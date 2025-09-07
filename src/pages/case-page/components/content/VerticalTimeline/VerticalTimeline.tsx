@@ -1,13 +1,16 @@
 import { SimpleVerticalTimelineProps } from "../../../../../interfaces";
 import styles from "./verticaltimeline.module.scss";
 
-function VerticalTimeline({ items }: SimpleVerticalTimelineProps) {
+function VerticalTimeline({ items, dotColor = "#BBBBBB" }: SimpleVerticalTimelineProps) {
   return (
     <div className={styles.timelineWrapper}>
       {items.map((item, index) => (
         <div key={index} className={styles.timelineItem}>
           <div className={styles.dotColumn}>
-            <div className={styles.dot} />
+            <div 
+              className={styles.dot} 
+              style={{ backgroundColor: dotColor }}
+            />
             <div className={styles.dashedLine} />
           </div>
           <div className={styles.stepWrapper}>

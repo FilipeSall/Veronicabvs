@@ -112,6 +112,8 @@ export interface SimpleVerticalTimelineItem {
 export interface SimpleVerticalTimelineProps {
   /** Array de items da timeline */
   items: SimpleVerticalTimelineItem[];
+  /** Cor dos dots e traços (padrão: #BBBBBB) */
+  dotColor?: string;
 }
 
 export interface TimelineDotsProps {

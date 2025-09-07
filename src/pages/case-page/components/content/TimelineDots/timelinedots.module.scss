@@ -1,0 +1,30 @@
+.dotsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.dotWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+}
+
+.dashedLine {
+  width: 2px;
+  height: 120px;
+  border-left: 2px dashed #ffffff;
+  opacity: 0.7;
+  margin: 20px 0;
+}

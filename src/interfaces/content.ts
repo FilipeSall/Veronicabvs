@@ -114,6 +114,11 @@ export interface SimpleVerticalTimelineProps {
   items: SimpleVerticalTimelineItem[];
 }
 
+export interface TimelineDotsProps {
+  /** Número de itens para criar os pontos */
+  itemsCount: number;
+}
+
 export interface ProcessStep {
   title: string;
   lists: string[];

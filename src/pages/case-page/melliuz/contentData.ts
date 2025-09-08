@@ -5,6 +5,8 @@ import {
   InsightCardsProps,
   SimpleVerticalTimelineItem,
 } from "../../../interfaces";
+import phone1 from "../../../assets/melliuz/phone1.webp";
+import phone2 from "../../../assets/melliuz/phone2.webp";
 
 export const processDataApp: ProcessDataApp = [
   {
@@ -69,5 +71,16 @@ export const evidenciasTimelineData: SimpleVerticalTimelineItem[] = [
     title: "Millenials",
     description:
       "46% Já participaram de campanhas  de crowdfunding; 47% Já doaram pelo site de uma organização; 31% Já utilizaram ferramentas online para doar (Meta).",
+  },
+];
+
+export const entryPoint1Data = [
+  {
+    description: "Na tela de Extrato, acessa ícone de doação na parte superior",
+    image: phone1,
+  },
+  {
+    description: "Opta pelo botão sugestivo para doar 100 reais",
+    image: phone2,
   },
 ];

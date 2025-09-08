@@ -14,7 +14,9 @@
       "Bash(tsc --noEmit)",
       "mcp__ide__getDiagnostics",
       "Bash(npm install:*)",
-      "Bash(npm i:*)"
+      "Bash(npm i:*)",
+      "Bash(node:*)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

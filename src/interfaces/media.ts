@@ -29,3 +29,14 @@ export interface InfoImgInterface {
   /** Informação associada à imagem */
   info: string;
 }
+
+export type StepsFlowProps = {
+  img: string;
+  description: string;
+  alt?: string;
+};
+
+export interface StepsImgFlowProps {
+  steps: StepsFlowProps[];
+  color: string;
+}

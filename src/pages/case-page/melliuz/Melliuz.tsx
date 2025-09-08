@@ -19,6 +19,7 @@ import {
 import pinkArrow from "../../../assets/svgs/pinkArrow.svg";
 import InsightCardsGrid from "../components/content/InsightCards/InsightCardsGrid";
 import VerticalTimeline from "../components/content/VerticalTimeline/VerticalTimeline";
+import StepsImgFlow from "../components/media/StepsImgFlow/StepsImgFlow";
 
 function Melliuz() {
   return (
@@ -106,6 +107,9 @@ function Melliuz() {
       {/* 3.5 Userflow — Entry point 1 */}
       <Chapter id="chapter-3-5" customCss={{ marginTop: "0" }}>
         <CaseTitleHeader id="3.5" title="Userflow — Entry point 1" />
+        <ContentBlock>
+          <StepsImgFlow />
+        </ContentBlock>
       </Chapter>
       {/* 3.6 Entrega de Valor */}
       {/* 3.7 Potenciais de impacto */}

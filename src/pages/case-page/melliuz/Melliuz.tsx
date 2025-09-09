@@ -25,6 +25,7 @@ import StepsImgFlow from "../components/media/StepsImgFlow/StepsImgFlow";
 import ContentSection from "../components/structure/ContentSection/ContentSection";
 import CardsEnumerados from "../components/content/CardsEnumerados/CardsEnumerados";
 import CaseFooter from "../components/structure/CaseFooter/CaseFooter";
+import ImgWithSuspenseTxt from "../components/media/ImgWithSuspenseTxt/ImgWithSuspenseTxt";
 
 function Melliuz() {
   return (
@@ -152,6 +153,8 @@ function Melliuz() {
                 color={melliuzData.bgColor}
               />
             )}
+
+            <ImgWithSuspenseTxt />
           </ContentSection>
         </ContentBlock>
       </Chapter>

@@ -105,13 +105,16 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}
-      <Chapter id="chapter-3-5" customCss={{ marginTop: "0" }}>
+      <Chapter id="chapter-3-5">
         <CaseTitleHeader id="3.5" title="Userflow — Entry point 1" />
         <ContentBlock>
           <StepsImgFlow />
         </ContentBlock>
       </Chapter>
       {/* 3.6 Entrega de Valor */}
+      <Chapter id="chapter-3-6">
+        <CaseTitleHeader id="3.6" title="Entrega de Valor" />
+      </Chapter>
       {/* 3.7 Potenciais de impacto */}
       {/* 3.7 Potenciais de impacto */}
       {/* 3.8 Próximos passos */}

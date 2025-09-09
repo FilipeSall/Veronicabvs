@@ -125,21 +125,23 @@ function Melliuz() {
       {/* 3.6 Entrega de Valor */}
       <Chapter
         id="chapter-3-6"
-        customCss={{ paddingTop: "34", marginTop: "0", marginBottom: "40" }}
+        customCss={{ paddingTop: "34", marginBottom: "34" }}
       >
         <CaseTitleHeader id="3.6" title="Entrega de Valor" />
+
         <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
           <InsightCardsGrid
             items={entregaValorData}
             customCss={{
               gap: "40",
               itemGap: "40",
+              marginBottom: "24",
             }}
           />
         </ContentBlock>
       </Chapter>
       {/* 3.7 Potenciais de impacto */}
-      <Chapter id="chapter-3-7">
+      <Chapter id="chapter-3-7" customCss={{ marginTop: "24" }}>
         <CaseTitleHeader id="3.7" title="Potenciais de impacto" />
 
         <ContentBlock>

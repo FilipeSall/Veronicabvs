@@ -6,10 +6,12 @@ import styles from "./insightcardsgrid.module.scss";
 interface InsightCardsGridProps {
   /** Array de itens para criar múltiplos InsightCards */
   items: InsightCardsProps[];
-  /** CSS customizado para espaçamento */
+  /** CSS customizado para espaçamento e margem */
   customCss?: {
     itemGap?: string;
     gap?: string;
+    marginTop?: string;
+    marginBottom?: string;
   };
 }
 
@@ -41,7 +43,7 @@ interface InsightCardsGridProps {
  *
  * @param props - Propriedades do componente
  * @param props.items - Array de objetos InsightCardsProps contendo img, text e alt
- * @param props.customCss - CSS customizado para espaçamento (itemGap padrão: 26, gap padrão: 26)
+ * @param props.customCss - CSS customizado para espaçamento e margem (itemGap padrão: 26, gap padrão: 26, marginTop padrão: 0, marginBottom padrão: 0)
  *
  * @returns JSX.Element contendo os InsightCards organizados em grid com gap customizável
  */
@@ -49,6 +51,8 @@ function InsightCardsGrid({ items, customCss }: InsightCardsGridProps) {
   const defaultCustomCss = {
     itemGap: "26",
     gap: "26",
+    marginTop: "0",
+    marginBottom: "0",
     ...customCss
   };
 
@@ -56,7 +60,9 @@ function InsightCardsGrid({ items, customCss }: InsightCardsGridProps) {
     <div 
       className={styles.container} 
       style={{ 
-        gap: normalizeMeasures(defaultCustomCss.itemGap)
+        gap: normalizeMeasures(defaultCustomCss.itemGap),
+        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
       }}
     >
       {items.map((item, index) => (

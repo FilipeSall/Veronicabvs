@@ -159,7 +159,52 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.8 Próximos passos */}
+      <Chapter id="chapter-3-8" customCss={{ paddingTop: "34" }}>
+        <CaseTitleHeader id="3.8" title="Próximos passos" />
+        <ContentBlock customCss={{ marginBottom: "34" }}>
+          <TextContent
+            customCss={{ paragraphWidth: "100%", titleGap: "8" }}
+            title="TESTES E VALIDAÇÃO"
+            paragraphs={[
+              "→ Realizar testes de usabilidade para avaliar a compreensão e efetividade dos entry points;",
+              "→ Testar diferentes versões do story pré-pronto para entender qual formato gera mais compartilhamentos. ",
+            ]}
+            lineBreaks={0}
+          />
 
+          <TextContent
+            customCss={{ paragraphWidth: "100%", titleGap: "8" }}
+            title="OTIMIZAÇÃO DO STORY PRÉ-PRONTO"
+            paragraphs={[
+              "→ Explorar personalizações, como nome da instituição e valor doado, para aumentar o engajamento;",
+              "→ Incluir elementos de gamificação (badges, contadores de impacto) para incentivar novas doações. ",
+            ]}
+            lineBreaks={0}
+          />
+
+          <TextContent
+            customCss={{ paragraphWidth: "100%", titleGap: "8" }}
+            title="PLANO DE ACOMPANHAMENTO PÓS-LANÇAMENTO"
+            paragraphs={[
+              "→ Monitorar KPIs como taxa de conversão da funcionalidade;",
+              "→ Taxa de compartilhamento do story e (impacto no alcance orgânico); ",
+              "→ Analisar dados acerca do valor das doações e para quais instituições parceiras estão sendo feitas.",
+            ]}
+            lineBreaks={0}
+          />
+
+          <TextContent
+            customCss={{ paragraphWidth: "100%", titleGap: "8" }}
+            title="EXPANSÃO DA FUNCIONALIDADE"
+            paragraphs={[
+              "→ Explorar novas formas de incentivar doações recorrentes, como um programa de fidelidade para doadores frequentes;",
+              "→ Criar campanhas sazonais de incentivo à doação (ex.: desafios, metas coletivas);",
+              "→ Novos formatos de CTA em contextos estratégicos (para potencializar ainda mais a conversão).",
+            ]}
+            lineBreaks={0}
+          />
+        </ContentBlock>
+      </Chapter>
       {/*FOOTER*/}
       <CaseFooter targetId="header-melliuz" arrowColor="rosa" />
     </PageWrapper>

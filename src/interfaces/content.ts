@@ -14,6 +14,7 @@ export interface TextContentProps {
     paddingTop?: string;
     paddingBottom?: string;
     paragraphWidth?: string;
+    titleGap?: string;
   };
 }
 

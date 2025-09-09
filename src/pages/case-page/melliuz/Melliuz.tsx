@@ -26,8 +26,11 @@ import ContentSection from "../components/structure/ContentSection/ContentSectio
 import CardsEnumerados from "../components/content/CardsEnumerados/CardsEnumerados";
 import CaseFooter from "../components/structure/CaseFooter/CaseFooter";
 import ImgWithSuspenseTxt from "../components/media/ImgWithSuspenseTxt/ImgWithSuspenseTxt";
+import { useScrollToElement } from "../../../hooks/useScrollToElement";
 
 function Melliuz() {
+  useScrollToElement("header-melliuz", { smooth: false });
+
   return (
     <PageWrapper>
       <PageHeader

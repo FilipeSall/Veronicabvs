@@ -46,6 +46,8 @@ export interface ChapterProps {
   customCss?: {
     marginTop?: string;
     marginBottom?: string;
+    paddingTop?: string;
+    paddingLeft?: string;
   };
 }
 

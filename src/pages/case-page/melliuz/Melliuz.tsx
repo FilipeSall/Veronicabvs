@@ -51,7 +51,7 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.2 Desafio */}
-      <Chapter id="chapter-3-2">
+      <Chapter id="chapter-3-2" customCss={{ paddingTop: "34" }}>
         <CaseTitleHeader id="3.2" title="Desafio" />
         <ContentBlock>
           <TextContent
@@ -73,7 +73,10 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.3 Processo */}
-      <Chapter id="chapter-3-3" customCss={{ marginTop: "0" }}>
+      <Chapter
+        id="chapter-3-3"
+        customCss={{ marginTop: "0", paddingTop: "34" }}
+      >
         <CaseTitleHeader id="3.3" title="Processo" />
         <ContentBlock>
           <TextContent
@@ -90,7 +93,10 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.4 Descobertas e evidências */}
-      <Chapter id="chapter-3-4" customCss={{ marginTop: "0" }}>
+      <Chapter
+        id="chapter-3-4"
+        customCss={{ marginTop: "0", paddingTop: "34" }}
+      >
         <CaseTitleHeader
           id="3.4"
           title="Descobertas e evidências"
@@ -105,14 +111,20 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}
-      <Chapter id="chapter-3-5">
+      <Chapter
+        id="chapter-3-5"
+        customCss={{ paddingTop: "34", marginTop: "0" }}
+      >
         <CaseTitleHeader id="3.5" title="Userflow — Entry point 1" />
         <ContentBlock>
           <StepsImgFlow />
         </ContentBlock>
       </Chapter>
       {/* 3.6 Entrega de Valor */}
-      <Chapter id="chapter-3-6">
+      <Chapter
+        id="chapter-3-6"
+        customCss={{ paddingTop: "34", marginTop: "0" }}
+      >
         <CaseTitleHeader id="3.6" title="Entrega de Valor" />
       </Chapter>
       {/* 3.7 Potenciais de impacto */}

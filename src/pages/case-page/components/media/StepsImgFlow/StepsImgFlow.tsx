@@ -23,6 +23,8 @@ function StepsImgFlow() {
       svgContainerStyle={{
         pointerEvents: "none",
       }}
+      endMarker={false}
+      lineStyle="curve"
     >
       <div className={styles.mainWrapper}>
         <div className={styles.container}>

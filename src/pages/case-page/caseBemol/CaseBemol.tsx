@@ -157,7 +157,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.2 Outras entregas*/}
-      <Chapter id="chapter-1-2">
+      <Chapter id="chapter-1-2" customCss={{paddingTop:"20"}}>
         <CaseTitleHeader
           id="1.2"
           title="Outras entregas"
@@ -187,7 +187,7 @@ function CaseBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ marginBottom: "40" }}>
           <ContentSection title="ENTREGA DE VALOR">
             {Values && <CardsEnumerados cards={Values} color="#4C31E0" />}
           </ContentSection>

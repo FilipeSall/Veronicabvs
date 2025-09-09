@@ -102,6 +102,10 @@ export interface InsightCardsProps {
   text: string;
   /** Texto da imagm */
   alt?: string;
+  /** Título opcional do card */
+  title?: string;
+  /** Gap entre imagem e texto */
+  gap?: string;
 }
 
 export interface SimpleVerticalTimelineItem {

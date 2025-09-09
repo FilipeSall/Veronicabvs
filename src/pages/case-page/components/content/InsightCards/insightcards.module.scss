@@ -4,5 +4,48 @@
   max-width: var(--max-width);
   margin: var(--center-margin);
   width: 65%;
-  gap: 26px;
+}
+
+.img {
+  min-height: 56px;
+  min-width: 56px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    font-style: "inter";
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  gap: 8px;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: "exo";
+  }
+}
+
+.bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  flex-shrink: 0;
 }

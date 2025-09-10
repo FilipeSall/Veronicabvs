@@ -7,10 +7,35 @@
 .mainImg {
   width: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
 }
 
 .optionalImg {
   position: absolute;
   top: 0;
   right: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageHidden {
+  opacity: 0;
+  position: absolute;
+}
+
+.imageLoaded {
+  opacity: 1;
+  position: relative;
+}
+
+.mainImgSkeleton {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+.optionalImgSkeleton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px !important;
+  height: 60px !important;
 }

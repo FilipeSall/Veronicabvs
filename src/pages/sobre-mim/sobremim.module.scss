@@ -1,305 +1,322 @@
 .sobremimContainer {
-    height: 85vh;
-    display: flex;
-    gap: 56px;
-    color: var(--textColor);
+  height: 85vh;
+  display: flex;
+  gap: 56px;
+  color: var(--textColor);
 }
 
 .imgSection {
-    animation: fadeInLeft 0.6s ease-out;
-    position: relative;
-    min-width: 400px;
-    min-height: 600px;
+  animation: fadeInLeft 0.6s ease-out;
+  position: relative;
+  min-width: 400px;
+  min-height: 600px;
 }
 
 .img {
-    object-fit: cover;
-    min-width: 400px;
-    min-height: 600px;
-    max-height: 100%;
-    transition: opacity 0.3s ease;
+  object-fit: cover;
+  min-width: 400px;
+  min-height: 600px;
+  max-height: 100%;
+  transition: opacity 0.3s ease;
 }
 
 .imageHidden {
-    opacity: 0;
-    position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 .imageLoaded {
-    opacity: 1;
-    position: relative;
+  opacity: 1;
+  position: relative;
 }
 
 .imageSkeleton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .contentSection {
-    flex: 1;
-    max-width: 65%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    height: 100%;
+  flex: 1;
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
 }
 
 .textWrapper {
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-    width: 70%;
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  width: 70%;
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
 }
 
 .title {
-    font-size: 40px;
+  font-size: 40px;
 }
 
-.title>span {
-    color: var(--fadeTextColor);
+.title > span {
+  color: var(--fadeTextColor);
 }
 
 .para {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-.para>span {
-    font-weight: bold;
+.para > span {
+  font-weight: bold;
 }
 
 .paraConversar {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .animatedItem {
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
 .ferramentasSection {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-    animation-delay: 0.6s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .ferramentasWrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 840px) {
     width: 100%;
-    position: relative;
-    overflow: hidden;
+  }
 
-    @media (max-width: 840px) {
-        width: 100%;
-    }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+  }
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        z-index: 2;
-    }
+  &::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--backgroundColor) 0%,
+      transparent 100%
+    );
+  }
 
-    &::before {
-        left: 0;
-        background: linear-gradient(to right, var(--backgroundColor) 0%, transparent 100%);
-    }
-
-    &::after {
-        right: 0;
-        background: linear-gradient(to left, var(--backgroundColor) 0%, transparent 100%);
-    }
+  &::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--backgroundColor) 0%,
+      transparent 100%
+    );
+  }
 }
 
 .ferramentasInner {
-    display: inline-flex;
-    gap: 30px;
-    align-items: center;
-    width: max-content;
-    animation: scrollTools 15s linear infinite;
-    transition: all 0.6s ease;
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  width: max-content;
+  animation: scrollTools 15s linear infinite;
+  transition: all 0.6s ease;
 }
 
 .empresasSection {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-    animation-delay: 0.6s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .empresasWrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        z-index: 2;
-    }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+  }
 
-    &::before {
-        left: 0;
-        background: linear-gradient(to right, var(--backgroundColor) 0%, transparent 100%);
-    }
+  &::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--backgroundColor) 0%,
+      transparent 100%
+    );
+  }
 
-    &::after {
-        right: 0;
-        background: linear-gradient(to left, var(--backgroundColor) 0%, transparent 100%);
-    }
+  &::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--backgroundColor) 0%,
+      transparent 100%
+    );
+  }
 
-    @media (max-width: 768px) {
-        flex-wrap: nowrap;
-        gap: 0;
-    }
+  @media (max-width: 768px) {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
 }
 
 .empresasInner {
-    display: inline-flex;
-    align-items: center;
-    width: max-content;
-    animation: scrollEmpresas 20s linear infinite;
-    gap: 25px;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollEmpresas 20s linear infinite;
+  gap: 25px;
 }
 
 .empresasImg {
-    max-width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
 .textWrapperContainer {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-left: 8px;
-    opacity: 0;
-    animation: fadeIn 0.6s ease-out forwards;
-    animation-delay: 0.6s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: 0.6s;
 }
 
 .curriculoLink {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
-    color: #F3DA8B;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  color: #f3da8b;
 
-    .newWindowBtn {
-        filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(522%) hue-rotate(8deg) brightness(102%) contrast(96%);
-    }
+  .newWindowBtn {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(522%)
+      hue-rotate(8deg) brightness(102%) contrast(96%);
+  }
 
-    // &:hover {
-    //     color: #0000FF;
+  // &:hover {
+  //     color: #0000FF;
 
-    //     .newWindowBtn {
-    //         filter: brightness(0) saturate(100%) invert(9%) sepia(100%) saturate(7391%) hue-rotate(248deg) brightness(105%) contrast(145%);
-    //     }
-    // }
+  //     .newWindowBtn {
+  //         filter: brightness(0) saturate(100%) invert(9%) sepia(100%) saturate(7391%) hue-rotate(248deg) brightness(105%) contrast(145%);
+  //     }
+  // }
 }
 
 .newWindowBtn {
-    cursor: pointer;
-    background-color: inherit;
-    border: none;
-    width: 20px;
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  width: 20px;
 }
 
 .curriculoContainer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .bulletPoint {
-    font-size: 30px;
-    line-height: 1;
-    color: var(--textColor);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--textColor);
 }
 
 .bulletPointCurriculo {
-    color: #F3DA8B;
+  color: #f3da8b;
 }
 
 @keyframes scrollTools {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(calc(-50% - 15px));
-    }
+  to {
+    transform: translateX(calc(-50% - 15px));
+  }
 }
 
 @keyframes scrollEmpresas {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(calc(-50% - 20px));
-    }
+  to {
+    transform: translateX(calc(-50% - 20px));
+  }
 }
 
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }

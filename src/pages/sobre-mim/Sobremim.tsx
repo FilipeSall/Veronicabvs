@@ -6,13 +6,32 @@ import { FerramentaInterface } from '../../interfaces/components';
 import empresasImg from '../../assets/EMPRESAS.webp'
 import newWindowIcon from '../../assets/svgs/new-window.svg';
 import pdfCurriculo from '../../assets/pdfs/curriculo.pdf';
+import { useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 function Sobremim() {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     return (
         <main className={styles.sobremimContainer}>
             {/* imagem*/}
             <section className={styles.imgSection}>
-                <img src={veronicaImg} className={styles.img} alt='Foto da Verônica de perfil cortada pela metade. Coloração preto e branca.' />
+                {!imageLoaded && (
+                    <Skeleton 
+                        height="100%" 
+                        width="100%" 
+                        className={styles.imageSkeleton}
+                        baseColor="#f0f0f0"
+                        highlightColor="#e0e0e0"
+                    />
+                )}
+                <img 
+                    src={veronicaImg} 
+                    className={`${styles.img} ${imageLoaded ? styles.imageLoaded : styles.imageHidden}`}
+                    alt='Foto da Verônica de perfil cortada pela metade. Coloração preto e branca.' 
+                    onLoad={() => setImageLoaded(true)}
+                />
             </section>
             {/* Seção do texto*/}
             <section className={styles.contentSection}>

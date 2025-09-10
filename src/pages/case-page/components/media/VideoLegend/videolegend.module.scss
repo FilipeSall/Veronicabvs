@@ -4,12 +4,10 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  position: relative;
 }
 
 .videoContainer video {
   width: 65%;
-  transition: opacity 0.3s ease;
 }
 
 .videoContainer p {
@@ -18,19 +16,4 @@
   color: #bbbbbb;
   font-style: italic;
   font-size: 14px;
-}
-
-.videoHidden {
-  opacity: 0;
-  position: absolute;
-}
-
-.videoLoaded {
-  opacity: 1;
-  position: relative;
-}
-
-.videoSkeleton {
-  width: 65% !important;
-  height: 300px !important;
 }

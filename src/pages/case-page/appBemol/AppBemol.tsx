@@ -23,223 +23,223 @@ import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
 
 function AppBemol() {
-  const totalReading = appBemolData.summary.items
-    .filter((item) => item.readingTime != null)
-    .reduce(
-      (acc: number, item: SummaryNavInterface) => acc + item.readingTime!,
-      0
-    );
+    const totalReading = appBemolData.summary.items
+        .filter((item) => item.readingTime != null)
+        .reduce(
+            (acc: number, item: SummaryNavInterface) => acc + item.readingTime!,
+            0
+        );
 
-  useScrollToElement("header-app-bemol", { smooth: false });
-  return (
-    <PageWrapper>
-      <PageHeader
-        bgColor={appBemolData.bgColor}
-        contextTxt={
-          appBemolData.contextTxt ||
-          "Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."
-        }
-        headerId="header-app-bemol"
-        tools={appBemolData.tools}
-      />
-
-      <Summary
-        items={appBemolData.summary.items}
-        bg={appBemolData.bgColor}
-        color={appBemolData.summary.color}
-        totalReading={totalReading}
-      />
-
-      {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}
-      <Chapter id="chapter-2-1">
-        <CaseTitleHeader
-          id={appBemolData.summary.items[0].id}
-          title={appBemolData.summary.items[0].title}
-          subtitle={appBemolData.summary.items[0].subtitle}
-        />
-
-        <ContentBlock>
-          <VideoLegend
-            src={videoAutocoplete}
-            legend="Solução: Reconhecimento de cliente com Conta Bemol durante o processo de contratação de empréstimo por preenchimento inteligente."
-          />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <TextContent
-            customCss={{ paddingTop: "40" }}
-            title="CONTEXTO"
-            lineBreaks={1}
-            paragraphs={[
-              "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",
-              <>
-                <strong>App Bemol:</strong> Aplicativo voltado para compras
-                online (e-commerce);
-                <br />
-                <strong>Conta Bemol:</strong> Destinado à gestão de serviços
-                financeiros (conta digital).
-              </>,
-              "O produto de **Empréstimo Pessoal** está disponível em ambos os apps, permitindo que os usuários contratem crédito de forma prática e digital",
-            ]}
-          />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <TextContent
-            title="DESAFIO E OPORTUNIDADE"
-            lineBreaks={1}
-            paragraphs={[
-              "Uma das **metas estratégicas** da empresa para o ano de 2024 era o aumento da base de contas Bemol ativas.",
-              "Em **parceria** com a equipe de dados, constatamos uma **taxa muito baixa (1,8%)** de escolha da Conta Bemol como destino do crédito, mesmo entre usuários que já possuíam conta ativa no ecossistema (no último semestre)",
-              "A situação revelou uma **oportunidade** de atuação com foco em **incentivar o cliente** com conta ativa a escolher a Conta Bemol como destino do crédito, em vez de contas de terceiros.",
-            ]}
-          />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <TextContent
-            title="PROCESSO"
-            paragraphs={[
-              "A solução foi desenvolvida seguindo o modelo **Double Diamond adaptado ao Data-Driven Design**, que inclui uma fase inicial de planejamento estratégico e uma final de acompanhamento contínuo.",
-            ]}
-          />
-          <ProcessFlowContainer
-            arrowColored={redArrow}
-            color="#E94545"
-            lists={processData}
-          />
-        </ContentBlock>
-
-        <ContentBlock>
-          <TextContent
-            title="DESIGN SYSTEM"
-            paragraphs={[
-              "Contribuí para a evolução do Design System com a **documentação técnica** e adaptação do componente Datepicker, originalmente do **Material 3 (Google)**, para a identidade da marca.",
-            ]}
-          />
-          <ImageWrapper src={desingSystemImg} alt="design system" />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ gap: "80", marginTop: "80px" }}>
-          <TextContent
-            title="NEGÓCIO X EXPERIÊNCIA"
-            paragraphs={[
-              "Elaborei duas abordagens para o componente: uma com foco em conversão direta, favorecendo objetivos de **negócio (Business First)**, e outra com uma comunicação mais fluida e informativa, priorizando a **experiência do usuário (Experience First)**.",
-              "Apresentei ambas aos stakeholders e, após alinhamento, seguimos com a opção mais alinhada aos objetivos de negócio (Opção 1), embora a outra solução oferecesse uma experiência mais completa para o usuário.",
-            ]}
-          />
-          <NegocioExperiencia />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "80" }}>
-          <TextContent
-            title="PLANO DE ACOMPANHAMENTO"
-            paragraphs={[
-              "Para acompanhar a evolução e impacto da solução no negócio, elaborei um plano de monitoramento mensal, analisando KPIs:",
-              <SimpleList
-                textColor="strong"
-                items={[
-                  "**Taxa de adesão** à Conta Bemol",
-                  "**Conversão** no fluxo de contratação",
-                  "**Fricção** no processo de reconhecimento",
-                  "**Feedback qualitativo** dos usuários (via pesquisas contínuas)",
-                ]}
-              />,
-            ]}
-          />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "80" }}>
-          <TextContent
-            title="MÉTRICAS E MELHORIAS"
-            paragraphs={[
-              "Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:",
-              "A escolha da Conta Bemol como destino do crédito contratado **aumentou de 1,8% para 14,6%** nas primeiras semanas após a implementação.",
-            ]}
-          />
-        </ContentBlock>
-      </Chapter>
-
-      {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
-      <Chapter id="chapter-2-2">
-        <CaseTitleHeader
-          customCss={{ marginTop: "40" }}
-          id={appBemolData.summary.items[1].id}
-          title={appBemolData.summary.items[1].title}
-          subtitle={appBemolData.summary.items[1].subtitle}
-        />
-
-        <ContentBlock>
-          <TextContent
-            title="DIAGNÓSTICO"
-            paragraphs={[
-              "Identificação de **pontos de dor** nas telas originais, como:",
-              <SimpleList
-                items={[
-                  <>
-                    <span>Experiência fragmentada</span> e pouco intuitiva
-                  </>,
-                  <>
-                    <span>Falta de clareza</span> na exibição das informações
-                    (impactando a confiança do usuário)
-                  </>,
-                  <>
-                    <span>Etapas desnecessárias</span> ou confusas (que levavam
-                    ao abandono do fluxo)
-                  </>,
-                  <>
-                    <span>Barreiras na finalização</span> da contratação
-                    (potencialmente motivando a queda na taxa de conversão)
-                  </>,
-                ]}
-              />,
-            ]}
-          />
-        </ContentBlock>
-
-        <ContentBlock customCss={{ marginTop: "80", marginBottom: "80" }}>
-          <ContentSection title="ANTES X DEPOIS">
-            <Carrossel
-              slides={carrosselData}
-              title="Tela inicial do fluxo de contratação"
-              dotColor="#F23434"
+    useScrollToElement("header-app-bemol", { smooth: false });
+    return (
+        <PageWrapper>
+            <PageHeader
+                bgColor={appBemolData.bgColor}
+                contextTxt={
+                    appBemolData.contextTxt ||
+                    "Atuação aplicativo de e-commerce (App Bemol), do mesmo ecossistema da empresa da BSF, que também abrangendo alguns dos serviços financeiros da empresa."
+                }
+                headerId="header-app-bemol"
+                tools={appBemolData.tools}
             />
-          </ContentSection>
-        </ContentBlock>
 
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <TextContent
-            title="DESAFIO E OBJETIVO"
-            paragraphs={[
-              "O redesenho envolveu a responsabilidade de **otimizar o fluxo** do produto mais rentável da empresa.",
-              "O objetivo era **equilibrar eficiência do negócio e experiência do usuário**, garantindo que as mudanças impulsionassem tanto a conversão quanto a satisfação",
-            ]}
-          />
-        </ContentBlock>
+            <Summary
+                items={appBemolData.summary.items}
+                bg={appBemolData.bgColor}
+                color={appBemolData.summary.color}
+                totalReading={totalReading}
+            />
 
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <ContentSection title="MELHORIAS">
-            <CardsEnumerados cards={cardsData} color="#F23434" />
-          </ContentSection>
-        </ContentBlock>
+            {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}
+            <Chapter id="chapter-2-1">
+                <CaseTitleHeader
+                    id={appBemolData.summary.items[0].id}
+                    title={appBemolData.summary.items[0].title}
+                    subtitle={appBemolData.summary.items[0].subtitle}
+                />
 
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
-          <TextContent
-            customCss={{ paragraphWidth: "70%" }}
-            title="PRÓXIMOS PASSOS"
-            paragraphs={[
-              "→ **Acompanhamento de métricas** pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",
-              "→ **Testes de usabilidade** com usuários reais: Para validar as melhorias e identificar novas oportunidades.",
-            ]}
-            lineBreaks={1}
-          />
-        </ContentBlock>
-      </Chapter>
+                <ContentBlock>
+                    <VideoLegend
+                        src={videoAutocoplete}
+                        legend="Solução: Reconhecimento de cliente com Conta Bemol durante o processo de contratação de empréstimo por preenchimento inteligente."
+                    />
+                </ContentBlock>
 
-      {/*FOOTER*/}
-      <CaseFooter targetId="header-app-bemol" arrowColor="vermelha" />
-    </PageWrapper>
-  );
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <TextContent
+                        customCss={{ paddingTop: "40" }}
+                        title="CONTEXTO"
+                        lineBreaks={1}
+                        paragraphs={[
+                            "A Bemol é uma empresa amazonense com forte atuação nos setores de varejo **(BSA)** e serviços financeiros **(BSF)**, oferecendo uma experiência integrada por meio de dois aplicativos principais:",
+                            <>
+                                <strong>App Bemol:</strong> Aplicativo voltado para compras
+                                online (e-commerce);
+                                <br />
+                                <strong>Conta Bemol:</strong> Destinado à gestão de serviços
+                                financeiros (conta digital).
+                            </>,
+                            "O produto de **Empréstimo Pessoal** está disponível em ambos os apps, permitindo que os usuários contratem crédito de forma prática e digital",
+                        ]}
+                    />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <TextContent
+                        title="DESAFIO E OPORTUNIDADE"
+                        lineBreaks={1}
+                        paragraphs={[
+                            "Uma das **metas estratégicas** da empresa para o ano de 2024 era o aumento da base de contas Bemol ativas.",
+                            "Em **parceria** com a equipe de dados, constatamos uma **taxa muito baixa (1,8%)** de escolha da Conta Bemol como destino do crédito, mesmo entre usuários que já possuíam conta ativa no ecossistema (no último semestre)",
+                            "A situação revelou uma **oportunidade** de atuação com foco em **incentivar o cliente** com conta ativa a escolher a Conta Bemol como destino do crédito, em vez de contas de terceiros.",
+                        ]}
+                    />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <TextContent
+                        title="PROCESSO"
+                        paragraphs={[
+                            "A solução foi desenvolvida seguindo o modelo **Double Diamond adaptado ao Data-Driven Design**, que inclui uma fase inicial de planejamento estratégico e uma final de acompanhamento contínuo.",
+                        ]}
+                    />
+                    <ProcessFlowContainer
+                        arrowColored={redArrow}
+                        color="#E94545"
+                        lists={processData}
+                    />
+                </ContentBlock>
+
+                <ContentBlock>
+                    <TextContent
+                        title="DESIGN SYSTEM"
+                        paragraphs={[
+                            "Contribuí para a evolução do Design System com a **documentação técnica** e adaptação do componente Datepicker, originalmente do **Material 3 (Google)**, para a identidade da marca.",
+                        ]}
+                    />
+                    <ImageWrapper src={desingSystemImg} alt="design system" />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ gap: "80", marginTop: "80px" }}>
+                    <TextContent
+                        title="NEGÓCIO X EXPERIÊNCIA"
+                        paragraphs={[
+                            "Elaborei duas abordagens para o componente: uma com foco em conversão direta, favorecendo objetivos de **negócio (Business First)**, e outra com uma comunicação mais fluida e informativa, priorizando a **experiência do usuário (Experience First)**.",
+                            "Apresentei ambas aos stakeholders e, após alinhamento, seguimos com a opção mais alinhada aos objetivos de negócio (Opção 1), embora a outra solução oferecesse uma experiência mais completa para o usuário.",
+                        ]}
+                    />
+                    <NegocioExperiencia />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "80" }}>
+                    <TextContent
+                        title="PLANO DE ACOMPANHAMENTO"
+                        paragraphs={[
+                            "Para acompanhar a evolução e impacto da solução no negócio, elaborei um plano de monitoramento mensal, analisando KPIs:",
+                            <SimpleList
+                                textColor="strong"
+                                items={[
+                                    "**Taxa de adesão** à Conta Bemol",
+                                    "**Conversão** no fluxo de contratação",
+                                    "**Fricção** no processo de reconhecimento",
+                                    "**Feedback qualitativo** dos usuários (via pesquisas contínuas)",
+                                ]}
+                            />,
+                        ]}
+                    />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "80" }}>
+                    <TextContent
+                        title="MÉTRICAS E MELHORIAS"
+                        paragraphs={[
+                            "Após o lançamento, acompanhamos os KPI's para medir o sucesso da solução implementada em relação aos objetivos do negócio e da experiência do usuário. Destaque para:",
+                            "A escolha da Conta Bemol como destino do crédito contratado **aumentou de 1,8% para 14,6%** nas primeiras semanas após a implementação.",
+                        ]}
+                    />
+                </ContentBlock>
+            </Chapter>
+
+            {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
+            <Chapter id="chapter-2-2">
+                <CaseTitleHeader
+                    customCss={{ marginTop: "40" }}
+                    id={appBemolData.summary.items[1].id}
+                    title={appBemolData.summary.items[1].title}
+                    subtitle={appBemolData.summary.items[1].subtitle}
+                />
+
+                <ContentBlock>
+                    <TextContent
+                        title="DIAGNÓSTICO"
+                        paragraphs={[
+                            "Identificação de **pontos de dor** nas telas originais, como:",
+                            <SimpleList
+                                items={[
+                                    <>
+                                        <span>Experiência fragmentada</span> e pouco intuitiva
+                                    </>,
+                                    <>
+                                        <span>Falta de clareza</span> na exibição das informações
+                                        (impactando a confiança do usuário)
+                                    </>,
+                                    <>
+                                        <span>Etapas desnecessárias</span> ou confusas (que levavam
+                                        ao abandono do fluxo)
+                                    </>,
+                                    <>
+                                        <span>Barreiras na finalização</span> da contratação
+                                        (potencialmente motivando a queda na taxa de conversão)
+                                    </>,
+                                ]}
+                            />,
+                        ]}
+                    />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "80", marginBottom: "80" }}>
+                    <ContentSection title="ANTES X DEPOIS">
+                        <Carrossel
+                            slides={carrosselData}
+                            title="Tela inicial do fluxo de contratação"
+                            dotColor="#F23434"
+                        />
+                    </ContentSection>
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <TextContent
+                        title="DESAFIO E OBJETIVO"
+                        paragraphs={[
+                            "O redesenho envolveu a responsabilidade de **otimizar o fluxo** do produto mais rentável da empresa.",
+                            "O objetivo era **equilibrar eficiência do negócio e experiência do usuário**, garantindo que as mudanças impulsionassem tanto a conversão quanto a satisfação",
+                        ]}
+                    />
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <ContentSection title="MELHORIAS">
+                        <CardsEnumerados cards={cardsData} color="#F23434" />
+                    </ContentSection>
+                </ContentBlock>
+
+                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                    <TextContent
+                        customCss={{ paragraphWidth: "70%" }}
+                        title="PRÓXIMOS PASSOS"
+                        paragraphs={[
+                            "→ **Acompanhamento de métricas** pós-lançamento: Como taxa de conversão, tempo médio no fluxo e taxa de abandono.",
+                            "→ **Testes de usabilidade** com usuários reais: Para validar as melhorias e identificar novas oportunidades.",
+                        ]}
+                        lineBreaks={1}
+                    />
+                </ContentBlock>
+            </Chapter>
+
+            {/*FOOTER*/}
+            <CaseFooter targetId="header-app-bemol" arrowColor="vermelha" />
+        </PageWrapper>
+    );
 }
 
 export default AppBemol;

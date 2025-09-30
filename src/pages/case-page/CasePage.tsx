@@ -9,11 +9,14 @@ import Melliuz from "./melliuz/Melliuz";
 import { caseBemolData } from "./caseBemol/data";
 import { appBemolData } from "./appBemol/data";
 import { melliuzData } from "./melliuz/data";
+import { safraData } from "./safra/data";
+import Safra from "./safra/Safra";
 
 const casesMap: { [key: number]: CaseInterface } = {
   1: caseBemolData,
   2: appBemolData,
   3: melliuzData,
+  4: safraData,
 };
 
 function CasePage() {
@@ -30,7 +33,7 @@ function CasePage() {
   }, [id]);
 
   if (!caseData) {
-    return <div>Carregando...</div>;
+    return <div style={{ color: "whitesmoke" }}>Carregando...</div>;
   }
 
   return (
@@ -46,6 +49,7 @@ function CasePage() {
         {caseData.id === 1 && <CaseBemol />}
         {caseData.id === 2 && <AppBemol />}
         {caseData.id === 3 && <Melliuz />}
+        {caseData.id === 4 && <Safra />}
       </section>
     </main>
   );

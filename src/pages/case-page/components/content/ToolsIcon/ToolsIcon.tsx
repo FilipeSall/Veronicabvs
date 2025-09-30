@@ -8,6 +8,8 @@ import adobeIco from "../../../../../assets/ferramentas/adobe.webp";
 import jetBrainsico from "../../../../../assets/ferramentas/jetBrains.webp";
 import logoAzulIco from "../../../../../assets/ferramentas/logoAzul.webp";
 import dbIco from "../../../../../assets/ferramentas/db.webp";
+import miroIco from "../../../../../assets/ferramentas/miro.webp";
+import notionIco from "../../../../../assets/ferramentas/notion.webp";
 
 /**
  * ToolsIcon - Componente para exibir ícones de ferramentas
@@ -37,6 +39,8 @@ import dbIco from "../../../../../assets/ferramentas/db.webp";
  * <ToolsIcon value="jetBrains" /> // JetBrains
  * <ToolsIcon value="logoAzul" />  // Logo Azul
  * <ToolsIcon value="db" />        // Database
+ * <ToolsIcon value="miro" />      // Miro
+ * <ToolsIcon value="notion" />    // Notion
  * ```
  * 
  * @param value - Nome da ferramenta (case-insensitive)
@@ -52,6 +56,8 @@ function ToolsIcon({ value }: ToolsIconInterface) {
       jetBrains: jetBrainsico,
       logoAzul: logoAzulIco,
       db: dbIco,
+      miro: miroIco,
+      notion: notionIco,
     };
 
     return iconMap[iconValue.toLowerCase()];

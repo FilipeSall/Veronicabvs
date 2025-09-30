@@ -34,7 +34,7 @@ export const melliuzData: CaseInterface = {
         id: "3.2",
         href: "#chapter-3-2",
         isSpecial: false,
-        title: "Resultado",
+        title: "Desafio",
       },
       {
         id: "3.3",

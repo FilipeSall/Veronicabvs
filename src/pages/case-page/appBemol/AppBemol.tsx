@@ -198,7 +198,10 @@ function AppBemol() {
                 </ContentBlock>
 
                 <ContentBlock customCss={{ marginTop: "80", marginBottom: "80" }}>
-                    <ContentSection title="ANTES X DEPOIS">
+                    <ContentSection
+                        title="ANTES X DEPOIS"
+                        customCss={{ titlePosition: 'center' }}
+                    >
                         <Carrossel
                             slides={carrosselData}
                             title="Tela inicial do fluxo de contratação"

@@ -6,7 +6,7 @@ import PageHeader from "../components/structure/PageHeader/PageHeader";
 import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 import Summary from "../components/structure/Summary/Summary";
 import { safraData } from "./data";
-import safraOpenImg from "../../../assets/safra/safraopen.png";
+import safraOpenImg from "../../../assets/safra/safraopen.webp";
 import styles from "./safra.module.scss";
 
 function Safra() {

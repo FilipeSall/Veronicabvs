@@ -81,11 +81,23 @@ function ContentSection({ title, subtitle, children, customCss }: ContentSection
   const defaultCustomCss = {
     marginTop: "0",
     marginBottom: "0",
+    titlePosition: "left" as const,
     ...customCss
   };
 
+  const getTitleAlignment = () => {
+    switch (defaultCustomCss.titlePosition) {
+      case 'center':
+        return 'center';
+      case 'right':
+        return 'right';
+      default:
+        return 'left';
+    }
+  };
+
   return (
-    <div 
+    <div
       className={styles.contentContainer}
       style={{
         marginTop: normalizeMeasures(defaultCustomCss.marginTop),
@@ -94,7 +106,10 @@ function ContentSection({ title, subtitle, children, customCss }: ContentSection
     >
       <div>
         {(title || subtitle) && (
-          <div className={styles.titleWrapper}>
+          <div
+            className={styles.titleWrapper}
+            style={{ textAlign: getTitleAlignment() }}
+          >
             {title && <h3 className={styles.contentTitle}>{title}</h3>}
             {subtitle && <p className={styles.contentSubtitle}>{subtitle}</p>}
           </div>

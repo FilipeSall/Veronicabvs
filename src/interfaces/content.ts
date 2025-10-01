@@ -29,6 +29,8 @@ export interface ContentSectionProps {
   customCss?: {
     marginTop?: string;
     marginBottom?: string;
+    /** Posição do título: 'left' (padrão), 'center' ou 'right' */
+    titlePosition?: 'left' | 'center' | 'right';
   };
 }
 

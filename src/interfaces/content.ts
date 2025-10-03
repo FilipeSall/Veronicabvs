@@ -52,6 +52,8 @@ export interface ChapterProps {
     paddingTop?: string;
     paddingLeft?: string;
   };
+  /** Força uma cor de fundo específica, sobrescrevendo a alternância automática */
+  forceBackgroundColor?: string;
 }
 
 export interface ContentBlockProps {

@@ -24,7 +24,7 @@ function StepsImgFlow() {
         pointerEvents: "none",
       }}
       endMarker={false}
-      lineStyle="curve"
+      lineStyle="straight"
     >
       <div className={styles.mainWrapper}>
         <div className={styles.container}>
@@ -122,9 +122,9 @@ function StepsImgFlow() {
               id="step6"
               relations={[
                 {
-                  targetId: "step7",
+                  targetId: "endpoint7",
                   sourceAnchor: "bottom",
-                  targetAnchor: "left",
+                  targetAnchor: "top",
                   style: archerLineStyle,
                 },
               ]}
@@ -136,10 +136,23 @@ function StepsImgFlow() {
         </div>
 
         <div className={styles.secondContainer}>
+          <ArcherElement
+            id="endpoint7"
+            relations={[
+              {
+                targetId: "step8",
+                sourceAnchor: "right",
+                targetAnchor: "left",
+                style: archerLineStyle,
+              },
+            ]}
+          >
+            <div className={styles.invisibleEndpoint}></div>
+          </ArcherElement>
           <div className={styles.mainStepContainer}>
             <img src={phone7} alt="Passo 7" />
             <div className={styles.textWrapper}>
-              <ArcherElement id="step7">
+              <ArcherElement id="step8">
                 <div className={styles.number}>7.</div>
               </ArcherElement>
               <p>

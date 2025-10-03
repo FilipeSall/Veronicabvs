@@ -48,11 +48,25 @@ function Safra() {
           title="Desafio"
           subtitle="Criação de solução tecnológica e inovadora para o banco, relacionada à terceira fase do Open Banking."
         />
+
+        {/* 4.3 Processo */}
+        <Chapter
+          id="chapter-4-3"
+          forceBackgroundColor="#272727"
+          customCss={{ paddingTop: "80" }}
+        >
+          <CaseTitleHeader
+            id="4.3"
+            title="Processo"
+            subtitle="Diante do curto prazo, optei por adaptar o método ágil Lean UX, direcionando cada etapa para um dia de desenvolvimento."
+          />
+        </Chapter>
       </Chapter>
 
-      {/* 4.3 Processo */}
-
       {/* 4.4 Descoberta e evidências */}
+      <Chapter id="chapter-4-4">
+        <CaseTitleHeader id="4.4" title="Descoberta e evidências" />
+      </Chapter>
 
       {/* 4.5 Evolução da interface */}
 

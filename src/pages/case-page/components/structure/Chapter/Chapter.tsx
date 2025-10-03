@@ -5,17 +5,17 @@ import styles from "./chapter.module.scss";
 
 /**
  * Chapter - Componente principal para organizar seções de cases
- * 
+ *
  * Este componente cria uma seção estruturada para cases, incluindo
  * alternância automática de cores de fundo e suporte a títulos opcionais.
  * É o container principal que agrupa ContentBlocks relacionados.
- * 
+ *
  * @example
  * ```tsx
  * // Exemplo básico sem título (manual)
  * <Chapter id="chapter-1-1">
- *   <CaseTitleHeader 
- *     id="1.1" 
+ *   <CaseTitleHeader
+ *     id="1.1"
  *     title="Resgatando clientes no fluxo de empréstimo"
  *     subtitle="Apoio: Equipe de Marketing"
  *   />
@@ -23,9 +23,9 @@ import styles from "./chapter.module.scss";
  *     <TextContent title="DESAFIO" paragraphs={["Texto do desafio..."]} />
  *   </ContentBlock>
  * </Chapter>
- * 
+ *
  * // Exemplo com título automático (via props - legado)
- * <Chapter 
+ * <Chapter
  *   id="chapter-1-2"
  *   title="Outras entregas"
  *   subtitle="Fluxogramas completos"
@@ -34,23 +34,31 @@ import styles from "./chapter.module.scss";
  *     <p>Conteúdo da seção...</p>
  *   </ContentBlock>
  * </Chapter>
- * 
+ *
  * // Com classe customizada
  * <Chapter id="chapter-1-3" className="special-chapter">
  *   <ContentBlock>
  *     <h3>Conteúdo especial</h3>
  *   </ContentBlock>
  * </Chapter>
+ *
+ * // Com cor de fundo forçada (sobrescreve alternância)
+ * <Chapter id="chapter-4-3" forceBackgroundColor="#272727">
+ *   <ContentBlock>
+ *     <p>Este chapter terá sempre fundo #272727</p>
+ *   </ContentBlock>
+ * </Chapter>
  * ```
- * 
+ *
  * @param id - Identificador único do chapter (usado para navegação)
  * @param title - Título opcional (usa CaseTitle legado se fornecido)
  * @param subtitle - Subtítulo opcional (apenas com title)
  * @param children - Conteúdo do chapter (ContentBlocks, etc.)
  * @param className - Classe CSS adicional para customização
  * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingLeft). Valores padrão: marginTop: "40px", marginBottom: "40px", paddingTop: "0px", paddingLeft: "0px"
+ * @param forceBackgroundColor - Força uma cor de fundo específica, sobrescrevendo a alternância automática
  */
-function Chapter({ id, title, subtitle, children, className, customCss }: ChapterProps) {
+function Chapter({ id, title, subtitle, children, className, customCss, forceBackgroundColor }: ChapterProps) {
   const defaultCustomCss = {
     marginTop: "40px",
     marginBottom: "40px",
@@ -60,14 +68,15 @@ function Chapter({ id, title, subtitle, children, className, customCss }: Chapte
   };
 
   return (
-    <section 
-      className={`${styles.chapter} ${className || ""}`} 
+    <section
+      className={`${styles.chapter} ${className || ""}`}
       id={id}
       style={{
         marginTop: normalizeMeasures(defaultCustomCss.marginTop),
         marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
         paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
-        paddingLeft: normalizeMeasures(defaultCustomCss.paddingLeft)
+        paddingLeft: normalizeMeasures(defaultCustomCss.paddingLeft),
+        ...(forceBackgroundColor && { backgroundColor: forceBackgroundColor })
       }}
     >
       {title && <CaseTitle title={title} subTitle={subtitle || ""} id={id} />}

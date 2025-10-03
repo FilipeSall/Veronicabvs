@@ -33,6 +33,9 @@
     margin: 0;
     width: 75%;
     min-height: 60px;
+    background-color: #0f0f0f;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -54,7 +57,8 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  position: relative;
 }
 
 .mainStepContainer {
@@ -82,4 +86,14 @@
     margin: 0;
     max-width: 200px;
   }
+}
+
+.invisibleEndpoint {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  position: absolute;
+  left: 93%;
+  top: 20px;
+  transform: translateX(-50%);
 }

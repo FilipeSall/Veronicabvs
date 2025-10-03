@@ -16,7 +16,9 @@
       "Bash(npm install:*)",
       "Bash(npm i:*)",
       "Bash(node:*)",
-      "WebSearch"
+      "WebSearch",
+      "Read(//home/sea/**)",
+      "Bash(claude mcp:*)"
     ],
     "deny": [],
     "ask": []

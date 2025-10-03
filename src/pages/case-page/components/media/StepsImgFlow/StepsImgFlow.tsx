@@ -140,7 +140,7 @@ function StepsImgFlow() {
             id="endpoint7"
             relations={[
               {
-                targetId: "step8",
+                targetId: "step7",
                 sourceAnchor: "right",
                 targetAnchor: "left",
                 style: archerLineStyle,
@@ -152,7 +152,7 @@ function StepsImgFlow() {
           <div className={styles.mainStepContainer}>
             <img src={phone7} alt="Passo 7" />
             <div className={styles.textWrapper}>
-              <ArcherElement id="step8">
+              <ArcherElement id="step7">
                 <div className={styles.number}>7.</div>
               </ArcherElement>
               <p>

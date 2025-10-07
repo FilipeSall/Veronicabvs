@@ -30,7 +30,7 @@ export interface ContentSectionProps {
     marginTop?: string;
     marginBottom?: string;
     /** Posição do título: 'left' (padrão), 'center' ou 'right' */
-    titlePosition?: 'left' | 'center' | 'right';
+    titlePosition?: "left" | "center" | "right";
   };
 }
 
@@ -138,3 +138,8 @@ export interface ProcessStep {
 }
 
 export type ProcessDataApp = ProcessStep[];
+
+export type ListByTypeProps = {
+  title: string;
+  description: string;
+};

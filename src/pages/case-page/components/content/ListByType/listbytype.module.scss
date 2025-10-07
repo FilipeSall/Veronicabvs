@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  max-width: var(--max-width);
+  margin: var(--center-margin);
+  padding-left: 72px;
+  padding-right: 72px;
+  width: var(--content-width);
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.ItemWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 12px;
+}
+
+.titleContainer h3 {
+  font-size: 16px;
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.typeLabel {
+  text-shadow: 2px 3px 4px #00000040;
+  font-size: 20px;
+  font-family: "Exo";
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+}

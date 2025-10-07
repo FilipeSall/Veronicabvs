@@ -8,6 +8,8 @@ import Summary from "../components/structure/Summary/Summary";
 import { safraData } from "./data";
 import safraOpenImg from "../../../assets/safra/safraopen.webp";
 import styles from "./safra.module.scss";
+import ListByType from "../components/content/ListByType/ListByType";
+import { processoData } from "./contentData";
 
 function Safra() {
   useScrollToElement("header-safra", { smooth: false });
@@ -42,7 +44,7 @@ function Safra() {
       </Chapter>
 
       {/* 4.2 Desafio */}
-      <Chapter id="chapter-4-2">
+      <Chapter id="chapter-4-2" customCss={{ paddingTop: "40" }}>
         <CaseTitleHeader
           id="4.2"
           title="Desafio"
@@ -60,6 +62,13 @@ function Safra() {
             title="Processo"
             subtitle="Diante do curto prazo, optei por adaptar o método ágil Lean UX, direcionando cada etapa para um dia de desenvolvimento."
           />
+          <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+            <ListByType
+              items={processoData}
+              type="day"
+              color={safraData.bgColor}
+            />
+          </ContentBlock>
         </Chapter>
       </Chapter>
 

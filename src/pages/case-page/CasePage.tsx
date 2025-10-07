@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import styles from "./casepage.module.scss";
 import { useEffect, useState } from "react";
 import { CaseInterface } from "../../interfaces/case";
@@ -34,6 +34,10 @@ function CasePage() {
 
   if (!caseData) {
     return <div style={{ color: "whitesmoke" }}>Carregando...</div>;
+  }
+
+  if (caseData.underConstruction) {
+    return <Navigate to="/" replace />;
   }
 
   return (

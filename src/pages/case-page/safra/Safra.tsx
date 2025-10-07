@@ -75,6 +75,7 @@ function Safra() {
       {/* 4.4 Descoberta e evidências */}
       <Chapter id="chapter-4-4">
         <CaseTitleHeader id="4.4" title="Descoberta e evidências" />
+        
       </Chapter>
 
       {/* 4.5 Evolução da interface */}

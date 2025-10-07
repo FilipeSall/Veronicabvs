@@ -9,7 +9,10 @@ import { safraData } from "./data";
 import safraOpenImg from "../../../assets/safra/safraopen.webp";
 import styles from "./safra.module.scss";
 import ListByType from "../components/content/ListByType/ListByType";
+import SimpleList from "../components/content/SimpleList/SimpleList";
 import { processoData } from "./contentData";
+import TextContent from "../components/content/TextContent/TextContent";
+import Quote from "../components/content/Quote/Quote";
 
 function Safra() {
   useScrollToElement("header-safra", { smooth: false });
@@ -73,13 +76,46 @@ function Safra() {
       </Chapter>
 
       {/* 4.4 Descoberta e evidências */}
-      <Chapter id="chapter-4-4">
+      <Chapter id="chapter-4-4" customCss={{ marginTop: "0" }}>
         <CaseTitleHeader id="4.4" title="Descoberta e evidências" />
-        
+
+        <ContentBlock customCss={{ marginTop: "0" }}>
+          <TextContent
+            title={
+              <>
+                PONTOS DE DOR{" "}
+                <i style={{ fontWeight: "normal" }}>
+                  (do sistema atual de pagamento)
+                </i>
+              </>
+            }
+            paragraphs={[
+              <SimpleList
+                listType="arrow"
+                textColor="strong"
+                items={[
+                  "Muitas opções diferentes (cartão de débito, cartão de crédito, Pix, TED, etc.);",
+                  "Em lugares com maior movimentação, pessoas enfrentam filas para realizar pagamentos que, em geral, são longas e demoradas (experiência negativa);",
+                  "Crescimento do número de roubos de cartões, dinheiro e celulares é grande;",
+                  "A manipulação de cartões e dinheiro em espécie entre pessoas aumenta o risco de disseminação de doenças virais, como a COVID 19.",
+                ]}
+              />,
+            ]}
+          />
+        </ContentBlock>
+
+        <ContentBlock customCss={{ marginTop: "40" }}>
+          <Quote
+            text="E se o Safra oferecesse um único dispositivo que permite que aos usuários a escolha de qualquer uma dentre as suas opções de pagamento disponíveis, da instituição financeira que ele preferir?"
+            title="OPORTUNIDADE"
+          />
+        </ContentBlock>
       </Chapter>
 
       {/* 4.5 Evolução da interface */}
-
+      <Chapter id="chapter-4-5" customCss={{ paddingTop: "40" }}>
+        <CaseTitleHeader id="4.5" title="Evolução da interface" />
+      </Chapter>
       {/* 4.6 Análise Heurística e User Test */}
 
       {/* 4.7 Reconhecimento e premiação */}

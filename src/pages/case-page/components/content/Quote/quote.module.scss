@@ -1,0 +1,27 @@
+.quoteContainer {
+  width: 100%;
+}
+
+.quoteContainer > div {
+  max-width: var(--max-width);
+  margin: var(--center-margin);
+  padding-left: 72px;
+  padding-right: 72px;
+  width: var(--content-width);
+  display: flex;
+  flex-direction: column;
+}
+
+.quoteContainer h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.quoteContainer p {
+  font-family: "Exo", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
+}

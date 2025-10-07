@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface TextContentProps {
   /** Título do conteúdo */
-  title?: string;
+  title?: string | ReactNode;
   /** Array de parágrafos do conteúdo */
   paragraphs: (string | ReactNode)[];
   /** Número de quebras de linha */
@@ -142,4 +142,9 @@ export type ProcessDataApp = ProcessStep[];
 export type ListByTypeProps = {
   title: string;
   description: string;
+};
+
+export type QuoteProps = {
+  text: string;
+  title?: string;
 };

@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+﻿import { ReactNode } from "react";
 
 export interface TextContentProps {
-  /** Título do conteúdo */
+  /** TÃ­tulo do conteÃºdo */
   title?: string | ReactNode;
-  /** Array de parágrafos do conteúdo */
+  /** Array de parÃ¡grafos do conteÃºdo */
   paragraphs: (string | ReactNode)[];
-  /** Número de quebras de linha */
+  /** NÃºmero de quebras de linha */
   lineBreaks?: number;
   /** CSS customizado para margin e padding */
   customCss?: {
@@ -19,29 +19,29 @@ export interface TextContentProps {
 }
 
 export interface ContentSectionProps {
-  /** Título da seção */
+  /** TÃ­tulo da seÃ§Ã£o */
   title?: string;
-  /** Subtítulo da seção */
+  /** SubtÃ­tulo da seÃ§Ã£o */
   subtitle?: string;
-  /** Conteúdo da seção */
+  /** ConteÃºdo da seÃ§Ã£o */
   children: ReactNode;
   /** CSS customizado para margin */
   customCss?: {
     marginTop?: string;
     marginBottom?: string;
-    /** Posição do título: 'left' (padrão), 'center' ou 'right' */
+    /** PosiÃ§Ã£o do tÃ­tulo: 'left' (padrÃ£o), 'center' ou 'right' */
     titlePosition?: "left" | "center" | "right";
   };
 }
 
 export interface ChapterProps {
-  /** Identificador único do capítulo */
+  /** Identificador Ãºnico do capÃ­tulo */
   id: string;
-  /** Título do capítulo */
+  /** TÃ­tulo do capÃ­tulo */
   title?: string;
-  /** Subtítulo do capítulo */
+  /** SubtÃ­tulo do capÃ­tulo */
   subtitle?: string;
-  /** Conteúdo do capítulo */
+  /** ConteÃºdo do capÃ­tulo */
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
@@ -52,12 +52,12 @@ export interface ChapterProps {
     paddingTop?: string;
     paddingLeft?: string;
   };
-  /** Força uma cor de fundo específica, sobrescrevendo a alternância automática */
+  /** ForÃ§a uma cor de fundo especÃ­fica, sobrescrevendo a alternÃ¢ncia automÃ¡tica */
   forceBackgroundColor?: string;
 }
 
 export interface ContentBlockProps {
-  /** Conteúdo do bloco */
+  /** ConteÃºdo do bloco */
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
@@ -72,15 +72,15 @@ export interface ContentBlockProps {
 }
 
 export interface CaseTitleHeaderProps {
-  /** Identificador único do cabeçalho */
+  /** Identificador Ãºnico do cabeÃ§alho */
   id: string;
-  /** Título do cabeçalho */
+  /** TÃ­tulo do cabeÃ§alho */
   title: string;
-  /** Subtítulo do cabeçalho */
+  /** SubtÃ­tulo do cabeÃ§alho */
   subtitle?: string | ReactNode;
-  /** Variante do subtítulo */
+  /** Variante do subtÃ­tulo */
   subtitleVariant?: "default" | "paragraph";
-  /** Se o subtítulo deve ser branco */
+  /** Se o subtÃ­tulo deve ser branco */
   subtitleWhite?: boolean;
   /** Classes CSS personalizadas */
   className?: string;
@@ -94,7 +94,7 @@ export interface CaseTitleHeaderProps {
 }
 
 export interface CardsEnumeradosInterface {
-  /** Título do card */
+  /** TÃ­tulo do card */
   title: string;
   /** Texto do card */
   text: string;
@@ -107,7 +107,7 @@ export interface InsightCardsProps {
   text: string;
   /** Texto da imagm */
   alt?: string;
-  /** Título opcional do card */
+  /** TÃ­tulo opcional do card */
   title?: string;
   /** Gap entre imagem e texto */
   gap?: string;
@@ -116,19 +116,19 @@ export interface InsightCardsProps {
 export interface SimpleVerticalTimelineItem {
   /** Titulo do step da timeline */
   title: string;
-  /** Texto da descrição que fica debaixo do title da timeline */
+  /** Texto da descriÃ§Ã£o que fica debaixo do title da timeline */
   description: string;
 }
 
 export interface SimpleVerticalTimelineProps {
   /** Array de items da timeline */
   items: SimpleVerticalTimelineItem[];
-  /** Cor dos dots e traços (padrão: #BBBBBB) */
+  /** Cor dos dots e traÃ§os (padrÃ£o: #BBBBBB) */
   dotColor?: string;
 }
 
 export interface TimelineDotsProps {
-  /** Número de itens para criar os pontos */
+  /** NÃºmero de itens para criar os pontos */
   itemsCount: number;
 }
 

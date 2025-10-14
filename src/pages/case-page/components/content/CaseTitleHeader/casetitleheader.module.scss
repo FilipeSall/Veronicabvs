@@ -39,6 +39,15 @@
   font-weight: 400;
 }
 
+.descriptionText a,
+.descriptionText a:visited,
+.descriptionText a:hover,
+.descriptionText a:focus,
+.descriptionText a:active {
+  color: #4B4BFF;
+  font-family: inherit;
+}
+
 /* Cor opcional #bbb para subtítulo quando subtitleWhite={false} */
 .descriptionText.grayText {
   color: #bbb;

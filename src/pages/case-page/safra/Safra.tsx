@@ -117,6 +117,28 @@ function Safra() {
         <CaseTitleHeader id="4.5" title="Evolução da interface" />
       </Chapter>
       {/* 4.6 Análise Heurística e User Test */}
+      <Chapter id="chapter-4-6" customCss={{ paddingTop: "40" }}>
+        <CaseTitleHeader
+          id="4.6"
+          title="Análise Heurística e User Test"
+          subtitle={
+            <>
+              Dica: Acesse a documentação detalhada no Estudo de Caso (
+              <a href="https://medium.com/@veronicabvs" target="_blank" rel="noreferrer">
+                link Medium
+              </a>
+              );
+              <br />
+              Outra dica: Acesse o teste no Maze (
+              <a href="#" target="_blank" rel="noreferrer">
+                link Maze
+              </a>
+              )
+            </>
+          }
+          subtitleWhite={true}
+        />
+      </Chapter>
 
       {/* 4.7 Reconhecimento e premiação */}
 

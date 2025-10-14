@@ -75,7 +75,7 @@ export interface CaseTitleHeaderProps {
   /** Identificador único do cabeçalho */
   id: string;
   /** Título do cabeçalho */
-  title: string;
+  title: string | ReactNode;
   /** Subtítulo do cabeçalho */
   subtitle?: string | ReactNode;
   /** Variante do subtítulo */

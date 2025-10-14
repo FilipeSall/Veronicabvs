@@ -1,5 +1,5 @@
 .sobremimContainer {
-  height: 85vh;
+  min-height: 85vh;
   display: flex;
   gap: 56px;
   color: var(--textColor);
@@ -60,7 +60,7 @@
   font-size: 40px;
 }
 
-.title > span {
+.title>span {
   color: var(--fadeTextColor);
 }
 
@@ -68,7 +68,7 @@
   font-size: 16px;
 }
 
-.para > span {
+.para>span {
   font-weight: bold;
 }
 
@@ -114,20 +114,16 @@
 
   &::before {
     left: 0;
-    background: linear-gradient(
-      to right,
-      var(--backgroundColor) 0%,
-      transparent 100%
-    );
+    background: linear-gradient(to right,
+        var(--backgroundColor) 0%,
+        transparent 100%);
   }
 
   &::after {
     right: 0;
-    background: linear-gradient(
-      to left,
-      var(--backgroundColor) 0%,
-      transparent 100%
-    );
+    background: linear-gradient(to left,
+        var(--backgroundColor) 0%,
+        transparent 100%);
   }
 }
 
@@ -169,20 +165,16 @@
 
   &::before {
     left: 0;
-    background: linear-gradient(
-      to right,
-      var(--backgroundColor) 0%,
-      transparent 100%
-    );
+    background: linear-gradient(to right,
+        var(--backgroundColor) 0%,
+        transparent 100%);
   }
 
   &::after {
     right: 0;
-    background: linear-gradient(
-      to left,
-      var(--backgroundColor) 0%,
-      transparent 100%
-    );
+    background: linear-gradient(to left,
+        var(--backgroundColor) 0%,
+        transparent 100%);
   }
 
   @media (max-width: 768px) {
@@ -224,8 +216,7 @@
   color: #f3da8b;
 
   .newWindowBtn {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(522%)
-      hue-rotate(8deg) brightness(102%) contrast(96%);
+    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(522%) hue-rotate(8deg) brightness(102%) contrast(96%);
   }
 
   // &:hover {

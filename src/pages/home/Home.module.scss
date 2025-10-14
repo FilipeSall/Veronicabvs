@@ -1,7 +1,8 @@
 .homeContainer {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
 }
 
 .titleSectionContainer {
@@ -62,14 +63,14 @@
     font-size: 32px;
 }
 
-.navCaseContainer{
+.navCaseContainer {
     display: flex;
     flex-direction: column;
     margin: 50px 0;
     gap: 16px;
 }
 
-.navCaseContainer > p {
+.navCaseContainer>p {
     color: var(--textColor);
     font-weight: 400;
     text-align: center;
@@ -79,7 +80,7 @@
     display: flex;
 }
 
-.NavCasesWrapper > p {
+.NavCasesWrapper>p {
     color: var(--textColor);
     border: 1px solid;
 }

@@ -10,5 +10,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@supports (min-height: 100dvh) {
+  .container {
+    min-height: 100dvh;
+  }
 }

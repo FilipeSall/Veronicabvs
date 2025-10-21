@@ -98,10 +98,6 @@
   position: relative;
   overflow: hidden;
 
-  @media (max-width: 840px) {
-    width: 100%;
-  }
-
   &::before,
   &::after {
     content: "";
@@ -129,11 +125,15 @@
 
 .ferramentasInner {
   display: inline-flex;
-  gap: 30px;
   align-items: center;
   width: max-content;
-  animation: scrollTools 15s linear infinite;
-  transition: all 0.6s ease;
+  animation: scrollFerramentas 20s linear infinite;
+}
+
+.ferramentasImg {
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .empresasSection {
@@ -258,13 +258,13 @@
   color: #f3da8b;
 }
 
-@keyframes scrollTools {
+@keyframes scrollFerramentas {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(calc(-50% - 15px));
+    transform: translateX(calc(-50%));
   }
 }
 

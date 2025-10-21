@@ -1,9 +1,7 @@
 import styles from "./sobremim.module.scss";
 import veronicaImg from "../../assets/veronica.png";
-import { Ferramentas } from "../../services/FerramentasData";
-import Ferramenta from "./components/ferramenta/Ferramenta";
-import { FerramentaInterface } from "../../interfaces/components";
 import empresasImg from "../../assets/Empresas.webp";
+import toolsImg from "../../assets/Tools.webp";
 import newWindowIcon from "../../assets/svgs/new-window.svg";
 import pdfCurriculo from "../../assets/pdfs/curriculo.pdf";
 import { useState } from "react";
@@ -114,12 +112,16 @@ function Sobremim() {
           </div>
           <div className={styles.ferramentasWrapper}>
             <div className={styles.ferramentasInner}>
-              {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
-                <Ferramenta key={`original-${i}`} {...ferramenta} />
-              ))}
-              {Ferramentas.map((ferramenta: FerramentaInterface, i: number) => (
-                <Ferramenta key={`duplicate-${i}`} {...ferramenta} />
-              ))}
+              <img
+                src={toolsImg}
+                className={styles.ferramentasImg}
+                alt="Principais ferramentas que utilizo"
+              />
+              <img
+                src={toolsImg}
+                className={styles.ferramentasImg}
+                alt="Principais ferramentas que utilizo"
+              />
             </div>
           </div>
         </section>

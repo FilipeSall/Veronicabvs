@@ -5,9 +5,8 @@ import PageHeader from "../components/structure/PageHeader/PageHeader";
 import PageWrapper from "../components/structure/PageWrapper/PageWrapper";
 import Summary from "../components/structure/Summary/Summary";
 import { melliuzData } from "./data";
-import dogImg from "../../../assets/melliuz/OWN.webp";
+import dogImg from "../../../assets/melliuz/OWN.png";
 import FullImg from "../components/media/FullImg/FullImg";
-import melliuzLogo from "../../../assets/melliuz/Meliuz.svg";
 import TextContent from "../components/content/TextContent/TextContent";
 import SimpleList from "../components/content/SimpleList/SimpleList";
 import ProcessFlowContainer from "../components/media/ProcessFlow/ProcessFlowContainer";
@@ -54,7 +53,6 @@ function Melliuz() {
           <FullImg
             img={dogImg}
             alt="Cachorro olhando para uma pessoa enquanto esssa mesma pessoa carrega o celular."
-            optionalImg={melliuzLogo}
             optionalAlt="Logo da Melliuz"
           />
         </ContentBlock>

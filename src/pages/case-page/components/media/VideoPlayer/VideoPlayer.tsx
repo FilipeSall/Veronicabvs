@@ -13,6 +13,7 @@ type VideoPlayerProps = {
     className?: string;
     threshold?: number;
     rootMargin?: string;
+    mediaType?: "video" | "gif";
 }
 
 /**
@@ -76,13 +77,16 @@ function VideoPlayer({
     playsInline = true,
     className,
     threshold = 0.3,
-    rootMargin = '0px'
+    rootMargin = '0px',
+    mediaType
 }: VideoPlayerProps) {
 
     const { videoRef } = useVideoInView({
         threshold,
         rootMargin
     });
+
+    const resolvedMediaType = mediaType ?? (src.toLowerCase().endsWith(".gif") ? "gif" : "video");
 
     return (
         <div className={`${styles.container} ${className || ''}`}>
@@ -93,16 +97,24 @@ function VideoPlayer({
                     className={styles.sucessIcon} 
                 />
             )}
-            <video
-                ref={videoRef}
-                className={styles.video}
-                loop={loop}
-                muted={muted}
-                playsInline={playsInline}
-                autoPlay={autoPlay}
-                src={src}
-                aria-label={alt}
-            />
+            {resolvedMediaType === "gif" ? (
+                <img
+                    src={src}
+                    alt={alt}
+                    className={styles.media}
+                />
+            ) : (
+                <video
+                    ref={videoRef}
+                    className={styles.media}
+                    loop={loop}
+                    muted={muted}
+                    playsInline={playsInline}
+                    autoPlay={autoPlay}
+                    src={src}
+                    aria-label={alt}
+                />
+            )}
         </div>
     )
 }

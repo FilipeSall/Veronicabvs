@@ -3,7 +3,7 @@ import veronicaImg from "../../assets/veronica.png";
 import { Ferramentas } from "../../services/FerramentasData";
 import Ferramenta from "./components/ferramenta/Ferramenta";
 import { FerramentaInterface } from "../../interfaces/components";
-import empresasImg from "../../assets/EMPRESAS.webp";
+import empresasImg from "../../assets/Empresas.webp";
 import newWindowIcon from "../../assets/svgs/new-window.svg";
 import pdfCurriculo from "../../assets/pdfs/curriculo.pdf";
 import { useState } from "react";

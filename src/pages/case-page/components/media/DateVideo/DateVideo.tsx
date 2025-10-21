@@ -1,8 +1,11 @@
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
-import videoEscolhaData from '../../../../../assets/caseBemol/EscolhaData.mp4';
+import defaultGifSrc from '../../../../../assets/caseBemol/EscolhaData.gif';
+import defaultVideoSrc from '../../../../../assets/caseBemol/EscolhaData.mp4';
 
 type DateVideoProps = {
     videoSrc?: string;
+    gifSrc?: string;
+    mediaType?: "video" | "gif";
     alt?: string;
     showSuccessIcon?: boolean;
     autoPlay?: boolean;
@@ -49,21 +52,29 @@ type DateVideoProps = {
  * @param className - Classe CSS adicional
  */
 function DateVideo({ 
-    videoSrc = videoEscolhaData,
+    videoSrc,
+    gifSrc,
+    mediaType = "gif",
     alt = "Vídeo demonstrativo da funcionalidade",
     showSuccessIcon = true,
     autoPlay = true,
     loop = true,
     className
 }: DateVideoProps) {
+    const resolvedMediaType = mediaType;
+    const selectedSrc = resolvedMediaType === "gif"
+        ? (gifSrc ?? defaultGifSrc)
+        : (videoSrc ?? defaultVideoSrc);
+
     return (
         <VideoPlayer
-            src={videoSrc}
+            src={selectedSrc}
             alt={alt}
             showSuccessIcon={showSuccessIcon}
             autoPlay={autoPlay}
             loop={loop}
             className={className}
+            mediaType={resolvedMediaType}
         />
     );
 }

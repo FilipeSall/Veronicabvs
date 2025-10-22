@@ -112,16 +112,20 @@ function Sobremim() {
           </div>
           <div className={styles.ferramentasWrapper}>
             <div className={styles.ferramentasInner}>
-              <img
-                src={toolsImg}
-                className={styles.ferramentasImg}
-                alt="Principais ferramentas que utilizo"
-              />
-              <img
-                src={toolsImg}
-                className={styles.ferramentasImg}
-                alt="Principais ferramentas que utilizo"
-              />
+              <div className={styles.ferramentaFrame}>
+                <img
+                  src={toolsImg}
+                  className={styles.ferramentasImg}
+                  alt="Principais ferramentas que utilizo"
+                />
+              </div>
+              <div className={styles.ferramentaFrame} aria-hidden="true">
+                <img
+                  src={toolsImg}
+                  className={styles.ferramentasImg}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </section>

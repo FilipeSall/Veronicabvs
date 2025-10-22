@@ -62,9 +62,6 @@
   font-family: Inter;
 }
 
-.anchor a:hover {
-  font-weight: 500;
-}
 
 .anchorId {
   font-family: Inter;
@@ -72,7 +69,7 @@
 }
 
 .specialText {
-  color: var(--textSucess);
+  color: #bbbbbb;
   font-size: 14px;
   font-style: italic;
   display: flex;

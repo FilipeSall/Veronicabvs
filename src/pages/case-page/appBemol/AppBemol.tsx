@@ -175,6 +175,7 @@ function AppBemol() {
                         paragraphs={[
                             "Identificação de **pontos de dor** nas telas originais, como:",
                             <SimpleList
+                                textColor="strong"
                                 items={[
                                     <>
                                         <span>Experiência fragmentada</span> e pouco intuitiva

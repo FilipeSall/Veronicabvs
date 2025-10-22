@@ -85,6 +85,18 @@ function CaseBemol() {
 
         <ContentBlock>
           <TextContent
+            title="PROCESSO"
+            paragraphs={[
+              "Para **aumentar a conversão** de clientes com crédito pré-aprovado, desenvolvi uma **régua de comunicação segmentada via push**, considerando o momento de abandono no fluxo e o perfil do usuário.",
+              "O conteúdo e o timing das mensagens foram definidos com apoio do **time de marketing** e alinhados com o **design system** da empresa.",
+            ]}
+          />
+
+          <OpenScreenImg />
+        </ContentBlock>
+
+        <ContentBlock>
+          <TextContent
             title="SOLUÇÃO"
             paragraphs={[
               "Comecei com uma **análise de dados** para identificar o problema e entender o comportamento de abandono no funil, seguida por um **benchmarking** com bancos digitais para mapear **boas práticas** de reengajamento.",
@@ -98,18 +110,6 @@ function CaseBemol() {
             color="#4C31E0"
             lists={processDataApp}
           />
-        </ContentBlock>
-
-        <ContentBlock>
-          <TextContent
-            title="PROCESSO"
-            paragraphs={[
-              "Para **aumentar a conversão** de clientes com crédito pré-aprovado, desenvolvi uma **régua de comunicação segmentada via push**, considerando o momento de abandono no fluxo e o perfil do usuário.",
-              "O conteúdo e o timing das mensagens foram definidos com apoio do **time de marketing** e alinhados com o **design system** da empresa.",
-            ]}
-          />
-
-          <OpenScreenImg />
         </ContentBlock>
 
         <ContentBlock>
@@ -157,7 +157,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.2 Outras entregas*/}
-      <Chapter id="chapter-1-2" customCss={{paddingTop:"20"}}>
+      <Chapter id="chapter-1-2" customCss={{ paddingTop: "20" }}>
         <CaseTitleHeader
           id="1.2"
           title="Outras entregas"
@@ -242,6 +242,7 @@ function CaseBemol() {
               comigo e agende um horário.
             </>
           }
+          subtitleWhite
           className="special-chapter"
         />
 

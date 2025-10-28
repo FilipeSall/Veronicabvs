@@ -51,7 +51,7 @@ function AppBemol() {
             />
 
             {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}
-            <Chapter id="chapter-2-1">
+            <Chapter id="chapter-2-1" customCss={{ gap: "80px" }}>
                 <CaseTitleHeader
                     id={appBemolData.summary.items[0].id}
                     title={appBemolData.summary.items[0].title}
@@ -96,7 +96,7 @@ function AppBemol() {
                     />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                <ContentBlock>
                     <TextContent
                         title="PROCESSO"
                         paragraphs={[
@@ -120,7 +120,7 @@ function AppBemol() {
                     <ImageWrapper src={desingSystemImg} alt="design system" />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ gap: "80", marginTop: "80px" }}>
+                <ContentBlock customCss={{ gap: "80px" }}>
                     <TextContent
                         title="NEGÓCIO X EXPERIÊNCIA"
                         paragraphs={[
@@ -131,7 +131,7 @@ function AppBemol() {
                     <NegocioExperiencia />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "80" }}>
+                <ContentBlock>
                     <TextContent
                         title="PLANO DE ACOMPANHAMENTO"
                         paragraphs={[
@@ -149,7 +149,7 @@ function AppBemol() {
                     />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "80" }}>
+                <ContentBlock>
                     <TextContent
                         title="MÉTRICAS E MELHORIAS"
                         paragraphs={[
@@ -161,9 +161,8 @@ function AppBemol() {
             </Chapter>
 
             {/*2.2 Redesign das telas de contratação de empréstimos via aplicativo e-commerce*/}
-            <Chapter id="chapter-2-2">
+            <Chapter id="chapter-2-2" customCss={{ gap: "80px" }}>
                 <CaseTitleHeader
-                    customCss={{ marginTop: "40" }}
                     id={appBemolData.summary.items[1].id}
                     title={appBemolData.summary.items[1].title}
                     subtitle={appBemolData.summary.items[1].subtitle}
@@ -198,7 +197,7 @@ function AppBemol() {
                     />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "80", marginBottom: "80" }}>
+                <ContentBlock>
                     <ContentSection
                         title="ANTES X DEPOIS"
                         customCss={{ titlePosition: 'center' }}
@@ -211,7 +210,7 @@ function AppBemol() {
                     </ContentSection>
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                <ContentBlock>
                     <TextContent
                         title="DESAFIO E OBJETIVO"
                         paragraphs={[
@@ -221,7 +220,7 @@ function AppBemol() {
                     />
                 </ContentBlock>
 
-                <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+                <ContentBlock>
                     <ContentSection title="MELHORIAS">
                         <CardsEnumerados cards={cardsData} color="#F23434" />
                     </ContentSection>

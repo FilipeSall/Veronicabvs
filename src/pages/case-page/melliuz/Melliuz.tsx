@@ -47,9 +47,9 @@ function Melliuz() {
       />
 
       {/* 3.1 resulado */}
-      <Chapter id="chapter-3-1">
+      <Chapter id="chapter-3-1" customCss={{ gap: "40px" }}>
         <CaseTitleHeader id="3.1" title="Resultado — Doação de Cashback" />
-        <ContentBlock customCss={{ marginTop: "40" }}>
+        <ContentBlock>
           <FullImg
             img={dogImg}
             alt="Cachorro olhando para uma pessoa enquanto esssa mesma pessoa carrega o celular."
@@ -58,7 +58,7 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.2 Desafio */}
-      <Chapter id="chapter-3-2" customCss={{ paddingTop: "34" }}>
+      <Chapter id="chapter-3-2" customCss={{ gap: "40px" }}>
         <CaseTitleHeader id="3.2" title="Desafio" />
         <ContentBlock>
           <TextContent
@@ -82,7 +82,7 @@ function Melliuz() {
       {/* 3.3 Processo */}
       <Chapter
         id="chapter-3-3"
-        customCss={{ marginTop: "0", paddingTop: "14" }}
+        customCss={{ gap: "40px" }}
       >
         <CaseTitleHeader id="3.3" title="Processo" />
         <ContentBlock>
@@ -102,7 +102,7 @@ function Melliuz() {
       {/* 3.4 Descobertas e evidências */}
       <Chapter
         id="chapter-3-4"
-        customCss={{ marginTop: "0", paddingTop: "14" }}
+        customCss={{ gap: "40px" }}
       >
         <CaseTitleHeader
           id="3.4"
@@ -118,7 +118,7 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.5 Userflow — Entry point 1 */}
-      <Chapter id="chapter-3-5" customCss={{ paddingTop: "0", marginTop: "0" }}>
+      <Chapter id="chapter-3-5" customCss={{ gap: "40px" }}>
         <CaseTitleHeader id="3.5" title="Userflow — Entry point 1" />
         <ContentBlock>
           <StepsImgFlow />
@@ -127,11 +127,11 @@ function Melliuz() {
       {/* 3.6 Entrega de Valor */}
       <Chapter
         id="chapter-3-6"
-        customCss={{ paddingTop: "34", marginBottom: "34" }}
+        customCss={{ gap: "40px" }}
       >
         <CaseTitleHeader id="3.6" title="Entrega de Valor" />
 
-        <ContentBlock customCss={{ marginTop: "40", marginBottom: "40" }}>
+        <ContentBlock customCss={{ marginBottom: "40" }}>
           <InsightCardsGrid
             items={entregaValorData}
             customCss={{
@@ -143,7 +143,7 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.7 Potenciais de impacto */}
-      <Chapter id="chapter-3-7" customCss={{ marginTop: "24" }}>
+      <Chapter id="chapter-3-7" customCss={{ gap: "40px" }}>
         <CaseTitleHeader id="3.7" title="Potenciais de impacto" />
 
         <ContentBlock>
@@ -160,9 +160,9 @@ function Melliuz() {
         </ContentBlock>
       </Chapter>
       {/* 3.8 Próximos passos */}
-      <Chapter id="chapter-3-8" customCss={{ paddingTop: "34" }}>
+      <Chapter id="chapter-3-8" customCss={{ gap: "40px" }}>
         <CaseTitleHeader id="3.8" title="Próximos passos" />
-        <ContentBlock customCss={{ marginBottom: "34" }}>
+        <ContentBlock customCss={{ gap: "40px" }}>
           <TextContent
             customCss={{ paragraphWidth: "100%", titleGap: "8" }}
             title="TESTES E VALIDAÇÃO"

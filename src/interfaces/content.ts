@@ -1,5 +1,15 @@
 import { ReactNode } from "react";
 
+/** Conjunto de espaçamentos compartilhado entre componentes estruturais de case. */
+export interface CommonCustomCss {
+  marginTop?: string;
+  marginBottom?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
+  paddingLeft?: string;
+  gap?: string;
+}
+
 export interface TextContentProps {
   /** Título do conteúdo */
   title?: string | ReactNode;
@@ -37,22 +47,16 @@ export interface ContentSectionProps {
 export interface ChapterProps {
   /** Identificador único do capítulo */
   id: string;
-  /** Título do capítulo */
+  /** @deprecated Use <CaseTitleHeader> no conteúdo do capítulo */
   title?: string;
-  /** Subtítulo do capítulo */
+  /** @deprecated Use <CaseTitleHeader> no conteúdo do capítulo */
   subtitle?: string;
   /** Conteúdo do capítulo */
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
   /** CSS customizado para margin, padding e gap */
-  customCss?: {
-    marginTop?: string;
-    marginBottom?: string;
-    paddingTop?: string;
-    paddingLeft?: string;
-    gap?: string;
-  };
+  customCss?: CommonCustomCss;
   /** Força uma cor de fundo específica, sobrescrevendo a alternância automática */
   forceBackgroundColor?: string;
 }
@@ -62,12 +66,8 @@ export interface ContentBlockProps {
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
-  /** CSS customizado para margin e gap */
-  customCss?: {
-    marginTop?: string;
-    marginBottom?: string;
-    gap?: string;
-  };
+  /** CSS customizado para margin, padding e gap */
+  customCss?: CommonCustomCss;
   /** Se deve ocupar toda a largura */
   fullWidth?: boolean;
 }
@@ -85,13 +85,8 @@ export interface CaseTitleHeaderProps {
   subtitleWhite?: boolean;
   /** Classes CSS personalizadas */
   className?: string;
-  /** CSS customizado para margin e padding */
-  customCss?: {
-    marginTop?: string;
-    marginBottom?: string;
-    paddingTop?: string;
-    paddingBottom?: string;
-  };
+  /** CSS customizado para margin, padding e gap */
+  customCss?: CommonCustomCss;
 }
 
 export interface CardsEnumeradosInterface {

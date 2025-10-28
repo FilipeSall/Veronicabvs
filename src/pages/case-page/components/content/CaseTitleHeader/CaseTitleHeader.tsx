@@ -1,4 +1,5 @@
-import { CaseTitleHeaderProps } from "../../../../../interfaces/components";
+import { CSSProperties } from "react";
+import { CaseTitleHeaderProps, CommonCustomCss } from "../../../../../interfaces/components";
 import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import styles from "./casetitleheader.module.scss";
 
@@ -46,7 +47,7 @@ import styles from "./casetitleheader.module.scss";
  * @param subtitleVariant - Estilo do subtítulo: 'default' (curto) ou 'paragraph' (longo)
  * @param subtitleWhite - Se true, aplica cor branca no subtítulo. Se false, usa cor padrão (#bbb)
  * @param className - Classe CSS adicional para customização
- * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px". Se apenas paddingTop for informado, paddingBottom é ajustado para "0px".
+ * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom, paddingLeft, gap). Propriedades só são aplicadas quando informadas. Se apenas paddingTop for informado, paddingBottom é ajustado para "0px".
  */
 function CaseTitleHeader({
   id,
@@ -57,36 +58,74 @@ function CaseTitleHeader({
   className,
   customCss,
 }: CaseTitleHeaderProps) {
-  const {
-    paddingTop: customPaddingTop,
-    paddingBottom: customPaddingBottom,
-    ...restCustomCss
-  } = customCss || {};
+  const normalizedCustomCss: CommonCustomCss = {};
 
-  const defaultCustomCss = {
-    marginTop: "0",
-    marginBottom: "0",
-    paddingTop: customPaddingTop ?? "20px",
-    paddingBottom:
-      customPaddingBottom ??
-      (customPaddingTop !== undefined ? "0px" : "20px"),
-    ...restCustomCss
-  };
+  if (customCss?.marginTop) {
+    normalizedCustomCss.marginTop = customCss.marginTop;
+  }
+
+  if (customCss?.marginBottom) {
+    normalizedCustomCss.marginBottom = customCss.marginBottom;
+  }
+
+  if (customCss?.paddingLeft) {
+    normalizedCustomCss.paddingLeft = customCss.paddingLeft;
+  }
+
+  if (customCss?.gap) {
+    normalizedCustomCss.gap = customCss.gap;
+  }
+
+  const customPaddingTop = customCss?.paddingTop;
+  const customPaddingBottom = customCss?.paddingBottom;
+
+  if (customPaddingTop !== undefined) {
+    normalizedCustomCss.paddingTop = customPaddingTop;
+    if (customPaddingBottom === undefined) {
+      normalizedCustomCss.paddingBottom = "0px";
+    }
+  }
+
+  if (customPaddingBottom !== undefined) {
+    normalizedCustomCss.paddingBottom = customPaddingBottom;
+  }
+
+  const wrapperStyle: CSSProperties = {};
+
+  if (normalizedCustomCss.marginTop) {
+    wrapperStyle.marginTop = normalizeMeasures(normalizedCustomCss.marginTop);
+  }
+
+  if (normalizedCustomCss.marginBottom) {
+    wrapperStyle.marginBottom = normalizeMeasures(normalizedCustomCss.marginBottom);
+  }
+
+  const titleContainerStyle: CSSProperties = {};
+
+  if (normalizedCustomCss.paddingTop) {
+    titleContainerStyle.paddingTop = normalizeMeasures(normalizedCustomCss.paddingTop);
+  }
+
+  if (normalizedCustomCss.paddingBottom) {
+    titleContainerStyle.paddingBottom = normalizeMeasures(normalizedCustomCss.paddingBottom);
+  }
+
+  if (normalizedCustomCss.paddingLeft) {
+    titleContainerStyle.paddingLeft = normalizeMeasures(normalizedCustomCss.paddingLeft);
+  }
+
+  if (normalizedCustomCss.gap) {
+    titleContainerStyle.gap = normalizeMeasures(normalizedCustomCss.gap);
+  }
 
   return (
     <div 
       className={`${styles.caseTitleWrapper} ${className || ""}`}
-      style={{
-        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
-        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
-      }}
+      style={Object.keys(wrapperStyle).length ? wrapperStyle : undefined}
     >
       <div 
         className={styles.titleTextContainer}
-        style={{
-          paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
-          paddingBottom: normalizeMeasures(defaultCustomCss.paddingBottom)
-        }}
+        style={Object.keys(titleContainerStyle).length ? titleContainerStyle : undefined}
       >
         <h3 className={styles.strongWhite}>
           <span className={styles.idText}>{id}</span> {title}

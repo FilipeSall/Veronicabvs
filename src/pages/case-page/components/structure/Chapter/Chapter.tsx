@@ -1,6 +1,6 @@
+import { CSSProperties } from "react";
 import { ChapterProps } from "../../../../../interfaces/components";
 import { normalizeMeasures } from "../../../../../utils/cssUtils";
-import CaseTitle from "../../content/CaseTitle/CaseTitle";
 import styles from "./chapter.module.scss";
 
 /**
@@ -51,37 +51,50 @@ import styles from "./chapter.module.scss";
  * ```
  *
  * @param id - Identificador único do chapter (usado para navegação)
- * @param title - Título opcional (usa CaseTitle legado se fornecido)
- * @param subtitle - Subtítulo opcional (apenas com title)
+ * @param title - (Legado) Sem efeito; preferir CaseTitleHeader
+ * @param subtitle - (Legado) Sem efeito; preferir CaseTitleHeader
  * @param children - Conteúdo do chapter (ContentBlocks, etc.)
  * @param className - Classe CSS adicional para customização
- * @param customCss - CSS customizado para margin, padding e gap (marginTop, marginBottom, paddingTop, paddingLeft, gap). Valores padrão: marginTop: "40px", marginBottom: "40px", paddingTop: "0px", paddingLeft: "0px", gap: "0px"
+ * @param customCss - CSS customizado para margin, padding e gap (marginTop, marginBottom, paddingTop, paddingBottom, paddingLeft, gap). Propriedades só são aplicadas quando informadas.
  * @param forceBackgroundColor - Força uma cor de fundo específica, sobrescrevendo a alternância automática
  */
-function Chapter({ id, title, subtitle, children, className, customCss, forceBackgroundColor }: ChapterProps) {
-  const defaultCustomCss = {
-    marginTop: "40px",
-    marginBottom: "40px",
-    paddingTop: "0px",
-    paddingLeft: "0px",
-    gap: "0px",
-    ...customCss
-  };
+function Chapter({ id, children, className, customCss, forceBackgroundColor }: ChapterProps) {
+  const sectionStyle: CSSProperties = {};
+
+  if (customCss?.marginTop) {
+    sectionStyle.marginTop = normalizeMeasures(customCss.marginTop);
+  }
+
+  if (customCss?.marginBottom) {
+    sectionStyle.marginBottom = normalizeMeasures(customCss.marginBottom);
+  }
+
+  if (customCss?.paddingTop) {
+    sectionStyle.paddingTop = normalizeMeasures(customCss.paddingTop);
+  }
+
+  if (customCss?.paddingBottom) {
+    sectionStyle.paddingBottom = normalizeMeasures(customCss.paddingBottom);
+  }
+
+  if (customCss?.paddingLeft) {
+    sectionStyle.paddingLeft = normalizeMeasures(customCss.paddingLeft);
+  }
+
+  if (customCss?.gap) {
+    sectionStyle.gap = normalizeMeasures(customCss.gap);
+  }
+
+  if (forceBackgroundColor) {
+    sectionStyle.backgroundColor = forceBackgroundColor;
+  }
 
   return (
     <section
       className={`${styles.chapter} ${className || ""}`}
       id={id}
-      style={{
-        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
-        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
-        paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
-        paddingLeft: normalizeMeasures(defaultCustomCss.paddingLeft),
-        ...(defaultCustomCss.gap && { gap: normalizeMeasures(defaultCustomCss.gap) }),
-        ...(forceBackgroundColor && { backgroundColor: forceBackgroundColor })
-      }}
+      style={Object.keys(sectionStyle).length ? sectionStyle : undefined}
     >
-      {title && <CaseTitle title={title} subTitle={subtitle || ""} id={id} />}
       {children}
     </section>
   );

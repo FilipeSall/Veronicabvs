@@ -1,3 +1,4 @@
+import { CSSProperties } from "react";
 import { ContentBlockProps } from "../../../../../interfaces/components";
 import { normalizeMeasures } from "../../../../../utils/cssUtils";
 import styles from "./contentblock.module.scss";
@@ -67,25 +68,40 @@ import styles from "./contentblock.module.scss";
  * 
  * @param children - Conteúdo a ser renderizado (componentes, texto, etc.)
  * @param className - Classe CSS adicional para customização
- * @param customCss - CSS customizado para margin e gap (marginTop, marginBottom, gap). Valores padrão: marginTop: "0", marginBottom: "0", gap: "20"
+ * @param customCss - CSS customizado para margin, padding e gap (marginTop, marginBottom, paddingTop, paddingBottom, paddingLeft, gap). Propriedades só são aplicadas quando informadas.
  * @param fullWidth - Se true, ocupa 100% da largura (sem limitação de max-width). Padrão: false
  */
 function ContentBlock({ children, className, customCss, fullWidth = false }: ContentBlockProps) {
-  const defaultCustomCss = {
-    marginTop: "0",
-    marginBottom: "0",
-    gap: "20",
-    ...customCss
-  };
+  const styleOverrides: CSSProperties = {};
+
+  if (customCss?.marginTop) {
+    styleOverrides.marginTop = normalizeMeasures(customCss.marginTop);
+  }
+
+  if (customCss?.marginBottom) {
+    styleOverrides.marginBottom = normalizeMeasures(customCss.marginBottom);
+  }
+
+  if (customCss?.gap) {
+    styleOverrides.gap = normalizeMeasures(customCss.gap);
+  }
+
+  if (customCss?.paddingTop) {
+    styleOverrides.paddingTop = normalizeMeasures(customCss.paddingTop);
+  }
+
+  if (customCss?.paddingBottom) {
+    styleOverrides.paddingBottom = normalizeMeasures(customCss.paddingBottom);
+  }
+
+  if (customCss?.paddingLeft) {
+    styleOverrides.paddingLeft = normalizeMeasures(customCss.paddingLeft);
+  }
 
   return (
     <div
       className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
-      style={{
-        marginTop: normalizeMeasures(defaultCustomCss.marginTop),
-        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
-        ...(defaultCustomCss.gap && { gap: normalizeMeasures(defaultCustomCss.gap) })
-      }}
+      style={Object.keys(styleOverrides).length ? styleOverrides : undefined}
     >
       {children}
     </div>

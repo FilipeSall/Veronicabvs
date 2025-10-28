@@ -157,7 +157,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.2 Outras entregas*/}
-      <Chapter id="chapter-1-2" customCss={{ gap: "80px", paddingTop: "20px" }}>
+      <Chapter id="chapter-1-2" customCss={{ gap: "80px" }}>
         <CaseTitleHeader
           id="1.2"
           title="Outras entregas"
@@ -202,6 +202,7 @@ function CaseBemol() {
           subtitle="Todas as propostas foram guiadas pela abordagem de Data-Driven Design — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento."
           subtitleVariant="paragraph"
         />
+
         <ContentBlock customCss={{ gap: "80px" }}>
           <ContentSection
             title="CÁLCULO E ANÁLISE DO NPS"

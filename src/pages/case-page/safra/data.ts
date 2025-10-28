@@ -12,7 +12,7 @@ export const safraData: CaseInterface = {
   tipoDeCase: "premiado",
   bgColor: "#386681",
   imgHover: case4img,
-  underConstruction: false,
+  underConstruction: true,
   underConstructionImg: case4imgOff,
   miniImg: safraMiniImg,
   CasePreview: {

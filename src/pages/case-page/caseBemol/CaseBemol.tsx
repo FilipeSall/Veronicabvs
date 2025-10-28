@@ -52,7 +52,7 @@ function CaseBemol() {
       />
 
       {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}
-      <Chapter id="chapter-1-1">
+      <Chapter id="chapter-1-1" customCss={{ gap: "80" }}>
         <CaseTitleHeader
           id="1.1"
           title="Resgatando clientes no fluxo de empréstimo por notificações segmentadas"
@@ -70,7 +70,7 @@ function CaseBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <TextContent
             title="DESAFIO E OPORTUNIDADE"
             paragraphs={[
@@ -83,7 +83,7 @@ function CaseBemol() {
           <FunilImg />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <TextContent
             title="PROCESSO"
             paragraphs={[
@@ -112,7 +112,7 @@ function CaseBemol() {
           />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <ContentSection title="MÉTRICAS E MELHORIAS">
             <MetricsList
               headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
@@ -157,7 +157,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.2 Outras entregas*/}
-      <Chapter id="chapter-1-2" customCss={{ paddingTop: "20" }}>
+      <Chapter id="chapter-1-2" customCss={{ gap: "80px", paddingTop: "20px" }}>
         <CaseTitleHeader
           id="1.2"
           title="Outras entregas"
@@ -195,14 +195,14 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.3 Outras entregas*/}
-      <Chapter id="chapter-1-3">
+      <Chapter id="chapter-1-3" customCss={{ gap: "80px" }}>
         <CaseTitleHeader
           id="1.3"
           title="Outras entregas"
           subtitle="Todas as propostas foram guiadas pela abordagem de Data-Driven Design — desde a identificação da dor e definição do problema até o plano de acompanhamento pós-lançamento."
           subtitleVariant="paragraph"
         />
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80px" }}>
           <ContentSection
             title="CÁLCULO E ANÁLISE DO NPS"
             subtitle="Da conta digital Conta Bemol, do ano de 2023."
@@ -232,7 +232,7 @@ function CaseBemol() {
       </Chapter>
 
       {/*1.4 Escolha da data do vencimento das parcelas de empréstimo (prévia) */}
-      <Chapter id="chapter-1-4">
+      <Chapter id="chapter-1-4" customCss={{ gap: "40px" }}>
         <CaseTitleHeader
           id="1.4"
           title="Escolha da data do vencimento das parcelas"

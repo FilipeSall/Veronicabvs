@@ -25,7 +25,7 @@ export interface ContentSectionProps {
   subtitle?: string;
   /** Conteúdo da seção */
   children: ReactNode;
-  /** CSS customizado para margin */
+  /** CSS customizado para margin, padding e gap */
   customCss?: {
     marginTop?: string;
     marginBottom?: string;
@@ -45,12 +45,13 @@ export interface ChapterProps {
   children: React.ReactNode;
   /** Classes CSS personalizadas */
   className?: string;
-  /** CSS customizado para margin */
+  /** CSS customizado para margin, padding e gap */
   customCss?: {
     marginTop?: string;
     marginBottom?: string;
     paddingTop?: string;
     paddingLeft?: string;
+    gap?: string;
   };
   /** Força uma cor de fundo específica, sobrescrevendo a alternância automática */
   forceBackgroundColor?: string;

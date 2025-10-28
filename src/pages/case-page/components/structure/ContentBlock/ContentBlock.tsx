@@ -79,12 +79,12 @@ function ContentBlock({ children, className, customCss, fullWidth = false }: Con
   };
 
   return (
-    <div 
+    <div
       className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}
-      style={{ 
+      style={{
         marginTop: normalizeMeasures(defaultCustomCss.marginTop),
         marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
-        gap: normalizeMeasures(defaultCustomCss.gap)
+        ...(defaultCustomCss.gap && { gap: normalizeMeasures(defaultCustomCss.gap) })
       }}
     >
       {children}

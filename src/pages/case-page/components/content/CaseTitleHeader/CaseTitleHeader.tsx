@@ -46,7 +46,7 @@ import styles from "./casetitleheader.module.scss";
  * @param subtitleVariant - Estilo do subtítulo: 'default' (curto) ou 'paragraph' (longo)
  * @param subtitleWhite - Se true, aplica cor branca no subtítulo. Se false, usa cor padrão (#bbb)
  * @param className - Classe CSS adicional para customização
- * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px"
+ * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingBottom). Valores padrão: marginTop: "0", marginBottom: "0", paddingTop: "20px", paddingBottom: "20px". Se apenas paddingTop for informado, paddingBottom é ajustado para "0px".
  */
 function CaseTitleHeader({
   id,
@@ -57,12 +57,20 @@ function CaseTitleHeader({
   className,
   customCss,
 }: CaseTitleHeaderProps) {
+  const {
+    paddingTop: customPaddingTop,
+    paddingBottom: customPaddingBottom,
+    ...restCustomCss
+  } = customCss || {};
+
   const defaultCustomCss = {
     marginTop: "0",
     marginBottom: "0",
-    paddingTop: "20px",
-    paddingBottom: "20px",
-    ...customCss
+    paddingTop: customPaddingTop ?? "20px",
+    paddingBottom:
+      customPaddingBottom ??
+      (customPaddingTop !== undefined ? "0px" : "20px"),
+    ...restCustomCss
   };
 
   return (

@@ -55,7 +55,7 @@ import styles from "./chapter.module.scss";
  * @param subtitle - Subtítulo opcional (apenas com title)
  * @param children - Conteúdo do chapter (ContentBlocks, etc.)
  * @param className - Classe CSS adicional para customização
- * @param customCss - CSS customizado para margin e padding (marginTop, marginBottom, paddingTop, paddingLeft). Valores padrão: marginTop: "40px", marginBottom: "40px", paddingTop: "0px", paddingLeft: "0px"
+ * @param customCss - CSS customizado para margin, padding e gap (marginTop, marginBottom, paddingTop, paddingLeft, gap). Valores padrão: marginTop: "40px", marginBottom: "40px", paddingTop: "0px", paddingLeft: "0px", gap: "0px"
  * @param forceBackgroundColor - Força uma cor de fundo específica, sobrescrevendo a alternância automática
  */
 function Chapter({ id, title, subtitle, children, className, customCss, forceBackgroundColor }: ChapterProps) {
@@ -64,6 +64,7 @@ function Chapter({ id, title, subtitle, children, className, customCss, forceBac
     marginBottom: "40px",
     paddingTop: "0px",
     paddingLeft: "0px",
+    gap: "0px",
     ...customCss
   };
 
@@ -76,6 +77,7 @@ function Chapter({ id, title, subtitle, children, className, customCss, forceBac
         marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
         paddingTop: normalizeMeasures(defaultCustomCss.paddingTop),
         paddingLeft: normalizeMeasures(defaultCustomCss.paddingLeft),
+        ...(defaultCustomCss.gap && { gap: normalizeMeasures(defaultCustomCss.gap) }),
         ...(forceBackgroundColor && { backgroundColor: forceBackgroundColor })
       }}
     >

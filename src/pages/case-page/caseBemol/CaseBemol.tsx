@@ -169,7 +169,7 @@ function CaseBemol() {
           <FluxogramaVideo />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <TextContent
             title="DIAGNÓSTICO E OPORTUNIDADE"
             paragraphs={[

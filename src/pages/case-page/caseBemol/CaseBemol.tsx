@@ -212,7 +212,7 @@ function CaseBemol() {
             <ImgWithText
               img={entregaImg1}
               title=""
-              description="Dados sensíveis censurados."
+              description="Dados sensíveis censurados"
               descriptionIcon={closeEye}
               maxWidth="80"
             />
@@ -227,7 +227,7 @@ function CaseBemol() {
             <ImgWithText
               img={entregaImg2}
               title=""
-              description="Dados sensíveis censurados."
+              description="Dados sensíveis censurados"
               descriptionIcon={closeEye}
               maxWidth="80"
             />
@@ -242,7 +242,7 @@ function CaseBemol() {
           title="Escolha da data do vencimento das parcelas"
           subtitle={
             <>
-              <span>Exclusivo para apresentação pessoal</span>, entre em contato
+              <strong>Exclusivo para apresentação pessoal</strong>, entre em contato
               comigo e agende um horário.
             </>
           }
@@ -254,6 +254,7 @@ function CaseBemol() {
           <ContentSection>
             <SimpleList
               listType="bullet"
+              textColor="strong"
               items={[
                 "Identificação da dor",
                 "Meu processo de design",

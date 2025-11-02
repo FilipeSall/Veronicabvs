@@ -28,9 +28,8 @@
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
+  height: 8px;
+  width: 20px;
   background-color: #bbbbbb;
   cursor: pointer;
   border: none;
@@ -38,11 +37,10 @@
 
   &.active {
     background: var(--dot-color);
-    transform: scale(1.2);
   }
 }
 
-.title > span {
+.title>span {
   font-weight: bold;
 }
 

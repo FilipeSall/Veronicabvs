@@ -5,6 +5,8 @@ type ImgWithTextProps = {
     title: string,
     text?: string,
     description?: string,
+    /** Imagem opcional exibida ao lado da descrição */
+    descriptionIcon?: string,
     maxWidth?: string
 }
 
@@ -57,8 +59,9 @@ type ImgWithTextProps = {
  * @param text - Texto explicativo opcional
  * @param description - Descrição adicional (ex: avisos, observações)
  * @param maxWidth - Largura máxima da imagem em porcentagem (padrão: "100")
- */
-function ImgWithText({ img, title, description, text, maxWidth = "100" }: ImgWithTextProps) {
+*/
+/** @param descriptionIcon Imagem opcional exibida ao lado da descrição (20x20) */
+function ImgWithText({ img, title, description, descriptionIcon, text, maxWidth = "100" }: ImgWithTextProps) {
     return (
         <div className={styles.container}>
             <div className={styles.textWrapper}>
@@ -67,7 +70,19 @@ function ImgWithText({ img, title, description, text, maxWidth = "100" }: ImgWit
             </div>
             <div className={styles.imgWrapper}>
                 <img src={img} alt={`Imagem mostrando ${title}`} className={styles.img} style={{ maxWidth: `${maxWidth}%` }} />
-                {description && <p className={styles.descriptionText}>{description}</p>}
+                {description && (
+                    <div className={styles.descriptionWrapper}>
+                        {descriptionIcon && (
+                            <img
+                                src={descriptionIcon}
+                                alt=""
+                                aria-hidden
+                                className={styles.descriptionIcon}
+                            />
+                        )}
+                        <p className={styles.descriptionText}>{description}</p>
+                    </div>
+                )}
             </div>
         </div>
     )

@@ -5,15 +5,16 @@
 
 .btnWrapper {
     position: absolute;
-    top: 80%;
+    margin-top: -7.5%;
     display: flex;
     justify-content: center;
-    left: 70%;
+    margin-left: 87%;
     gap: 4px;
     font-size: 14px;
     color: #BBBBBB;
     align-items: center;
-    p{
+
+    p {
         font-size: 14px;
         font-style: italic;
     }
@@ -29,6 +30,7 @@
     font-weight: normal;
     cursor: pointer;
     font-family: 'Inter';
+    gap: 6px;
     font-size: 14px;
     font-style: italic;
 }

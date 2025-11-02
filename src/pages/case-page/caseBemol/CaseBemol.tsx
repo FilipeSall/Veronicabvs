@@ -15,6 +15,7 @@ import ImgWithText from "../components/media/ImageWithText/ImgWithText";
 import entregaImg1 from "../../../assets/caseBemol/1.3 A.png";
 import entregaImg2 from "../../../assets/caseBemol/1.3 B.png";
 import arrowBlue from "../../../assets/svgs/blueArrow.svg";
+import closeEye from "../../../assets/svgs/closeEye.svg";
 import ContentSection from "../components/structure/ContentSection/ContentSection";
 import TextContent from "../components/content/TextContent/TextContent";
 import Chapter from "../components/structure/Chapter/Chapter";
@@ -212,6 +213,7 @@ function CaseBemol() {
               img={entregaImg1}
               title=""
               description="Dados sensíveis censurados."
+              descriptionIcon={closeEye}
               maxWidth="80"
             />
           </ContentSection>
@@ -226,6 +228,7 @@ function CaseBemol() {
               img={entregaImg2}
               title=""
               description="Dados sensíveis censurados."
+              descriptionIcon={closeEye}
               maxWidth="80"
             />
           </ContentSection>

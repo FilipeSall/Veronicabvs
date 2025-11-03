@@ -19,37 +19,37 @@ import svg4 from "../../../assets/melliuz/gamificacao.svg";
 export const processDataApp: ProcessDataApp = [
   {
     title: "Planning",
-    lists: ["Questionamentos;", "Alinhamento", "Plano de pesquisa."],
+    lists: ["Questionamentos", "Alinhamento", "Plano de pesquisa"],
   },
   {
     title: "Discovery",
     lists: [
-      "Imersão;",
-      "Pesquisa exploratória;",
-      "Benchmarking.",
-      "Pontos de dor;",
-      "Análises.",
+      "Imersão",
+      "Pesquisa exploratória",
+      "Benchmarking",
+      "Pontos de dor",
+      "Análises",
     ],
   },
   {
     title: "Define",
     lists: [
-      "Síntese dos insights;",
-      "Perfil do usuário;",
-      "Definição da solução.",
+      "Síntese dos insights",
+      "Perfil do usuário",
+      "Definição da solução",
     ],
   },
   {
     title: "Develop",
-    lists: ["deação;", "luxograma", "rototipação (Wireframes)."],
+    lists: ["Ideação", "Fluxograma", "Prototipação (Wireframes)"],
   },
   {
     title: "Delivery",
-    lists: ["Apresentação (defesa);", "Documentação técnica."],
+    lists: ["Apresentação (defesa)", "Documentação técnica"],
   },
   {
     title: "Follow-up",
-    lists: ["(Próximos passos)."],
+    lists: ["(Próximos passos)"],
   },
 ];
 

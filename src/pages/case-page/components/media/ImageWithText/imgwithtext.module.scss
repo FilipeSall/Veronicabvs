@@ -23,7 +23,19 @@
 
 .descriptionText {
   font-size: 14px;
-  color: #bbbbbb;
+  color: #BBBBBB;
   font-family: "Inter";
   font-style: italic;
+}
+
+/* Wrapper para descrição e ícone opcional */
+.descriptionWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.descriptionIcon {
+  width: 20px;
+  height: 20px;
 }

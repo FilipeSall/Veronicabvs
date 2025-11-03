@@ -15,6 +15,7 @@ import ImgWithText from "../components/media/ImageWithText/ImgWithText";
 import entregaImg1 from "../../../assets/caseBemol/1.3 A.png";
 import entregaImg2 from "../../../assets/caseBemol/1.3 B.png";
 import arrowBlue from "../../../assets/svgs/blueArrow.svg";
+import closeEye from "../../../assets/svgs/closeEye.svg";
 import ContentSection from "../components/structure/ContentSection/ContentSection";
 import TextContent from "../components/content/TextContent/TextContent";
 import Chapter from "../components/structure/Chapter/Chapter";
@@ -91,11 +92,11 @@ function CaseBemol() {
               "O conteúdo e o timing das mensagens foram definidos com apoio do **time de marketing** e alinhados com o **design system** da empresa.",
             ]}
           />
-
-          <OpenScreenImg />
-        </ContentBlock>
-
-        <ContentBlock>
+          <ProcessFlowContainer
+            arrowColored={arrowBlue}
+            color="#4C31E0"
+            lists={processDataApp}
+          />
           <TextContent
             title="SOLUÇÃO"
             paragraphs={[
@@ -105,14 +106,48 @@ function CaseBemol() {
               "Apresentei a solução aos stakeholders, **validei a solução** e finalizei a entrega.",
             ]}
           />
-          <ProcessFlowContainer
-            arrowColored={arrowBlue}
-            color="#4C31E0"
-            lists={processDataApp}
-          />
-        </ContentBlock>
+          <OpenScreenImg />
+          <ContentSection title="MÉTRICAS E MELHORIAS">
+            <MetricsList
+              headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
+              items={[
+                {
+                  label: "Taxa de retorno",
+                  value: (
+                    <>
+                      ao fluxo de contratação (
+                      <span>aumento de 12% para 28%</span>)
+                    </>
+                  ),
+                },
+                {
+                  label: "Taxa de conversão",
+                  value: (
+                    <>
+                      em empréstimos efetivados (
+                      <span>aumento de 4% para 7%</span>)
+                    </>
+                  ),
+                },
+                {
+                  label: "Taxa de engajamento",
+                  value: (
+                    <>
+                      com as notificações (
+                      <span>taxa de cliques em torno de 18%</span>)
+                    </>
+                  ),
+                },
+              ]}
+              footerText={
+                <>
+                  Além disso, tive apoio do time de marketing nos ajustes na{" "}
+                  <span>copy</span> e no <span>timing</span> das notificações.
+                </>
+              }
+            />
+          </ContentSection>
 
-        <ContentBlock customCss={{ gap: "80" }}>
           <ContentSection title="MÉTRICAS E MELHORIAS">
             <MetricsList
               headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
@@ -211,7 +246,8 @@ function CaseBemol() {
             <ImgWithText
               img={entregaImg1}
               title=""
-              description="Dados sensíveis censurados."
+              description="Dados sensíveis censurados"
+              descriptionIcon={closeEye}
               maxWidth="80"
             />
           </ContentSection>
@@ -225,7 +261,8 @@ function CaseBemol() {
             <ImgWithText
               img={entregaImg2}
               title=""
-              description="Dados sensíveis censurados."
+              description="Dados sensíveis censurados"
+              descriptionIcon={closeEye}
               maxWidth="80"
             />
           </ContentSection>
@@ -239,7 +276,7 @@ function CaseBemol() {
           title="Escolha da data do vencimento das parcelas"
           subtitle={
             <>
-              <span>Exclusivo para apresentação pessoal</span>, entre em contato
+              <strong>Exclusivo para apresentação pessoal</strong>, entre em contato
               comigo e agende um horário.
             </>
           }
@@ -251,6 +288,7 @@ function CaseBemol() {
           <ContentSection>
             <SimpleList
               listType="bullet"
+              textColor="strong"
               items={[
                 "Identificação da dor",
                 "Meu processo de design",

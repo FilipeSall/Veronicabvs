@@ -1,4 +1,5 @@
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
+import styles from './datevideo.module.scss';
 import defaultGifSrc from '../../../../../assets/caseBemol/EscolhaData.gif';
 import defaultVideoSrc from '../../../../../assets/caseBemol/EscolhaData.mp4';
 
@@ -51,7 +52,7 @@ type DateVideoProps = {
  * @param loop - Loop contínuo (padrão: true)
  * @param className - Classe CSS adicional
  */
-function DateVideo({ 
+function DateVideo({
     videoSrc,
     gifSrc,
     mediaType = "gif",
@@ -67,15 +68,18 @@ function DateVideo({
         : (videoSrc ?? defaultVideoSrc);
 
     return (
-        <VideoPlayer
-            src={selectedSrc}
-            alt={alt}
-            showSuccessIcon={showSuccessIcon}
-            autoPlay={autoPlay}
-            loop={loop}
-            className={className}
-            mediaType={resolvedMediaType}
-        />
+        <div className={styles.videoPreviewContainer}>
+            <p>PREVIEW</p>
+            <VideoPlayer
+                src={selectedSrc}
+                alt={alt}
+                showSuccessIcon={showSuccessIcon}
+                autoPlay={autoPlay}
+                loop={loop}
+                className={className}
+                mediaType={resolvedMediaType}
+            />
+        </div>
     );
 }
 

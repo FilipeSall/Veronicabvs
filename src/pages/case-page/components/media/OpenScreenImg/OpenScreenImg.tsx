@@ -65,12 +65,12 @@ type OpenScreenImgProps = {
  * @param onClick - Ação customizada (substitui abertura em nova aba)
  * @param className - Classe CSS adicional
  */
-function OpenScreenImg({ 
+function OpenScreenImg({
     previewImg = defaultPreviewImg,
     fullscreenImg = defaultFullscreen,
     alt = 'imagem com o funil',
-    instructionText = '💡 Clique para abrir imagem inteira:',
-    buttonText = '(nova guia)',
+    instructionText = '',
+    buttonText = 'Ampliar',
     buttonIcon = defaultNewBtn,
     onClick,
     className

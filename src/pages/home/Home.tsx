@@ -1,12 +1,15 @@
 import CaseNav from '../../components/navigation/CaseNav/CaseNav';
 import { CaseInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
+import HomeSEO from '../../components/SEO/HomeSEO';
 import styles from './Home.module.scss';
 import solicon from '../../assets/svgs/sol.svg';
 
 function Home() {
   return (
-    <section className={styles.homeContainer}>
+    <>
+      <HomeSEO />
+      <section className={styles.homeContainer}>
 
       <div className={styles.titleSectionContainer}>
 
@@ -49,7 +52,8 @@ function Home() {
         <p className={styles.footerTxt}>Combine comigo a apresentação de case de sucesso <strong>exclusivo</strong>:</p>
       </div>
 
-    </section>
+      </section>
+    </>
   );
 }
 

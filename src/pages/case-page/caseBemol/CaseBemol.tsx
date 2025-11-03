@@ -92,11 +92,11 @@ function CaseBemol() {
               "O conteúdo e o timing das mensagens foram definidos com apoio do **time de marketing** e alinhados com o **design system** da empresa.",
             ]}
           />
-
-          <OpenScreenImg />
-        </ContentBlock>
-
-        <ContentBlock>
+          <ProcessFlowContainer
+            arrowColored={arrowBlue}
+            color="#4C31E0"
+            lists={processDataApp}
+          />
           <TextContent
             title="SOLUÇÃO"
             paragraphs={[
@@ -106,14 +106,48 @@ function CaseBemol() {
               "Apresentei a solução aos stakeholders, **validei a solução** e finalizei a entrega.",
             ]}
           />
-          <ProcessFlowContainer
-            arrowColored={arrowBlue}
-            color="#4C31E0"
-            lists={processDataApp}
-          />
-        </ContentBlock>
+          <OpenScreenImg />
+          <ContentSection title="MÉTRICAS E MELHORIAS">
+            <MetricsList
+              headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
+              items={[
+                {
+                  label: "Taxa de retorno",
+                  value: (
+                    <>
+                      ao fluxo de contratação (
+                      <span>aumento de 12% para 28%</span>)
+                    </>
+                  ),
+                },
+                {
+                  label: "Taxa de conversão",
+                  value: (
+                    <>
+                      em empréstimos efetivados (
+                      <span>aumento de 4% para 7%</span>)
+                    </>
+                  ),
+                },
+                {
+                  label: "Taxa de engajamento",
+                  value: (
+                    <>
+                      com as notificações (
+                      <span>taxa de cliques em torno de 18%</span>)
+                    </>
+                  ),
+                },
+              ]}
+              footerText={
+                <>
+                  Além disso, tive apoio do time de marketing nos ajustes na{" "}
+                  <span>copy</span> e no <span>timing</span> das notificações.
+                </>
+              }
+            />
+          </ContentSection>
 
-        <ContentBlock customCss={{ gap: "80" }}>
           <ContentSection title="MÉTRICAS E MELHORIAS">
             <MetricsList
               headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
@@ -170,7 +204,7 @@ function CaseBemol() {
           <FluxogramaVideo />
         </ContentBlock>
 
-        <ContentBlock>
+        <ContentBlock customCss={{ gap: "80" }}>
           <TextContent
             title="DIAGNÓSTICO E OPORTUNIDADE"
             paragraphs={[

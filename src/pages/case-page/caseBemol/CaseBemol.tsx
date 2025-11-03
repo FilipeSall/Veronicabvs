@@ -148,46 +148,13 @@ function CaseBemol() {
             />
           </ContentSection>
 
-          <ContentSection title="MÉTRICAS E MELHORIAS">
-            <MetricsList
-              headerText="Para avaliar o impacto da solução, foram analisadas métricas estratégicas nos primeiros 30 dias após o lançamento:"
-              items={[
-                {
-                  label: "Taxa de retorno",
-                  value: (
-                    <>
-                      ao fluxo de contratação (
-                      <span>aumento de 12% para 28%</span>)
-                    </>
-                  ),
-                },
-                {
-                  label: "Taxa de conversão",
-                  value: (
-                    <>
-                      em empréstimos efetivados (
-                      <span>aumento de 4% para 7%</span>)
-                    </>
-                  ),
-                },
-                {
-                  label: "Taxa de engajamento",
-                  value: (
-                    <>
-                      com as notificações (
-                      <span>taxa de cliques em torno de 18%</span>)
-                    </>
-                  ),
-                },
-              ]}
-              footerText={
-                <>
-                  Além disso, tive apoio do time de marketing nos ajustes na{" "}
-                  <span>copy</span> e no <span>timing</span> das notificações.
-                </>
-              }
-            />
-          </ContentSection>
+          <TextContent
+            title="PLANO DE MONINTORIA"
+            paragraphs={[
+              "O desempenho da estratégia foi acompanhado por relatórios periódicos, com foco na **identificação de padrões e ajustes contínuos**.",
+              "O monitoramento incluiu **métricas** como interações com os pushes, tempo médio de retorno ao fluxo e variações nas taxas de conversão, de forma a garantir a **evolução da estratégia**, de acordo com o comportamento dos usuários e as metas do negócio.",
+            ]}
+          />
         </ContentBlock>
       </Chapter>
 
@@ -276,8 +243,8 @@ function CaseBemol() {
           title="Escolha da data do vencimento das parcelas"
           subtitle={
             <>
-              <strong>Exclusivo para apresentação pessoal</strong>, entre em contato
-              comigo e agende um horário.
+              <strong>Exclusivo para apresentação pessoal</strong>, entre em
+              contato comigo e agende um horário.
             </>
           }
           subtitleWhite

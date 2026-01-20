@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { useEffect } from 'react';
 
 const ptKeywords = [
   'product designer',
@@ -101,24 +101,68 @@ const ptDescription =
 const enDescription =
   'Portfolio of Verônica Silva, Product Designer focused on creating strategic, human-centered digital experiences.';
 
+type MetaTagOptions = {
+  name?: string;
+  property?: string;
+  content: string;
+  lang?: string;
+};
+
+function upsertMetaTag({ name, property, content, lang }: MetaTagOptions) {
+  const selectorAttributes = [
+    name ? `[name="${name}"]` : null,
+    property ? `[property="${property}"]` : null,
+    lang ? `[lang="${lang}"]` : null,
+  ].filter(Boolean);
+
+  const selector = `meta${selectorAttributes.join('')}`;
+  const existing = selector ? document.querySelector(selector) : null;
+  const meta = existing || document.createElement('meta');
+
+  if (name) meta.setAttribute('name', name);
+  if (property) meta.setAttribute('property', property);
+  if (lang) meta.setAttribute('lang', lang);
+  meta.setAttribute('content', content);
+
+  if (!existing) {
+    meta.setAttribute('data-managed-by', 'HomeSEO');
+    document.head.appendChild(meta);
+  }
+}
+
 function HomeSEO() {
-  return (
-    <Helmet>
-      <title>Verônica Silva | Product Designer</title>
-      <meta name="description" content={ptDescription} lang="pt-BR" />
-      <meta name="description" content={enDescription} lang="en" />
-      <meta name="keywords" content={ptKeywords} lang="pt-BR" />
-      <meta name="keywords" content={enKeywords} lang="en" />
-      <meta property="og:title" content="Verônica Silva | Product Designer" />
-      <meta
-        property="og:description"
-        content="Cases de UX, UI e Product Design por Verônica Silva, com foco em experiências digitais estratégicas e centradas no usuário."
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content="pt_BR" />
-      <meta property="og:locale:alternate" content="en_US" />
-    </Helmet>
-  );
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = 'Verônica Silva | Product Designer';
+
+    const createdMetaSelector = 'meta[data-managed-by="HomeSEO"]';
+
+    upsertMetaTag({ name: 'description', content: ptDescription, lang: 'pt-BR' });
+    upsertMetaTag({ name: 'description', content: enDescription, lang: 'en' });
+    upsertMetaTag({ name: 'keywords', content: ptKeywords, lang: 'pt-BR' });
+    upsertMetaTag({ name: 'keywords', content: enKeywords, lang: 'en' });
+    upsertMetaTag({
+      property: 'og:title',
+      content: 'Verônica Silva | Product Designer',
+    });
+    upsertMetaTag({
+      property: 'og:description',
+      content:
+        'Cases de UX, UI e Product Design por Verônica Silva, com foco em experiências digitais estratégicas e centradas no usuário.',
+    });
+    upsertMetaTag({ property: 'og:type', content: 'website' });
+    upsertMetaTag({ property: 'og:locale', content: 'pt_BR' });
+    upsertMetaTag({ property: 'og:locale:alternate', content: 'en_US' });
+
+    return () => {
+      document.title = previousTitle;
+      document.querySelectorAll(createdMetaSelector).forEach((meta) => {
+        meta.remove();
+      });
+    };
+  }, []);
+
+  return null;
 }
 
 export default HomeSEO;

@@ -14,7 +14,7 @@
     justify-content: center;
     gap: 24px;
     flex-wrap: nowrap;
-    text-align: center;
+    text-align: left;
 }
 
 .titlesWrapper {
@@ -61,7 +61,7 @@
     align-items: center;
     width: 100%;
     gap: 8px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .subtitle {
@@ -171,7 +171,7 @@
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 0;
     }
 
     .NavCasesWrapper :global(.caseNav) {

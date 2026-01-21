@@ -98,6 +98,10 @@ function ContentBlock({ children, className, customCss, fullWidth = false }: Con
     styleOverrides.paddingLeft = normalizeMeasures(customCss.paddingLeft);
   }
 
+  if (customCss?.alignItems) {
+    styleOverrides.alignItems = customCss.alignItems;
+  }
+
   return (
     <div
       className={`${styles.contentBlock} ${fullWidth ? styles.fullWidth : ""} ${className || ""}`}

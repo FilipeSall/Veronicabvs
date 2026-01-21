@@ -8,6 +8,7 @@ export interface CommonCustomCss {
   paddingBottom?: string;
   paddingLeft?: string;
   gap?: string;
+  alignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
 }
 
 export interface TextContentProps {

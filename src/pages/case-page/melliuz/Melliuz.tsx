@@ -131,13 +131,14 @@ function Melliuz() {
       >
         <CaseTitleHeader id="3.6" title="Entrega de Valor" />
 
-        <ContentBlock customCss={{ marginBottom: "40" }}>
+        <ContentBlock customCss={{ marginBottom: "40", alignItems: "center" }}>
           <InsightCardsGrid
             items={entregaValorData}
             customCss={{
               gap: "40",
               itemGap: "40",
               marginBottom: "24",
+              width: "var(--layout-content-width)",
             }}
           />
         </ContentBlock>

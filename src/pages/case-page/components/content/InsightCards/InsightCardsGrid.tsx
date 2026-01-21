@@ -12,6 +12,7 @@ interface InsightCardsGridProps {
     gap?: string;
     marginTop?: string;
     marginBottom?: string;
+    width?: string;
   };
 }
 
@@ -62,7 +63,8 @@ function InsightCardsGrid({ items, customCss }: InsightCardsGridProps) {
       style={{ 
         gap: normalizeMeasures(defaultCustomCss.itemGap),
         marginTop: normalizeMeasures(defaultCustomCss.marginTop),
-        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom)
+        marginBottom: normalizeMeasures(defaultCustomCss.marginBottom),
+        width: defaultCustomCss.width ? normalizeMeasures(defaultCustomCss.width) : undefined,
       }}
     >
       {items.map((item, index) => (

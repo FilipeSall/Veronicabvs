@@ -6,14 +6,19 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  min-height: 550px;
 }
 
 .img {
-  width: clamp(250px, 35%, 450px);
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
   z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
 }
 
 .suspenseTxt {
@@ -21,81 +26,106 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: clamp(180px, 28%, 320px);
+  width: 28%;
+  max-width: 320px;
   h3 {
-    font-size: clamp(13px, 1.1vw, 16px);
+    font-size: 16px;
     font-weight: bold;
   }
   p {
-    font-size: clamp(13px, 1.1vw, 16px);
+    font-size: 16px;
     font-family: "inter";
   }
 }
 
+/* Texto da esquerda */
 .suspenseTxt1 {
-  right: calc(50% + clamp(140px, 18%, 240px));
-  top: 40%;
   text-align: right;
+  top: 43.5%;
+  left: -4%;
 }
 
+/* Texto da direita */
 .suspenseTxt2 {
-  left: calc(50% + clamp(140px, 18%, 240px));
-  top: 12%;
   text-align: left;
+  top: 20%;
+  left: 76%;
 }
 
-/* Responsividade para telas menores que 1380px */
-@media (max-width: 1380px) {
-  .img {
-    width: clamp(220px, 32%, 380px);
-  }
-
-  .suspenseTxt {
-    width: clamp(150px, 25%, 280px);
-  }
-
-  .suspenseTxt1 {
-    right: calc(50% + clamp(120px, 16%, 200px));
-  }
-
-  .suspenseTxt2 {
-    left: calc(50% + clamp(120px, 16%, 200px));
-  }
-}
-
+/* Apenas a partir de 1100px começamos a reduzir */
 @media (max-width: 1100px) {
+  .container {
+    min-height: 450px;
+  }
+
   .img {
-    width: clamp(200px, 30%, 320px);
+    max-width: 380px;
   }
 
   .suspenseTxt {
-    width: clamp(120px, 22%, 220px);
+    width: 26%;
     h3 {
-      font-size: clamp(11px, 1vw, 14px);
+      font-size: 14px;
     }
     p {
-      font-size: clamp(11px, 1vw, 14px);
+      font-size: 14px;
     }
   }
 
   .suspenseTxt1 {
-    right: calc(50% + clamp(110px, 15%, 170px));
+    left: 0%;
   }
 
   .suspenseTxt2 {
-    left: calc(50% + clamp(110px, 15%, 170px));
+    left: 74%;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+  .container {
+    min-height: 400px;
+  }
+
+  .img {
+    max-width: 320px;
+  }
+
+  .suspenseTxt {
+    width: 24%;
+    h3 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .suspenseTxt1 {
+    left: 1%;
+  }
+
+  .suspenseTxt2 {
+    left: 75%;
+  }
+}
+
+@media (max-width: 800px) {
   .container {
     flex-direction: column;
     gap: 30px;
     padding: 20px;
+    justify-content: center;
+    min-height: auto;
+    align-items: center;
   }
 
   .img {
-    width: clamp(250px, 60%, 400px);
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 60%;
+    max-width: 350px;
     order: 1;
   }
 
@@ -103,10 +133,15 @@
     position: relative;
     width: 100%;
     max-width: 500px;
-    right: auto !important;
-    left: auto !important;
     top: auto !important;
+    left: auto !important;
     text-align: center !important;
+    h3 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 
   .suspenseTxt1 {

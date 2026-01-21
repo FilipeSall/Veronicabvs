@@ -5,8 +5,15 @@
   margin: 40px 0;
   position: relative;
   width: 100%;
-  padding: 0 5%;
   box-sizing: border-box;
+}
+
+.img {
+  width: clamp(250px, 35%, 450px);
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  z-index: 1;
 }
 
 .suspenseTxt {
@@ -14,68 +21,99 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: clamp(150px, 30%, 300px);
+  width: clamp(180px, 28%, 320px);
   h3 {
-    font-size: clamp(12px, 1.1vw, 16px);
+    font-size: clamp(13px, 1.1vw, 16px);
+    font-weight: bold;
   }
   p {
-    font-size: clamp(12px, 1.1vw, 16px);
+    font-size: clamp(13px, 1.1vw, 16px);
     font-family: "inter";
   }
 }
 
 .suspenseTxt1 {
-  left: 2%;
-  top: 43%;
+  right: calc(50% + clamp(140px, 18%, 240px));
+  top: 40%;
   text-align: right;
 }
 
 .suspenseTxt2 {
-  right: 2%;
-  top: 15%;
+  left: calc(50% + clamp(140px, 18%, 240px));
+  top: 12%;
   text-align: left;
 }
 
 /* Responsividade para telas menores que 1380px */
 @media (max-width: 1380px) {
+  .img {
+    width: clamp(220px, 32%, 380px);
+  }
+
   .suspenseTxt {
-    width: clamp(120px, 25%, 250px);
+    width: clamp(150px, 25%, 280px);
   }
 
   .suspenseTxt1 {
-    left: 1%;
+    right: calc(50% + clamp(120px, 16%, 200px));
   }
 
   .suspenseTxt2 {
-    right: 1%;
+    left: calc(50% + clamp(120px, 16%, 200px));
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
+  .img {
+    width: clamp(200px, 30%, 320px);
+  }
+
+  .suspenseTxt {
+    width: clamp(120px, 22%, 220px);
+    h3 {
+      font-size: clamp(11px, 1vw, 14px);
+    }
+    p {
+      font-size: clamp(11px, 1vw, 14px);
+    }
+  }
+
+  .suspenseTxt1 {
+    right: calc(50% + clamp(110px, 15%, 170px));
+  }
+
+  .suspenseTxt2 {
+    left: calc(50% + clamp(110px, 15%, 170px));
+  }
+}
+
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
+    gap: 30px;
     padding: 20px;
-    gap: 20px;
+  }
+
+  .img {
+    width: clamp(250px, 60%, 400px);
+    order: 1;
   }
 
   .suspenseTxt {
     position: relative;
     width: 100%;
-    left: auto !important;
+    max-width: 500px;
     right: auto !important;
+    left: auto !important;
     top: auto !important;
     text-align: center !important;
   }
 
   .suspenseTxt1 {
-    order: 1;
+    order: 2;
   }
 
   .suspenseTxt2 {
     order: 3;
-  }
-
-  .container > img {
-    order: 2;
   }
 }

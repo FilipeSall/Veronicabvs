@@ -1,13 +1,11 @@
-:root {
-  --arrow-width: 26px;
-  --arrow-height: 39px;
-}
-
 .container {
   width: 100%;
   padding: 40px 12px 0;
   margin: 40px 0;
   box-sizing: border-box;
+  /* Variáveis locais para controle responsivo */
+  --local-arrow-width: 26px;
+  --local-arrow-height: 39px;
 }
 
 .columnWrapper {
@@ -20,7 +18,8 @@
     content: "";
     position: absolute;
     width: 85%;
-    top: 19.5px; /* Metade da altura da seta (39px / 2) */
+    /* Centraliza com a seta usando a variável local */
+    top: calc(var(--local-arrow-height) / 2);
     left: 8%;
     border-top: 1px dashed #ffffff;
     opacity: 0.7;
@@ -37,13 +36,14 @@
 }
 
 .arrow {
-  width: var(--arrow-width);
-  height: var(--arrow-height);
+  width: var(--local-arrow-width);
+  height: var(--local-arrow-height);
   position: relative;
   z-index: 1;
   opacity: 1;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .reverse {
@@ -90,13 +90,13 @@
 
 /* Responsividade para telas menores que 1380px */
 @media (max-width: 1380px) {
-  .columnWrapper {
-    gap: clamp(6px, 1vw, 15px);
+  .container {
+    --local-arrow-width: clamp(18px, 1.8vw, 26px);
+    --local-arrow-height: clamp(27px, 2.7vw, 39px);
   }
 
-  .arrow {
-    width: clamp(18px, 1.8vw, 26px);
-    height: clamp(27px, 2.7vw, 39px);
+  .columnWrapper {
+    gap: clamp(6px, 1vw, 15px);
   }
 }
 

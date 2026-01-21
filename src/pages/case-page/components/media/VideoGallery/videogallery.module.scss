@@ -1,11 +1,21 @@
-
 .galleryContainer {
   display: flex;
-  width: 85%;
+  width: 100%;
+  max-width: 85%;
   justify-content: space-evenly;
   align-items: flex-start;
-  gap: 16px;
+  gap: clamp(10px, 1.1vw, 16px);
   flex-wrap: wrap;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Responsividade para telas menores que 1380px */
+@media (max-width: 1380px) {
+  .galleryContainer {
+    max-width: 95%;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -13,5 +23,6 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    max-width: 100%;
   }
 }

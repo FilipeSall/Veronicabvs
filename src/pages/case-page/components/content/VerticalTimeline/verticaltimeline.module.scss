@@ -2,17 +2,20 @@
   display: flex;
   flex-direction: column;
   max-width: var(--layout-max-width);
+  width: 100%;
   align-items: center;
   padding: 20px 0 40px 0;
+  box-sizing: border-box;
 }
 
 .timelineItem {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: clamp(10px, 1vw, 15px);
   width: 100%;
   justify-content: center;
-  margin-left: 4%;
+  padding-left: 4%;
+  box-sizing: border-box;
 }
 
 .dotColumn {
@@ -42,6 +45,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 .stepWrapper h4::before {
@@ -52,5 +56,23 @@
 }
 
 .stepWrapper > p {
-  width: 85%;
+  width: 100%;
+  max-width: 85%;
+}
+
+/* Responsividade para telas menores que 1380px */
+@media (max-width: 1380px) {
+  .stepWrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineItem {
+    padding-left: 2%;
+  }
+
+  .stepWrapper {
+    width: 80%;
+  }
 }

@@ -1,21 +1,22 @@
 .container {
     position: relative;
     margin: 40px 0;
+    width: 100%;
 }
 
 .btnWrapper {
     position: absolute;
-    margin-top: -7.5%;
+    top: -5%;
+    right: 2%;
     display: flex;
     justify-content: center;
-    margin-left: 87%;
     gap: 4px;
-    font-size: 14px;
+    font-size: clamp(12px, 1vw, 14px);
     color: #BBBBBB;
     align-items: center;
 
     p {
-        font-size: 14px;
+        font-size: clamp(12px, 1vw, 14px);
         font-style: italic;
     }
 }
@@ -31,6 +32,23 @@
     cursor: pointer;
     font-family: 'Inter';
     gap: 6px;
-    font-size: 14px;
+    font-size: clamp(12px, 1vw, 14px);
     font-style: italic;
+}
+
+/* Responsividade para telas menores que 1380px */
+@media (max-width: 1380px) {
+    .btnWrapper {
+        right: 1%;
+    }
+}
+
+@media (max-width: 768px) {
+    .btnWrapper {
+        position: relative;
+        top: auto;
+        right: auto;
+        justify-content: flex-end;
+        padding: 10px 0;
+    }
 }

@@ -5,6 +5,7 @@
     height: 100%;
     margin: 40px 0;
     position: relative;
+    gap: 10px;
 }
 
 .imgWrapper {
@@ -12,17 +13,20 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    height: 300px;
+    height: auto;
+    min-height: 200px;
     gap: 4px;
+    flex: 1;
+    min-width: 0;
 }
 
 .imgWrapper p {
-    font-size: 24px;
+    font-size: clamp(16px, 1.7vw, 24px);
     font-weight: bolder;
 }
 
 .description {
-    font-size: 12px;
+    font-size: clamp(10px, 0.9vw, 12px);
     color: #666;
     text-align: center;
     margin-top: 4px;
@@ -34,6 +38,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    max-width: 40%;
+    height: auto;
 }
 
 // Para manter compatibilidade com classe global existente
@@ -43,4 +49,35 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    max-width: 40%;
+    height: auto;
+}
+
+/* Responsividade para telas menores que 1380px */
+@media (max-width: 1380px) {
+    .container {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .imgWrapper {
+        flex: 0 1 calc(50% - 10px);
+        min-width: 150px;
+    }
+
+    .centerImage,
+    :global(.funilImg) {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        margin: 20px auto;
+    }
 }

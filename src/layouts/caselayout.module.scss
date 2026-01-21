@@ -4,6 +4,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Header e Footer ficam dentro de um wrapper com o mesmo padding do MainLayout */

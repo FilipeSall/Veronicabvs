@@ -17,22 +17,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: clamp(120px, 14vw, 200px);
   gap: 10px;
+  flex-shrink: 0;
 
   img {
-    width: 200px;
-    height: 370px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 200 / 370;
     object-fit: contain;
   }
 
   p {
-    font-size: 16px;
+    font-size: clamp(12px, 1.1vw, 16px);
     color: #ffffff;
     text-align: center;
     margin: 0;
-    width: 75%;
-    min-height: 60px;
+    width: 90%;
+    min-height: 50px;
     background-color: #0f0f0f;
     position: relative;
     z-index: 1;
@@ -41,7 +44,7 @@
 
 .number {
   color: #ed387b;
-  font-size: 20px;
+  font-size: clamp(16px, 1.4vw, 20px);
   font-weight: 700;
   z-index: 999;
   position: relative;
@@ -63,11 +66,12 @@
 
 .mainStepContainer {
   display: flex;
-  margin-left: 15%;
+  margin-left: 10%;
 
   img {
-    width: 341px;
-    height: 504px;
+    width: clamp(200px, 24vw, 341px);
+    height: auto;
+    aspect-ratio: 341 / 504;
     object-fit: contain;
   }
 }
@@ -77,10 +81,10 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 75%;
+  width: 80%;
 
   p {
-    font-size: 16px;
+    font-size: clamp(12px, 1.1vw, 16px);
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -96,4 +100,39 @@
   left: 93%;
   top: 20px;
   transform: translateX(-50%);
+}
+
+/* Responsividade para telas menores que 1380px */
+@media (max-width: 1380px) {
+  .container {
+    min-height: auto;
+    gap: 10px;
+  }
+
+  .stepWrapper {
+    width: clamp(100px, 12vw, 180px);
+  }
+
+  .mainStepContainer {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stepWrapper {
+    width: calc(33% - 20px);
+    min-width: 120px;
+  }
+
+  .mainStepContainer {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }

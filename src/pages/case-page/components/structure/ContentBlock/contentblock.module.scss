@@ -5,6 +5,7 @@
   width: 100%;
   max-width: var(--layout-max-width);
   padding: 0 var(--layout-padding-inline);
+  box-sizing: border-box;
 }
 
 /* Quando fullWidth=true, o conteúdo filho ocupa 100% mas respeitando o max-width do container */

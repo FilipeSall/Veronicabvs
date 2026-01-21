@@ -19,35 +19,29 @@
 
 .titlesWrapper {
     width: min(100%, 640px);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+    column-gap: 8px;
+    row-gap: 6px;
     color: var(--textColor);
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .title {
     font-weight: 700;
     font-size: 40px;
-
-    img {
-        opacity: 0;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-    }
-
-    &:hover {
-        img {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .titlesWrapper>p {
     font-weight: 400;
     font-size: 16px;
-    margin: 0 56px;
+    margin: 0;
+    grid-column: 2;
+    justify-self: center;
 }
 
 
@@ -56,12 +50,34 @@
     transition: all 0.3s ease;
 }
 
-.subtitleWrapper {
+.titleRow {
+    display: contents;
+}
+
+.sunIcon {
+    grid-column: 1;
+    grid-row: 2;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.title:hover+.sunIcon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.titleMeta {
     display: flex;
     align-items: center;
-    width: 100%;
     gap: 8px;
-    justify-content: flex-start;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.lastName {
+    font-weight: 700;
+    font-size: 40px;
 }
 
 .subtitle {
@@ -113,6 +129,8 @@
 #outonoTxt,
 #invernoTxt {
     transition: all 0.3s ease;
+    grid-column: 2;
+    justify-self: center;
 }
 
 @keyframes colorChange {
@@ -142,6 +160,7 @@
     animation: colorChange 6s infinite;
     animation-delay: 0s;
     animation-timing-function: ease-in-out;
+    grid-row: 1;
 }
 
 #outonoTxt {
@@ -149,6 +168,7 @@
     animation: colorChange 6s infinite;
     animation-delay: 2s;
     animation-timing-function: ease-in-out;
+    grid-row: 3;
 }
 
 #invernoTxt {
@@ -156,11 +176,13 @@
     animation: colorChange 6s infinite;
     animation-delay: 4s;
     animation-timing-function: ease-in-out;
+    grid-row: 4;
 }
 
 @media (max-width: 1040px) {
     .titlesWrapper {
         width: 100%;
+        grid-template-columns: max-content max-content auto;
     }
 
     .titlesWrapper>p {

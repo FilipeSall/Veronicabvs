@@ -52,10 +52,57 @@
   left: 76%;
 }
 
-/* Apenas a partir de 1100px começamos a reduzir */
+@media (max-width: 1360px) {
+  .suspenseTxt1 {
+    left: -6%;
+  }
+
+  .suspenseTxt2 {
+    left: 78%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .suspenseTxt {
+    width: 26%;
+  }
+
+  .suspenseTxt1 {
+    left: -5%;
+  }
+
+  .suspenseTxt2 {
+    left: 79%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .img {
+    max-width: 420px;
+  }
+
+  .suspenseTxt {
+    width: 25%;
+    h3 {
+      font-size: 15px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .suspenseTxt1 {
+    left: -3%;
+  }
+
+  .suspenseTxt2 {
+    left: 78%;
+  }
+}
+
 @media (max-width: 1100px) {
   .container {
-    min-height: 450px;
+    min-height: 480px;
   }
 
   .img {
@@ -63,12 +110,74 @@
   }
 
   .suspenseTxt {
-    width: 26%;
+    width: 24%;
     h3 {
       font-size: 14px;
     }
     p {
       font-size: 14px;
+    }
+  }
+
+  .suspenseTxt1 {
+    left: -2%;
+  }
+
+  .suspenseTxt2 {
+    left: 78%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .suspenseTxt {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    min-height: 450px;
+  }
+
+  .img {
+    max-width: 340px;
+  }
+
+  .suspenseTxt {
+    width: 23%;
+    h3 {
+      font-size: 13px;
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .suspenseTxt1 {
+    left: -1%;
+  }
+
+  .suspenseTxt2 {
+    left: 78%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    min-height: 420px;
+  }
+
+  .img {
+    max-width: 300px;
+  }
+
+  .suspenseTxt {
+    width: 22%;
+    h3 {
+      font-size: 12px;
+    }
+    p {
+      font-size: 12px;
     }
   }
 
@@ -77,35 +186,7 @@
   }
 
   .suspenseTxt2 {
-    left: 74%;
-  }
-}
-
-@media (max-width: 950px) {
-  .container {
-    min-height: 400px;
-  }
-
-  .img {
-    max-width: 320px;
-  }
-
-  .suspenseTxt {
-    width: 24%;
-    h3 {
-      font-size: 13px;
-    }
-    p {
-      font-size: 13px;
-    }
-  }
-
-  .suspenseTxt1 {
-    left: 1%;
-  }
-
-  .suspenseTxt2 {
-    left: 75%;
+    left: 78%;
   }
 }
 

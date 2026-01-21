@@ -109,7 +109,7 @@ function Melliuz() {
           title="Descobertas e evidências"
           customCss={{ marginTop: "20" }}
         />
-        <ContentBlock customCss={{ marginTop: "20" }}>
+        <ContentBlock customCss={{ marginTop: "20", gap:"40" }}>
           <InsightCardsGrid items={insightsCardsValue} />
           <VerticalTimeline
             items={evidenciasTimelineData}

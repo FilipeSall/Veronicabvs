@@ -15,9 +15,13 @@ function Home() {
 
         <div className={styles.titlesWrapper}>
           <p id={styles.privameraTxt}>Primavér<span className={styles.textDegrade}>nica</span></p>
-          <div className={styles.subtitleWrapper}>
-            <h1 className={styles.title}><img src={solicon} alt='icone de sol' /> Verônica Silva</h1>
-            <h2 className={styles.subtitle}>- Product Designer</h2>
+          <div className={styles.titleRow}>
+            <h1 className={styles.title}>Verônica</h1>
+            <img className={styles.sunIcon} src={solicon} alt='icone de sol' />
+            <div className={styles.titleMeta}>
+              <span className={styles.lastName}>Silva</span>
+              <h2 className={styles.subtitle}>- Product Designer</h2>
+            </div>
           </div>
           <p id={styles.outonoTxt}>Outô<span className={styles.textDegrade}>nica</span></p>
           <p id={styles.invernoTxt}>Invér<span className={styles.textDegrade}>nica</span></p>

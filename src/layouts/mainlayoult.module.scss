@@ -1,8 +1,8 @@
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 40px);
+  padding: 0 var(--layout-padding-inline);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

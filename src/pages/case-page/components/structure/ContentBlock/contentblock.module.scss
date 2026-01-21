@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: var(--layout-max-width);
+  padding: 0 var(--layout-padding-inline);
 }
 
 /* Quando fullWidth=true, o conteúdo filho ocupa 100% mas respeitando o max-width do container */

@@ -42,12 +42,14 @@ function CasePage() {
 
   return (
     <main className={styles.caseContainer}>
-      <CasePanel
-        nome={caseData.nome}
-        bgColor={caseData.bgColor}
-        projeto={caseData.projeto}
-        miniImg={caseData.miniImg}
-      />
+      <div className={styles.casePanelWrapper}>
+        <CasePanel
+          nome={caseData.nome}
+          bgColor={caseData.bgColor}
+          projeto={caseData.projeto}
+          miniImg={caseData.miniImg}
+        />
+      </div>
 
       <section className={styles.caseWrapper}>
         {caseData.id === 1 && <CaseBemol />}

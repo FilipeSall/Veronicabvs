@@ -1,0 +1,32 @@
+/* Layout específico para pages de case - permite backgrounds full-width */
+.caseLayoutContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header e Footer ficam dentro de um wrapper com o mesmo padding do MainLayout */
+.headerWrapper,
+.footerWrapper {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding: 0 var(--layout-padding-inline);
+  box-sizing: border-box;
+}
+
+/* O conteúdo principal do case ocupa 100% da largura - sem padding */
+.caseMainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@supports (min-height: 100dvh) {
+  .caseLayoutContainer {
+    min-height: 100dvh;
+  }
+}

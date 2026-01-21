@@ -1,8 +1,8 @@
 .container {
   display: flex;
   align-items: center;
-  max-width: var(--max-width);
-  margin: var(--center-margin);
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
   width: 65%;
 }
 

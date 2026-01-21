@@ -6,11 +6,18 @@
     height: 86vh;
 }
 
+/* Wrapper para o CasePanel com mesmo padding do header */
+.casePanelWrapper {
+    width: 100%;
+    max-width: var(--layout-max-width);
+    margin: 0 auto;
+    padding: 0 var(--layout-padding-inline);
+    box-sizing: border-box;
+}
+
 .caseWrapper{
     height: 75vh;
     width: 100%;
     overflow-y: scroll;
     background-color: #0f0f0f;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
 }

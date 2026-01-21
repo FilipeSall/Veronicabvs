@@ -18,7 +18,9 @@
       "Bash(node:*)",
       "WebSearch",
       "Read(//home/sea/**)",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []

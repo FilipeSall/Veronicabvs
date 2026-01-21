@@ -3,11 +3,9 @@
 }
 
 .contentContainer > div {
-  max-width: var(--max-width);
-  margin: var(--center-margin);
-  padding-left: 72px;
-  padding-right: 72px;
-  width: var(--content-width);
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  width: var(--layout-content-width);
   display: flex;
   flex-direction: column;
 }

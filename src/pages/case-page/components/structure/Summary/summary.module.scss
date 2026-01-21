@@ -4,12 +4,12 @@
 }
 
 .navContent {
-  max-width: 1440px;
+  max-width: var(--layout-max-width);
   margin: 0 auto;
   display: flex;
   gap: 3px;
   justify-content: space-between;
-  padding: 35px 55px;
+  padding: var(--case-content-padding);
   flex-wrap: wrap;
   max-height: inherit;
 }

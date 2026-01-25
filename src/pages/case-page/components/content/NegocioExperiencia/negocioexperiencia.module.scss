@@ -1,19 +1,33 @@
 .container{
     display: flex;
     font-family: 'Inter' !important;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contentWrapper{
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.contentWrapper img{
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .textWrapper{
     width: 300px;
+    min-width: 200px;
     gap: 12px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
 }
 
 .textWrapper h4{
@@ -30,4 +44,100 @@
 
 .textWrapper:last-child{
     text-align: left;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1330px) {
+    .container {
+        gap: 30px;
+    }
+
+    .contentWrapper {
+        gap: 20px;
+    }
+
+    .contentWrapper img {
+        max-width: 280px;
+    }
+
+    .textWrapper {
+        width: 250px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .container {
+        gap: 20px;
+    }
+
+    .contentWrapper {
+        gap: 16px;
+    }
+
+    .contentWrapper img {
+        max-width: 220px;
+    }
+
+    .textWrapper {
+        width: 200px;
+        min-width: 150px;
+    }
+
+    .textWrapper h4 {
+        font-size: 14px;
+    }
+
+    .textWrapper p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contentWrapper img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .textWrapper {
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .textWrapper:first-child,
+    .textWrapper:last-child {
+        text-align: center;
+    }
+
+    .textWrapper h4 {
+        font-size: 16px;
+    }
+
+    .textWrapper p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contentWrapper {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .textWrapper {
+        min-width: unset;
+    }
 }

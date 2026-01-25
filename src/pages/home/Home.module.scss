@@ -20,13 +20,24 @@
 .titlesWrapper {
     width: min(100%, 640px);
     display: grid;
-    grid-template-columns: max-content max-content auto;
+    grid-template-columns: max-content max-content max-content auto;
     column-gap: 8px;
-    row-gap: 6px;
+    row-gap: 4px;
     color: var(--textColor);
     justify-content: center;
     align-items: center;
-    text-align: left;
+}
+
+.titlesWrapper > p {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.nameRow {
+    display: contents;
 }
 
 .title {
@@ -36,22 +47,9 @@
     grid-row: 2;
 }
 
-.titlesWrapper>p {
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0;
-    grid-column: 2;
-    justify-self: center;
-}
-
-
 .textDegrade {
     color: var(--fadeTextColor);
     transition: all 0.3s ease;
-}
-
-.titleRow {
-    display: contents;
 }
 
 .sunIcon {
@@ -62,27 +60,24 @@
     transition: all 0.3s ease;
 }
 
-.title:hover+.sunIcon {
+.title:hover ~ .sunIcon,
+.titlesWrapper:hover .sunIcon {
     opacity: 1;
     transform: translateY(0);
-}
-
-.titleMeta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    grid-column: 3;
-    grid-row: 2;
 }
 
 .lastName {
     font-weight: 700;
     font-size: 40px;
+    grid-column: 3;
+    grid-row: 2;
 }
 
 .subtitle {
     font-weight: 500;
     font-size: 32px;
+    grid-column: 4;
+    grid-row: 2;
 }
 
 .navCaseContainer {
@@ -129,8 +124,6 @@
 #outonoTxt,
 #invernoTxt {
     transition: all 0.3s ease;
-    grid-column: 2;
-    justify-self: center;
 }
 
 @keyframes colorChange {
@@ -182,11 +175,6 @@
 @media (max-width: 1040px) {
     .titlesWrapper {
         width: 100%;
-        grid-template-columns: max-content max-content auto;
-    }
-
-    .titlesWrapper>p {
-        margin: 0;
     }
 
     .NavCasesWrapper {
@@ -210,5 +198,90 @@
     .NavCasesWrapper :global(.faixaImg) {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 679px) {
+    .NavCasesWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .NavCasesWrapper :global(.caseNav) {
+        width: 40% !important;
+        min-width: unset;
+        max-width: unset;
+        height: auto;
+        flex: 0 0 40%;
+    }
+}
+
+@media (max-width: 678px) {
+    .titleSectionContainer {
+        justify-content: center;
+    }
+
+    .titlesWrapper {
+        width: auto;
+        grid-template-columns: max-content max-content;
+        column-gap: 8px;
+    }
+
+    .titlesWrapper > p {
+        grid-column: 1;
+        justify-self: end;
+        text-align: right;
+    }
+
+    #privameraTxt {
+        grid-row: 1;
+    }
+
+    #outonoTxt {
+        grid-row: 3;
+    }
+
+    #invernoTxt {
+        grid-row: 4;
+    }
+
+    .title {
+        font-size: 32px;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .sunIcon {
+        display: none;
+    }
+
+    .lastName {
+        font-size: 32px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    .NavCasesWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .NavCasesWrapper :global(.caseNav) {
+        width: 77%;
+        max-width: 328px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .NavCasesWrapper :global(.caseImgWrapper) {
+        height: 60%;
     }
 }

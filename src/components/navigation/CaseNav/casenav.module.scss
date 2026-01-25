@@ -190,3 +190,50 @@
         font-size: clamp(12px, 1.8vw, 16px);
     }
 }
+
+@media (max-width: 768px) and (min-width: 679px) {
+    .caseNav {
+        flex: none;
+        height: 28.5vh;
+    }
+
+    .caseIndicator {
+        display: none;
+    }
+}
+
+@media (max-width: 678px) {
+    .caseNav {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        flex: none;
+    }
+
+    .caseImgWrapper {
+        min-height: unset;
+        height: 65%;
+    }
+
+    .imgPreview {
+        width: 85%;
+        height: auto;
+    }
+
+    .hoverImg {
+        width: 85%;
+        height: auto;
+    }
+
+    .caseNavHeader > h3 {
+        font-size: 24px;
+    }
+
+    .caseNavHeader > p {
+        font-size: 14px;
+    }
+
+    .caseIndicator {
+        display: none;
+    }
+}

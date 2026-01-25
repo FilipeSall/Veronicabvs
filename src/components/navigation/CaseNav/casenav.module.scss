@@ -167,3 +167,26 @@
         transform: translateX(0);
     }
 }
+
+@media (max-width: 900px) {
+    .imgPreview {
+        width: clamp(55%, 9vw + 45%, 80%);
+        height: auto;
+    }
+
+    .caseImgWrapper {
+        min-height: clamp(140px, 18vw, 180px);
+    }
+
+    .caseNav {
+        height: clamp(220px, 26vw, 360px);
+    }
+
+    .caseNavHeader > h3 {
+        font-size: clamp(20px, 3vw, 28px);
+    }
+
+    .caseNavHeader > p {
+        font-size: clamp(12px, 1.8vw, 16px);
+    }
+}

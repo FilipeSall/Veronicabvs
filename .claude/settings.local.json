@@ -20,7 +20,10 @@
       "Read(//home/sea/**)",
       "Bash(claude mcp:*)",
       "Bash(curl:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(npx vite-bundle-visualizer:*)",
+      "Bash(npx vite build:*)",
+      "Bash(wc:*)"
     ],
     "deny": [],
     "ask": []

@@ -11,6 +11,7 @@ function CaseNav({
     caseValue,
     path,
     imgHover,
+    bgColor,
     CasePreview,
     isUnderConstruction,
 }: CaseNavInterface) {
@@ -33,6 +34,7 @@ function CaseNav({
                 }
             }}
             className={`${styles.caseNav} ${isUnderConstruction && styles.disabled}`}
+            style={{ '--case-bg-color': bgColor } as React.CSSProperties}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

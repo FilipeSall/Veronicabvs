@@ -6,11 +6,15 @@ import SecaoContatos from "../components/layout/SecaoContatos/SecaoContatos";
 function MainLayoult() {
   return (
     <div className={styles.container}>
-      <Header />
+      <div className={styles.headerWrapper}>
+        <Header />
+      </div>
       <main className={styles.mainContent}>
         <Outlet />
       </main>
-      <SecaoContatos />
+      <div className={styles.contatosWrapper}>
+        <SecaoContatos />
+      </div>
     </div>
   );
 }

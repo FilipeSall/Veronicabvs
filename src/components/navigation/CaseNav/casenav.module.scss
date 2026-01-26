@@ -191,7 +191,7 @@
     }
 }
 
-@media (max-width: 768px) and (min-width: 679px) {
+@media (max-width: 900px) and (min-width: 679px) {
     .caseNav {
         flex: none;
         height: 28.5vh;
@@ -206,8 +206,9 @@
     .caseNav {
         width: 100%;
         height: auto;
-        aspect-ratio: 1 / 1;
         flex: none;
+        background-color: var(--case-bg-color);
+        padding: 32px;
     }
 
     .caseImgWrapper {
@@ -221,12 +222,12 @@
     }
 
     .hoverImg {
-        width: 85%;
-        height: auto;
+        display: none;
     }
 
     .caseNavHeader > h3 {
-        font-size: 24px;
+        font-size: 28px;
+        text-decoration: underline;
     }
 
     .caseNavHeader > p {

@@ -9,7 +9,7 @@ export const caseBemolData: CaseInterface = {
   projeto: "Bemol BSF (Bemol Serviços Financeiros)",
   path: "case-1",
   tipoDeCase: "sucesso",
-  bgColor: "#4C31E0",
+  bgColor: "#1E1743",
   imgHover: case2img,
   miniImg: bemolBSFMiniImg,
   CasePreview: {

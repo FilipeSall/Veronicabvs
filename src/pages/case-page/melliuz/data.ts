@@ -9,7 +9,7 @@ export const melliuzData: CaseInterface = {
   nome: "Case 03 - Doação de Cashback",
   projeto: "Méliuz",
   path: "case-3",
-  bgColor: "#ED387B",
+  bgColor: "#52303C",
   imgHover: case1img,
   underConstruction: false,
   underConstructionImg: case3imgOff,

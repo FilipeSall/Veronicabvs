@@ -22,3 +22,15 @@
     min-height: 100dvh;
   }
 }
+
+.headerWrapper,
+.contatosWrapper {
+  display: contents;
+}
+
+@media (max-width: 678px) {
+  .headerWrapper,
+  .contatosWrapper {
+    display: none;
+  }
+}

@@ -10,7 +10,7 @@ export const safraData: CaseInterface = {
   projeto: "Banco Safra",
   path: "case-4",
   tipoDeCase: "premiado",
-  bgColor: "#386681",
+  bgColor: "#19242B",
   imgHover: case4img,
   underConstruction: true,
   underConstructionImg: case4imgOff,

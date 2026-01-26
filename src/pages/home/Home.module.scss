@@ -201,7 +201,7 @@
     }
 }
 
-@media (max-width: 768px) and (min-width: 679px) {
+@media (max-width: 900px) and (min-width: 679px) {
     .NavCasesWrapper {
         display: flex;
         flex-wrap: wrap;
@@ -283,5 +283,18 @@
 
     .NavCasesWrapper :global(.caseImgWrapper) {
         height: 60%;
+    }
+
+    .contatoWrapper {
+        display: none;
+    }
+
+    .navCaseContainer > p {
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #696969;
     }
 }

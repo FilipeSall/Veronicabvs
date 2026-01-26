@@ -9,7 +9,7 @@ export const appBemolData: CaseInterface = {
   nome: "Case 02 - App Bemol (e-commerce)",
   projeto: "Bemol BSA (Varejo)",
   path: "case-2",
-  bgColor: "#F23434",
+  bgColor: "#3C1616",
   imgHover: case3img,
   underConstruction: false,
   underConstructionImg: case2imgOff,

@@ -208,7 +208,7 @@
         height: auto;
         min-height: 378px;
         flex: none;
-        background-color: var(--case-bg-color);
+        background-color: var(--case-mobile-bg, var(--case-bg-color));
         padding: 32px;
     }
 

@@ -20,6 +20,8 @@ export interface CaseNavInterface extends LinkInterface {
   caseValue?: 'sucesso' | 'premiado';
   /** Cor de fundo */
   bgColor: string;
+  /** Se está ativo (uso em layout mobile) */
+  isActive?: boolean;
   /** Imagem de hover */
   imgHover: string;
   /** Nome do projeto */
@@ -91,4 +93,3 @@ export interface SummaryInterface {
   /** Tempo total de leitura */
   totalReading?: number;
 }
-

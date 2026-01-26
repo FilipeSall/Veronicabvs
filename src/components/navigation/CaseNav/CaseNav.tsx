@@ -14,8 +14,13 @@ function CaseNav({
     bgColor,
     CasePreview,
     isUnderConstruction,
+    isActive,
 }: CaseNavInterface) {
     const [isHovered, setIsHovered] = useState(false);
+    const caseNavStyle = {
+        '--case-bg-color': bgColor,
+        '--case-mobile-bg': isActive ? bgColor : '#272727',
+    } as React.CSSProperties;
 
     return (
         <Link
@@ -34,7 +39,7 @@ function CaseNav({
                 }
             }}
             className={`${styles.caseNav} ${isUnderConstruction && styles.disabled}`}
-            style={{ '--case-bg-color': bgColor } as React.CSSProperties}
+            style={caseNavStyle}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import CaseNav from '../../components/navigation/CaseNav/CaseNav';
 import { CaseInterface } from '../../interfaces/case';
 import { CasesData } from '../../services/casesData';
@@ -6,6 +7,10 @@ import styles from './Home.module.scss';
 import solicon from '../../assets/svgs/sol.svg';
 
 function Home() {
+  const sortedCases = [...CasesData].sort((a, b) => a.id - b.id);
+  const [activeCaseIndex, setActiveCaseIndex] = useState(0);
+  const activeCaseColor = sortedCases[activeCaseIndex]?.bgColor ?? '#272727';
+
   return (
     <>
       <HomeSEO />
@@ -30,12 +35,17 @@ function Home() {
     
       <div className={styles.navCaseContainer}>
         <p>Cases selecionados</p>
-        <div className={styles.NavCasesWrapper}>
-          {CasesData
-            .sort((a, b) => a.id - b.id)
-            .map((caseItem: CaseInterface, i: number) => (
+        <div
+          className={styles.NavCasesWrapper}
+          style={{ '--active-index': activeCaseIndex } as React.CSSProperties}
+        >
+          {sortedCases.map((caseItem: CaseInterface, i: number) => (
+            <div
+              key={caseItem.id}
+              className={styles.caseSlide}
+              aria-hidden={i !== activeCaseIndex}
+            >
               <CaseNav
-                key={i}
                 path={`case/${caseItem.id}`}
                 text={caseItem.id.toString()}
                 caseValue={caseItem.tipoDeCase}
@@ -45,8 +55,24 @@ function Home() {
                 isUnderConstruction={caseItem.underConstruction}
                 underConstructionImg={caseItem.underConstructionImg}
                 CasePreview={caseItem.CasePreview}
+                isActive={i === activeCaseIndex}
               />
-            ))}
+            </div>
+          ))}
+        </div>
+        <div
+          className={styles.caseNavMenu}
+          style={{ '--active-case-bg': activeCaseColor } as React.CSSProperties}
+        >
+          {sortedCases.map((caseItem: CaseInterface, i: number) => (
+            <button
+              key={caseItem.id}
+              type="button"
+              className={`${styles.caseNavItem} ${i === activeCaseIndex ? styles.caseNavItemActive : ''}`}
+              onClick={() => setActiveCaseIndex(i)}
+              aria-label={`Ir para o case ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
 

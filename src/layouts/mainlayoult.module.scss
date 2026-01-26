@@ -29,6 +29,10 @@
 }
 
 @media (max-width: 678px) {
+  .container {
+    padding-bottom: 96px;
+  }
+
   .headerWrapper,
   .contatosWrapper {
     display: none;

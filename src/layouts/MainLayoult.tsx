@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/layout/Header/Header";
 import styles from "./mainlayoult.module.scss";
 import SecaoContatos from "../components/layout/SecaoContatos/SecaoContatos";
+import MobileNav from "../components/layout/MobileNav/MobileNav";
 
 function MainLayoult() {
   return (
@@ -15,6 +16,7 @@ function MainLayoult() {
       <div className={styles.contatosWrapper}>
         <SecaoContatos />
       </div>
+      <MobileNav />
     </div>
   );
 }

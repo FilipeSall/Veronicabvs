@@ -1,0 +1,87 @@
+.mobileNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 32px;
+  z-index: 50;
+  display: none;
+  background: var(--backgroundColor);
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16.5px;
+}
+
+.mobileNavItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 13.9%;
+}
+
+.mobileNavLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.mobileNavIcon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(0.55);
+  transition: filter 0.2s ease;
+}
+
+.mobileNavText {
+  color: #888888;
+  transition: color 0.2s ease;
+}
+
+.mobileNavLinkActive {
+  color: #ffffff;
+}
+
+.mobileNavLinkActive .mobileNavText {
+  color: #ffffff;
+}
+
+.mobileNavLinkActive .mobileNavIcon {
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+.mobileNavLink::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 6px;
+  border-radius: 4px;
+  background: #d9d9d9;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mobileNavLinkActive::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media (max-width: 678px) {
+  .mobileNav {
+    display: block;
+  }
+}

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/layout/Header/Header";
 import styles from "./caselayout.module.scss";
 import SecaoContatos from "../components/layout/SecaoContatos/SecaoContatos";
+import MobileNav from "../components/layout/MobileNav/MobileNav";
 
 function CaseLayout() {
   return (
@@ -15,6 +16,7 @@ function CaseLayout() {
       <div className={styles.footerWrapper}>
         <SecaoContatos />
       </div>
+      <MobileNav />
     </div>
   );
 }

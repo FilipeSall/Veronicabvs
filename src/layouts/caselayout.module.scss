@@ -31,3 +31,9 @@
     min-height: 100dvh;
   }
 }
+
+@media (max-width: 678px) {
+  .caseLayoutContainer {
+    padding-bottom: 96px;
+  }
+}

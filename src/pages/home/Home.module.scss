@@ -209,6 +209,13 @@
     }
 }
 
+@media (min-width: 901px) {
+    .NavCasesWrapper {
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
 @media (max-width: 900px) and (min-width: 679px) {
     .NavCasesWrapper {
         display: flex;

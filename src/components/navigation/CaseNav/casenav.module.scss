@@ -206,6 +206,7 @@
     .caseNav {
         width: 100%;
         height: auto;
+        min-height: 378px;
         flex: none;
         background-color: var(--case-bg-color);
         padding: 32px;

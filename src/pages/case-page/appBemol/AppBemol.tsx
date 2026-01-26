@@ -48,6 +48,7 @@ function AppBemol() {
                 bg={appBemolData.bgColor}
                 color={appBemolData.summary.color}
                 totalReading={totalReading}
+                mobileTitle={appBemolData.CasePreview.title}
             />
 
             {/*2.1 Autocomplete para reconhecimento de clientes com Conta Bemol*/}

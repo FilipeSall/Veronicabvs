@@ -25,6 +25,17 @@
   margin-bottom: 16px;
 }
 
+.summaryCaseTitle {
+  display: none;
+  font-family: "Exo";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
 .titleWrapper h1 {
   font-size: 16px;
 }
@@ -82,4 +93,21 @@
   width: 24px;
   height: 24px;
   margin: 0 3px;
+}
+
+@media (max-width: 678px) {
+  .titleWrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .summaryCaseTitle {
+    display: block;
+  }
+
+  .titleWrapper h1 span,
+  .titleWrapper p {
+    display: none;
+  }
 }

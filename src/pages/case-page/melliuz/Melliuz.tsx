@@ -44,6 +44,7 @@ function Melliuz() {
         items={melliuzData.summary.items}
         color={melliuzData.summary.color}
         totalReading={4}
+        mobileTitle={melliuzData.CasePreview.title}
       />
 
       {/* 3.1 resulado */}

@@ -50,6 +50,7 @@ function CaseBemol() {
         bg={caseBemolData.bgColor}
         color={caseBemolData.summary.color}
         totalReading={totalReading}
+        mobileTitle={caseBemolData.CasePreview.title}
       />
 
       {/*1.1 Resgatando clientes no fluxo de empréstimo por notificações segmentadas*/}

@@ -94,4 +94,6 @@ export interface SummaryInterface {
   navegavelColor?: string;
   /** Tempo total de leitura */
   totalReading?: number;
+  /** Título exibido no mobile */
+  mobileTitle?: string;
 }

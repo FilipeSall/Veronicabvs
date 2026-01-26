@@ -19,3 +19,9 @@
   font-family: "Inter";
   margin-top: 8px;
 }
+
+@media (max-width: 1024px) {
+  .suspenseImgContainer {
+    display: none;
+  }
+}

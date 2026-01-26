@@ -5,7 +5,7 @@ import sucessoIcon from '../../../../../assets/svgs/sucesso.svg';
 import { useSmoothScroll } from '../../../../../hooks/useSmoothScrol';
 import { hexToRgba } from '../../../../../utils/hexToRgba';
 
-function Summary({ items, bg, color, navegavelColor, totalReading }: SummaryInterface) {
+function Summary({ items, bg, color, navegavelColor, totalReading, mobileTitle }: SummaryInterface) {
     const scrollToElement = useSmoothScroll();
 
     const backgroundWithOpacity = hexToRgba(bg, 0.25);
@@ -14,6 +14,9 @@ function Summary({ items, bg, color, navegavelColor, totalReading }: SummaryInte
         <nav className={styles.navContainer} style={{ background: backgroundWithOpacity, color: color }}>
             <div className={styles.navContent}>
                 <div className={styles.summaryContentWrapper}>
+                    {mobileTitle && (
+                        <div className={styles.summaryCaseTitle}>{mobileTitle}</div>
+                    )}
                     <div className={styles.titleWrapper}>
                         <h1>Sumário <span>(principais entregas) </span></h1>
                         <p>

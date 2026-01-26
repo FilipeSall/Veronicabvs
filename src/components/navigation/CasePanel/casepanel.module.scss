@@ -148,3 +148,45 @@
         font-size: clamp(20px, 5vw, 32px);
     }
 }
+
+@media (max-width: 678px) {
+    .infoWrapper {
+        display: none;
+    }
+
+    .casePanelThumbnail {
+        display: none;
+    }
+
+    .casePanelShowcase {
+        justify-content: center;
+    }
+
+    .textNavWrapper {
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        width: 100%;
+        padding-top: 60px;
+        gap: 16px;
+    }
+
+    .textNavWrapper > p {
+        display: block;
+        font-size: 14px;
+        color: #888888;
+    }
+
+    .navWrapper {
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 100%;
+    }
+
+    .caseNav {
+        width: 20%;
+        height: 44px;
+        padding: 0;
+    }
+}

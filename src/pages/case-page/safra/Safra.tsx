@@ -30,6 +30,7 @@ function Safra() {
         items={safraData.summary.items}
         color={safraData.summary.color}
         totalReading={6}
+        mobileTitle={safraData.CasePreview.title}
       />
 
       {/* 4.1 Resultado */}

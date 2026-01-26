@@ -2,8 +2,7 @@ import styles from "./sobremim.module.scss";
 import veronicaImg from "../../assets/veronica.png";
 import empresasImg from "../../assets/Empresas.webp";
 import toolsImg from "../../assets/Tools.webp";
-import newWindowIcon from "../../assets/svgs/new-window.svg";
-import pdfCurriculo from "../../assets/pdfs/curriculo.pdf";
+import ParaConversar from "./components/ParaConversar";
 import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -59,30 +58,7 @@ function Sobremim() {
             marketing digital, <span>Fintech</span> e negócios, em empresas B2C
             e B2B, com vivências nacionais e internacionais.
           </p>
-          <div className={styles.paraConversar}>
-            <p>
-              <span>Vamos conversar?</span>
-            </p>
-            <div className={styles.textWrapperContainer}>
-              <div
-                className={`${styles.bulletPoint} ${styles.bulletPointCurriculo}`}
-              >
-                •
-              </div>
-              <a
-                href={pdfCurriculo}
-                target="_blank"
-                className={styles.curriculoLink}
-              >
-                <span>Acesse meu currículo </span>
-                <img
-                  alt="Nova janela icone"
-                  className={styles.newWindowBtn}
-                  src={newWindowIcon}
-                />
-              </a>
-            </div>
-          </div>
+          <ParaConversar />
         </div>
 
         {/* Seção das empresas*/}

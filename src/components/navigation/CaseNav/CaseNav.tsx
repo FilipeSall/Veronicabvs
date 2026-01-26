@@ -15,6 +15,7 @@ function CaseNav({
     CasePreview,
     isUnderConstruction,
     isActive,
+    onSelect,
 }: CaseNavInterface) {
     const [isHovered, setIsHovered] = useState(false);
     const caseNavStyle = {
@@ -22,22 +23,26 @@ function CaseNav({
         '--case-mobile-bg': isActive ? bgColor : '#272727',
     } as React.CSSProperties;
 
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        if (isUnderConstruction) {
+            event.preventDefault();
+            event.stopPropagation();
+            return;
+        }
+
+        const isMobile = window.matchMedia('(max-width: 678px)').matches;
+        if (isMobile && !isActive) {
+            event.preventDefault();
+            event.stopPropagation();
+            onSelect?.();
+        }
+    };
+
     return (
         <Link
             to={path}
-            onClick={(e) => {
-                if (isUnderConstruction) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            }}
-
-            onAuxClick={(e) => {
-                if (isUnderConstruction) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-            }}
+            onClick={handleClick}
+            onAuxClick={handleClick}
             className={`${styles.caseNav} ${isUnderConstruction && styles.disabled}`}
             style={caseNavStyle}
             onMouseEnter={() => setIsHovered(true)}

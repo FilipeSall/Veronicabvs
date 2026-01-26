@@ -22,6 +22,8 @@ export interface CaseNavInterface extends LinkInterface {
   bgColor: string;
   /** Se está ativo (uso em layout mobile) */
   isActive?: boolean;
+  /** Seleciona o case no mobile sem navegar */
+  onSelect?: () => void;
   /** Imagem de hover */
   imgHover: string;
   /** Nome do projeto */

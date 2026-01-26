@@ -56,6 +56,7 @@ function Home() {
                 underConstructionImg={caseItem.underConstructionImg}
                 CasePreview={caseItem.CasePreview}
                 isActive={i === activeCaseIndex}
+                onSelect={() => setActiveCaseIndex(i)}
               />
             </div>
           ))}

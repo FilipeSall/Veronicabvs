@@ -290,11 +290,15 @@
         overflow: hidden;
         --case-slide-width: 86vw;
         --case-slide-gap: 12px;
+        --case-slide-offset: calc((100vw - var(--case-slide-width)) / 2);
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        padding-inline: 0;
     }
 
     .caseSlide {
         flex: 0 0 var(--case-slide-width);
-        transform: translateX(calc(-1 * var(--active-index) * (var(--case-slide-width) + var(--case-slide-gap))));
+        transform: translateX(calc(var(--case-slide-offset) - (var(--active-index) * (var(--case-slide-width) + var(--case-slide-gap)))));
         transition: transform 0.55s ease;
         will-change: transform;
     }

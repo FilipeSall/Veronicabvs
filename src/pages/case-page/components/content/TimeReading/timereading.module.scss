@@ -21,3 +21,9 @@
 .txtTotalReading{
     color: #FFFFFF;
 }
+
+@media (max-width: 678px) {
+    .timeReadingSpan {
+        display: none;
+    }
+}

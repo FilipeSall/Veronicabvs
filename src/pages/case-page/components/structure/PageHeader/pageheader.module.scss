@@ -58,3 +58,9 @@
     font-size: 16px;
     letter-spacing: 0%;
 }
+
+@media (max-width: 678px) {
+    .pageHeaderContainer {
+        display: none;
+    }
+}

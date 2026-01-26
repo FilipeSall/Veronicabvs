@@ -37,7 +37,10 @@ function Sobremim() {
       <section className={styles.contentSection}>
         <div className={styles.textWrapper}>
           <h1 className={styles.title}>
-            Prazer, Verô<span>nica</span>
+            <span className={styles.titleGreeting}>Prazer,</span>
+            <span className={styles.titleName}>
+              Verô<span>nica</span>
+            </span>
           </h1>
           <p className={styles.para}>
             Bacharel em Arquitetura, sou{" "}

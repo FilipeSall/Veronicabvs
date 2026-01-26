@@ -67,10 +67,25 @@
 
 .title {
   font-size: clamp(28px, 4vh, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: "Inter", sans-serif;
 }
 
-.title>span {
+.titleName > span {
   color: var(--fadeTextColor);
+}
+
+.titleGreeting {
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.titleName {
+  color: #ffffff;
 }
 
 .para {
@@ -275,16 +290,57 @@
   .sobremimContainer {
     flex-direction: column;
     align-items: center;
+    font-family: "Inter", sans-serif;
   }
 
   .imgSection {
-    width: min(100%, 420px);
-    max-width: 100%;
-    aspect-ratio: 2 / 3;
+    display: none;
   }
 
   .contentSection {
     max-width: 100%;
+  }
+
+  .textWrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .para {
+    text-align: justify;
+  }
+
+  .title {
+    padding-top: 38px;
+  }
+
+  .paraConversar span {
+    font-weight: 700;
+  }
+
+  .empresasSection .bulletPoint,
+  .ferramentasSection .bulletPoint {
+    display: none;
+  }
+
+  .empresasImg,
+  .ferramentasImg {
+    width: 150%;
+  }
+
+  .ferramentasImg {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .ferramentasInner {
+    gap: 16px;
+  }
+
+  .ferramentaFrame {
+    flex: 0 0 calc(50% - 8px);
+    overflow: hidden;
   }
 }
 

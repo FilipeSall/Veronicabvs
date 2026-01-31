@@ -1,4 +1,8 @@
-.container{
+.wrapper {
+    width: 100%;
+}
+
+.desktopContainer{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -9,7 +13,7 @@
     gap: 20px;
 }
 
-.container img {
+.desktopContainer img {
     max-width: 100%;
     height: auto;
     flex-shrink: 1;
@@ -38,9 +42,75 @@
     font-weight: bolder;
 }
 
+.mobileContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.funilImg {
+    width: auto;
+    max-width: 320px;
+    height: auto;
+}
+
+.mobileCarousel {
+    position: relative;
+    width: min(360px, 100%);
+}
+
+.stepText {
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.viewport {
+    overflow: hidden;
+}
+
+.carouselContainer {
+    display: flex;
+}
+
+.slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slideImage {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+}
+
+.arrowButton {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.prevButton {
+    left: -12px;
+}
+
+.nextButton {
+    right: -12px;
+}
+
 /* Responsividade para telas menores */
 @media (max-width: 1330px) {
-    .container {
+    .desktopContainer {
         gap: 16px;
     }
 
@@ -57,8 +127,8 @@
     }
 }
 
-@media (max-width: 1040px) {
-    .container {
+@media (max-width: 1024px) {
+    .desktopContainer {
         gap: 12px;
     }
 
@@ -73,10 +143,23 @@
     .imgWrapper p {
         font-size: 16px;
     }
+
+    .desktopContainer {
+        display: none;
+    }
+
+    .mobileContainer {
+        display: flex;
+    }
+
+    .funilImg {
+        width: 100%;
+        max-width: 360px;
+    }
 }
 
 @media (max-width: 768px) {
-    .container {
+    .desktopContainer {
         flex-direction: column;
         align-items: center;
         gap: 30px;
@@ -99,12 +182,32 @@
 }
 
 @media (max-width: 600px) {
-    .container {
+    .desktopContainer {
         margin: 20px 0;
         padding: 0 20px;
     }
 
     .imgWrapper {
         max-width: 100%;
+    }
+
+    .mobileContainer {
+        padding: 0 20px;
+    }
+
+    .mobileCarousel {
+        width: 100%;
+    }
+
+    .slideImage {
+        max-width: 240px;
+    }
+
+    .prevButton {
+        left: -6px;
+    }
+
+    .nextButton {
+        right: -6px;
     }
 }

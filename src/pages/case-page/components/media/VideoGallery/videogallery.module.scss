@@ -18,6 +18,12 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .galleryContainer > :not(:first-child) {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .galleryContainer {
     flex-direction: column;

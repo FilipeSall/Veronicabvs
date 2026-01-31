@@ -57,7 +57,7 @@ function CaseBemol() {
       <Chapter id="chapter-1-1" customCss={{ gap: "80" }}>
         <CaseTitleHeader
           id="1.1"
-          title="Resgatando clientes no fluxo de empréstimo por notificações segmentadas"
+          title="Resgatando clientes do funil de empréstimo"
           subtitle="Apoio: Equipe de Marketing e equipe de Dados."
           subtitleWhite={false}
         />

@@ -77,3 +77,9 @@
 .special-chapter .descriptionText span {
   color: #f3da8b;
 }
+
+@media (max-width: 768px) {
+  .descriptionText {
+    display: none;
+  }
+}

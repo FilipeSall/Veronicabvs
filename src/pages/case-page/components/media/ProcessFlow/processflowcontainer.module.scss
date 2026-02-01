@@ -6,6 +6,11 @@
   /* Variáveis locais para controle responsivo */
   --local-arrow-width: 26px;
   --local-arrow-height: 39px;
+  position: relative;
+}
+
+.scrollArea {
+  width: 100%;
 }
 
 .columnWrapper {
@@ -24,6 +29,39 @@
     border-top: 1px dashed #ffffff;
     opacity: 0.7;
   }
+}
+
+.dragHint {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #272727;
+  background: #878787;
+  color: #0f0f0f;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  right: clamp(-40px, -6vw, 0px);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  pointer-events: none;
+  transform-origin: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.dragHint img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  display: block;
+}
+
+.dragHintHidden {
+  opacity: 0;
 }
 
 .column {
@@ -101,18 +139,49 @@
 }
 
 @media (max-width: 1024px) {
+  .scrollArea {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .columnWrapper {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
     gap: 20px;
+    width: max-content;
+    padding-bottom: 12px;
 
     &::before {
       display: none;
     }
   }
+
+  .column {
+    min-width: 180px;
+  }
+
+  .dragHint {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
-  .columnWrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .column {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .isTouch .scrollArea {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .isTouch .scrollArea::-webkit-scrollbar {
+    display: none;
+  }
+
+  .isTouch .dragHint {
+    display: inline-flex;
   }
 }

@@ -4,6 +4,43 @@
     width: 100%;
 }
 
+.scrollArea {
+    width: 100%;
+}
+
+.dragHint {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #272727;
+  background: rgba(255, 255, 255, 0.7);
+  color: #0f0f0f;
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  right: clamp(-40px, -6vw, 0px);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  padding: 10px;
+}
+
+.dragHint img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    display: block;
+}
+
+.dragHintHidden {
+    opacity: 0;
+}
+
 .btnWrapper {
     position: absolute;
     top: -5%;
@@ -48,7 +85,33 @@
         position: relative;
         top: auto;
         right: auto;
-        justify-content: flex-end;
+        justify-content: flex-start;
         padding: 10px 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .scrollArea {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dragHint {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .isTouch .scrollArea {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .isTouch .scrollArea::-webkit-scrollbar {
+        display: none;
+    }
+
+    .isTouch .dragHint {
+        display: inline-flex;
     }
 }
